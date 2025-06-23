@@ -2,22 +2,15 @@ import classNames from 'classnames';
 import React from 'react';
 
 const Box = (props: Common.BoxProps) => {
-  const {
-    id,
-    classes = '',
-    type = 'default',
-    title,
-    maxWidth,
-    children = null,
-  } = props;
+  const { id, classes = '', type = 'default', title, maxWidth, children = null } = props;
   return (
     <div
       id={id}
       className={classNames(
-        'w-full rounded-xl text-primary-600 overflow-hidden border border-primary-500/30',
+        'text-primary-600 border-primary-500/30 w-full overflow-hidden rounded-xl border',
         {
           'flex flex-col': title,
-          'shadow-custom-light ': type === 'card',
+          'shadow-custom-light': type === 'card',
         },
       )}
       style={

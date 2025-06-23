@@ -41,33 +41,23 @@ const ComboBoxBasicGuide = () => {
   return (
     <div className="flex w-full flex-col gap-4">
       <div className="flex w-full justify-end">
-        <ButtonGroup
-          options={viewOptions}
-          onChange={handleChangeView}
-          value={selectedView}
-        />
+        <ButtonGroup options={viewOptions} onChange={handleChangeView} value={selectedView} />
       </div>
       <Box id="textButtonExample" classes="w-full h-[200px]">
         {selectedView.id === 'PREVIEW' ? (
-          <FlexWrapper
-            classes="size-full !gap-1"
-            items="center"
-            direction="col"
-          >
+          <FlexWrapper classes="size-full !gap-1" items="center" direction="col">
             <div className="flex w-full flex-1 items-center">
               {/* example view start */}
-              <div className="flex size-full flex-1 items-center justify-center gap-4 border-primary-700">
+              <div className="border-primary-700 flex size-full flex-1 items-center justify-center gap-4">
                 <ComboBox options={exampleOption} />
               </div>
               {/* example view end */}
             </div>
           </FlexWrapper>
         ) : (
-          <div className="relative flex size-full items-center justify-center gap-4 p-10 text-primary-600">
+          <div className="text-primary-600 relative flex size-full items-center justify-center gap-4 p-10">
             <pre>
-              <code className="!bg-transparent text-base">
-                {createButtonText()}
-              </code>
+              <code className="!bg-transparent text-base">{createButtonText()}</code>
             </pre>
             <Button
               classes="!absolute right-6 top-4"

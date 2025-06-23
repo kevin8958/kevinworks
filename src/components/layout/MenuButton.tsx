@@ -10,18 +10,17 @@ const MenuButton = (props: Layout.MenuButtonProps) => {
 
   return (
     <div
-      className={classNames(
-        'relative size-full flex flex-col items-start gap-2',
-        { 'pl-4': isItem },
-      )}
+      className={classNames('relative flex size-full flex-col items-start gap-2', {
+        'pl-4': isItem,
+      })}
     >
       <button
         type="button"
         className={classNames(
-          'size-full flex items-center p-0 text-center rounded-xl transition-all duration-200 ease-in-out text-base py-2 px-4',
+          'flex size-full items-center rounded-xl p-0 px-4 py-2 text-center text-base transition-all duration-200 ease-in-out',
           {
             'font-semibold': !isItem,
-            'bg-primary-100 font-semibold ': isActive,
+            'bg-primary-100 font-semibold': isActive,
             'text-textPrimary': !isActive,
             'hover:bg-primary-100 hover:': !isActive && isItem,
             'pointer-events-none cursor-default': !href,
@@ -35,12 +34,7 @@ const MenuButton = (props: Layout.MenuButtonProps) => {
         <ul className="flex w-full flex-col">
           {items?.map((item) => (
             <li key={item.id} className="flex size-full flex-col items-start">
-              <MenuButton
-                label={item.label}
-                href={item.href}
-                locale={locale}
-                isItem
-              />
+              <MenuButton label={item.label} href={item.href} locale={locale} isItem />
             </li>
           ))}
         </ul>

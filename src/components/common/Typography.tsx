@@ -12,9 +12,9 @@ const Typography = (props: Common.TypographyProps) => {
             return (
               <h2
                 className={classNames(
-                  `text-[60px] font-bold  transition-all duration-200 ease-in-out tracking-wide ${classes}`,
+                  `text-[60px] font-bold tracking-wide transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}
@@ -26,9 +26,9 @@ const Typography = (props: Common.TypographyProps) => {
             return (
               <h3
                 className={classNames(
-                  `text-2xl font-bold transition-all duration-200 ease-in-out tracking-wide ${classes}`,
+                  `text-2xl font-bold tracking-wide transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}
@@ -40,9 +40,9 @@ const Typography = (props: Common.TypographyProps) => {
             return (
               <h3
                 className={classNames(
-                  `text-lg font-normal transition-all duration-200 ease-in-out tracking-wide ${classes}`,
+                  `text-lg font-normal tracking-wide transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}
@@ -56,7 +56,7 @@ const Typography = (props: Common.TypographyProps) => {
                 className={classNames(
                   `text-4xl transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}
@@ -70,7 +70,7 @@ const Typography = (props: Common.TypographyProps) => {
                 className={classNames(
                   `text-2xl transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}
@@ -84,7 +84,7 @@ const Typography = (props: Common.TypographyProps) => {
                 className={classNames(
                   `text-base transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}
@@ -98,7 +98,7 @@ const Typography = (props: Common.TypographyProps) => {
                 className={classNames(
                   `text-sm transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}
@@ -112,7 +112,7 @@ const Typography = (props: Common.TypographyProps) => {
                 className={classNames(
                   `text-xs transition-all duration-200 ease-in-out ${classes}`,
                   {
-                    'text-primary-200 ': color === 'primary',
+                    'text-primary-200': color === 'primary',
                     'text-secondary-400': color === 'secondary',
                   },
                 )}

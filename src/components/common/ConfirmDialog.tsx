@@ -1,9 +1,4 @@
-import {
-  Description,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-} from '@headlessui/react';
+import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import React from 'react';
 
 type ConfirmDialogProps = {
@@ -31,9 +26,7 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
       <div className="fixed inset-0 flex items-center justify-center p-4">
         <DialogPanel className="w-full max-w-md rounded-xl bg-white p-6">
           <DialogTitle className="text-lg font-bold">{title}</DialogTitle>
-          <Description className="mt-2 text-sm text-gray-600">
-            {description}
-          </Description>
+          <Description className="mt-2 text-sm text-gray-600">{description}</Description>
           <div className="mt-6 flex justify-end gap-2">
             <button
               type="button"

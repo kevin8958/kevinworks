@@ -32,35 +32,22 @@ const Avatar = (props: Common.AvatarProps) => {
   const content = (() => {
     if (type === 'image') {
       if (profileImageUrl) {
-        return (
-          <img
-            src={profileImageUrl}
-            alt="profile"
-            className="size-full object-cover"
-          />
-        );
+        return <img src={profileImageUrl} alt="profile" className="size-full object-cover" />;
       }
       return <p className={classNames(textSize, 'font-tossface')}>👦</p>;
     }
-    return (
-      <p className={classNames(textSize, 'text-primary-800')}>{firstLetter}</p>
-    );
+    return <p className={classNames(textSize, 'text-primary-800')}>{firstLetter}</p>;
   })();
 
   return (
-    <div
-      id={id}
-      title={name}
-      style={{ width: dimension, height: dimension }}
-      className="relative"
-    >
-      <div className="flex size-full items-center justify-center overflow-hidden rounded-full bg-secondary-100">
+    <div id={id} title={name} style={{ width: dimension, height: dimension }} className="relative">
+      <div className="bg-secondary-100 flex size-full items-center justify-center overflow-hidden rounded-full">
         {content}
       </div>
       {state !== 'none' && (
         <span
           className={classNames(
-            'absolute bottom-0 right-0 h-3 w-3 rounded-full ring-2 ring-white',
+            'absolute right-0 bottom-0 h-3 w-3 rounded-full ring-2 ring-white',
             {
               'bg-success': state === 'active',
               'bg-warning': state === 'semiActive',

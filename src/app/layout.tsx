@@ -7,42 +7,30 @@ import PageWrapper from '@/components/layout/PageWrapper';
 import Snb from '@/components/layout/Snb';
 
 export const metadata: Metadata = {
-  icons: [
-    { rel: 'icon', url: '/favicon.ico' },
-  ],
+  icons: [{ rel: 'icon', url: '/favicon.ico' }],
 };
 
-export default function RootLayout(props: {
-  children: React.ReactNode;
-}) {
-
+export default function RootLayout(props: { children: React.ReactNode }) {
   return (
-    <html
-      className="size-full bg-primary-900 font-pretendard transition-all duration-200 ease-in-out"
-    >
-    <head>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/pretendard.css"
-      />
-    </head>
+    <html className="bg-primary-900 font-pretendard size-full transition-all duration-200 ease-in-out">
+      <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/pretendard.css"
+        />
+      </head>
       <body
-        className="relative flex size-full justify-center text-textPrimary"
+        className="text-textPrimary relative flex size-full justify-center"
         suppressHydrationWarning
       >
-            <PageWrapper>
-              <Gnb />
-              <div className="relative m-auto w-[1400px] pt-[80px]">
-                <Snb  />
-                <div className="relative w-full pl-[260px]">
-                  {props.children}
-                </div>
-              </div>
-            </PageWrapper>
+        <PageWrapper>
+          <Gnb />
+          <div className="relative m-auto w-[1400px] pt-[80px]">
+            <Snb />
+            <div className="relative w-full pl-[260px]">{props.children}</div>
+          </div>
+        </PageWrapper>
       </body>
     </html>
   );

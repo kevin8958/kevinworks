@@ -1,10 +1,6 @@
 'use client';
 
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from '@headlessui/react';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import { LuChevronRight } from 'react-icons/lu';
@@ -84,10 +80,7 @@ const SNB = () => {
       <nav className="w-[260px] rounded-xl p-4">
         <ul className="flex flex-col">
           {componentsMenus.map((menu) => {
-            const isActiveMenu = menu.items?.some(
-              (item) =>
-                pathname === item.href ,
-            );
+            const isActiveMenu = menu.items?.some((item) => pathname === item.href);
             return (
               <li key={menu.id}>
                 <Disclosure defaultOpen={isActiveMenu}>
@@ -95,9 +88,9 @@ const SNB = () => {
                     <div>
                       <DisclosureButton
                         className={classNames(
-                          'text-sm flex w-full items-center justify-between rounded-md px-4 py-2 text-left font-medium hover:bg-primary-600/20',
-                          { '!font-bold text-primary-100 ': isActiveMenu },
-                          { '!font-bold text-primary-100/70 ': !isActiveMenu },
+                          'hover:bg-primary-600/20 flex w-full items-center justify-between rounded-md px-4 py-2 text-left text-sm font-medium',
+                          { 'text-primary-100 !font-bold': isActiveMenu },
+                          { 'text-primary-100/70 !font-bold': !isActiveMenu },
                         )}
                       >
                         <span>{menu.label}</span>
@@ -109,19 +102,16 @@ const SNB = () => {
                       </DisclosureButton>
                       <DisclosurePanel className="flex flex-col">
                         {menu.items?.map((item) => {
-                          const isActiveItem =
-                            pathname === item.href 
+                          const isActiveItem = pathname === item.href;
 
                           return (
                             <a
                               key={item.id}
-                              href={item.href
-                              }
+                              href={item.href}
                               className={classNames(
-                                'rounded-lg px-8 py-2 text-sm text-primary-100/70 hover:bg-primary-600/20 transition-all duration-100 ease-in-out',
+                                'text-primary-100/70 hover:bg-primary-600/20 rounded-lg px-8 py-2 text-sm transition-all duration-100 ease-in-out',
                                 {
-                                  '!text-secondary-500 font-bold bg-primary-600/20':
-                                    isActiveItem,
+                                  '!text-secondary-500 bg-primary-600/20 font-bold': isActiveItem,
                                 },
                               )}
                             >

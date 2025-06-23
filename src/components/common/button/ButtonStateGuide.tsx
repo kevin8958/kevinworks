@@ -35,8 +35,9 @@ const ButtonStateGuide = () => {
                     loading={option.id === 'loading'}
                     prompted={option.id === 'prompted'}
                     icon={
-                      (option.id === 'icon-left' ||
-                        option.id === 'icon-right') && <HiOutlineHeart />
+                      (option.id === 'icon-left' || option.id === 'icon-right') && (
+                        <HiOutlineHeart />
+                      )
                     }
                     iconPosition={option.id === 'icon-left' ? 'left' : 'right'}
                     classes="min-w-[80px]"

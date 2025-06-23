@@ -4,15 +4,7 @@ namespace Common {
   interface TypographyProps {
     classes?: string;
     color?: TypographyColor;
-    variant:
-      | 'h2'
-      | 'h3'
-      | 'h4'
-      | 'display1'
-      | 'display2'
-      | 'body1'
-      | 'body2'
-      | 'caption';
+    variant: 'h2' | 'h3' | 'h4' | 'display1' | 'display2' | 'body1' | 'body2' | 'caption';
     children?: React.ReactNode | string;
   }
   /** Avatar */

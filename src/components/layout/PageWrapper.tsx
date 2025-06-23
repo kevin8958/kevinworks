@@ -13,8 +13,7 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
 
   useEffect(() => {
     const root = scrollRef.current;
-    if (!root || !topSentinel.current || !bottomSentinel.current)
-      return () => {};
+    if (!root || !topSentinel.current || !bottomSentinel.current) return () => {};
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -37,10 +36,7 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
   }, []);
 
   return (
-    <div
-      ref={scrollRef}
-      className="relative flex w-full flex-col items-center overflow-y-auto"
-    >
+    <div ref={scrollRef} className="relative flex w-full flex-col items-center overflow-y-auto">
       {/* 위쪽 센티널 */}
       <div ref={topSentinel} className="h-px w-full" />
 
@@ -53,7 +49,7 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
       <div
         className={classNames(
           'pointer-events-none fixed top-[80px] left-[260px] z-[4] h-[60px] w-[1400px]',
-          'bg-gradient-to-b from-primary-900 to-transparent',
+          'from-primary-900 bg-gradient-to-b to-transparent',
           'transition-opacity duration-300',
           showTopShadow ? 'opacity-100' : 'opacity-0',
         )}
@@ -63,7 +59,7 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
       <div
         className={classNames(
           'pointer-events-none fixed bottom-0 left-[260px] z-[4] h-[60px] w-[1400px]',
-          'bg-gradient-to-b from-transparent to-primary-900',
+          'to-primary-900 bg-gradient-to-b from-transparent',
           'transition-opacity duration-300',
           showBottomShadow ? 'opacity-100' : 'opacity-0',
         )}

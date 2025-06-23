@@ -7,14 +7,7 @@ import React, { useRef, useState } from 'react';
 import Button from '@/components/common/Button';
 
 const Menu = (props: Common.MenuProps) => {
-  const {
-    id,
-    value,
-    items,
-    buttonClasses,
-    dialogPosition = 'left',
-    onChange,
-  } = props;
+  const { id, value, items, buttonClasses, dialogPosition = 'left', onChange } = props;
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -44,10 +37,10 @@ const Menu = (props: Common.MenuProps) => {
       </Button>
       <dialog
         className={classNames(
-          '!block right-0 mt-2 overflow-hidden rounded-xl bg-primary-400 p-2 transition-all duration-200 ease-in-out',
+          'bg-primary-400 right-0 mt-2 !block overflow-hidden rounded-xl p-2 transition-all duration-200 ease-in-out',
           {
             'left-0': dialogPosition === 'left',
-            'left-[unset] right-0': dialogPosition === 'right',
+            'right-0 left-[unset]': dialogPosition === 'right',
             'opacity-0': !isOpen,
             'opacity-100': isOpen,
           },

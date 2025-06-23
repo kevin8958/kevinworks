@@ -6,11 +6,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 export default function ComponentButtonGroupPage() {
   return (
-    <FlexWrapper
-      classes="w-full pb-20 overflow-scroll pr-6"
-      direction="col"
-      justify="start"
-    >
+    <FlexWrapper classes="w-full pb-20 overflow-scroll pr-6" direction="col" justify="start">
       {/* <BreadCrumb locale={props.params.locale} items={breadcrumbItems} /> */}
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">

@@ -1,11 +1,8 @@
-
 import Typography from '@/components/common/Typography';
 import BreadCrumb from '@/components/layout/BreadCrumb';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-
 export default function ComponentTypographyPage() {
-
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Components' },
@@ -15,7 +12,7 @@ export default function ComponentTypographyPage() {
 
   return (
     <div className="flex size-full flex-col items-start gap-4">
-      <BreadCrumb  items={breadcrumbItems} />
+      <BreadCrumb items={breadcrumbItems} />
       <Typography variant="h2" classes="mb-10">
         Typography
       </Typography>
@@ -26,7 +23,7 @@ export default function ComponentTypographyPage() {
               Typography h2
             </Typography>
             <Typography variant="body1" classes="flex items-center gap-2">
-              for <em className="font-bold not-italic text-emphasis">Title</em>
+              for <em className="text-emphasis font-bold not-italic">Title</em>
             </Typography>
           </FlexWrapper>
           <FlexWrapper>
@@ -34,45 +31,37 @@ export default function ComponentTypographyPage() {
               Typography h3
             </Typography>
             <Typography variant="body1" classes="flex items-center gap-2">
-              for{' '}
-              <em className="font-bold not-italic text-emphasis">Sub-Title</em>
+              for <em className="text-emphasis font-bold not-italic">Sub-Title</em>
             </Typography>
           </FlexWrapper>
           <FlexWrapper>
             <Typography variant="display1">Typography display1</Typography>
             <Typography variant="body1" classes="flex items-center gap-2">
-              for{' '}
-              <em className="font-bold not-italic text-emphasis">Huge Text</em>
+              for <em className="text-emphasis font-bold not-italic">Huge Text</em>
             </Typography>
           </FlexWrapper>
           <FlexWrapper>
             <Typography variant="display2">Typography display2</Typography>
             <Typography variant="body1" classes="flex items-center gap-2">
-              for{' '}
-              <em className="font-bold not-italic text-emphasis">Big Text</em>
+              for <em className="text-emphasis font-bold not-italic">Big Text</em>
             </Typography>
           </FlexWrapper>
           <FlexWrapper>
             <Typography variant="body1">Typography body1</Typography>
             <Typography variant="body1" classes="flex items-center gap-2">
-              for{' '}
-              <em className="font-bold not-italic text-emphasis">Contents</em>
+              for <em className="text-emphasis font-bold not-italic">Contents</em>
             </Typography>
           </FlexWrapper>
           <FlexWrapper>
             <Typography variant="body2">Typography body2</Typography>
             <Typography variant="body1" classes="flex items-center gap-2">
-              for{' '}
-              <em className="font-bold not-italic text-emphasis">
-                Small Contents
-              </em>
+              for <em className="text-emphasis font-bold not-italic">Small Contents</em>
             </Typography>
           </FlexWrapper>
           <FlexWrapper>
             <Typography variant="caption">Typography caption</Typography>
             <Typography variant="body1" classes="flex items-center gap-2">
-              for{' '}
-              <em className="font-bold not-italic text-emphasis">Caption</em>
+              for <em className="text-emphasis font-bold not-italic">Caption</em>
             </Typography>
           </FlexWrapper>
         </div>
@@ -80,7 +69,7 @@ export default function ComponentTypographyPage() {
           <Typography variant="display1" classes="mb-4">
             code usage
           </Typography>
-          <div className="rounded-lg border border-textPrimary p-4 font-bold text-emphasis">
+          <div className="border-textPrimary text-emphasis rounded-lg border p-4 font-bold">
             <pre>
               <code>{`<Typography variant="variant"> Children </Typography>`}</code>
             </pre>

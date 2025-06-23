@@ -7,11 +7,10 @@ import ButtonGroup from '../ButtonGroup';
 import Typography from '../Typography';
 
 const ButtonGroupSizeGuide = () => {
-  const [selectedOption, setSelectedOption] =
-    useState<Common.ButtonGroupOption>({
-      id: 'option1',
-      value: 'Option 1',
-    });
+  const [selectedOption, setSelectedOption] = useState<Common.ButtonGroupOption>({
+    id: 'option1',
+    value: 'Option 1',
+  });
 
   const buttonGroupOptions = [
     { id: 'option1', value: 'Option 1' },

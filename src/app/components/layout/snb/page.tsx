@@ -2,7 +2,6 @@ import Typography from '@/components/common/Typography';
 import BreadCrumb from '@/components/layout/BreadCrumb';
 
 export default function ComponentButtonPage() {
-
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Components' },

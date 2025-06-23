@@ -15,20 +15,15 @@ const BreadCrumb = (props: Layout.BreadCrumbProps) => {
     <nav aria-label="breadcrumb">
       <ol className="flex items-center gap-1">
         {items.map((item, index) => {
-          const isActive =
-            pathname ===
-            item.href;
+          const isActive = pathname === item.href;
           return (
             <li
               key={item.label}
-              className={classNames(
-                'text-sm flex items-center gap-1 font-normal',
-                {
-                  'text-secondary-300 font-bold': isActive,
-                  'text-primary-400 ': !isActive,
-                  'hover:text-gray-300': !isActive && item.href,
-                },
-              )}
+              className={classNames('flex items-center gap-1 text-sm font-normal', {
+                'text-secondary-300 font-bold': isActive,
+                'text-primary-400': !isActive,
+                'hover:text-gray-300': !isActive && item.href,
+              })}
             >
               {item.href ? (
                 <Link href={item.href} className="underline underline-offset-4">
@@ -37,9 +32,7 @@ const BreadCrumb = (props: Layout.BreadCrumbProps) => {
               ) : (
                 item.label
               )}
-              {index < items.length - 1 && (
-                <MdChevronRight className="text-primary-400" />
-              )}
+              {index < items.length - 1 && <MdChevronRight className="text-primary-400" />}
             </li>
           );
         })}

@@ -16,14 +16,7 @@ const gapMap = {
 } as const;
 
 const FlexWrapper = (props: Layout.FlexWrapperProps) => {
-  const {
-    direction = 'row',
-    justify,
-    items,
-    gap = 4,
-    classes = '',
-    children = null,
-  } = props;
+  const { direction = 'row', justify, items, gap = 4, classes = '', children = null } = props;
 
   return (
     <div

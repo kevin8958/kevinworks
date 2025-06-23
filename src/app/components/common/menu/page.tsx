@@ -1,7 +1,5 @@
-
 import Typography from '@/components/common/Typography';
 import BreadCrumb from '@/components/layout/BreadCrumb';
-
 
 export default function ComponentMenuPage() {
   const breadcrumbItems = [

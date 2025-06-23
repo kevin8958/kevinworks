@@ -7,7 +7,6 @@ import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 export default function ComponentAvatarPage() {
-
   return (
     <FlexWrapper classes="w-full pb-20 px-4" direction="col" justify="start">
       <FlexWrapper justify="center">

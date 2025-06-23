@@ -30,10 +30,8 @@ export default function Checkbox(props: Common.CheckboxProps) {
     <label
       htmlFor={id}
       className={classNames(
-        'flex items-center select-none gap-2',
-        disabled
-          ? 'cursor-not-allowed text-gray-600'
-          : 'cursor-pointer text-white',
+        'flex items-center gap-2 select-none',
+        disabled ? 'cursor-not-allowed text-gray-600' : 'cursor-pointer text-white',
         classes,
       )}
     >
@@ -54,7 +52,7 @@ export default function Checkbox(props: Common.CheckboxProps) {
           boxSize[size],
           disabled
             ? 'border-primary-700 text-transparent'
-            : 'border-primary-700 peer-checked:text-white text-transparent transition',
+            : 'border-primary-700 text-transparent transition peer-checked:text-white',
           disabled && checked && 'bg-gray-300 text-gray-500/70',
           invalid && '!border-error',
         )}
@@ -62,7 +60,7 @@ export default function Checkbox(props: Common.CheckboxProps) {
         <BsCheck className={textSizeMap[size]} />
       </span>
 
-      {label && <span className="break-keep text-sm">{label}</span>}
+      {label && <span className="text-sm break-keep">{label}</span>}
     </label>
   );
 }
