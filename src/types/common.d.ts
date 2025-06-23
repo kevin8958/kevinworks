@@ -43,7 +43,7 @@ namespace Common {
   type ButtonType = 'button' | 'submit';
   type ButtonSize = 'lg' | 'md' | 'sm';
   type ButtonVariant = 'contain' | 'outline' | 'clear';
-  type ButtonColor = 'primary' | 'success' | 'warning' | 'danger';
+  type ButtonColor = 'primary' | 'info' | 'success' | 'warning' | 'danger';
   type ButtonIconPosition = 'left' | 'right';
   interface ButtonProps {
     id?: string;
@@ -75,6 +75,21 @@ namespace Common {
     onChange?: (option: ButtonGroupOption) => void;
   }
 
+  /** Dialog */
+  type DialogPlacement = 'top' | 'center' | 'bottom';
+  type DialogState = 'info' | 'success' | 'warning' | 'danger' | 'default';
+  interface DialogProps {
+    title?: string;
+    message: string;
+    confirmText?: string;
+    cancelText?: string;
+    placement?: DialogPlacement;
+    state?: DialogState;
+  }
+  interface DialogContextValue {
+    openDialog: (options: DialogProps) => Promise<boolean>;
+    close: (value?: boolean) => void;
+  }
   /** Menu */
   type MenuItem = { id: string; label: string };
 

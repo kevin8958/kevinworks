@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import Gnb from '@/components/layout/Gnb';
 import PageWrapper from '@/components/layout/PageWrapper';
 import Snb from '@/components/layout/Snb';
+import { DialogProvider } from '@/hooks/useDialog';
 
 export const metadata: Metadata = {
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
@@ -24,13 +25,15 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         className="text-textPrimary relative flex size-full justify-center"
         suppressHydrationWarning
       >
-        <PageWrapper>
-          <Gnb />
-          <div className="relative m-auto h-full w-[1400px] pt-[80px]">
-            <Snb />
-            <div className="relative w-full pl-[260px]">{props.children}</div>
-          </div>
-        </PageWrapper>
+        <DialogProvider>
+          <PageWrapper>
+            <Gnb />
+            <div className="relative m-auto h-full w-[1400px] pt-[80px]">
+              <Snb />
+              <div className="relative w-full pl-[260px]">{props.children}</div>
+            </div>
+          </PageWrapper>
+        </DialogProvider>
       </body>
     </html>
   );

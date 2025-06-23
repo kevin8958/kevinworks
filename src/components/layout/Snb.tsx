@@ -49,6 +49,7 @@ const SNB = () => {
           label: 'ComboBox',
           href: '/components/common/comboBox',
         },
+        { id: 'dialog', label: 'Dialog', href: '/components/common/dialog' },
         { id: 'menu', label: 'Menu', href: '/components/common/menu' },
         {
           id: 'typography',

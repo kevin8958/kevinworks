@@ -20,7 +20,7 @@ const AlertCloseGuide = () => {
                 variant="contain"
                 state="danger"
                 title="Alert"
-                message="this is message"
+                message="this is a message"
                 showClose
               />
               <Typography variant="caption" color="secondary">
@@ -32,7 +32,7 @@ const AlertCloseGuide = () => {
                 variant="contain"
                 state="danger"
                 title="Alert"
-                message="this is message"
+                message="this is a message"
                 time={5}
                 repeat
               />

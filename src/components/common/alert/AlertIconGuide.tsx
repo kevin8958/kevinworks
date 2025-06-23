@@ -21,7 +21,7 @@ const AlertIconGuide = () => {
                 variant="contain"
                 state="danger"
                 title="Alert"
-                message="this is message"
+                message="this is a message"
                 hideIcon
               />
               <Typography variant="caption" color="secondary">
@@ -33,7 +33,7 @@ const AlertIconGuide = () => {
                 variant="contain"
                 state="danger"
                 title="Alert"
-                message="this is message"
+                message="this is a message"
                 icon={<LuAlarmClock className="text-lg" />}
               />
               <Typography variant="caption" color="secondary">
@@ -45,7 +45,7 @@ const AlertIconGuide = () => {
                 variant="contain"
                 state="danger"
                 title="Alert"
-                message="this is message"
+                message="this is a message"
                 loading
               />
               <Typography variant="caption" color="secondary">

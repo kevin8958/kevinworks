@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Box from '../Box';
-import Button from '../Button';
-import ButtonGroup from '../ButtonGroup';
+import Button from '@/components/common/Button';
+import ButtonGroup from '@/components/common/ButtonGroup';
 import ComboBox from '../ComboBox';
 
 const ComboBoxBasicGuide = () => {

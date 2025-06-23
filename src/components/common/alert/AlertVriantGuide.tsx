@@ -29,7 +29,7 @@ const AlertVriantGuide = () => {
                     variant={option.id}
                     state="danger"
                     title="Alert"
-                    message="this is message"
+                    message="this is a message"
                   />
                   <Typography variant="caption" color="secondary">
                     {option.id}

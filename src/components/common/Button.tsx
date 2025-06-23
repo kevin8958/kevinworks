@@ -37,6 +37,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
   const getClearColorClasses = (buttonColor: Common.ButtonColor) => {
     const colors = {
       primary: 'text-primary-300',
+      info: 'text-info',
       success: 'text-success',
       warning: 'text-warning',
       danger: 'text-danger',
@@ -47,6 +48,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
   const getOutlineClasses = (buttonColor: Common.ButtonColor) => {
     const styles = {
       primary: 'border-primary-500 text-primary-300',
+      info: 'border-info !text-info',
       success: 'border-success !text-success',
       warning: 'border-warning !text-warning',
       danger: 'border-danger !text-danger',
@@ -58,6 +60,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
     const styles = {
       primary:
         'bg-white hover:bg-primary-100 active:bg-primary-200 disabled:active:!bg-white disabled:hover:!bg-white text-gray-800',
+      info: 'bg-info !text-gray-200',
       success: 'bg-success !text-gray-200',
       warning: 'bg-warning !text-gray-200',
       danger: 'bg-danger !text-gray-200',

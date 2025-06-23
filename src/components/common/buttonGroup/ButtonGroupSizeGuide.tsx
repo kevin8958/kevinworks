@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Box from '../Box';
-import ButtonGroup from '../ButtonGroup';
+import ButtonGroup from '@/components/common/ButtonGroup';
 import Typography from '../Typography';
 
 const ButtonGroupSizeGuide = () => {

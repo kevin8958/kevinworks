@@ -2,36 +2,51 @@ import React from 'react';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Box from '../Box';
 import Button from '@/components/common/Button';
+import Box from '../Box';
 import Typography from '../Typography';
+import { useDialog } from '@/hooks/useDialog';
 
-const ButtonSizeGuide = () => {
-  const sizeOptions: {
-    id: Common.ButtonSize;
+const DialogPlacementGuide = () => {
+  const placementOptions: {
+    id: Common.DialogPlacement;
     value: string;
   }[] = [
-    { id: 'lg', value: 'Large' },
-    { id: 'md', value: 'Medium' },
-    { id: 'sm', value: 'Small' },
+    { id: 'top', value: 'Top' },
+    { id: 'center', value: 'Center' },
+    { id: 'bottom', value: 'Bottom' },
   ];
+  const { openDialog } = useDialog();
+
+  const handleClick = async (placement: Common.DialogPlacement) => {
+    const confirmed = await openDialog({
+      title: 'Dialog Title',
+      message: 'this is a message',
+      placement,
+    });
+
+    if (confirmed) {
+      alert('Confirmed!');
+    }
+  };
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
       <Typography variant="h4" color="secondary">
-        Size
+        Placement
       </Typography>
       <Box id="button-size-box" classes="h-[300px] w-full">
         <FlexWrapper classes="size-full" items="center" justify="center">
           <FlexWrapper items="end">
-            {sizeOptions.map((option) => (
+            {placementOptions.map((option) => (
               <div key={option.id} className="w-full">
-                <FlexWrapper classes="!gap-3" direction="col" items="center">
+                <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
                   <Button
-                    id={`${option.value}-button-example`}
+                    id={`${option.value}-dialog-button-example`}
                     classes="min-w-[80px]"
-                    size={option.id}
+                    variant="contain"
+                    onClick={() => handleClick(option.id)}
                   >
-                    Button
+                    Dialog
                   </Button>
                   <Typography variant="caption" color="secondary">
                     {option.id}
@@ -46,4 +61,4 @@ const ButtonSizeGuide = () => {
   );
 };
 
-export default ButtonSizeGuide;
+export default DialogPlacementGuide;

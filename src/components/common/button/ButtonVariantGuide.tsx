@@ -3,7 +3,7 @@ import React from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Box from '../Box';
-import Button from '../Button';
+import Button from '@/components/common/Button';
 import Typography from '../Typography';
 
 const ButtonVariantGuide = () => {
