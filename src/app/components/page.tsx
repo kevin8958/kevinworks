@@ -1,3 +1,3 @@
 export default function Index() {
-  return <div className="size-full">Index</div>;
+  return <div className="h-screen w-full">Index</div>;
 }

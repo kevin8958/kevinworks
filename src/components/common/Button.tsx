@@ -39,17 +39,17 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
       primary: 'text-primary-300',
       success: 'text-success',
       warning: 'text-warning',
-      danger: 'text-error',
+      danger: 'text-danger',
     };
     return colors[buttonColor];
   };
 
   const getOutlineClasses = (buttonColor: Common.ButtonColor) => {
     const styles = {
-      primary: 'border-primary-700 text-primary-300',
+      primary: 'border-primary-500 text-primary-300',
       success: 'border-success !text-success',
       warning: 'border-warning !text-warning',
-      danger: 'border-error !text-error',
+      danger: 'border-danger !text-danger',
     };
     return styles[buttonColor];
   };
@@ -57,10 +57,10 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
   const getContainClasses = (buttonColor: Common.ButtonColor) => {
     const styles = {
       primary:
-        'bg-primary-700 hover:bg-primary-500 active:bg-primary-600 disabled:active:!bg-primary-700 disabled:hover:!bg-primary-700 text-primary-100',
+        'bg-white hover:bg-primary-100 active:bg-primary-200 disabled:active:!bg-white disabled:hover:!bg-white text-gray-800',
       success: 'bg-success !text-gray-200',
       warning: 'bg-warning !text-gray-200',
-      danger: 'bg-error !text-gray-200',
+      danger: 'bg-danger !text-gray-200',
     };
     return styles[buttonColor];
   };

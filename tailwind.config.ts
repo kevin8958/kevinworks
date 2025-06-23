@@ -58,7 +58,7 @@ export default {
           900: '#171923',
         },
         textPrimary: '#1A1A1A',
-        error: '#D32F2F',
+        danger: '#D32F2F',
         warning: '#F57C00',
         info: '#0288D1',
         success: '#388E3C',

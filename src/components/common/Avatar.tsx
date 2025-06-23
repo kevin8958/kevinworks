@@ -51,7 +51,7 @@ const Avatar = (props: Common.AvatarProps) => {
             {
               'bg-success': state === 'active',
               'bg-warning': state === 'semiActive',
-              'bg-error': state === 'inactive',
+              'bg-danger': state === 'inactive',
               '!bg-gray-300': disabled,
             },
           )}

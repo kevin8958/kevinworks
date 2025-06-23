@@ -7,6 +7,24 @@ namespace Common {
     variant: 'h2' | 'h3' | 'h4' | 'display1' | 'display2' | 'body1' | 'body2' | 'caption';
     children?: React.ReactNode | string;
   }
+  /** Alert */
+  type AlertState = 'info' | 'success' | 'warning' | 'danger';
+  type AlertVariant = 'contain' | 'outline';
+  interface AlertProps {
+    classes?: string;
+    variant: AlertVariant;
+    state: AlertState;
+    title: string;
+    message?: string;
+    showClose?: boolean;
+    time?: number;
+    repeat?: boolean;
+    loading?: boolean;
+    icon?: React.ReactNode;
+    hideIcon?: boolean;
+    onClose?: () => void;
+  }
+
   /** Avatar */
   type AvatarSize = 'lg' | 'md' | 'sm';
   type AvatarType = 'image' | 'text';

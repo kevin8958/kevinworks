@@ -27,7 +27,7 @@ const CheckboxStateGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
       <Typography variant="h4" color="secondary">
-        Size
+        State
       </Typography>
       <Box id="button-size-box" classes="h-[300px] w-full">
         <FlexWrapper classes="size-full" items="center" justify="center">

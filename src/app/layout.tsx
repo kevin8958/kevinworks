@@ -26,7 +26,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       >
         <PageWrapper>
           <Gnb />
-          <div className="relative m-auto w-[1400px] pt-[80px]">
+          <div className="relative m-auto h-full w-[1400px] pt-[80px]">
             <Snb />
             <div className="relative w-full pl-[260px]">{props.children}</div>
           </div>

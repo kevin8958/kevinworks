@@ -31,6 +31,7 @@ const SNB = () => {
       label: 'Common',
       href: null,
       items: [
+        { id: 'alert', label: 'Alert', href: '/components/common/alert' },
         { id: 'avatar', label: 'Avatar', href: '/components/common/avatar' },
         { id: 'button', label: 'Button', href: '/components/common/button' },
         {
