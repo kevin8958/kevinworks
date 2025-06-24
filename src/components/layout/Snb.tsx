@@ -46,6 +46,7 @@ const SNB = () => {
         },
         { id: 'datePicker', label: 'DatePicker', href: '/components/common/datepicker' },
         { id: 'dialog', label: 'Dialog', href: '/components/common/dialog' },
+        { id: 'drawer', label: 'Drawer', href: '/components/common/drawer' },
         {
           id: 'typography',
           label: 'Typography',

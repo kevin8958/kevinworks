@@ -159,6 +159,17 @@ namespace Common {
     onChange?: (value: Date | null) => void;
   }
 
+  /** Drawer */
+  interface DrawerProps {
+    open: boolean;
+    title?: string;
+    children?: React.ReactNode;
+    showFooter?: boolean;
+    onConfirm?: () => void;
+    onCancel?: () => void;
+    onClose: () => void;
+  }
+
   /** SimpleTable */
   type Column = {
     key: string;

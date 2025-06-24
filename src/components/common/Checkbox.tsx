@@ -14,7 +14,7 @@ const textSizeMap = {
   lg: 'text-4xl',
 } as const;
 
-export default function Checkbox(props: Common.CheckboxProps) {
+const Checkbox = (props: Common.CheckboxProps) => {
   const {
     id,
     label = '',
@@ -63,4 +63,6 @@ export default function Checkbox(props: Common.CheckboxProps) {
       {label && <span className="text-sm break-keep">{label}</span>}
     </label>
   );
-}
+};
+
+export default Checkbox;

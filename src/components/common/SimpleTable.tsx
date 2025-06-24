@@ -1,6 +1,6 @@
 'use client';
 
-export default function SimpleTable(props: Common.SimpleTableProps) {
+const SimpleTable = (props: Common.SimpleTableProps) => {
   const { columns = [], data = [] } = props;
   return (
     <div className="mx-auto mt-10 w-full overflow-hidden rounded-lg border shadow-md">
@@ -26,4 +26,5 @@ export default function SimpleTable(props: Common.SimpleTableProps) {
       </table>
     </div>
   );
-}
+};
+export default SimpleTable;
