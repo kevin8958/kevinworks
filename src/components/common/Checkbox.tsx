@@ -53,7 +53,7 @@ export default function Checkbox(props: Common.CheckboxProps) {
           disabled
             ? 'border-primary-700 text-transparent'
             : 'border-primary-700 text-transparent transition peer-checked:text-white',
-          disabled && checked && 'bg-gray-300 text-gray-500/70',
+          disabled && checked && 'bg-gray-300 !text-gray-500/70',
           invalid && '!border-danger',
         )}
       >

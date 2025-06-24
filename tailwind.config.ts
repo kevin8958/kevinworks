@@ -1,6 +1,9 @@
 export default {
   darkMode: 'selector',
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}', // 여기에 해당 css 파일도 포함되어야 함
+    './src/styles/**/*.css', // 예: CSS 경로가 따로 있다면 명시
+  ],
   theme: {
     fontSize: {
       xs: '0.75rem',

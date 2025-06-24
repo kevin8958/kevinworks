@@ -3,8 +3,8 @@ import React from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Button from '@/components/common/Button';
-import Box from '../Box';
-import Typography from '../Typography';
+import Box from '@/components/common/Box';
+import Typography from '@/components/common/Typography';
 import { useDialog } from '@/hooks/useDialog';
 
 const DialogStateGuide = () => {

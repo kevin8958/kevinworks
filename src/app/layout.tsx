@@ -1,4 +1,5 @@
-import './globals.css';
+import '@/styles/globals.css';
+import '@/styles/datepicker.override.css';
 
 import type { Metadata } from 'next';
 
@@ -34,6 +35,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             </div>
           </PageWrapper>
         </DialogProvider>
+        <div id="datepicker-portal"></div>
       </body>
     </html>
   );

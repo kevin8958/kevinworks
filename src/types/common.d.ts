@@ -135,4 +135,27 @@ namespace Common {
     setIsDarkMode: (isDarkMode: boolean) => void;
     toggleIsDarkMode: () => void;
   }
+
+  /** Datepicker */
+  type DatepickerType = 'single' | 'range';
+  type DatepickerSize = 'sm' | 'md' | 'lg';
+  interface DatepickerProps {
+    classes?: string;
+    type: DatepickerType;
+    value: Date | null;
+    minDate?: Date | null;
+    maxDate?: Date | null;
+    isError?: boolean;
+    isNullable?: boolean;
+    isFilter?: boolean;
+    placeholder?: string;
+    isRange?: boolean;
+    isMultiple?: boolean;
+    startDate?: Date;
+    endDate?: Date;
+    size?: DatepickerSize;
+    disabled?: boolean;
+    hideHeaderButtons?: boolean;
+    onChange?: (value: Date | null) => void;
+  }
 }

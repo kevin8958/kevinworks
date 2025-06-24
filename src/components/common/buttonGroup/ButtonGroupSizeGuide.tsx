@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Box from '../Box';
+import Box from '@/components/common/Box';
 import ButtonGroup from '@/components/common/ButtonGroup';
-import Typography from '../Typography';
+import Typography from '@/components/common/Typography';
 
 const ButtonGroupSizeGuide = () => {
   const [selectedOption, setSelectedOption] = useState<Common.ButtonGroupOption>({

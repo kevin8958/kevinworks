@@ -65,16 +65,6 @@ export default function ComponentTypographyPage() {
             </Typography>
           </FlexWrapper>
         </div>
-        <div className="col-span-6 row-span-12">
-          <Typography variant="display1" classes="mb-4">
-            code usage
-          </Typography>
-          <div className="border-textPrimary text-emphasis rounded-lg border p-4 font-bold">
-            <pre>
-              <code>{`<Typography variant="variant"> Children </Typography>`}</code>
-            </pre>
-          </div>
-        </div>
       </div>
     </div>
   );

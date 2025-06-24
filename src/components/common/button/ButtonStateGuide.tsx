@@ -3,9 +3,9 @@ import { HiOutlineHeart } from 'react-icons/hi';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Box from '../Box';
+import Box from '@/components/common/Box';
 import Button from '@/components/common/Button';
-import Typography from '../Typography';
+import Typography from '@/components/common/Typography';
 
 const ButtonStateGuide = () => {
   const statusOptions: {

@@ -44,13 +44,8 @@ const SNB = () => {
           label: 'Checkbox',
           href: '/components/common/checkbox',
         },
-        {
-          id: 'comboBox',
-          label: 'ComboBox',
-          href: '/components/common/comboBox',
-        },
+        { id: 'datePicker', label: 'DatePicker', href: '/components/common/datepicker' },
         { id: 'dialog', label: 'Dialog', href: '/components/common/dialog' },
-        { id: 'menu', label: 'Menu', href: '/components/common/menu' },
         {
           id: 'typography',
           label: 'Typography',

@@ -3,8 +3,8 @@ import React from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Alert from '../Alert';
-import Box from '../Box';
-import Typography from '../Typography';
+import Box from '@/components/common/Box';
+import Typography from '@/components/common/Typography';
 
 const AlertCloseGuide = () => {
   return (

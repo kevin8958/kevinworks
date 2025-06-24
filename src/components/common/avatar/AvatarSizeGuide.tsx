@@ -2,9 +2,9 @@ import React from 'react';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Avatar from '../Avatar';
-import Box from '../Box';
-import Typography from '../Typography';
+import Avatar from '@/components/common/Avatar';
+import Box from '@/components/common/Box';
+import Typography from '@/components/common/Typography';
 
 const AvatarSizeGuide = () => {
   const sizeOptions: {

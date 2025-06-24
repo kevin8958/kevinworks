@@ -18,10 +18,10 @@ const ButtonGroup = (props: Common.ButtonGroupProps) => {
     <FlexWrapper items="center" justify="center" gap={2}>
       {title && <p className="font-bold">{title}</p>}
       <FlexWrapper
-        classes={classNames('shrink-0 rounded-lg p-1 shadow-custom-dark bg-white', classes)}
+        classes={classNames('shrink-0 rounded-lg p-[2px] shadow-custom-dark bg-white', classes)}
         items="center"
         justify="center"
-        gap={2}
+        gap={0}
       >
         {options.map((option) => (
           <button
@@ -29,7 +29,7 @@ const ButtonGroup = (props: Common.ButtonGroupProps) => {
             type="button"
             className={classNames(
               'rounded-lg !border-0 !px-2 !py-[4px] !text-sm text-gray-800 transition-all duration-200 ease-in-out',
-              { 'bg-primary-600 text-white': value.id === option.id },
+              { 'bg-primary-200': value.id === option.id },
               sizeClasses[size],
             )}
             onClick={() => onChange && onChange(option)}

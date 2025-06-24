@@ -26,7 +26,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
   } = props;
 
   const baseClasses =
-    'flex items-center justify-center px-4 py-[6px] rounded-lg text-sm text-center font-normal transition-all duration-200 ease-in-out';
+    'flex items-center justify-center px-2 py-[6px] rounded-lg text-sm text-center font-normal transition-all duration-200 ease-in-out';
 
   const sizeClasses = {
     sm: 'h-[30px] text-xs w-max',
@@ -77,11 +77,10 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
         classes,
         sizeClasses[size],
         {
-          'hover:bg-primary-800 active:bg-primary-600 disabled:!bg-transparent':
+          'hover:bg-primary-800/30 active:bg-primary-600/30 disabled:!bg-transparent':
             variant === 'clear',
-          'hover:bg-primary-800 active:bg-primary-600 border disabled:!bg-transparent':
+          'hover:bg-primary-800/30 active:bg-primary-600/30 border disabled:!bg-transparent':
             variant === 'outline',
-          'shadow-custom-dark': variant === 'contain',
         },
         variant === 'clear' && getClearColorClasses(color),
         variant === 'outline' && getOutlineClasses(color),

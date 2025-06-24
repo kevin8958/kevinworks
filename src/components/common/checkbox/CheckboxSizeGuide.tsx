@@ -2,9 +2,9 @@ import React from 'react';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Box from '../Box';
+import Box from '@/components/common/Box';
 import Checkbox from '../Checkbox';
-import Typography from '../Typography';
+import Typography from '@/components/common/Typography';
 
 const CheckboxSizeGuide = () => {
   const [isChecked, setIsChecked] = React.useState<{
