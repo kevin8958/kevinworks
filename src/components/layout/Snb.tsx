@@ -15,14 +15,9 @@ const SNB = () => {
       href: null,
       items: [
         {
-          id: 'snb',
-          label: 'Side Navigation Bar',
-          href: '/components/layout/snb',
-        },
-        {
-          id: 'gnb',
-          label: 'Global Navigation Bar',
-          href: '/components/layout/gnb',
+          id: 'splitText',
+          label: 'Split Text',
+          href: '/components/interaction/splitText',
         },
       ],
     },
@@ -81,7 +76,7 @@ const SNB = () => {
             const isActiveMenu = menu.items?.some((item) => pathname === item.href);
             return (
               <li key={menu.id}>
-                <Disclosure defaultOpen={isActiveMenu}>
+                <Disclosure defaultOpen={true}>
                   {({ open }) => (
                     <div>
                       <DisclosureButton

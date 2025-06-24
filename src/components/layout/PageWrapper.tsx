@@ -38,14 +38,11 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
   }, []);
 
   return (
-    <div
-      ref={scrollRef}
-      className="relative flex max-h-[calc(100vhx)] w-full flex-col overflow-y-auto"
-    >
+    <div ref={scrollRef} className="relative flex w-full flex-col overflow-y-auto">
       <div ref={topSentinel} className="h-px w-full" />
 
       {/* 콘텐츠가 너무 짧으면 스크롤 감지가 안 되므로 최소 높이 확보 */}
-      <div className="min-h-[1500px] w-full">{children}</div>
+      <div className="w-full">{children}</div>
 
       <div ref={bottomSentinel} className="h-4 w-full" />
 

@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 
 import AlertVriantGuide from '@/components/common/alert/AlertVriantGuide';
 import AlertStateGuide from '@/components/common/alert/AlertStateGuide';
