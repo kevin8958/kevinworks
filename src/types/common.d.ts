@@ -158,4 +158,18 @@ namespace Common {
     hideHeaderButtons?: boolean;
     onChange?: (value: Date | null) => void;
   }
+
+  /** SimpleTable */
+  type Column = {
+    key: string;
+    label: string;
+  };
+  type Row = {
+    id: string | number;
+    [key: string]: any;
+  };
+  interface SimpleTableProps {
+    columns: Column[];
+    data: Row[];
+  }
 }
