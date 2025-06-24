@@ -1,130 +1,48 @@
 import classNames from 'classnames';
 import React from 'react';
 
+const tagMap = {
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  display1: 'p',
+  display2: 'p',
+  body1: 'p',
+  body2: 'p',
+  caption: 'p',
+} as const;
+
+const baseStyles: Record<string, string> = {
+  h2: 'text-[60px] font-bold',
+  h3: 'text-2xl font-bold',
+  h4: 'text-lg font-semibold',
+  display1: 'text-4xl',
+  display2: 'text-2xl',
+  body1: 'text-base',
+  body2: 'text-sm',
+  caption: 'text-xs',
+};
+
 const Typography = (props: Common.TypographyProps) => {
-  const { classes, variant, color = 'primary', children } = props;
+  const { classes = '', variant, color = 'primary', children } = props;
+
+  const Tag = tagMap[variant];
+  if (!Tag) return <p>Invalid variant</p>;
 
   return (
-    <>
-      {(() => {
-        switch (variant) {
-          case 'h2':
-            return (
-              <h2
-                className={classNames(
-                  `text-[60px] font-bold tracking-wide transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </h2>
-            );
-          case 'h3':
-            return (
-              <h3
-                className={classNames(
-                  `text-2xl font-bold tracking-wide transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </h3>
-            );
-          case 'h4':
-            return (
-              <h3
-                className={classNames(
-                  `text-lg font-normal tracking-wide transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </h3>
-            );
-          case 'display1':
-            return (
-              <p
-                className={classNames(
-                  `text-4xl transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </p>
-            );
-          case 'display2':
-            return (
-              <p
-                className={classNames(
-                  `text-2xl transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </p>
-            );
-          case 'body1':
-            return (
-              <p
-                className={classNames(
-                  `text-base transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </p>
-            );
-          case 'body2':
-            return (
-              <p
-                className={classNames(
-                  `text-sm transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </p>
-            );
-          case 'caption':
-            return (
-              <p
-                className={classNames(
-                  `text-xs transition-all duration-200 ease-in-out ${classes}`,
-                  {
-                    'text-primary-200': color === 'primary',
-                    'text-secondary-400': color === 'secondary',
-                  },
-                )}
-              >
-                {children}
-              </p>
-            );
-          default:
-            return <p>Invalid level</p>;
-        }
-      })()}
-    </>
+    <Tag
+      className={classNames(
+        baseStyles[variant],
+        'tracking-wide transition-all duration-200 ease-in-out',
+        {
+          'text-primary-200': color === 'primary',
+          'text-secondary-400': color === 'secondary',
+        },
+        classes,
+      )}
+    >
+      {children}
+    </Tag>
   );
 };
 

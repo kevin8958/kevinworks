@@ -65,6 +65,10 @@ export default {
         warning: '#F57C00',
         info: '#0288D1',
         success: '#388E3C',
+        'danger-light': '#F9D6D5',
+        'warning-light': '#FFE0B2',
+        'info-light': '#B3E5FC',
+        'success-light': '#C8E6C9',
         emphasis: '#E3D026',
       },
       keyframes: {

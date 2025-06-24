@@ -10,51 +10,47 @@ import Typography from '@/components/common/Typography';
 const AlertIconGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4" color="secondary">
-        Icon
-      </Typography>
-      <Box id="button-size-box" classes="h-[300px] w-full">
-        <FlexWrapper classes="size-full" items="center" justify="center">
-          <FlexWrapper items="end">
-            <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
-              <Alert
-                variant="contain"
-                state="danger"
-                title="Alert"
-                message="this is a message"
-                hideIcon
-              />
-              <Typography variant="caption" color="secondary">
-                hide icon
-              </Typography>
-            </FlexWrapper>
-            <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
-              <Alert
-                variant="contain"
-                state="danger"
-                title="Alert"
-                message="this is a message"
-                icon={<LuAlarmClock className="text-lg" />}
-              />
-              <Typography variant="caption" color="secondary">
-                custom icon
-              </Typography>
-            </FlexWrapper>
-            <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
-              <Alert
-                variant="contain"
-                state="danger"
-                title="Alert"
-                message="this is a message"
-                loading
-              />
-              <Typography variant="caption" color="secondary">
-                loading icon
-              </Typography>
-            </FlexWrapper>
+      <Typography variant="h4">Icon</Typography>
+      <FlexWrapper classes="size-full" items="center">
+        <FlexWrapper items="end">
+          <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
+            <Alert
+              variant="contain"
+              state="danger"
+              title="Alert"
+              message="this is a message"
+              hideIcon
+            />
+            <Typography variant="caption" color="secondary">
+              hide icon
+            </Typography>
+          </FlexWrapper>
+          <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
+            <Alert
+              variant="contain"
+              state="danger"
+              title="Alert"
+              message="this is a message"
+              icon={<LuAlarmClock className="text-lg" />}
+            />
+            <Typography variant="caption" color="secondary">
+              custom icon
+            </Typography>
+          </FlexWrapper>
+          <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
+            <Alert
+              variant="contain"
+              state="danger"
+              title="Alert"
+              message="this is a message"
+              loading
+            />
+            <Typography variant="caption" color="secondary">
+              loading icon
+            </Typography>
           </FlexWrapper>
         </FlexWrapper>
-      </Box>
+      </FlexWrapper>
     </FlexWrapper>
   );
 };

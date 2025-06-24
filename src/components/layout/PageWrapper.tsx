@@ -19,31 +19,35 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.target === topSentinel.current) {
-            // 위쪽 센티널이 안 보이면 ↑ 영역에 더 내용이 있으므로 그림자 ON
             setShowTopShadow(!entry.isIntersecting);
-          } else {
-            // 아래쪽 센티널이 안 보이면 ↓ 영역에 더 내용이 있으므로 그림자 ON
+          } else if (entry.target === bottomSentinel.current) {
             setShowBottomShadow(!entry.isIntersecting);
           }
         });
       },
-      { root, threshold: 1 },
+      {
+        root,
+        threshold: 0.1, // 살짝만 보여도 감지되도록
+      },
     );
 
     io.observe(topSentinel.current);
     io.observe(bottomSentinel.current);
+
     return () => io.disconnect();
   }, []);
 
   return (
-    <div ref={scrollRef} className="relative flex w-full flex-col items-center overflow-y-auto">
-      {/* 위쪽 센티널 */}
+    <div
+      ref={scrollRef}
+      className="relative flex max-h-[calc(100vhx)] w-full flex-col overflow-y-auto"
+    >
       <div ref={topSentinel} className="h-px w-full" />
 
-      {children}
+      {/* 콘텐츠가 너무 짧으면 스크롤 감지가 안 되므로 최소 높이 확보 */}
+      <div className="min-h-[1500px] w-full">{children}</div>
 
-      {/* 아래쪽 센티널 */}
-      <div ref={bottomSentinel} className="h-px w-full" />
+      <div ref={bottomSentinel} className="h-4 w-full" />
 
       {/* ⇡ 위 그림자 */}
       <div

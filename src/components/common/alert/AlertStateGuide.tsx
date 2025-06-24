@@ -18,30 +18,26 @@ const AlertStateGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4" color="secondary">
-        State
-      </Typography>
-      <Box id="button-size-box" classes="h-[300px] w-full">
-        <FlexWrapper classes="size-full" items="center" justify="center">
-          <FlexWrapper items="end">
-            {stateOptions.map((option) => (
-              <div key={option.id} className="w-full">
-                <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
-                  <Alert
-                    variant="contain"
-                    state={option.id}
-                    title="Alert"
-                    message="this is a message"
-                  />
-                  <Typography variant="caption" color="secondary">
-                    {option.id}
-                  </Typography>
-                </FlexWrapper>
-              </div>
-            ))}
-          </FlexWrapper>
+      <Typography variant="h4">State</Typography>
+      <FlexWrapper classes="size-full" items="center">
+        <FlexWrapper items="end">
+          {stateOptions.map((option) => (
+            <div key={option.id} className="w-full">
+              <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
+                <Alert
+                  variant="contain"
+                  state={option.id}
+                  title="Alert"
+                  message="this is a message"
+                />
+                <Typography variant="caption" color="secondary">
+                  {option.id}
+                </Typography>
+              </FlexWrapper>
+            </div>
+          ))}
         </FlexWrapper>
-      </Box>
+      </FlexWrapper>
     </FlexWrapper>
   );
 };

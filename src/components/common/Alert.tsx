@@ -21,10 +21,10 @@ const ICONS: Record<Common.AlertState, any> = {
  */
 const COLOR_CLASSES: Record<Common.AlertVariant, Record<Common.AlertState, string>> = {
   contain: {
-    danger: 'bg-danger text-white',
-    warning: 'bg-warning text-white',
-    info: 'bg-info text-white',
-    success: 'bg-success text-white',
+    danger: 'bg-danger text-primary-100',
+    warning: 'bg-warning text-primary-100',
+    info: 'bg-info text-primary-100',
+    success: 'bg-success text-primary-100',
   },
   outline: {
     danger: 'text-danger border border-danger bg-transparent',
@@ -35,22 +35,23 @@ const COLOR_CLASSES: Record<Common.AlertVariant, Record<Common.AlertState, strin
 };
 
 const Alert: FC<Common.AlertProps> = ({
+  classes,
   variant = 'contain',
-  state,
+  state = 'info',
   title,
   message,
-  classes,
   showClose = false,
+  time,
+  repeat = false,
   loading,
   icon,
   hideIcon = false,
-  time,
-  repeat = false,
   onClose,
 }) => {
   const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(100); // 게이지 진행률(%)
   const manualClosedRef = useRef(false);
+  const rafIdRef = useRef<number | null>(null);
 
   /** 수동 닫기 */
   const handleClose = () => {
@@ -59,14 +60,11 @@ const Alert: FC<Common.AlertProps> = ({
     onClose?.();
   };
 
-  /** 자동 닫힘 + 게이지 애니메이션 */
-  useEffect(() => {
-    if (!time) return; // time이 없으면 자동 닫힘·게이지 무시
-
+  const startTimer = () => {
+    if (!time) return;
     const total = time * 1000;
     const start = performance.now();
 
-    let rafId: number;
     const tick = (now: number) => {
       const elapsed = now - start;
       const pct = Math.max(0, 100 - (elapsed / total) * 100);
@@ -77,16 +75,25 @@ const Alert: FC<Common.AlertProps> = ({
         onClose?.();
         return;
       }
-      rafId = requestAnimationFrame(tick);
+      rafIdRef.current = requestAnimationFrame(tick);
     };
 
-    rafId = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    rafIdRef.current = requestAnimationFrame(tick);
+  };
+
+  useEffect(() => {
+    if (!time || !visible) return;
+
+    startTimer();
+    return () => {
+      if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+    };
   }, [time, visible]);
 
   useEffect(() => {
     if (!repeat || visible || manualClosedRef.current) return;
+
+    if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
     setProgress(100);
     setVisible(true);
   }, [repeat, visible]);
