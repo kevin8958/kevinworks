@@ -40,6 +40,44 @@ const propsData = [
     id: '2',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+        variant
+      </span>
+    ),
+    type: (
+      <FlexWrapper items="center" gap={1}>
+        {['h2', 'h3', 'h4', 'display1', 'display2', 'body1', 'body2', 'caption'].map((variant) => (
+          <span key={variant} className="bg-primary-800 rounded-md px-2 py-1">
+            {variant}
+          </span>
+        ))}
+      </FlexWrapper>
+    ),
+    default: "'h2'",
+    description: 'Typography variant for the text',
+  },
+  {
+    id: '3',
+    property: (
+      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+        color
+      </span>
+    ),
+    type: (
+      <FlexWrapper items="center" gap={1}>
+        {['primary', 'secondary'].map((color) => (
+          <span key={color} className="bg-primary-800 rounded-md px-2 py-1">
+            {color}
+          </span>
+        ))}
+      </FlexWrapper>
+    ),
+    default: "'primary'",
+    description: 'Color theme for the text',
+  },
+  {
+    id: '4',
+    property: (
+      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         text
       </span>
     ),
@@ -48,7 +86,7 @@ const propsData = [
     description: 'Text to be split and animated',
   },
   {
-    id: '3',
+    id: '5',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         delay
@@ -59,7 +97,7 @@ const propsData = [
     description: 'Delay before the animation starts for each letter',
   },
   {
-    id: '4',
+    id: '6',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         duration
@@ -70,7 +108,7 @@ const propsData = [
     description: 'Duration of the animation for each letter',
   },
   {
-    id: '5',
+    id: '7',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         ease
@@ -81,7 +119,7 @@ const propsData = [
     description: 'Easing function for the animation',
   },
   {
-    id: '6',
+    id: '8',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         splitType
@@ -100,7 +138,7 @@ const propsData = [
     description: 'Type of split for the text: chars, lines, words, or words and chars',
   },
   {
-    id: '7',
+    id: '9',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         from
@@ -111,7 +149,7 @@ const propsData = [
     description: 'Initial CSS properties for the animation when the letters appear',
   },
   {
-    id: '8',
+    id: '10',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">to</span>
     ),
@@ -120,7 +158,7 @@ const propsData = [
     description: 'Final CSS properties for the animation when the letters are fully visible',
   },
   {
-    id: '9',
+    id: '11',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         threshold
@@ -131,7 +169,7 @@ const propsData = [
     description: 'Intersection observer threshold for triggering the animation',
   },
   {
-    id: '10',
+    id: '12',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         rootMargin
@@ -142,26 +180,7 @@ const propsData = [
     description: 'Root margin for the intersection observer to trigger the animation',
   },
   {
-    id: '11',
-    property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
-        textAlign
-      </span>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['left', 'center', 'right'].map((alignment) => (
-          <span key={alignment} className="bg-primary-800 rounded-md px-2 py-1">
-            {alignment}
-          </span>
-        ))}
-      </FlexWrapper>
-    ),
-    default: "'center'",
-    description: 'Text alignment for the split text',
-  },
-  {
-    id: '12',
+    id: '13',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         repeat
@@ -172,7 +191,7 @@ const propsData = [
     description: 'Whether to repeat the animation when the element comes back into view',
   },
   {
-    id: '13',
+    id: '14',
     property: (
       <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
         onLetterAnimationComplete

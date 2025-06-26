@@ -14,17 +14,17 @@ const SplitTextDefaultGuide = () => {
       <Typography variant="h4">Default</Typography>
       <FlexWrapper classes="size-full" items="center">
         <SplitText
+          variant="h2"
           text="Split Text"
-          classes="text-center text-[60px] font-semibold text-white"
           delay={100}
-          duration={0.6}
+          duration={2}
           ease="power3.out"
           splitType="chars"
           from={{ opacity: 0, y: 40 }}
           to={{ opacity: 1, y: 0 }}
           threshold={0.1}
           rootMargin="-100px"
-          textAlign="center"
+          repeat
           onLetterAnimationComplete={handleAnimationComplete}
         />
       </FlexWrapper>

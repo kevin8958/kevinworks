@@ -1,8 +1,10 @@
 namespace Interaction {
   /** SplitText */
   interface SplitTextProps {
+    classes?: string;
+    color?: TypographyColor;
+    variant: 'h2' | 'h3' | 'h4' | 'display1' | 'display2' | 'body1' | 'body2' | 'caption';
     text: string;
-    className?: string;
     delay?: number;
     duration?: number;
     ease?: string;
@@ -11,7 +13,6 @@ namespace Interaction {
     to?: Record<string, any>;
     threshold?: number;
     rootMargin?: string;
-    textAlign?: 'left' | 'center' | 'right';
     repeat?: boolean;
     onLetterAnimationComplete?: () => void;
   }
