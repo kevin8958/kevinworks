@@ -18,7 +18,7 @@ const ButtonGroup = (props: Common.ButtonGroupProps) => {
     <FlexWrapper items="center" justify="center" gap={2}>
       {title && <p className="font-bold">{title}</p>}
       <FlexWrapper
-        classes={classNames('shrink-0 rounded-lg p-[2px] shadow-custom-dark bg-white', classes)}
+        classes={classNames('shrink-0 rounded-lg p-1 shadow-custom-dark bg-white', classes)}
         items="center"
         justify="center"
         gap={0}

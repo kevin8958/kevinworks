@@ -1,6 +1,7 @@
 'use client';
 
 import Typography from '@/components/common/Typography';
+import SplitTextDefaultGuide from '@/components/interaction/splitText/SplitTextDefaultGuide';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 export default function ComponentSplitTextPage() {
@@ -11,6 +12,7 @@ export default function ComponentSplitTextPage() {
           <Typography variant="h2" color="secondary">
             Split Text
           </Typography>
+          <SplitTextDefaultGuide />
         </FlexWrapper>
       </FlexWrapper>
     </FlexWrapper>
