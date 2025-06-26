@@ -36,7 +36,7 @@ const Avatar = (props: Common.AvatarProps) => {
       }
       return <p className={classNames(textSize, 'font-tossface')}>👦</p>;
     }
-    return <p className={classNames(textSize, 'text-primary-800')}>{firstLetter}</p>;
+    return <p className={classNames(textSize, 'text-primary-800 font-bold')}>{firstLetter}</p>;
   })();
 
   return (

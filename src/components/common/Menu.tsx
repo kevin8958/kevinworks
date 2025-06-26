@@ -7,7 +7,7 @@ import React, { useRef, useState } from 'react';
 import Button from '@/components/common/Button';
 
 const Menu = (props: Common.MenuProps) => {
-  const { id, value, items, buttonClasses, dialogPosition = 'left', onChange } = props;
+  const { value, items, buttonClasses, dialogPosition = 'left', onChange } = props;
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -25,7 +25,6 @@ const Menu = (props: Common.MenuProps) => {
   return (
     <div className="relative">
       <Button
-        id={id}
         classes={buttonClasses}
         type="button"
         variant="contain"
@@ -52,7 +51,6 @@ const Menu = (props: Common.MenuProps) => {
           {items.map((item) => (
             <li key={item.id}>
               <Button
-                id={item.id}
                 type="button"
                 variant="clear"
                 size="sm"

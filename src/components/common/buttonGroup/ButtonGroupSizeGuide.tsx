@@ -33,30 +33,26 @@ const ButtonGroupSizeGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4" color="secondary">
-        Size
-      </Typography>
-      <Box id="button-size-box" classes="h-[300px] w-full">
-        <FlexWrapper classes="size-full" items="center" justify="center">
-          <FlexWrapper items="end">
-            {sizeOptions.map((option) => (
-              <div key={option.id}>
-                <FlexWrapper classes="!gap-3" direction="col" items="center">
-                  <ButtonGroup
-                    size={option.id}
-                    value={selectedOption}
-                    options={buttonGroupOptions}
-                    onChange={handleChangeOption}
-                  />
-                  <Typography variant="caption" color="secondary">
-                    {option.id}
-                  </Typography>
-                </FlexWrapper>
-              </div>
-            ))}
-          </FlexWrapper>
+      <Typography variant="h4">Size</Typography>
+      <FlexWrapper classes="size-full" items="center">
+        <FlexWrapper items="end">
+          {sizeOptions.map((option) => (
+            <div key={option.id}>
+              <FlexWrapper classes="!gap-3" direction="col" items="center">
+                <ButtonGroup
+                  size={option.id}
+                  value={selectedOption}
+                  options={buttonGroupOptions}
+                  onChange={handleChangeOption}
+                />
+                <Typography variant="caption" color="secondary">
+                  {option.id}
+                </Typography>
+              </FlexWrapper>
+            </div>
+          ))}
         </FlexWrapper>
-      </Box>
+      </FlexWrapper>
     </FlexWrapper>
   );
 };

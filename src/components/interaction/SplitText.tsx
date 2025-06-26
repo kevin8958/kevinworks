@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger, GSAPSplitText);
 const SplitText = (props: Interaction.SplitTextProps) => {
   const {
     text,
-    className = '',
+    classes = '',
     delay = 100,
     duration = 0.6,
     ease = 'power3.out',
@@ -113,7 +113,7 @@ const SplitText = (props: Interaction.SplitTextProps) => {
   return (
     <p
       ref={ref}
-      className={`split-parent ${className}`}
+      className={`split-parent ${classes}`}
       style={{
         textAlign,
         overflow: 'hidden',

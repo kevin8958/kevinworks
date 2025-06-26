@@ -1,19 +1,10 @@
 import Typography from '@/components/common/Typography';
-import BreadCrumb from '@/components/layout/BreadCrumb';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-export default function ComponentTypographyPage() {
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Components' },
-    { label: 'Common' },
-    { label: 'Typography', href: '/components/common/typography' },
-  ];
-
+const ComponenTypographyPage = () => {
   return (
     <div className="flex size-full flex-col items-start gap-4">
-      <BreadCrumb items={breadcrumbItems} />
-      <Typography variant="h2" classes="mb-10">
+      <Typography variant="h2" color="secondary">
         Typography
       </Typography>
       <div className="grid grid-cols-12 grid-rows-12">
@@ -68,4 +59,5 @@ export default function ComponentTypographyPage() {
       </div>
     </div>
   );
-}
+};
+export default ComponenTypographyPage;

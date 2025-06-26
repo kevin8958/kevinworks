@@ -20,39 +20,32 @@ const ButtonStateGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4" color="secondary">
-        State
-      </Typography>
-      <Box id="button-state-box" classes="h-[300px] w-full">
-        <FlexWrapper classes="size-full" items="center" justify="center">
-          <FlexWrapper items="end">
-            {statusOptions.map((option) => (
-              <div key={option.id} className="w-full">
-                <FlexWrapper classes="!gap-3" direction="col" items="center">
-                  <Button
-                    id={`${option.value}-button-example`}
-                    disabled={option.id === 'disabled'}
-                    loading={option.id === 'loading'}
-                    prompted={option.id === 'prompted'}
-                    icon={
-                      (option.id === 'icon-left' || option.id === 'icon-right') && (
-                        <HiOutlineHeart />
-                      )
-                    }
-                    iconPosition={option.id === 'icon-left' ? 'left' : 'right'}
-                    classes="min-w-[80px]"
-                  >
-                    Button
-                  </Button>
-                  <Typography variant="caption" color="secondary">
-                    {option.id}
-                  </Typography>
-                </FlexWrapper>
-              </div>
-            ))}
-          </FlexWrapper>
+      <Typography variant="h4">State</Typography>
+      <FlexWrapper classes="size-full" items="center">
+        <FlexWrapper items="end">
+          {statusOptions.map((option) => (
+            <div key={option.id} className="w-full">
+              <FlexWrapper classes="!gap-3" direction="col" items="center">
+                <Button
+                  disabled={option.id === 'disabled'}
+                  loading={option.id === 'loading'}
+                  prompted={option.id === 'prompted'}
+                  icon={
+                    (option.id === 'icon-left' || option.id === 'icon-right') && <HiOutlineHeart />
+                  }
+                  iconPosition={option.id === 'icon-left' ? 'left' : 'right'}
+                  classes="min-w-[80px]"
+                >
+                  Button
+                </Button>
+                <Typography variant="caption" color="secondary">
+                  {option.id}
+                </Typography>
+              </FlexWrapper>
+            </div>
+          ))}
         </FlexWrapper>
-      </Box>
+      </FlexWrapper>
     </FlexWrapper>
   );
 };

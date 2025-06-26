@@ -30,7 +30,6 @@ namespace Common {
   type AvatarType = 'image' | 'text';
   type AvatarState = 'none' | 'active' | 'semiActive' | 'inactive';
   interface AvatarProps {
-    id?: string;
     classes?: string;
     size: AvatarSize;
     type?: AvatarType;
@@ -46,7 +45,6 @@ namespace Common {
   type ButtonColor = 'primary' | 'info' | 'success' | 'warning' | 'danger';
   type ButtonIconPosition = 'left' | 'right';
   interface ButtonProps {
-    id?: string;
     classes?: string;
     type?: ButtonType;
     children?: React.ReactNode;
@@ -67,39 +65,12 @@ namespace Common {
   type ButtonGroupSize = 'lg' | 'md' | 'sm';
   type ButtonGroupOption = { id: string; value: string };
   interface ButtonGroupProps {
-    title?: string;
     classes?: string;
+    title?: string;
     size?: ButtonGroupSize;
     value: ButtonGroupOption;
     options: ButtonGroupOption[];
     onChange?: (option: ButtonGroupOption) => void;
-  }
-
-  /** Dialog */
-  type DialogPlacement = 'top' | 'center' | 'bottom';
-  type DialogState = 'info' | 'success' | 'warning' | 'danger' | 'default';
-  interface DialogProps {
-    title?: string;
-    message: string;
-    confirmText?: string;
-    cancelText?: string;
-    placement?: DialogPlacement;
-    state?: DialogState;
-  }
-  interface DialogContextValue {
-    openDialog: (options: DialogProps) => Promise<boolean>;
-    close: (value?: boolean) => void;
-  }
-  /** Menu */
-  type MenuItem = { id: string; label: string };
-
-  interface MenuProps {
-    id: string;
-    value: MenuItem;
-    items: MenuItem[];
-    buttonClasses?: string;
-    dialogPosition?: 'left' | 'right';
-    onChange: (item: MenuItem) => void;
   }
 
   /** Box */
@@ -114,13 +85,13 @@ namespace Common {
   /** Checkbox */
   type CheckboxSize = 'sm' | 'md' | 'lg';
   interface CheckboxProps {
+    classes?: string;
     id: string;
     label?: string;
     checked?: boolean;
     disabled?: boolean;
     invalid?: boolean;
     size?: CheckboxSize;
-    classes?: string;
     onChange?: (data: { id: string; checked: boolean }) => void;
   }
 
@@ -159,6 +130,21 @@ namespace Common {
     onChange?: (value: Date | null) => void;
   }
 
+  /** Dialog */
+  type DialogPlacement = 'top' | 'center' | 'bottom';
+  type DialogState = 'info' | 'success' | 'warning' | 'danger' | 'default';
+  interface DialogProps {
+    title?: string;
+    message: string;
+    confirmText?: string;
+    cancelText?: string;
+    placement?: DialogPlacement;
+    state?: DialogState;
+  }
+  interface DialogContextValue {
+    openDialog: (options: DialogProps) => Promise<boolean>;
+    close: (value?: boolean) => void;
+  }
   /** Drawer */
   interface DrawerProps {
     open: boolean;
@@ -170,6 +156,16 @@ namespace Common {
     onClose: () => void;
   }
 
+  /** Menu */
+  type MenuItem = { id: string; label: string };
+
+  interface MenuProps {
+    value: MenuItem;
+    items: MenuItem[];
+    buttonClasses?: string;
+    dialogPosition?: 'left' | 'right';
+    onChange: (item: MenuItem) => void;
+  }
   /** SimpleTable */
   type Column = {
     key: string;

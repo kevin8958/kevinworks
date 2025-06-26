@@ -15,7 +15,7 @@ const tagMap = {
 const baseStyles: Record<string, string> = {
   h2: 'text-[60px] font-bold',
   h3: 'text-2xl font-bold',
-  h4: 'text-lg font-semibold',
+  h4: 'text-lg font-normal',
   display1: 'text-4xl',
   display2: 'text-2xl',
   body1: 'text-base',
@@ -35,7 +35,7 @@ const Typography = (props: Common.TypographyProps) => {
         baseStyles[variant],
         'tracking-wide transition-all duration-200 ease-in-out',
         {
-          'text-primary-200': color === 'primary',
+          'text-primary-100': color === 'primary',
           'text-secondary-400': color === 'secondary',
         },
         classes,
