@@ -73,6 +73,18 @@ namespace Common {
     onChange?: (option: ButtonGroupOption) => void;
   }
 
+  /** Badge */
+  type BadgeSize = 'sm' | 'md' | 'lg';
+  type BadgeColor = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+  interface BadgeProps {
+    children: string | React.ReactNode;
+    size?: BadgeSize;
+    color?: BadgeColor;
+    icon?: React.ReactNode;
+    disabled?: boolean;
+    classes?: string;
+  }
+
   /** Box */
   interface BoxProps {
     id?: string;

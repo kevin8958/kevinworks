@@ -17,7 +17,6 @@ const textSizeMap = {
 
 const Avatar = (props: Common.AvatarProps) => {
   const {
-    id,
     size = 'md',
     type = 'image',
     state = 'none',
@@ -40,7 +39,7 @@ const Avatar = (props: Common.AvatarProps) => {
   })();
 
   return (
-    <div id={id} title={name} style={{ width: dimension, height: dimension }} className="relative">
+    <div title={name} style={{ width: dimension, height: dimension }} className="relative">
       <div className="bg-secondary-100 flex size-full items-center justify-center overflow-hidden rounded-full">
         {content}
       </div>

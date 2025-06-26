@@ -4,6 +4,7 @@ import Typography from '@/components/common/Typography';
 import SplitTextDefaultGuide from '@/components/interaction/splitText/SplitTextDefaultGuide';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
+import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
 
 export default function ComponentSplitTextPage() {
@@ -28,9 +29,9 @@ const propsData = [
   {
     id: '1',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         classes
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -39,17 +40,26 @@ const propsData = [
   {
     id: '2',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         variant
-      </span>
+      </Badge>
     ),
     type: (
-      <FlexWrapper items="center" gap={1}>
-        {['h2', 'h3', 'h4', 'display1', 'display2', 'body1', 'body2', 'caption'].map((variant) => (
-          <span key={variant} className="bg-primary-800 rounded-md px-2 py-1">
-            {variant}
-          </span>
-        ))}
+      <FlexWrapper items="start" gap={1} direction="col">
+        <FlexWrapper items="center" gap={1}>
+          {['h2', 'h3', 'h4', 'display1', 'display2'].map((variant) => (
+            <Badge key={variant} size="md">
+              {variant}
+            </Badge>
+          ))}
+        </FlexWrapper>
+        <FlexWrapper items="center" gap={1}>
+          {['body1', 'body2', 'caption'].map((variant) => (
+            <Badge key={variant} size="md">
+              {variant}
+            </Badge>
+          ))}
+        </FlexWrapper>
       </FlexWrapper>
     ),
     default: "'h2'",
@@ -58,16 +68,16 @@ const propsData = [
   {
     id: '3',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         color
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['primary', 'secondary'].map((color) => (
-          <span key={color} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={color} size="md">
             {color}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -77,9 +87,9 @@ const propsData = [
   {
     id: '4',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         text
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -88,9 +98,9 @@ const propsData = [
   {
     id: '5',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         delay
-      </span>
+      </Badge>
     ),
     type: 'number',
     default: '100',
@@ -99,9 +109,9 @@ const propsData = [
   {
     id: '6',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         duration
-      </span>
+      </Badge>
     ),
     type: 'number',
     default: '0.6',
@@ -110,9 +120,9 @@ const propsData = [
   {
     id: '7',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         ease
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: "'power3.out'",
@@ -121,16 +131,16 @@ const propsData = [
   {
     id: '8',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         splitType
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['chars', 'lines', 'words', 'words,chars'].map((size) => (
-          <span key={size} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={size} size="md">
             {size}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -140,9 +150,9 @@ const propsData = [
   {
     id: '9',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         from
-      </span>
+      </Badge>
     ),
     type: 'Record<string, any>',
     default: '{opacity:0,y:40}',
@@ -151,7 +161,9 @@ const propsData = [
   {
     id: '10',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">to</span>
+      <Badge color="secondary" size="md">
+        to
+      </Badge>
     ),
     type: 'Record<string, any>',
     default: '{opacity:1,y:0}',
@@ -160,9 +172,9 @@ const propsData = [
   {
     id: '11',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         threshold
-      </span>
+      </Badge>
     ),
     type: 'number',
     default: '0.1',
@@ -171,9 +183,9 @@ const propsData = [
   {
     id: '12',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         rootMargin
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '-100px',
@@ -182,9 +194,9 @@ const propsData = [
   {
     id: '13',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         repeat
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -193,9 +205,9 @@ const propsData = [
   {
     id: '14',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         onLetterAnimationComplete
-      </span>
+      </Badge>
     ),
     type: '() => void',
     default: '',

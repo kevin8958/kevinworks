@@ -7,6 +7,7 @@ import AlertIconGuide from '@/components/common/alert/AlertIconGuide';
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
+import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
 
 export default function ComponentAlertPage() {
@@ -37,9 +38,9 @@ const propsData = [
   {
     id: '1',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         classes
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -48,16 +49,16 @@ const propsData = [
   {
     id: '2',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         variant
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['contain', 'outline'].map((state) => (
-          <span key={state} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={state} size="md">
             {state}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -67,16 +68,16 @@ const propsData = [
   {
     id: '3',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         state
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['info', 'success', 'warning', 'danger'].map((state) => (
-          <span key={state} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={state} size="md">
             {state}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -86,9 +87,9 @@ const propsData = [
   {
     id: '4',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         title
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -97,9 +98,9 @@ const propsData = [
   {
     id: '5',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         message
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -108,9 +109,9 @@ const propsData = [
   {
     id: '6',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         showClose
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -119,9 +120,9 @@ const propsData = [
   {
     id: '7',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         time
-      </span>
+      </Badge>
     ),
     type: 'number',
     default: '',
@@ -130,9 +131,9 @@ const propsData = [
   {
     id: '8',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         repeat
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -141,9 +142,9 @@ const propsData = [
   {
     id: '9',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         loading
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -152,9 +153,9 @@ const propsData = [
   {
     id: '10',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         icon
-      </span>
+      </Badge>
     ),
     type: 'ReactNode',
     default: '',
@@ -163,9 +164,9 @@ const propsData = [
   {
     id: '11',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         hideIcon
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -174,9 +175,9 @@ const propsData = [
   {
     id: '12',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         onClose
-      </span>
+      </Badge>
     ),
     type: '() => void',
     default: '',

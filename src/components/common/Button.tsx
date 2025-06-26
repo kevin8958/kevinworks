@@ -8,7 +8,6 @@ import React from 'react';
 
 const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
   const {
-    id = '',
     classes = '',
     type = 'button',
     children = null,
@@ -70,7 +69,6 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
 
   return (
     <button
-      id={id}
       type={type === 'button' ? 'button' : 'submit'}
       className={classNames(
         baseClasses,

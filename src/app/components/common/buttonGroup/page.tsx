@@ -4,6 +4,7 @@ import ButtonGroupSizeGuide from '@/components/common/buttonGroup/ButtonGroupSiz
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
+import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
 
 export default function ComponentButtonGroupPage() {
@@ -29,9 +30,9 @@ const propsData = [
   {
     id: '1',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         classes
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -40,9 +41,9 @@ const propsData = [
   {
     id: '2',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         title
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -51,16 +52,16 @@ const propsData = [
   {
     id: '3',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         size
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['lg', 'md', 'sm'].map((size) => (
-          <span key={size} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={size} size="md">
             {size}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -70,9 +71,9 @@ const propsData = [
   {
     id: '4',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         value
-      </span>
+      </Badge>
     ),
     type: 'object',
     default: '',
@@ -81,9 +82,9 @@ const propsData = [
   {
     id: '5',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         options
-      </span>
+      </Badge>
     ),
     type: 'array',
     default: '',
@@ -92,9 +93,9 @@ const propsData = [
   {
     id: '6',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         onChange
-      </span>
+      </Badge>
     ),
     type: '(option) => void',
     default: '',

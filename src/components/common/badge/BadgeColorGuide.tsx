@@ -2,28 +2,32 @@ import React from 'react';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Avatar from '@/components/common/Avatar';
-import Box from '@/components/common/Box';
+import Badge from '@/components/common/Badge';
 import Typography from '@/components/common/Typography';
 
-const AvatarSizeGuide = () => {
-  const sizeOptions: {
-    id: Common.ButtonSize;
+const BadgeColorGuide = () => {
+  const colorOptions: {
+    id: Common.BadgeColor;
     value: string;
   }[] = [
-    { id: 'sm', value: 'Small' },
-    { id: 'md', value: 'Medium' },
-    { id: 'lg', value: 'Large' },
+    { id: 'primary', value: 'Primary' },
+    { id: 'secondary', value: 'Secondary' },
+    { id: 'success', value: 'Success' },
+    { id: 'warning', value: 'Warning' },
+    { id: 'danger', value: 'Danger' },
   ];
+
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Size</Typography>
+      <Typography variant="h4">State</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
-          {sizeOptions.map((option) => (
+          {colorOptions.map((option) => (
             <div key={option.id} className="w-full">
               <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Avatar size={option.id} />
+                <Badge color={option.id} size="md">
+                  Badge
+                </Badge>
                 <Typography variant="caption" color="secondary">
                   {option.id}
                 </Typography>
@@ -36,4 +40,4 @@ const AvatarSizeGuide = () => {
   );
 };
 
-export default AvatarSizeGuide;
+export default BadgeColorGuide;

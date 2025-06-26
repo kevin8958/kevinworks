@@ -5,6 +5,7 @@ import DialogStateGuide from '@/components/common/dialog/DialogStateGuide';
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
+import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
 
 export default function ComponentDialogPage() {
@@ -31,9 +32,9 @@ const propsData = [
   {
     id: '1',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         title
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -42,9 +43,9 @@ const propsData = [
   {
     id: '2',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         message
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -53,9 +54,9 @@ const propsData = [
   {
     id: '3',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         confirmText
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: 'Confirm',
@@ -64,9 +65,9 @@ const propsData = [
   {
     id: '4',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         cancelText
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: 'Cancel',
@@ -75,16 +76,16 @@ const propsData = [
   {
     id: '5',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         placement
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['top', 'center', 'bottom'].map((size) => (
-          <span key={size} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={size} size="md">
             {size}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -94,16 +95,16 @@ const propsData = [
   {
     id: '6',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         state
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['info', 'success', 'warning', 'danger', 'default'].map((state) => (
-          <span key={state} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={state} size="md">
             {state}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),

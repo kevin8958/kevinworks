@@ -1,21 +1,23 @@
 'use client';
 
-import DrawerDefaultGuide from '@/components/common/drawer/DrawerDefaultGuide';
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
-import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
+import BadgeSizeGuide from '@/components/common/badge/BadgeSizeGuide';
+import BadgeColorGuide from '@/components/common/badge/BadgeColorGuide';
+import Badge from '@/components/common/Badge';
 
-export default function ComponentDrawerPage() {
+export default function ComponentBadgePage() {
   return (
     <FlexWrapper classes="w-full pb-20 px-4" direction="col" justify="start">
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
           <Typography variant="h2" color="secondary">
-            Drawer
+            Badge
           </Typography>
-          <DrawerDefaultGuide />
+          <BadgeSizeGuide />
+          <BadgeColorGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="h4">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />
@@ -31,77 +33,82 @@ const propsData = [
     id: '1',
     property: (
       <Badge color="secondary" size="md">
-        open
-      </Badge>
-    ),
-    type: 'boolean',
-    default: '',
-    description: 'Controls the visibility of the drawer.',
-  },
-  {
-    id: '2',
-    property: (
-      <Badge color="secondary" size="md">
         title
       </Badge>
     ),
     type: 'string',
     default: '',
-    description: 'The title displayed at the top of the drawer.',
+    description: 'The title of the datepicker.',
+  },
+  {
+    id: '2',
+    property: (
+      <Badge color="secondary" size="md">
+        message
+      </Badge>
+    ),
+    type: 'string',
+    default: '',
+    description: 'The message displayed below the datepicker.',
   },
   {
     id: '3',
     property: (
       <Badge color="secondary" size="md">
-        children
+        confirmText
       </Badge>
     ),
-    type: 'React.ReactNode',
-    default: '',
-    description: 'Content to be displayed inside the drawer.',
+    type: 'string',
+    default: 'Confirm',
+    description: 'Text for the confirm button.',
   },
   {
     id: '4',
     property: (
       <Badge color="secondary" size="md">
-        showFooter
+        cancelText
       </Badge>
     ),
-    type: 'boolean',
-    default: 'true',
-    description: 'Controls the visibility of the footer section.',
+    type: 'string',
+    default: 'Cancel',
+    description: 'Text for the cancel button.',
   },
   {
     id: '5',
     property: (
       <Badge color="secondary" size="md">
-        onConfirm
+        placement
       </Badge>
     ),
-    type: '() => void',
-    default: '',
-    description: 'Callback function triggered when the confirm button is clicked.',
+    type: (
+      <FlexWrapper items="center" gap={1}>
+        {['top', 'center', 'bottom'].map((size) => (
+          <Badge key={size} size="md">
+            {size}
+          </Badge>
+        ))}
+      </FlexWrapper>
+    ),
+    default: 'center',
+    description: 'Placement of the datepicker.',
   },
   {
     id: '6',
     property: (
       <Badge color="secondary" size="md">
-        onCancel
+        state
       </Badge>
     ),
-    type: '() => void',
-    default: '',
-    description: 'Callback function triggered when the cancel button is clicked.',
-  },
-  {
-    id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        onClose
-      </Badge>
+    type: (
+      <FlexWrapper items="center" gap={1}>
+        {['info', 'success', 'warning', 'danger', 'default'].map((state) => (
+          <Badge key={state} size="md">
+            {state}
+          </Badge>
+        ))}
+      </FlexWrapper>
     ),
-    type: '() => void',
-    default: '',
-    description: 'Callback function triggered when the drawer is closed.',
+    default: 'default',
+    description: 'State of the datepicker.',
   },
 ];

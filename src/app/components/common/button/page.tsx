@@ -6,6 +6,7 @@ import ButtonVariantGuide from '@/components/common/button/ButtonVariantGuide';
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
+import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
 
 export default function ComponentButtonPage() {
@@ -34,9 +35,9 @@ const propsData = [
   {
     id: '1',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         classes
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -45,16 +46,16 @@ const propsData = [
   {
     id: '2',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         type
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['button', 'submit'].map((type) => (
-          <span key={type} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={type} size="md">
             {type}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -64,16 +65,16 @@ const propsData = [
   {
     id: '3',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         size
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['lg', 'md', 'sm'].map((size) => (
-          <span key={size} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={size} size="md">
             {size}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -83,16 +84,16 @@ const propsData = [
   {
     id: '4',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         variant
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['contain', 'outline', 'clear'].map((variant) => (
-          <span key={variant} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={variant} size="md">
             {variant}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -102,16 +103,16 @@ const propsData = [
   {
     id: '5',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         color
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['primary', 'info', 'success', 'warning', 'danger'].map((color) => (
-          <span key={color} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={color} size="md">
             {color}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -121,9 +122,9 @@ const propsData = [
   {
     id: '6',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         disabled
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -132,9 +133,9 @@ const propsData = [
   {
     id: '7',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         loading
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -143,9 +144,9 @@ const propsData = [
   {
     id: '8',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         prompted
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: 'false',
@@ -154,9 +155,9 @@ const propsData = [
   {
     id: '9',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         icon
-      </span>
+      </Badge>
     ),
     type: 'ReactNode',
     default: '',
@@ -165,16 +166,16 @@ const propsData = [
   {
     id: '10',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         iconPosition
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['left', 'right'].map((position) => (
-          <span key={position} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={position} size="md">
             {position}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -184,9 +185,9 @@ const propsData = [
   {
     id: '11',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         onClick
-      </span>
+      </Badge>
     ),
     type: '(e) => void',
     default: '',

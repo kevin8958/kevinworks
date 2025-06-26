@@ -2,11 +2,10 @@ import React from 'react';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Avatar from '@/components/common/Avatar';
-import Box from '@/components/common/Box';
+import Badge from '@/components/common/Badge';
 import Typography from '@/components/common/Typography';
 
-const AvatarSizeGuide = () => {
+const BadgeSizeGuide = () => {
   const sizeOptions: {
     id: Common.ButtonSize;
     value: string;
@@ -23,7 +22,9 @@ const AvatarSizeGuide = () => {
           {sizeOptions.map((option) => (
             <div key={option.id} className="w-full">
               <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Avatar size={option.id} />
+                <Badge size={option.id} color="primary">
+                  Badge
+                </Badge>
                 <Typography variant="caption" color="secondary">
                   {option.id}
                 </Typography>
@@ -36,4 +37,4 @@ const AvatarSizeGuide = () => {
   );
 };
 
-export default AvatarSizeGuide;
+export default BadgeSizeGuide;

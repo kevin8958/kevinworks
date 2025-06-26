@@ -4,6 +4,7 @@ import DatepickerTypeGuide from '@/components/common/datepicker/DatepickerTypeGu
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
+import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
 
 export default function ComponentDatepickerPage() {
@@ -28,9 +29,9 @@ const propsData = [
   {
     id: '1',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         classes
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -39,16 +40,16 @@ const propsData = [
   {
     id: '2',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         type
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['single', 'range'].map((type) => (
-          <span key={type} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={type} size="md">
             {type}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -58,9 +59,9 @@ const propsData = [
   {
     id: '3',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         value
-      </span>
+      </Badge>
     ),
     type: 'Date | null',
     default: null,
@@ -69,9 +70,9 @@ const propsData = [
   {
     id: '4',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         minDate
-      </span>
+      </Badge>
     ),
     type: 'Date | null',
     default: null,
@@ -80,9 +81,9 @@ const propsData = [
   {
     id: '5',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         maxDate
-      </span>
+      </Badge>
     ),
     type: 'Date | null',
     default: null,
@@ -91,9 +92,9 @@ const propsData = [
   {
     id: '6',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         isError
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: false,
@@ -102,9 +103,9 @@ const propsData = [
   {
     id: '7',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         isNullable
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: false,
@@ -113,9 +114,9 @@ const propsData = [
   {
     id: '8',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         isFilter
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: false,
@@ -124,9 +125,9 @@ const propsData = [
   {
     id: '9',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         placeholder
-      </span>
+      </Badge>
     ),
     type: 'string',
     default: '',
@@ -135,9 +136,9 @@ const propsData = [
   {
     id: '10',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         isRange
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: false,
@@ -146,9 +147,9 @@ const propsData = [
   {
     id: '11',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         isMultiple
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: false,
@@ -157,9 +158,9 @@ const propsData = [
   {
     id: '12',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         startDate
-      </span>
+      </Badge>
     ),
     type: 'Date',
     default: null,
@@ -168,9 +169,9 @@ const propsData = [
   {
     id: '13',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         endDate
-      </span>
+      </Badge>
     ),
     type: 'Date',
     default: null,
@@ -179,16 +180,16 @@ const propsData = [
   {
     id: '14',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         size
-      </span>
+      </Badge>
     ),
     type: (
       <FlexWrapper items="center" gap={1}>
         {['sm', 'md', 'lg'].map((size) => (
-          <span key={size} className="bg-primary-800 rounded-md px-2 py-1">
+          <Badge key={size} size="md">
             {size}
-          </span>
+          </Badge>
         ))}
       </FlexWrapper>
     ),
@@ -198,9 +199,9 @@ const propsData = [
   {
     id: '15',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         disabled
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: false,
@@ -209,9 +210,9 @@ const propsData = [
   {
     id: '16',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         hideHeaderButtons
-      </span>
+      </Badge>
     ),
     type: 'boolean',
     default: false,
@@ -220,9 +221,9 @@ const propsData = [
   {
     id: '17',
     property: (
-      <span className="bg-secondary-500 rounded-md px-2 py-1 font-semibold text-gray-800">
+      <Badge color="secondary" size="md">
         onChange
-      </span>
+      </Badge>
     ),
     type: '(value: Date | null) => void',
     default: '',
