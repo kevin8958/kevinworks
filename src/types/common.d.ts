@@ -191,4 +191,30 @@ namespace Common {
     columns: Column[];
     data: Row[];
   }
+  /** TextInput */
+  type TextInputSize = 'sm' | 'md' | 'lg';
+  type TextInputType = 'text' | 'password' | 'email' | 'number';
+  type TextInputRounded = 'sm' | 'md' | 'lg' | '2xl';
+  interface TextInputProps {
+    label?: string;
+    placeholder?: string;
+    id?: string;
+    classes?: string;
+    type?: TextInputType;
+    value?: string;
+    max?: number;
+    size?: TextInputSize;
+    required?: boolean;
+    disabled?: boolean;
+    error?: boolean;
+    errorMsg?: string;
+    inputProps?: any;
+    rounded?: TextInputRounded;
+    suffix?: string | ReactNode;
+    autoFocus?: boolean;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
+    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+    onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  }
 }
