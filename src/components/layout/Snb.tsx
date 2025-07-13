@@ -76,29 +76,29 @@ const SNB = () => {
         },
       ],
     },
-    {
-      id: 'layout',
-      label: 'Layout',
-      href: null,
-      items: [
-        {
-          id: 'snb',
-          label: 'Side Navigation Bar',
-          href: '/components/layout/snb',
-        },
-        {
-          id: 'gnb',
-          label: 'Global Navigation Bar',
-          href: '/components/layout/gnb',
-        },
-      ],
-    },
+    // {
+    //   id: 'layout',
+    //   label: 'Layout',
+    //   href: null,
+    //   items: [
+    //     {
+    //       id: 'snb',
+    //       label: 'Side Navigation Bar',
+    //       href: '/components/layout/snb',
+    //     },
+    //     {
+    //       id: 'gnb',
+    //       label: 'Global Navigation Bar',
+    //       href: '/components/layout/gnb',
+    //     },
+    //   ],
+    // },
   ];
 
   return (
-    <header className="fixed z-50 flex h-dvh pr-0">
+    <header className="bg-primary-900 fixed z-50 flex h-[calc(100dvh-80px)] overflow-y-auto pr-0">
       <nav className="w-[260px] rounded-xl p-4">
-        <ul className="flex flex-col">
+        <ul className="flex flex-col pb-10">
           {componentsMenus.map((menu) => {
             const isActiveMenu = menu.items?.some((item) => pathname === item.href);
             return (
