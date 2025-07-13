@@ -112,13 +112,6 @@ namespace Common {
     options: { id: number; value: string; available?: boolean }[];
   }
 
-  /** Store */
-  interface CommonStore {
-    isDarkMode: boolean;
-    setIsDarkMode: (isDarkMode: boolean) => void;
-    toggleIsDarkMode: () => void;
-  }
-
   /** Datepicker */
   type DatepickerType = 'single' | 'range';
   type DatepickerSize = 'sm' | 'md' | 'lg';
@@ -157,6 +150,7 @@ namespace Common {
     openDialog: (options: DialogProps) => Promise<boolean>;
     close: (value?: boolean) => void;
   }
+
   /** Drawer */
   interface DrawerProps {
     open: boolean;
@@ -168,16 +162,29 @@ namespace Common {
     onClose: () => void;
   }
 
-  /** Menu */
-  type MenuItem = { id: string; label: string };
+  /** Dropdown */
 
-  interface MenuProps {
-    value: MenuItem;
-    items: MenuItem[];
-    buttonClasses?: string;
+  type DropdownItem =
+    | {
+        type: 'item';
+        id: string;
+        label: string;
+        icon?: React.ReactNode;
+        onClick?: () => void;
+        danger?: boolean;
+      }
+    | { type: 'group'; id: string; label?: string; icon?: React.ReactNode; items: DropdownItem[] }
+    | { type: 'submenu'; id: string; label: string; icon?: React.ReactNode; items: DropdownItem[] };
+
+  interface DropdownProps {
+    items: DropdownItem[];
+    onChange?: (value: any) => void;
     dialogPosition?: 'left' | 'right';
-    onChange: (item: MenuItem) => void;
+    dialogWidth?: number;
+    buttonItem?: string | React.ReactNode;
+    buttonClasses?: string;
   }
+
   /** SimpleTable */
   type Column = {
     key: string;
@@ -216,5 +223,12 @@ namespace Common {
     onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  }
+
+  /** Store */
+  interface CommonStore {
+    isDarkMode: boolean;
+    setIsDarkMode: (isDarkMode: boolean) => void;
+    toggleIsDarkMode: () => void;
   }
 }
