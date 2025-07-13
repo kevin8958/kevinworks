@@ -22,9 +22,9 @@ const ButtonGroupSizeGuide = () => {
     id: Common.ButtonSize;
     value: string;
   }[] = [
-    { id: 'lg', value: 'Large' },
-    { id: 'md', value: 'Medium' },
     { id: 'sm', value: 'Small' },
+    { id: 'md', value: 'Medium' },
+    { id: 'lg', value: 'Large' },
   ];
 
   const handleChangeOption = (option: Common.ButtonGroupOption) => {

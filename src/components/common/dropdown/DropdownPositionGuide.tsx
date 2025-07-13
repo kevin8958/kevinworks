@@ -18,7 +18,7 @@ const DropdownPositionGuide = () => {
       <Typography variant="h4">Position</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
-          <FlexWrapper classes="w-full !gap-10" items="center">
+          <FlexWrapper classes="w-full !gap-6" items="center">
             {positionOptions.map((option) => (
               <div key={option.id} className="w-full">
                 <FlexWrapper classes="!gap-3" direction="col" items="center">
@@ -34,6 +34,7 @@ const DropdownPositionGuide = () => {
                     dialogWidth={80}
                     dialogPosition={option.id as 'left' | 'right'}
                     buttonItem="Menu"
+                    buttonClasses="w-[80px]"
                   />
                   <Typography classes="w-max" variant="caption" color="secondary">
                     {option.value}

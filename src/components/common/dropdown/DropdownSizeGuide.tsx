@@ -33,6 +33,7 @@ const DropdownSizeGuide = () => {
                     onChange={(val) => console.log('Selected:', val)}
                     dialogWidth={option.id === 'fixed' ? 80 : undefined}
                     buttonItem="Menu"
+                    buttonClasses="w-[80px]"
                   />
                   <Typography classes="w-max" variant="caption" color="secondary">
                     {option.value}
