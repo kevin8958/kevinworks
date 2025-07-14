@@ -49,7 +49,7 @@ const Dropdown = (props: Common.DropdownProps) => {
                   setIsOpen(false);
                 }}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex w-full items-center gap-2">
                   {item.icon}
                   <span className="block truncate">{item.label}</span>
                 </div>
