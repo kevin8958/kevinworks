@@ -63,11 +63,11 @@ const SNB = () => {
         // { id: 'tree', label: 'Tree', href: '/components/common/tree' },
         // { id: 'upload', label: 'Upload', href: '/components/common/upload' },
         // { id: 'video', label: 'Video', href: '/components/common/video' },
-        // { id: 'progress', label: 'Progress', href: '/components/common/progress' },
         // { id: 'carousel', label: 'Carousel', href: '/components/common/carousel' },
         // { id: 'colorPicker', label: 'ColorPicker', href: '/components/common/colorPicker' },
         // { id: 'fileInput', label: 'FileInput', href: '/components/common/fileInput' },
         // { id: 'linkButton', label: 'LinkButton', href: '/components/common/linkButton' },
+        { id: 'progress', label: 'Progress', href: '/components/common/progress' },
         { id: 'textInput', label: 'TextInput', href: '/components/common/textInput' },
         {
           id: 'typography',

@@ -185,6 +185,18 @@ namespace Common {
     buttonClasses?: string;
   }
 
+  type ProgressSize = 'sm' | 'md' | 'lg';
+  type ProgressLabelPosition = 'top' | 'bottom' | 'inside';
+
+  interface ProgressProps {
+    value: number;
+    size?: ProgressSize;
+    width?: string | number;
+    label?: string;
+    labelPosition?: LabelPosition;
+    isCircle?: boolean;
+  }
+
   /** SimpleTable */
   type Column = {
     key: string;
