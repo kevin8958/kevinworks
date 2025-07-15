@@ -2,6 +2,7 @@
 
 import ProgressSizeGuide from '@/components/common/progress/ProgressSizeGuide';
 import ProgressLabelPositionGuide from '@/components/common/progress/ProgressLabelPositionGuide';
+import ProgressTypeGuide from '@/components/common/progress/ProgressTypeGuide';
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
@@ -18,6 +19,7 @@ export default function ComponentProgressPage() {
           </Typography>
           <ProgressSizeGuide />
           <ProgressLabelPositionGuide />
+          <ProgressTypeGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="h4">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />
