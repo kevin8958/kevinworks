@@ -1,108 +1,99 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { SplitText as GSAPSplitText } from 'gsap/SplitText';
+import { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 
-gsap.registerPlugin(GSAPSplitText);
+const baseStyles: Record<string, string> = {
+  h2: 'text-[60px] font-bold',
+  h3: 'text-2xl font-bold',
+  h4: 'text-lg font-normal',
+  display1: 'text-4xl',
+  display2: 'text-2xl',
+  body1: 'text-base',
+  body2: 'text-sm',
+  caption: 'text-xs',
+};
 
-const SplitText = (props: Interaction.SplitTextProps) => {
-  const {
-    classes = '',
-    color = 'primary',
-    variant,
-    text,
-    delay = 100,
-    duration = 0.6,
-    ease = 'power3.out',
-    splitType = 'chars',
-    from = { opacity: 0, y: 40 },
-    to = { opacity: 1, y: 0 },
-    repeat = false,
-    onLetterAnimationComplete,
-  } = props;
-
+const SimpleSplitText: React.FC<Interaction.SplitTextProps> = ({
+  text,
+  classes = '',
+  variant = 'body1',
+  delay = 40,
+  repeat = false,
+}) => {
   const ref = useRef<HTMLParagraphElement>(null);
+  const [cycle, setCycle] = useState(0);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    if (!repeat) return;
 
-    const absoluteLines = splitType === 'lines';
-    if (absoluteLines) el.style.position = 'relative';
-
-    const splitter = new GSAPSplitText(el, {
-      type: splitType,
-      absolute: absoluteLines,
-      linesClass: 'split-line',
-    });
-
-    let targets: any;
-    switch (splitType) {
-      case 'lines':
-        targets = splitter.lines;
-        break;
-      case 'words':
-        targets = splitter.words;
-        break;
-      case 'words, chars':
-        targets = [...splitter.words, ...splitter.chars];
-        break;
-      default:
-        targets = splitter.chars;
-    }
-
-    const tl = gsap.timeline({
-      repeat: repeat ? -1 : 0,
-      onComplete: () => {
-        onLetterAnimationComplete?.();
+    const interval = setInterval(
+      () => {
+        setCycle((prev) => prev + 1); // 트리거를 위해 상태 변경
       },
-    });
+      text.length * delay + 1000,
+    ); // 전체 애니메이션 길이 + 약간의 쉬는 시간
 
-    tl.set(targets, { ...from, immediateRender: false, force3D: true });
-    tl.to(targets, {
-      ...to,
-      duration,
-      ease,
-      stagger: delay / 1000,
-      force3D: true,
-    });
+    return () => clearInterval(interval);
+  }, [repeat, text, delay]);
 
-    return () => {
-      tl.kill();
-      gsap.killTweensOf(targets);
-      splitter.revert();
-    };
-  }, [text, delay, duration, ease, splitType, from, to, repeat, onLetterAnimationComplete]);
+  useEffect(() => {
+    if (!repeat) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setCycle((prev) => prev + 1);
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.1 },
+      );
 
-  const baseStyles: Record<string, string> = {
-    h2: 'text-[60px] font-bold',
-    h3: 'text-2xl font-bold',
-    h4: 'text-lg font-normal',
-    display1: 'text-4xl',
-    display2: 'text-2xl',
-    body1: 'text-base',
-    body2: 'text-sm',
-    caption: 'text-xs',
-  };
+      if (ref.current) observer.observe(ref.current);
+      return () => observer.disconnect();
+    }
+  }, [repeat]);
 
   return (
     <p
+      key={cycle} // 상태 변화에 따라 리렌더 → 애니메이션 재시작
       ref={ref}
       className={classNames(
         baseStyles[variant],
-        'split-parent inline-block overflow-hidden tracking-wide break-words whitespace-normal transition-all duration-200 ease-in-out',
-        {
-          'text-primary-100': color === 'primary',
-          'text-secondary-400': color === 'secondary',
-        },
+        'text-primary-100 inline-block overflow-hidden break-words whitespace-pre-wrap',
         classes,
       )}
     >
-      {text}
+      {text.split('').map((char, i) => (
+        <span
+          key={i}
+          className={classNames(
+            'inline-block transform transition duration-500 ease-out',
+            'translate-y-4 opacity-0',
+          )}
+          style={{
+            animation: `fadeUp 0.5s ease-out forwards`,
+            animationDelay: `${i * delay}ms`,
+          }}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </span>
+      ))}
+
+      <style jsx>{`
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(1rem);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </p>
   );
 };
 
-export default SplitText;
+export default SimpleSplitText;

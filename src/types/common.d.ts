@@ -1,10 +1,19 @@
 namespace Common {
   /** Typography */
   type TypographyColor = 'primary' | 'secondary';
+  type TypographyVariant =
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'display1'
+    | 'display2'
+    | 'body1'
+    | 'body2'
+    | 'caption';
   interface TypographyProps {
     classes?: string;
     color?: TypographyColor;
-    variant: 'h2' | 'h3' | 'h4' | 'display1' | 'display2' | 'body1' | 'body2' | 'caption';
+    variant: TypographyVariant;
     children?: React.ReactNode | string;
   }
   /** Alert */
