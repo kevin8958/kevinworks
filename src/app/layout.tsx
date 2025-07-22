@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 
 import Gnb from '@/components/layout/Gnb';
 import PageWrapper from '@/components/layout/PageWrapper';
-import Snb from '@/components/layout/Snb';
 import { DialogProvider } from '@/hooks/useDialog';
 
 export const metadata: Metadata = {
@@ -29,10 +28,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         <DialogProvider>
           <PageWrapper>
             <Gnb />
-            <div className="relative w-full pt-[80px]">
-              <Snb />
-              <div className="relative m-auto w-[1400px] pl-[260px]">{props.children}</div>
-            </div>
+            {props.children}
           </PageWrapper>
         </DialogProvider>
         <div id="datepicker-portal"></div>

@@ -96,7 +96,7 @@ const SNB = () => {
   ];
 
   return (
-    <header className="bg-primary-900 fixed z-50 flex h-[calc(100dvh-80px)] overflow-y-auto pr-0">
+    <header className="bg-primary-900 fixed z-50 flex h-[calc(100dvh-60px)] overflow-y-auto pr-0">
       <nav className="w-[260px] rounded-xl p-4">
         <ul className="flex flex-col pb-10">
           {componentsMenus.map((menu) => {
