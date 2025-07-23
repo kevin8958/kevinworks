@@ -49,9 +49,9 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
       {/* ⇡ 위 그림자 */}
       <div
         className={classNames(
-          'pointer-events-none fixed top-[60px] left-[260px] z-[4] h-[100px] w-full',
-          'from-primary-900 bg-gradient-to-b to-transparent',
-          'transition-opacity duration-300',
+          'pointer-events-none fixed top-0 left-[260px] z-[4] h-[120px] w-full',
+          'from-primary-990 bg-gradient-to-b to-transparent',
+          'transition-opacity duration-700',
           showTopShadow ? 'opacity-100' : 'opacity-0',
         )}
       />
@@ -60,7 +60,7 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
       <div
         className={classNames(
           'pointer-events-none fixed bottom-0 left-[260px] z-[4] h-[100px] w-full',
-          'to-primary-900 bg-gradient-to-b from-transparent',
+          'to-primary-990 bg-gradient-to-b from-transparent',
           'transition-opacity duration-300',
           showBottomShadow ? 'opacity-100' : 'opacity-0',
         )}
