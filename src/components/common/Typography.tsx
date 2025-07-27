@@ -13,9 +13,9 @@ const tagMap = {
 } as const;
 
 const baseStyles: Record<string, string> = {
-  h2: 'text-[70px] leading-[1.2] font-extrabold',
+  h2: 'text-[60px] md:text-[70px] leading-[1.2] font-extrabold',
   h3: 'text-2xl font-bold',
-  h4: 'text-xl font-normal',
+  h4: 'text-lg md:text-xl font-normal',
   display1: 'text-4xl',
   display2: 'text-2xl',
   body1: 'text-base',

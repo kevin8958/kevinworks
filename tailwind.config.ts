@@ -5,6 +5,9 @@ export default {
     './src/styles/**/*.css', // 예: CSS 경로가 따로 있다면 명시
   ],
   theme: {
+    screens: {
+      xs: '480px',
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
