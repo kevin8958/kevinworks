@@ -32,4 +32,10 @@ namespace Layout {
   interface ScrollShadowProps {
     direction?: ScrollShadowDirection;
   }
+
+  /** GnbButton */
+  interface GnbButtonProps {
+    href: string;
+    children: React.ReactNode;
+  }
 }

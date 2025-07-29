@@ -4,6 +4,9 @@ import Button from '@/components/common/Button';
 import PressureText from '@/components/interaction/PressureText';
 import ShinyText from '@/components/interaction/ShinyText';
 import { FiArrowUpRight } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa6';
+import { MdOutlineMail } from 'react-icons/md';
 
 export default function Section1() {
   return (
@@ -31,29 +34,14 @@ export default function Section1() {
             </Typography>
           </div>
           <div className="flex items-center gap-2">
-            <Button
-              variant="clear"
-              size="sm"
-              icon={<FiArrowUpRight className="text-lg" />}
-              iconPosition="right"
-            >
-              LIKED IN
+            <Button variant="clear" size="sm">
+              <FaLinkedin className="text-lg" />
             </Button>
-            <Button
-              variant="clear"
-              size="sm"
-              icon={<FiArrowUpRight className="text-lg" />}
-              iconPosition="right"
-            >
-              GITHUB
+            <Button variant="clear" size="sm">
+              <FaGithub className="text-lg" />
             </Button>
-            <Button
-              variant="clear"
-              size="sm"
-              icon={<FiArrowUpRight className="text-lg" />}
-              iconPosition="right"
-            >
-              GMAIL
+            <Button variant="clear" size="sm">
+              <MdOutlineMail className="text-lg" />
             </Button>
           </div>
         </div>
