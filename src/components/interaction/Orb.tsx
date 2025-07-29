@@ -282,5 +282,5 @@ export default function Orb({
     };
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
-  return <div ref={ctnDom} className="h-full w-full" />;
+  return <div ref={ctnDom} className="h-full w-[600px] md:w-full" />;
 }

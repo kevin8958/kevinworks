@@ -79,9 +79,14 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.4' },
         },
+        shine: {
+          '0%': { 'background-position': '100%' },
+          '100%': { 'background-position': '-100%' },
+        },
       },
       animation: {
         'flash-fast': 'flash 1s ease-in-out infinite',
+        shine: 'shine 5s linear infinite',
       },
     },
     boxShadow: {

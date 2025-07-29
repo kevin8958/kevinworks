@@ -13,12 +13,12 @@ const tagMap = {
 } as const;
 
 const baseStyles: Record<string, string> = {
-  h2: 'text-[60px] md:text-[70px] leading-[1.2] font-extrabold',
+  h2: 'text-[60px] leading-[1.2] font-bold',
   h3: 'text-2xl font-bold',
   h4: 'text-lg md:text-xl font-normal',
   display1: 'text-4xl',
   display2: 'text-2xl',
-  body1: 'text-base',
+  body1: 'text-base font-thin',
   body2: 'text-sm',
   caption: 'text-xs',
 };
