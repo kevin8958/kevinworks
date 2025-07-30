@@ -19,7 +19,7 @@ const baseStyles: Record<string, string> = {
   display1: 'text-4xl',
   display2: 'text-2xl',
   body1: 'text-base font-thin',
-  body2: 'text-sm',
+  body2: 'text-sm font-thin',
   caption: 'text-xs',
 };
 
