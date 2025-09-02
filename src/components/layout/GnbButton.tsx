@@ -9,7 +9,7 @@ import clsx from 'clsx';
 const GnbButton = ({ href, children }: Layout.GnbButtonProps) => {
   const pathname = usePathname();
 
-  const isActive = pathname === href || (href === '/' && pathname === '/home');
+  const isActive = (href !== '/' && pathname.includes(href)) || (href === '/' && pathname === '/');
 
   return (
     <Link
