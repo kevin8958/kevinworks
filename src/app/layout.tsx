@@ -17,8 +17,8 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css" />
         <link
+          href="https://cdn.jsdelivr.net/npm/pretendard@1.3.6/dist/web/static/pretendard.css"
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/pretendard.css"
         />
       </head>
       <body
