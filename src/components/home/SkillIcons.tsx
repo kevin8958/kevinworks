@@ -102,7 +102,7 @@ const SkillIcons = () => {
 
     const sizeScale = scaleLinear()
       .domain([0, Math.max(...analysisData.map((d: any) => d.usage * 100))])
-      .range([20, 70]); // 최소 20px, 최대 70px
+      .range([20, 60]); // 최소 20px, 최대 60px
 
     const simulation = forceSimulation(analysisData as SimulationNodeDatum[])
       .force('charge', forceManyBody().strength(200))
@@ -140,7 +140,7 @@ const SkillIcons = () => {
     const handleResize = () => {
       if (containerRef.current) {
         const { width, height } = containerRef.current.getBoundingClientRect();
-        setDimensions({ width: width < 380 ? 380 : width, height });
+        setDimensions({ width: width < 380 ? 320 : width, height });
       }
     };
 

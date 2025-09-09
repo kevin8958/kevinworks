@@ -5,7 +5,8 @@ import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import { LuChevronRight } from 'react-icons/lu';
 
-const SNB = () => {
+const SNB = (props: { isOpen: boolean }) => {
+  const { isOpen } = props;
   const pathname = usePathname();
 
   const componentsMenus = [
@@ -96,8 +97,14 @@ const SNB = () => {
   ];
 
   return (
-    <header className="bg-primary-990 fixed z-40 flex h-[calc(100dvh-60px)] overflow-y-auto pr-0">
-      <nav className="w-[260px] rounded-xl p-4">
+    <header
+      className={
+        'bg-primary-990 fixed z-40 flex h-[100dvh] w-full overflow-y-auto pt-[60px] pr-0 sm:w-[260px] ' +
+        (isOpen ? 'left-0' : '-left-full sm:left-0') +
+        ' transition-left duration-300 ease-in-out'
+      }
+    >
+      <nav className="w-full rounded-xl p-4">
         <ul className="flex flex-col pb-10">
           {componentsMenus.map((menu) => {
             const isActiveMenu = menu.items?.some((item) => pathname === item.href);

@@ -10,7 +10,7 @@ import { MdOutlineMail } from 'react-icons/md';
 
 export default function Section1() {
   return (
-    <div className="relative h-[calc(100dvh)] w-full px-20">
+    <div className="relative h-[calc(100dvh)] w-full overflow-hidden px-20">
       <PlanetBackground />
       <Orb hoverIntensity={0} rotateOnHover={true} hue={0} forceHoverState={false} />
       <div className="absolute top-1/2 left-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">

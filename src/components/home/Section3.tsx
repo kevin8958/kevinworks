@@ -27,6 +27,7 @@ export default function Section3() {
                 <Image
                   src="/image/sellease_thumbnail.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Sellease Thumbnail"
                   className="rounded-lg object-cover"
                 />
@@ -45,6 +46,7 @@ export default function Section3() {
                 <Image
                   src="/image/aispace_thumbnail.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Aispace Thumbnail"
                   className="rounded-lg object-cover"
                 />
@@ -63,6 +65,7 @@ export default function Section3() {
                 <Image
                   src="/image/oligo_thumbnail.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Oligo Thumbnail"
                   className="rounded-lg object-cover"
                 />
@@ -81,6 +84,7 @@ export default function Section3() {
                 <Image
                   src="/image/camstudy_thumbnail.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="CamStudy Thumbnail"
                   className="rounded-lg object-cover"
                 />
@@ -99,6 +103,7 @@ export default function Section3() {
                 <Image
                   src="/image/medicaldb_thumbnail.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="MedicalDB Thumbnail"
                   className="rounded-lg object-cover"
                 />
