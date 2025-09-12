@@ -60,7 +60,7 @@ const SimpleSplitText: React.FC<Interaction.SplitTextProps> = ({
       ref={ref}
       className={classNames(
         baseStyles[variant],
-        'text-primary-100 inline-block overflow-hidden break-words whitespace-pre-wrap',
+        'text-primary-100 inline-block break-words whitespace-pre-wrap',
         classes,
       )}
     >

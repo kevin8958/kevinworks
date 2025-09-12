@@ -16,7 +16,7 @@ export default function Section1() {
       <div className="absolute top-1/2 left-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
         <div className="flex w-full flex-col items-start gap-4 px-6 md:items-center">
           <div className="flex w-full max-w-[400px] flex-col items-start md:items-center">
-            <ShinyText text="FRONTEND DEVELOPER" disabled={false} speed={3} />
+            <ShinyText text="FRONTEND DEVELOPER" disabled speed={3} />
             <PressureText
               text="Kevin Lee"
               flex={true}

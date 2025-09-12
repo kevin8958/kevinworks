@@ -13,6 +13,7 @@ import {
 } from 'd3-force';
 import { scaleLinear } from 'd3-scale';
 import { select } from 'd3-selection';
+import 'd3-transition';
 import React, { useEffect, useRef, useState } from 'react';
 
 const SkillIcons = () => {
@@ -94,7 +95,6 @@ const SkillIcons = () => {
     if (!analysisData || !svgRef.current || !containerRef.current) return;
 
     const svg = select(svgRef.current);
-    const tooltip = select(tooltipRef.current);
 
     svg.selectAll('*').remove(); // Clear previous content
 
@@ -122,8 +122,7 @@ const SkillIcons = () => {
     nodes
       .append('circle')
       .attr('r', (d: any) => sizeScale(d.usage * 100))
-      .style('fill', 'rgba(80, 179, 255, 0.3)')
-      .style('transition', 'stroke 200ms ease-in-out');
+      .style('fill', 'rgba(80, 179, 255, 0.3)');
 
     nodes
       .append('image')
@@ -132,6 +131,39 @@ const SkillIcons = () => {
       .attr('y', (d: any) => -sizeScale(d.usage * 100 * 0.8) / 2)
       .attr('width', (d: any) => sizeScale(d.usage * 100 * 0.8))
       .attr('height', (d: any) => sizeScale(d.usage * 100 * 0.8));
+    nodes
+      .on('mouseover', function (event, d: any) {
+        select(this)
+          .select('circle')
+          .transition()
+          .duration(400)
+          .attr('r', sizeScale(d.usage * 100) * 1.1);
+
+        select(this)
+          .select('image')
+          .transition()
+          .duration(400)
+          .attr('width', sizeScale(d.usage * 100 * 0.9) * 1.1)
+          .attr('height', sizeScale(d.usage * 100 * 0.9) * 1.1)
+          .attr('x', (-sizeScale(d.usage * 100 * 0.9) * 1.1) / 2)
+          .attr('y', (-sizeScale(d.usage * 100 * 0.9) * 1.1) / 2);
+      })
+      .on('mouseout', function (event, d: any) {
+        select(this)
+          .select('circle')
+          .transition()
+          .duration(400)
+          .attr('r', sizeScale(d.usage * 100));
+
+        select(this)
+          .select('image')
+          .transition()
+          .duration(400)
+          .attr('width', sizeScale(d.usage * 100 * 0.9))
+          .attr('height', sizeScale(d.usage * 100 * 0.9))
+          .attr('x', -sizeScale(d.usage * 100 * 0.9) / 2)
+          .attr('y', -sizeScale(d.usage * 100 * 0.9) / 2);
+      });
 
     simulation.on('tick', () => {
       nodes.attr('transform', (d: any) => `translate(${d.x},${d.y})`);

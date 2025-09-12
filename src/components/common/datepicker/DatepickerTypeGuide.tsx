@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import dayjs from 'dayjs';
-import Box from '@/components/common/Box';
 import Datepicker from '@/components/common/DatePicker';
 import Typography from '@/components/common/Typography';
 

@@ -22,7 +22,7 @@ export default function Section3() {
             className="col-span-12 md:col-span-6 lg:col-span-4"
             spotlightColor="rgba(80, 180, 255, 0.7)"
           >
-            <div className="flex w-full flex-col items-start gap-6 p-2">
+            <div className="flex w-full flex-col items-start gap-6">
               <div className="bg-primary-100 relative aspect-[3/2] w-full rounded-lg">
                 <Image
                   src="/image/sellease_thumbnail.png"

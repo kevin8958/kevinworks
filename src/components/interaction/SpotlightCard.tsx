@@ -1,4 +1,6 @@
-import React, { useRef, useState } from 'react';
+'use client';
+import React, { useRef, useState, ElementType } from 'react';
+import Link from 'next/link';
 
 interface Position {
   x: number;
@@ -8,12 +10,14 @@ interface Position {
 interface SpotlightCardProps extends React.PropsWithChildren {
   className?: string;
   spotlightColor?: `rgba(${number}, ${number}, ${number}, ${number})`;
+  href?: string; // ✅ link props 추가
 }
 
 const SpotlightCard: React.FC<SpotlightCardProps> = ({
   children,
   className = '',
   spotlightColor = 'rgba(255, 255, 255, 0.25)',
+  href,
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
   const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -22,7 +26,6 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
 
   const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
     if (!divRef.current || isFocused) return;
-
     const rect = divRef.current.getBoundingClientRect();
     setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
@@ -45,15 +48,20 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
     setOpacity(0);
   };
 
+  // ✅ 동적으로 태그를 결정 (Link or div)
+  const Wrapper: ElementType = href ? Link : 'div';
+  const wrapperProps = href ? { href } : {};
+
   return (
-    <div
+    <Wrapper
+      {...wrapperProps}
       ref={divRef}
       onMouseMove={handleMouseMove}
       onFocus={handleFocus}
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`bg-primary-900 relative overflow-hidden rounded-2xl border border-neutral-800 p-4 ${className}`}
+      className={`bg-primary-900 relative block overflow-hidden rounded-2xl border border-neutral-800 p-4 ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out"
@@ -63,7 +71,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
         }}
       />
       {children}
-    </div>
+    </Wrapper>
   );
 };
 
