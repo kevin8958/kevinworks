@@ -11,7 +11,7 @@ export default function ComponentsLayout(props: { children: React.ReactNode }) {
       <div className="relative w-full">
         <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
         <Snb isOpen={isOpen} />
-        <div className="relative m-auto w-[1400px] pt-[100px] sm:pl-[260px]">{props.children}</div>
+        <div className="relative m-auto pt-[100px] sm:pl-[260px]">{props.children}</div>
       </div>
     </div>
   );
