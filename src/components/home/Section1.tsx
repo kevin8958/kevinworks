@@ -10,7 +10,7 @@ import { MdOutlineMail } from 'react-icons/md';
 
 export default function Section1() {
   return (
-    <div className="relative h-[calc(100dvh)] w-full overflow-hidden px-20">
+    <section className="relative h-screen min-h-screen w-full snap-start overflow-hidden px-20">
       <PlanetBackground />
       <Orb hoverIntensity={0} rotateOnHover={true} hue={0} forceHoverState={false} />
       <div className="absolute top-1/2 left-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
@@ -47,6 +47,6 @@ export default function Section1() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

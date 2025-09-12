@@ -6,7 +6,7 @@ import { BsStars } from 'react-icons/bs';
 
 export default function Section3() {
   return (
-    <div className="flex w-full flex-col items-center gap-10 bg-[linear-gradient(to_right,_transparent_20%,_rgba(80,180,255,0.1))] pb-20">
+    <section className="flex h-screen min-h-screen w-full snap-start flex-col items-center gap-10 overflow-y-scroll bg-[linear-gradient(to_right,_transparent_20%,_rgba(80,180,255,0.1))] pb-20">
       <span className="bg-primary-100/10 h-px w-full"></span>
       <div className="flex w-full max-w-[1000px] flex-col items-start gap-4 px-10">
         <div className="mb-2 flex w-full items-center justify-between">
@@ -115,6 +115,6 @@ export default function Section3() {
           </SpotlightCard>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
