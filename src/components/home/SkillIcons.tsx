@@ -135,14 +135,10 @@ const SkillIcons = () => {
       .on('mouseover', function (event, d: any) {
         select(this)
           .select('circle')
-          .transition()
-          .duration(400)
           .attr('r', sizeScale(d.usage * 100) * 1.1);
 
         select(this)
           .select('image')
-          .transition()
-          .duration(400)
           .attr('width', sizeScale(d.usage * 100 * 0.9) * 1.1)
           .attr('height', sizeScale(d.usage * 100 * 0.9) * 1.1)
           .attr('x', (-sizeScale(d.usage * 100 * 0.9) * 1.1) / 2)
@@ -151,14 +147,10 @@ const SkillIcons = () => {
       .on('mouseout', function (event, d: any) {
         select(this)
           .select('circle')
-          .transition()
-          .duration(400)
           .attr('r', sizeScale(d.usage * 100));
 
         select(this)
           .select('image')
-          .transition()
-          .duration(400)
           .attr('width', sizeScale(d.usage * 100 * 0.9))
           .attr('height', sizeScale(d.usage * 100 * 0.9))
           .attr('x', -sizeScale(d.usage * 100 * 0.9) / 2)
