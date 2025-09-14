@@ -21,7 +21,7 @@ const PlanetBackground = () => {
 
       {/* 블루 플레어 (왼쪽 위) */}
       <motion.div
-        className="absolute top-[5%] left-[5%] h-[250px] w-[250px] rounded-full bg-[radial-gradient(circle,_rgba(80,180,255,0.7),_transparent_65%)] blur-sm"
+        className="absolute top-[5%] left-[5%] h-[250px] w-[250px] rounded-full bg-[radial-gradient(circle,_rgba(80,180,255,0.1),_transparent_80%)] blur-sm"
         animate={{ y: [0, 30, 0], x: [0, 30, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       />

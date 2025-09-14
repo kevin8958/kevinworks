@@ -1,13 +1,12 @@
 'use client';
 import Typography from '@/components/common/Typography';
-import SkillIcons from './SkillIcons';
 import { BsStars } from 'react-icons/bs';
 
 export default function Section2() {
   return (
-    <section className="flex h-screen min-h-screen w-full snap-start flex-col items-center gap-10 bg-[linear-gradient(to_right,_rgba(180,100,255,0.1),_transparent_80%)] pb-10">
-      <div className="flex min-h-[500px] w-full max-w-[1000px] items-center gap-4">
-        <div className="flex w-full flex-col items-center lg:flex-row">
+    <section className="flex h-screen min-h-screen w-full snap-start flex-col items-center gap-10 pb-10">
+      <div className="flex size-full max-w-[1000px] items-center gap-4">
+        <div className="flex size-full flex-col items-start justify-between">
           <div className="flex w-full max-w-[400px] shrink-0 flex-col items-center gap-4 pt-10 pl-10">
             <div className="mb-2 flex w-full items-center gap-2">
               <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
@@ -31,9 +30,6 @@ export default function Section2() {
               grow with a team that values collaboration and continuous learning.
             </Typography>
           </div>
-          {/* <div className="h-[400px] w-full lg:w-[calc(100%-400px)]">
-            <SkillIcons />
-          </div> */}
         </div>
       </div>
     </section>

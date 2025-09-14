@@ -5,10 +5,42 @@ import Image from 'next/image';
 import { BsStars } from 'react-icons/bs';
 
 export default function Section3() {
+  const projects = [
+    {
+      title: 'Sellease',
+      year: 2025,
+      imageUrl: '/image/sellease_thumbnail.png',
+      altText: 'Sellease Thumbnail',
+    },
+    {
+      title: 'AI space',
+      year: 2024,
+      imageUrl: '/image/aispace_thumbnail.png',
+      altText: 'Aispace Thumbnail',
+    },
+    {
+      title: 'Oligo',
+      year: 2023,
+      imageUrl: '/image/oligo_thumbnail.png',
+      altText: 'Oligo Thumbnail',
+    },
+    {
+      title: 'CamStudy',
+      year: 2022,
+      imageUrl: '/image/camstudy_thumbnail.png',
+      altText: 'CamStudy Thumbnail',
+    },
+    {
+      title: 'MedicalDB',
+      year: 2021,
+      imageUrl: '/image/medicaldb_thumbnail.png',
+      altText: 'MedicalDB Thumbnail',
+    },
+  ];
+
   return (
-    <section className="flex h-screen min-h-screen w-full snap-start flex-col items-center gap-10 overflow-y-scroll bg-[linear-gradient(to_right,_transparent_20%,_rgba(80,180,255,0.1))] pb-20">
-      <span className="bg-primary-100/10 h-px w-full"></span>
-      <div className="flex w-full max-w-[1000px] flex-col items-start gap-4 px-10">
+    <section className="flex h-screen min-h-screen w-full snap-start flex-col items-center gap-10 overflow-y-scroll px-10 pt-10 pb-20">
+      <div className="flex w-full max-w-[1000px] flex-col items-start gap-4">
         <div className="mb-2 flex w-full items-center justify-between">
           <div className="flex items-center gap-2">
             <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
@@ -17,102 +49,31 @@ export default function Section3() {
             </Typography>
           </div>
         </div>
-        <div className="grid w-full grid-cols-12 gap-4">
-          <SpotlightCard
-            className="col-span-12 md:col-span-6 lg:col-span-4"
-            spotlightColor="rgba(80, 180, 255, 0.7)"
-          >
-            <div className="flex w-full flex-col items-start gap-6">
-              <div className="bg-primary-100 relative aspect-[3/2] w-full rounded-lg">
-                <Image
-                  src="/image/sellease_thumbnail.png"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Sellease Thumbnail"
-                  className="rounded-lg object-cover"
-                />
+        <div className="grid w-full grid-cols-12 gap-y-10 md:gap-x-10 md:gap-y-0">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className={`group col-span-12 md:col-span-6 ${index % 2 !== 0 ? 'md:mt-10' : ''}`}
+            >
+              <div className="flex w-full flex-col items-start gap-4">
+                <div className="bg-primary-100 relative aspect-video w-full overflow-hidden rounded-2xl">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.altText}
+                    className="h-full w-full object-cover brightness-75 transition-all duration-500 ease-in-out group-hover:brightness-100"
+                  />
+                </div>
+                <div className="flex w-full items-center justify-between px-2">
+                  <Typography variant="h4" classes="!text-primary-100">
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" classes="!text-primary-200">
+                    {project.year}
+                  </Typography>
+                </div>
               </div>
-              <Typography variant="h4" classes="!text-primary-100">
-                Sellease
-              </Typography>
             </div>
-          </SpotlightCard>
-          <SpotlightCard
-            className="col-span-12 md:col-span-6 lg:col-span-4"
-            spotlightColor="rgba(80, 180, 255, 0.7)"
-          >
-            <div className="flex w-full flex-col items-start gap-6">
-              <div className="bg-primary-100 relative aspect-[3/2] w-full rounded-lg">
-                <Image
-                  src="/image/aispace_thumbnail.png"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Aispace Thumbnail"
-                  className="rounded-lg object-cover"
-                />
-              </div>
-              <Typography variant="h4" classes="!text-primary-100">
-                AI space
-              </Typography>
-            </div>
-          </SpotlightCard>
-          <SpotlightCard
-            className="col-span-12 md:col-span-6 lg:col-span-4"
-            spotlightColor="rgba(80, 180, 255, 0.7)"
-          >
-            <div className="flex w-full flex-col items-start gap-6">
-              <div className="bg-primary-100 relative aspect-[3/2] w-full rounded-lg">
-                <Image
-                  src="/image/oligo_thumbnail.png"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Oligo Thumbnail"
-                  className="rounded-lg object-cover"
-                />
-              </div>
-              <Typography variant="h4" classes="!text-primary-100">
-                Oligo
-              </Typography>
-            </div>
-          </SpotlightCard>
-          <SpotlightCard
-            className="col-span-12 md:col-span-6 lg:col-span-4"
-            spotlightColor="rgba(80, 180, 255, 0.7)"
-          >
-            <div className="flex w-full flex-col items-start gap-6">
-              <div className="bg-primary-100 relative aspect-[3/2] w-full rounded-lg">
-                <Image
-                  src="/image/camstudy_thumbnail.png"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="CamStudy Thumbnail"
-                  className="rounded-lg object-cover"
-                />
-              </div>
-              <Typography variant="h4" classes="!text-primary-100">
-                CamStudy
-              </Typography>
-            </div>
-          </SpotlightCard>
-          <SpotlightCard
-            className="col-span-12 md:col-span-6 lg:col-span-4"
-            spotlightColor="rgba(80, 180, 255, 0.7)"
-          >
-            <div className="flex w-full flex-col items-start gap-6">
-              <div className="bg-primary-100 relative aspect-[3/2] w-full rounded-lg">
-                <Image
-                  src="/image/medicaldb_thumbnail.png"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="MedicalDB Thumbnail"
-                  className="rounded-lg object-cover"
-                />
-              </div>
-              <Typography variant="h4" classes="!text-primary-100">
-                MedicalDB
-              </Typography>
-            </div>
-          </SpotlightCard>
+          ))}
         </div>
       </div>
     </section>
