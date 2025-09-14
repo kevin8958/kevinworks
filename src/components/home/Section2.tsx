@@ -7,7 +7,7 @@ export default function Section2() {
     <section className="flex h-screen min-h-screen w-full snap-start flex-col items-center gap-10 pb-10">
       <div className="flex size-full max-w-[1000px] items-center gap-4">
         <div className="flex size-full flex-col items-start justify-between">
-          <div className="flex w-full max-w-[400px] shrink-0 flex-col items-center gap-4 pt-10 pl-10">
+          <div className="flex w-full max-w-[400px] shrink-0 flex-col items-center gap-4 pt-20 pl-10">
             <div className="mb-2 flex w-full items-center gap-2">
               <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
               <Typography variant="h4" classes="!text-[#50b4ff]">

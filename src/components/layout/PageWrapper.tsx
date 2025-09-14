@@ -2,9 +2,10 @@
 
 import classNames from 'classnames';
 import React, { useEffect, useRef, useState } from 'react';
-import Gnb from '@/components/layout/Gnb';
+import { usePathname } from 'next/navigation';
 
 const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
+  const pathname = usePathname();
   const scrollRef = useRef<HTMLDivElement>(null);
   const topSentinel = useRef<HTMLDivElement>(null);
   const bottomSentinel = useRef<HTMLDivElement>(null);
@@ -53,17 +54,17 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
           'pointer-events-none fixed top-0 left-0 z-40 h-[120px] w-full',
           'from-primary-990 bg-gradient-to-b to-transparent',
           'transition-opacity duration-700',
-          showTopShadow ? 'opacity-100' : 'opacity-0',
+          showTopShadow || pathname === '/' ? 'opacity-100' : 'opacity-0',
         )}
       />
 
       {/* ⇣ 아래 그림자 */}
       <div
         className={classNames(
-          'pointer-events-none fixed bottom-0 left-0 z-40 h-[100px] w-full',
+          'pointer-events-none fixed bottom-0 left-0 z-40 h-[200px] w-full',
           'to-primary-990 bg-gradient-to-b from-transparent',
           'transition-opacity duration-300',
-          showBottomShadow ? 'opacity-100' : 'opacity-0',
+          showBottomShadow || pathname === '/' ? 'opacity-100' : 'opacity-0',
         )}
       />
     </div>
