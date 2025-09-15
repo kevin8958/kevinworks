@@ -113,6 +113,12 @@ export default function Section3() {
       >
         View All Projects
       </Link>
+      <div
+        className={classNames(
+          'pointer-events-none absolute bottom-0 left-0 z-40 h-[400px] w-full',
+          'to-primary-990 bg-gradient-to-b from-transparent',
+        )}
+      />
     </section>
   );
 }

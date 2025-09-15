@@ -61,7 +61,7 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
       {/* ⇣ 아래 그림자 */}
       <div
         className={classNames(
-          'pointer-events-none fixed bottom-0 left-0 z-40 h-[200px] w-full',
+          'pointer-events-none fixed bottom-0 left-0 z-40 h-[100px] w-full',
           'to-primary-990 bg-gradient-to-b from-transparent',
           'transition-opacity duration-300',
           showBottomShadow || pathname === '/' ? 'opacity-100' : 'opacity-0',
