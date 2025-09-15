@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Button from '@/components/common/Button';
 import Typography from '@/components/common/Typography';
 import { BsStars } from 'react-icons/bs';
 import classNames from 'classnames';

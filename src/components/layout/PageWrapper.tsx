@@ -22,7 +22,8 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
         entries.forEach((entry) => {
           if (entry.target === topSentinel.current) {
             setShowTopShadow(!entry.isIntersecting);
-          } else if (entry.target === bottomSentinel.current) {
+          }
+          if (entry.target === bottomSentinel.current) {
             setShowBottomShadow(!entry.isIntersecting);
           }
         });
