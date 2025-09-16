@@ -10,13 +10,15 @@ import { MdOutlineMail } from 'react-icons/md';
 
 export default function Section1() {
   return (
-    <section className="relative h-screen min-h-screen w-full snap-start overflow-hidden px-20">
+    <section className="relative h-screen min-h-screen w-full overflow-hidden px-20">
       <PlanetBackground />
       <Orb hoverIntensity={0} rotateOnHover={true} hue={0} forceHoverState={false} />
       <div className="absolute top-1/2 left-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
         <div className="flex w-full flex-col items-start gap-4 px-6 md:items-center">
           <div className="flex w-full max-w-[400px] flex-col items-start md:items-center">
-            <ShinyText text="FRONTEND DEVELOPER" disabled speed={3} />
+            <Typography variant="body2" classes="!text-primary-200/50 !font-semibold">
+              FRONTEND DEVELOPER
+            </Typography>
             <PressureText
               text="Kevin Lee"
               flex={true}
@@ -29,7 +31,7 @@ export default function Section1() {
               strokeColor="#ff0000"
               minFontSize={36}
             />
-            <Typography variant="body2" classes="opacity-60 mt-6 md:text-center">
+            <Typography variant="body2" classes="opacity-60 mt-6 md:text-center uppercase">
               Crafting interactive, user-focused web experiences
               <br /> with clean and modern code.
             </Typography>

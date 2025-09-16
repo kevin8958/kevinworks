@@ -8,7 +8,7 @@ import Section4 from '@/components/home/Section4';
 
 export default function Index() {
   return (
-    <div className="flex h-screen w-full snap-y snap-mandatory flex-col items-center overflow-y-scroll text-white">
+    <div className="flex w-full flex-col items-center overflow-y-scroll text-white">
       <Section1 />
       <Section2 />
       <Section3 />

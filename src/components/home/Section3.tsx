@@ -17,8 +17,15 @@ export default function Section3() {
       href: '/projects/sellease',
     },
     {
-      title: 'AI space',
+      title: 'Hanwha Life Insurance',
       year: 2024,
+      imageUrl: '/image/hanwha_thumbnail.jpeg',
+      altText: 'Hanwha Life Insurance Thumbnail',
+      href: '/projects/hanwha',
+    },
+    {
+      title: 'AI space',
+      year: 2023,
       imageUrl: '/image/aispace_thumbnail.png',
       altText: 'Aispace Thumbnail',
       href: '/projects/aispace',
@@ -47,7 +54,7 @@ export default function Section3() {
   ];
 
   return (
-    <section className="relative flex h-screen min-h-screen w-full snap-start flex-col items-center gap-10 overflow-hidden px-10 pt-20 pb-20">
+    <section className="relative flex min-h-screen w-full flex-col items-center gap-10 px-6 pt-20 pb-10 lg:px-10">
       <div className="flex w-full max-w-[1000px] flex-col items-start gap-4">
         <div className="mb-2 flex w-full items-center justify-between">
           <div className="flex items-center gap-2">
@@ -62,7 +69,7 @@ export default function Section3() {
             <Link
               key={index}
               className={classNames('col-span-12 md:col-span-6', {
-                'md:mt-10': index % 2 !== 0,
+                'md:mt-[60px]': index % 2 !== 0,
                 'hidden sm:block': index >= 3,
               })}
               href={project.href}
@@ -70,14 +77,16 @@ export default function Section3() {
               onMouseLeave={() => setFocusedProject(null)}
             >
               <div className="flex w-full flex-col items-start gap-4">
-                <div className="bg-primary-100 relative aspect-video w-full overflow-hidden rounded-2xl">
+                <div className="bg-primary-100 border-primary-900/50 relative aspect-video w-full overflow-hidden rounded-2xl border">
                   <img
                     src={project.imageUrl}
                     alt={project.altText}
                     className={classNames(
                       'h-full w-full object-cover transition-all duration-500 ease-in-out',
                       focusedProject === index + 1 ? 'scale-105' : 'scale-100',
-                      !!focusedProject && focusedProject !== index + 1 ? 'brightness-50' : '',
+                      !!focusedProject && focusedProject !== index + 1
+                        ? 'brightness-50'
+                        : 'brightness-80',
                     )}
                   />
                 </div>
@@ -106,18 +115,18 @@ export default function Section3() {
           ))}
         </div>
       </div>
-      <Link
+      {/* <Link
         className="!border-primary-200/50 bg-primary-900/50 hover:bg-primary-990/50 absolute bottom-10 left-1/2 z-90 min-w-[140px] -translate-x-1/2 transform rounded-xl border px-4 py-2 text-sm backdrop-blur"
         href="/projects"
       >
         View All Projects
-      </Link>
-      <div
+      </Link> */}
+      {/* <div
         className={classNames(
           'pointer-events-none absolute bottom-0 left-0 z-40 h-[400px] w-full',
           'to-primary-990 bg-gradient-to-b from-transparent',
         )}
-      />
+      /> */}
     </section>
   );
 }
