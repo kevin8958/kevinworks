@@ -4,6 +4,7 @@ import Typography from '@/components/common/Typography';
 import { BsStars } from 'react-icons/bs';
 import classNames from 'classnames';
 import Link from 'next/link';
+import FadeInGsap from '@/components/layout/FadeInGsap';
 
 export default function Section3() {
   const [focusedProject, setFocusedProject] = useState<number | null>(null);
@@ -54,7 +55,7 @@ export default function Section3() {
   ];
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center gap-10 px-6 pt-20 pb-10 lg:px-10">
+    <section className="flex w-full flex-col items-center gap-10 px-6 pt-20 pb-10 lg:px-10">
       <div className="flex w-full max-w-[1000px] flex-col items-start gap-4">
         <div className="mb-2 flex w-full items-center justify-between">
           <div className="flex items-center gap-2">
@@ -70,63 +71,52 @@ export default function Section3() {
               key={index}
               className={classNames('col-span-12 md:col-span-6', {
                 'md:mt-[60px]': index % 2 !== 0,
-                'hidden sm:block': index >= 3,
               })}
               href={project.href}
               onMouseEnter={() => setFocusedProject(index + 1)}
               onMouseLeave={() => setFocusedProject(null)}
             >
-              <div className="flex w-full flex-col items-start gap-4">
-                <div className="bg-primary-100 border-primary-900/50 relative aspect-video w-full overflow-hidden rounded-2xl border">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.altText}
-                    className={classNames(
-                      'h-full w-full object-cover transition-all duration-500 ease-in-out',
-                      focusedProject === index + 1 ? 'scale-105' : 'scale-100',
-                      !!focusedProject && focusedProject !== index + 1
-                        ? 'brightness-50'
-                        : 'brightness-80',
-                    )}
-                  />
+              <FadeInGsap>
+                <div className="flex w-full flex-col items-start gap-4">
+                  <div className="bg-primary-100 border-primary-990/80 relative aspect-video w-full overflow-hidden rounded-2xl border-[2px]">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.altText}
+                      className={classNames(
+                        'h-full w-full object-cover transition-all duration-500 ease-in-out',
+                        focusedProject === index + 1 ? 'scale-105' : 'scale-100',
+                        !!focusedProject && focusedProject !== index + 1
+                          ? 'brightness-50'
+                          : 'brightness-80',
+                      )}
+                    />
+                  </div>
+                  <div className="flex w-full items-center justify-between px-2">
+                    <Typography
+                      variant="h4"
+                      classes={
+                        '!text-primary-100' +
+                        (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
+                      }
+                    >
+                      {project.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      classes={
+                        '!text-primary-200' +
+                        (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
+                      }
+                    >
+                      {project.year}
+                    </Typography>
+                  </div>
                 </div>
-                <div className="flex w-full items-center justify-between px-2">
-                  <Typography
-                    variant="h4"
-                    classes={
-                      '!text-primary-100' +
-                      (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
-                    }
-                  >
-                    {project.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    classes={
-                      '!text-primary-200' +
-                      (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
-                    }
-                  >
-                    {project.year}
-                  </Typography>
-                </div>
-              </div>
+              </FadeInGsap>
             </Link>
           ))}
         </div>
       </div>
-      {/* <Link
-        className="!border-primary-200/50 bg-primary-900/50 hover:bg-primary-990/50 absolute bottom-10 left-1/2 z-90 min-w-[140px] -translate-x-1/2 transform rounded-xl border px-4 py-2 text-sm backdrop-blur"
-        href="/projects"
-      >
-        View All Projects
-      </Link> */}
-      {/* <div
-        className={classNames(
-          'pointer-events-none absolute bottom-0 left-0 z-40 h-[400px] w-full',
-          'to-primary-990 bg-gradient-to-b from-transparent',
-        )}
-      /> */}
     </section>
   );
 }

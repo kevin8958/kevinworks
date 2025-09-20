@@ -26,10 +26,8 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         suppressHydrationWarning
       >
         <DialogProvider>
-          <PageWrapper>
-            <Gnb />
-            {props.children}
-          </PageWrapper>
+          <Gnb />
+          {props.children}
         </DialogProvider>
         <div id="datepicker-portal"></div>
       </body>
