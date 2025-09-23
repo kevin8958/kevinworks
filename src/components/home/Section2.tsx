@@ -23,23 +23,25 @@ export default function Section2() {
     {
       company: 'Sellease',
       description:
-        'Led development of a video consultation service for both customers and counselors.',
+        'Independently built the entire frontend from the ground up, including both the asset management service and the back-office system.',
       period: 'May 2024 – June 2025',
     },
     {
       company: 'Hanwha Life Insurance (Via contract)',
-      description: 'Worked on frontend infrastructure and UI libraries.',
+      description:
+        'Developed a real-time video consultation service for both customers and counselors.',
       period: 'Nov 2023 - Jan 2024',
     },
     {
       company: 'Gooroomee',
       description:
-        'Contributed to multiple live services including Gooroomee.com, AI Space, Oligo, and Camstudy.',
+        'Contributed to multiple live products, including Gooroomee.com, AI Space, Oligo, and Camstudy.',
       period: 'Dec 2021 - Aug 2023',
     },
     {
       company: 'Lime Society / Research Factory',
-      description: 'Worked on developing e-CRF medical data platforms for hospitals.',
+      description:
+        'Developed e-CRF medical data platforms to support hospital clinical research workflows',
       period: 'Sep 2020 - Dec 2021',
     },
   ];
@@ -56,7 +58,7 @@ export default function Section2() {
         </Typography>
       </div>
       <div className="grid min-h-[500px] w-full max-w-[1000px] grid-cols-12 gap-4">
-        <div className="col-span-12 flex size-full w-full shrink-0 flex-col items-start gap-4 md:col-span-6">
+        <div className="col-span-12 flex size-full w-full shrink-0 flex-col items-start gap-8 md:col-span-6">
           <div className="flex w-full flex-col items-start gap-4">
             <Typography variant="h4" classes="!text-white w-full">
               Who am I
@@ -64,16 +66,15 @@ export default function Section2() {
             <FadeInGsap>
               <div className="flex w-full flex-col items-start gap-4">
                 <Typography variant="body2" classes="!text-white">
-                  Hi, I'm Kevin Lee. Front-end developer with 5 years of experience building
-                  scalable, user-focused web applications.
+                  Kevin Lee — Front-end Developer (5 years)
                 </Typography>
                 <Typography variant="body2" classes="!text-white">
-                  My work blends clean, maintainable code with thoughtful UX and design system
-                  principles.
+                  Building scalable and user-friendly web applications with a balance of clean code,
+                  thoughtful UX, and design system principles.
                 </Typography>
                 <Typography variant="body2" classes="!text-white">
-                  I aim to create intuitive interfaces through empathy-driven design, and I'm
-                  looking to grow with a team that values collaboration and continuous learning.
+                  Passionate about creating interfaces that feel intuitive and human, and excited to
+                  contribute to teams that prioritize collaboration and growth.
                 </Typography>
               </div>
             </FadeInGsap>
@@ -127,7 +128,7 @@ export default function Section2() {
                         <Typography variant="body1" classes="!text-white !font-semibold">
                           {exp.company}
                         </Typography>
-                        <Typography variant="body2" classes="!text-primary-200/70">
+                        <Typography variant="body2" classes="!text-primary-200/70 mt-2">
                           {exp.description}
                         </Typography>
                         <Typography variant="caption" classes="mt-2 !text-primary-200/70">
