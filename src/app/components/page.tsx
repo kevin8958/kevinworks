@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { componentsMenus } from '@/constants/common';
 import SpotlightCard from '@/components/interaction/SpotlightCard';
 import Alert from '@/components/common/Alert';
@@ -141,7 +141,7 @@ export default function Index() {
                   <div className="bg-primary-990 pointer-events-none relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white">
                     {parseComponent(item.id)}
                   </div>
-                  <Typography variant="h4" classes="!text-primary-100">
+                  <Typography variant="body2" classes="!text-primary-100 !font-semibold">
                     {item.label}
                   </Typography>
                 </div>

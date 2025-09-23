@@ -8,7 +8,7 @@ import { MdOutlineMail } from 'react-icons/md';
 
 export default function Section1() {
   return (
-    <section className="relative h-screen min-h-screen w-full overflow-hidden px-20">
+    <section id="home" className="relative h-screen min-h-screen w-full overflow-hidden px-20">
       <Orb hoverIntensity={0} rotateOnHover={true} hue={0} forceHoverState={false} />
       <div className="absolute top-1/2 left-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
         <div className="flex w-full flex-col items-start gap-4 px-6 md:items-center">
@@ -27,6 +27,7 @@ export default function Section1() {
               textColor="#ffffff"
               strokeColor="#ff0000"
               minFontSize={36}
+              disabled
             />
             <Typography variant="body2" classes="opacity-60 mt-6 md:text-center uppercase">
               Crafting interactive, user-focused web experiences

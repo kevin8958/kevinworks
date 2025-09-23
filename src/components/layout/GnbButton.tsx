@@ -2,18 +2,45 @@
 
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-const GnbButton = ({ href, children }: Layout.GnbButtonProps) => {
-  const pathname = usePathname();
+const GnbButton = ({ href, isActive, children }: Layout.GnbButtonProps) => {
+  const smoothScrollTo = (target: HTMLElement, duration = 800) => {
+    const start = window.scrollY;
+    const end = target.getBoundingClientRect().top + window.scrollY;
+    const distance = end - start;
+    let startTime: number | null = null;
 
-  const isActive = (href !== '/' && pathname.includes(href)) || (href === '/' && pathname === '/');
+    const easeInOutQuad = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+    const loop = (time: number) => {
+      if (startTime === null) startTime = time;
+      const progress = Math.min((time - startTime) / duration, 1);
+      const eased = easeInOutQuad(progress);
+
+      window.scrollTo(0, start + distance * eased);
+
+      if (progress < 1) requestAnimationFrame(loop);
+    };
+
+    requestAnimationFrame(loop);
+  };
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        smoothScrollTo(target, 1200);
+      }
+    }
+  };
 
   return (
-    <Link
+    <a
       href={href}
+      onClick={handleClick}
       className={clsx(
         'group relative px-2 py-1 text-white transition-colors',
         isActive ? 'font-semibold !text-[#50b4ff]' : 'opacity-80 hover:opacity-100',
@@ -28,7 +55,7 @@ const GnbButton = ({ href, children }: Layout.GnbButtonProps) => {
           !isActive && 'group-hover:-translate-x-1/2',
         )}
       ></span>
-    </Link>
+    </a>
   );
 };
 

@@ -91,3 +91,62 @@ export const componentsMenus = [
   //   ],
   // },
 ];
+
+export const componentsImages = [
+  {
+    id: 'buttonGroup',
+    label: 'ButtonGroup',
+    src: '/image/buttongroup_thumbnail.png',
+    href: '/components/common/buttonGroup',
+    alt: 'Button Group Thumbnail',
+  },
+  {
+    id: 'datePicker',
+    label: 'DatePicker',
+    src: '/image/datepicker_thumbnail.png',
+    href: '/components/common/datepicker',
+    alt: 'Date Picker Thumbnail',
+  },
+  {
+    id: 'dialog',
+    label: 'Dialog',
+    src: '/image/dialog_thumbnail.png',
+    href: '/components/common/dialog',
+    alt: 'Dialog Thumbnail',
+  },
+  {
+    id: 'drawer',
+    label: 'Drawer',
+    src: '/image/drawer_thumbnail.png',
+    href: '/components/common/drawer',
+    alt: 'Drawer Thumbnail',
+  },
+  {
+    id: 'dropdown',
+    label: 'Dropdown',
+    src: '/image/dropdown_thumbnail.png',
+    href: '/components/common/dropdown',
+    alt: 'Dropdown Thumbnail',
+  },
+  {
+    id: 'progress',
+    label: 'Progress',
+    src: '/image/progress_thumbnail.png',
+    href: '/components/common/progress',
+    alt: 'Progress Thumbnail',
+  },
+  {
+    id: 'textInput',
+    label: 'TextInput',
+    src: '/image/textinput_thumbnail.png',
+    href: '/components/common/textInput',
+    alt: 'Text Input Thumbnail',
+  },
+  {
+    id: 'typography',
+    label: 'Typography',
+    src: '/image/typography_thumbnail.png',
+    href: '/components/common/typography',
+    alt: 'Typography Thumbnail',
+  },
+];

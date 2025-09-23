@@ -17,6 +17,7 @@ interface TextPressureProps {
   strokeWidth?: number;
   className?: string;
   minFontSize?: number;
+  disabled?: boolean;
 }
 
 const TextPressure: React.FC<TextPressureProps> = ({
@@ -35,6 +36,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
   strokeWidth = 2,
   className = '',
   minFontSize = 24,
+  disabled = false,
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
@@ -139,9 +141,9 @@ const TextPressure: React.FC<TextPressureProps> = ({
             return Math.max(minVal, val + minVal);
           };
 
-          const wdth = width ? Math.floor(getAttr(d, 5, 200)) : 100;
-          const wght = weight ? Math.floor(getAttr(d, 100, 900)) : 400;
-          const italVal = italic ? getAttr(d, 0, 1).toFixed(2) : '0';
+          const wdth = disabled ? 5 : width ? Math.floor(getAttr(d, 5, 200)) : 100;
+          const wght = disabled ? 100 : weight ? Math.floor(getAttr(d, 100, 900)) : 400;
+          const italVal = disabled ? 0 : italic ? getAttr(d, 0, 1).toFixed(2) : '0';
           const alphaVal = alpha ? getAttr(d, 0, 1).toFixed(2) : '1';
 
           span.style.opacity = alphaVal;

@@ -45,7 +45,10 @@ export default function Section2() {
   ];
 
   return (
-    <section className="flex w-full max-w-[1000px] flex-col items-center gap-6 px-6 pt-20 pb-10 lg:px-0">
+    <section
+      id="about"
+      className="flex w-full max-w-[1000px] flex-col items-center gap-6 px-6 pt-20 pb-10 lg:px-0"
+    >
       <div className="mb-2 flex w-full items-center gap-2">
         <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
         <Typography variant="h4" classes="!text-[#50b4ff]">

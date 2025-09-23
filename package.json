@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
     "@types/react-datepicker": "^6.2.0",
     "@uidotdev/usehooks": "^2.4.1",
     "classnames": "^2.5.1",

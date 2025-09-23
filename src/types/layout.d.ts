@@ -36,6 +36,7 @@ namespace Layout {
   /** GnbButton */
   interface GnbButtonProps {
     href: string;
+    isActive: boolean;
     children: React.ReactNode;
   }
 }

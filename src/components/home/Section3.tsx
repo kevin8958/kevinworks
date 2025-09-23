@@ -12,14 +12,14 @@ export default function Section3() {
   const projects = [
     {
       title: 'Sellease',
-      year: 2025,
+      year: '2024-2025',
       imageUrl: '/image/sellease_thumbnail.png',
       altText: 'Sellease Thumbnail',
       href: '/projects/sellease',
     },
     {
       title: 'Hanwha Life Insurance',
-      year: 2024,
+      year: '2023-2024',
       imageUrl: '/image/hanwha_thumbnail.jpeg',
       altText: 'Hanwha Life Insurance Thumbnail',
       href: '/projects/hanwha',
@@ -40,14 +40,14 @@ export default function Section3() {
     },
     {
       title: 'CamStudy',
-      year: 2022,
+      year: '2022-2023',
       imageUrl: '/image/camstudy_thumbnail.png',
       altText: 'CamStudy Thumbnail',
       href: '/projects/camstudy',
     },
     {
       title: 'MedicalDB',
-      year: 2021,
+      year: '2021-2022',
       imageUrl: '/image/medicaldb_thumbnail.png',
       altText: 'MedicalDB Thumbnail',
       href: '/projects/medicaldb',
@@ -55,7 +55,10 @@ export default function Section3() {
   ];
 
   return (
-    <section className="flex w-full flex-col items-center gap-10 px-6 pt-20 pb-10 lg:px-10">
+    <section
+      id="projects"
+      className="flex w-full flex-col items-center gap-10 px-6 pt-20 pb-10 lg:px-10"
+    >
       <div className="flex w-full max-w-[1000px] flex-col items-start gap-4">
         <div className="mb-2 flex w-full items-center justify-between">
           <div className="flex items-center gap-2">
@@ -78,7 +81,7 @@ export default function Section3() {
             >
               <FadeInGsap>
                 <div className="flex w-full flex-col items-start gap-4">
-                  <div className="bg-primary-100 border-primary-990/80 relative aspect-video w-full overflow-hidden rounded-2xl border-[2px]">
+                  <div className="border-primary-990 relative box-border aspect-video w-full overflow-hidden rounded-2xl border-[2px]">
                     <img
                       src={project.imageUrl}
                       alt={project.altText}
@@ -93,9 +96,9 @@ export default function Section3() {
                   </div>
                   <div className="flex w-full items-center justify-between px-2">
                     <Typography
-                      variant="h4"
+                      variant="body2"
                       classes={
-                        '!text-primary-100' +
+                        '!text-primary-100 !font-semibold' +
                         (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
                       }
                     >
