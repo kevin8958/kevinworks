@@ -66,7 +66,7 @@ export default function Section2() {
             <FadeInGsap>
               <div className="flex w-full flex-col items-start gap-4">
                 <Typography variant="body2" classes="!text-white">
-                  Kevin Lee — Front-end Developer (5 years)
+                  Kevin Lee — Front-End Developer (+5 years)
                 </Typography>
                 <Typography variant="body2" classes="!text-white">
                   Building scalable and user-friendly web applications with a balance of clean code,
@@ -76,9 +76,13 @@ export default function Section2() {
                   Passionate about creating interfaces that feel intuitive and human, and excited to
                   contribute to teams that prioritize collaboration and growth.
                 </Typography>
+                <Typography variant="body2" classes="!text-white">
+                  Proficient in React, Next.js, and TypeScript, with a strong background in building
+                  design systems and scalable frontend architecture.
+                </Typography>
               </div>
             </FadeInGsap>
-            <div className="relative mt-8 h-[56px] w-full shrink-0 overflow-hidden">
+            <div className="relative mt-6 h-[56px] w-full shrink-0 overflow-hidden">
               <LogoLoop
                 logos={techLogos}
                 speed={60}
@@ -98,12 +102,15 @@ export default function Section2() {
               Education
             </Typography>
             <FadeInGsap classes="w-full">
-              <div className="bg-primary-900 flex w-full flex-col items-start gap-1 rounded-2xl px-4 py-10">
+              <div className="bg-primary-900 flex w-full flex-col items-start rounded-2xl px-4 py-10">
                 <Typography variant="body1" classes="!text-white !font-semibold">
                   Bachelor in Computer Science
                 </Typography>
-                <Typography variant="body2" classes="!text-primary-200/70">
-                  Kangwon National University ( South Korea )
+                <Typography variant="body2" classes="!text-primary-200/70 mt-2">
+                  Kangwon National University ( South Korea, Chuncheon )
+                </Typography>
+                <Typography variant="caption" classes="mt-2 !text-primary-200/70">
+                  Mar 2008 – Feb 2015
                 </Typography>
               </div>
             </FadeInGsap>
@@ -132,7 +139,7 @@ export default function Section2() {
                           {exp.description}
                         </Typography>
                         <Typography variant="caption" classes="mt-2 !text-primary-200/70">
-                          {exp.period}
+                          {exp.period} ( South Korea, Seoul )
                         </Typography>
                       </FadeInGsap>
                     </div>

@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { componentsImages } from '@/constants/common';
 import Image from 'next/image';
+import Link from 'next/link';
 import '@splidejs/react-splide/css';
 
 const CarouselWithProgress = () => {
@@ -29,6 +30,7 @@ const CarouselWithProgress = () => {
           perPage: 1,
           autoplay: true,
           interval: 3000,
+          pagination: false,
         }}
         onMounted={handleMove}
         onMove={handleMove}
@@ -36,7 +38,10 @@ const CarouselWithProgress = () => {
         <SplideTrack>
           {componentsImages.map((item) => (
             <SplideSlide key={item.id}>
-              <div className="bg-primary-990 pointer-events-none relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white">
+              <Link
+                href={item.href}
+                className="bg-primary-990 relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white"
+              >
                 <Image
                   src={item.src}
                   fill
@@ -44,7 +49,7 @@ const CarouselWithProgress = () => {
                   alt={item.alt}
                   className="rounded-lg object-contain"
                 />
-              </div>
+              </Link>
             </SplideSlide>
           ))}
         </SplideTrack>
