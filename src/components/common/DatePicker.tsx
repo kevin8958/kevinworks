@@ -16,6 +16,7 @@ dayjs.extend(isBetween);
 const CustomDatePicker = (props: Common.DatepickerProps) => {
   const {
     classes,
+    variant = 'contain',
     value,
     minDate,
     maxDate,
@@ -47,7 +48,7 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
     <DatePicker
       portalId="datepicker-portal"
       className={classNames(
-        'border-primary-600 text-primary-100 box-border h-full !rounded-lg border px-4 text-center !text-sm !outline-none placeholder:text-gray-300 focus:z-10',
+        'box-border h-full !rounded-lg px-4 text-center !text-sm !outline-none placeholder:text-gray-300 focus:z-10',
         classes,
         {
           'border-danger focus:!border-danger !border-2': isError,
@@ -56,6 +57,11 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
           'bg-newPrimary-50 cursor-not-allowed !text-[#8C9097]': disabled,
           'h-[32px] min-h-[32px]': size === 'sm',
           'h-[40px] min-h-[40px]': size === 'md',
+          'h-[48px] min-h-[48px]': size === 'lg',
+          'hover:bg-primary-100 active:bg-primary-200 bg-white text-gray-800 disabled:hover:!bg-white disabled:active:!bg-white':
+            variant === 'contain',
+          'border-primary-600 text-primary-100 border bg-transparent': variant === 'outline',
+          'text-primary-300 bg-transparent': variant === 'clear',
         },
       )}
       dateFormat="MMM dd, yyyy"

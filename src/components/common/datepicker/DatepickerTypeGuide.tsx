@@ -24,7 +24,7 @@ const DatepickerTypeGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
       <Typography variant="h4">Type</Typography>
-      <FlexWrapper classes="size-full" items="center">
+      <FlexWrapper classes="size-full px-6" items="center">
         <FlexWrapper items="end">
           {typeOptions.map((option) => (
             <div key={option.id} className="w-full">

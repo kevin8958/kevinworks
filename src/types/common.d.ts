@@ -124,9 +124,11 @@ namespace Common {
   /** Datepicker */
   type DatepickerType = 'single' | 'range';
   type DatepickerSize = 'sm' | 'md' | 'lg';
+  type DatepickerVariant = 'outline' | 'contain' | 'clear';
   interface DatepickerProps {
     classes?: string;
     type: DatepickerType;
+    variant?: DatepickerVariant;
     value: Date | null;
     minDate?: Date | null;
     maxDate?: Date | null;

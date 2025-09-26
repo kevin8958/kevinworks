@@ -17,8 +17,8 @@ const PlanetBackground = () => {
       tl.to(planet, {
         x: () => gsap.utils.random(-300, 300),
         y: () => gsap.utils.random(-300, 300),
-        scale: () => gsap.utils.random(0.4, 1.5),
-        duration: gsap.utils.random(6, 12),
+        scale: () => gsap.utils.random(0.2, 2),
+        duration: gsap.utils.random(4, 10),
         ease: 'sine.inOut',
       });
     });

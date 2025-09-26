@@ -31,6 +31,7 @@ const CarouselWithProgress = () => {
           autoplay: true,
           interval: 3000,
           pagination: false,
+          arrows: false,
         }}
         onMounted={handleMove}
         onMove={handleMove}
@@ -40,15 +41,17 @@ const CarouselWithProgress = () => {
             <SplideSlide key={item.id}>
               <Link
                 href={item.href}
-                className="bg-primary-990 relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white"
+                className="bg-primary-990 flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white"
               >
-                <Image
-                  src={item.src}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt={item.alt}
-                  className="rounded-lg object-contain"
-                />
+                <div className="relative h-full w-[90%]">
+                  <Image
+                    src={item.src}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    alt={item.alt}
+                    className="rounded-lg object-contain"
+                  />
+                </div>
               </Link>
             </SplideSlide>
           ))}

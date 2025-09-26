@@ -8,7 +8,7 @@ const BurgerButton = (props: { isOpen: boolean; setIsOpen: (isOpen: boolean) => 
   return (
     <button
       onClick={() => setIsOpen(!isOpen)}
-      className="z-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg focus:outline-none sm:hidden"
+      className="z-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg focus:outline-none"
       aria-label="Menu"
     >
       {/* Top bar */}

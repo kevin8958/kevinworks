@@ -6,6 +6,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
 import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
+import DatepickerVariantGuide from '@/components/common/datepicker/DatepickerVariantGuide';
 
 export default function ComponentDatepickerPage() {
   return (
@@ -16,6 +17,7 @@ export default function ComponentDatepickerPage() {
             Datepicker
           </Typography>
           <DatepickerTypeGuide />
+          <DatepickerVariantGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="h4">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />

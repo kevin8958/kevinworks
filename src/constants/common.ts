@@ -94,6 +94,27 @@ export const componentsMenus = [
 
 export const componentsImages = [
   {
+    id: 'alert',
+    label: 'Alert',
+    src: '/image/alert_thumbnail.png',
+    href: '/components/common/alert',
+    alt: 'Alert Thumbnail',
+  },
+  {
+    id: 'avatar',
+    label: 'Avatar',
+    src: '/image/avatar_thumbnail.png',
+    href: '/components/common/avatar',
+    alt: 'Avatar Thumbnail',
+  },
+  {
+    id: 'badge',
+    label: 'Badge',
+    src: '/image/badge_thumbnail.png',
+    href: '/components/common/badge',
+    alt: 'Badge Thumbnail',
+  },
+  {
     id: 'buttonGroup',
     label: 'ButtonGroup',
     src: '/image/buttongroup_thumbnail.png',
@@ -127,26 +148,5 @@ export const componentsImages = [
     src: '/image/dropdown_thumbnail.png',
     href: '/components/common/dropdown',
     alt: 'Dropdown Thumbnail',
-  },
-  {
-    id: 'progress',
-    label: 'Progress',
-    src: '/image/progress_thumbnail.png',
-    href: '/components/common/progress',
-    alt: 'Progress Thumbnail',
-  },
-  {
-    id: 'textInput',
-    label: 'TextInput',
-    src: '/image/textinput_thumbnail.png',
-    href: '/components/common/textInput',
-    alt: 'Text Input Thumbnail',
-  },
-  {
-    id: 'typography',
-    label: 'Typography',
-    src: '/image/typography_thumbnail.png',
-    href: '/components/common/typography',
-    alt: 'Typography Thumbnail',
   },
 ];
