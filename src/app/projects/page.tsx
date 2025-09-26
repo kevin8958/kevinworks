@@ -4,7 +4,7 @@ import Typography from '@/components/common/Typography';
 import classNames from 'classnames';
 import { BsStars } from 'react-icons/bs';
 import Link from 'next/link';
-import Section4 from '@/components/home/Section4';
+import Section4 from '@/components/home/Section99';
 
 export default function Index() {
   const [focusedProject, setFocusedProject] = useState<number | null>(null);

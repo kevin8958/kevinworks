@@ -7,10 +7,17 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
 import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
+import BreadCrumb from '@/components/layout/BreadCrumb';
 
 export default function ComponentDialogPage() {
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Components', href: '/components' },
+    { label: 'Dialog', href: '/components/common/dialog' },
+  ];
   return (
     <FlexWrapper classes="w-full pb-20 px-4" direction="col" justify="start">
+      <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
           <Typography variant="h2" color="secondary">

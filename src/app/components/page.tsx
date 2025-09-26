@@ -2,19 +2,19 @@
 import React from 'react';
 import { componentsMenus } from '@/constants/common';
 import SpotlightCard from '@/components/interaction/SpotlightCard';
-import Alert from '@/components/common/Alert';
-import Avatar from '@/components/common/Avatar';
-import Badge from '@/components/common/Badge';
-import Button from '@/components/common/Button';
-import Checkbox from '@/components/common/Checkbox';
 import Image from 'next/image';
 import Typography from '@/components/common/Typography';
 import { BsStars } from 'react-icons/bs';
 import SplitText from '@/components/interaction/SplitText';
+import BreadCrumb from '@/components/layout/BreadCrumb';
 
 export default function Index() {
-  const parseComponent = (component: string) => {
-    switch (component) {
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Components', href: '/components' },
+  ];
+  const parseComponent = (component: { id: string; label: string; href: string }) => {
+    switch (component.id) {
       case 'splitText':
         return (
           <SplitText
@@ -25,107 +25,22 @@ export default function Index() {
             repeat
           />
         );
-      case 'alert':
-        return <Alert variant="contain" state="info" title="Alert" message="this is a message" />;
-      case 'avatar':
-        return <Avatar size="md" type="image" state="active" />;
-      case 'badge':
-        return (
-          <Badge color="primary" size="md">
-            Badge
-          </Badge>
-        );
-      case 'button':
-        return <Button classes="min-w-[80px]">Button</Button>;
-      case 'buttonGroup':
-        return (
-          <Image
-            src="/image/buttongroup_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Button Group Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
-      case 'checkbox':
-        return <Checkbox id="checkbox" checked size="sm" label="Check me" />;
-      case 'datePicker':
-        return (
-          <Image
-            src="/image/datepicker_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Date Picker Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
-      case 'dialog':
-        return (
-          <Image
-            src="/image/dialog_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Dialog Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
-      case 'drawer':
-        return (
-          <Image
-            src="/image/drawer_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Drawer Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
-      case 'dropdown':
-        return (
-          <Image
-            src="/image/dropdown_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Dropdown Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
-      case 'progress':
-        return (
-          <Image
-            src="/image/progress_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Progress Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
-      case 'textInput':
-        return (
-          <Image
-            src="/image/textinput_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Text Input Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
-      case 'typography':
-        return (
-          <Image
-            src="/image/typography_thumbnail.png"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt="Typography Thumbnail"
-            className="rounded-lg object-contain"
-          />
-        );
       default:
-        return <div>Component not found</div>;
+        return (
+          <Image
+            src={`/image/${component.id}_thumbnail.png`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt={`${component.label} Thumbnail`}
+            className="rounded-lg object-contain"
+          />
+        );
     }
   };
 
   return (
-    <div className="w-full px-4">
+    <div className="flex w-full flex-col gap-6 px-4">
+      <BreadCrumb items={breadcrumbItems} />
       {componentsMenus.map((menu) => (
         <div key={menu.id} className="mb-10 grid w-full grid-cols-12 gap-4">
           <div className="col-span-12 flex items-center gap-2">
@@ -139,7 +54,7 @@ export default function Index() {
               <SpotlightCard spotlightColor="rgba(80, 180, 255, 0.7)" href={item.href}>
                 <div className="flex w-full flex-col items-start gap-4 pb-4">
                   <div className="bg-primary-990 pointer-events-none relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white">
-                    {parseComponent(item.id)}
+                    {parseComponent(item)}
                   </div>
                   <Typography variant="body2" classes="!text-primary-100 !font-semibold">
                     {item.label}

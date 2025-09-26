@@ -14,7 +14,7 @@ const SNB = (props: { isOpen: boolean }) => {
     <header
       className={
         'bg-primary-990 fixed z-40 flex h-[100dvh] w-full overflow-y-auto pt-12 pr-0 sm:w-[260px] ' +
-        (isOpen ? 'left-0' : '-left-[260px]') +
+        (isOpen ? 'left-0' : '-left-full sm:left-0') +
         ' transition-left duration-300 ease-in-out'
       }
     >

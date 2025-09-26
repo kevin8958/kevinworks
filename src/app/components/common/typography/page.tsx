@@ -1,9 +1,16 @@
 import Typography from '@/components/common/Typography';
+import BreadCrumb from '@/components/layout/BreadCrumb';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 const ComponenTypographyPage = () => {
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Components', href: '/components' },
+    { label: 'Typography', href: '/components/common/typography' },
+  ];
   return (
     <div className="flex size-full flex-col items-start gap-4 px-4">
+      <BreadCrumb items={breadcrumbItems} />
       <Typography variant="h2" color="secondary">
         Typography
       </Typography>

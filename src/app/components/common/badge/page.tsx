@@ -7,10 +7,17 @@ import { propsColumn } from '@/constants/common';
 import BadgeSizeGuide from '@/components/common/badge/BadgeSizeGuide';
 import BadgeColorGuide from '@/components/common/badge/BadgeColorGuide';
 import Badge from '@/components/common/Badge';
+import BreadCrumb from '@/components/layout/BreadCrumb';
 
 export default function ComponentBadgePage() {
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Components', href: '/components' },
+    { label: 'Badge', href: '/components/common/badge' },
+  ];
   return (
     <FlexWrapper classes="w-full pb-20 px-4" direction="col" justify="start">
+      <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
           <Typography variant="h2" color="secondary">

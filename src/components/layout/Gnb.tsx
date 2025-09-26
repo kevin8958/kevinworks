@@ -5,7 +5,7 @@ import GnbButton from '@/components/layout/GnbButton';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
 
-const sections = ['home', 'about', 'projects', 'components'];
+const sections = ['home', 'about', 'works', 'contact'];
 const Gnb = () => {
   const [currentSection, setCurrentSection] = useState<string>('home');
   const pathname = usePathname();

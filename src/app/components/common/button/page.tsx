@@ -3,6 +3,7 @@
 import ButtonSizeGuide from '@/components/common/button/ButtonSizeGuide';
 import ButtonStateGuide from '@/components/common/button/ButtonStateGuide';
 import ButtonVariantGuide from '@/components/common/button/ButtonVariantGuide';
+import BreadCrumb from '@/components/layout/BreadCrumb';
 import Typography from '@/components/common/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
@@ -10,9 +11,15 @@ import Badge from '@/components/common/Badge';
 import { propsColumn } from '@/constants/common';
 
 export default function ComponentButtonPage() {
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Components', href: '/components' },
+    { label: 'Button', href: '/components/common/button' },
+  ];
+
   return (
     <FlexWrapper classes="w-full pb-20 px-4" direction="col" justify="start">
-      {/* <BreadCrumb locale={props.params.locale} items={breadcrumbItems} /> */}
+      <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
           <Typography variant="h2" color="secondary">

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import { MdChevronRight } from 'react-icons/md';
+import { FaChevronRight } from 'react-icons/fa';
 
 const BreadCrumb = (props: Layout.BreadCrumbProps) => {
   const { items } = props;
@@ -19,20 +19,14 @@ const BreadCrumb = (props: Layout.BreadCrumbProps) => {
           return (
             <li
               key={item.label}
-              className={classNames('flex items-center gap-1 text-sm font-normal', {
-                'text-secondary-300 font-bold': isActive,
-                'text-primary-400': !isActive,
+              className={classNames('flex items-center gap-1 text-sm font-semibold', {
+                'text-secondary-300 !font-bold': isActive,
+                'text-primary-200': !isActive,
                 'hover:text-gray-300': !isActive && item.href,
               })}
             >
-              {item.href ? (
-                <Link href={item.href} className="underline underline-offset-4">
-                  {item.label}
-                </Link>
-              ) : (
-                item.label
-              )}
-              {index < items.length - 1 && <MdChevronRight className="text-primary-400" />}
+              {item.href ? <Link href={item.href}>{item.label}</Link> : item.label}
+              {index < items.length - 1 && <FaChevronRight className="text-primary-200 text-xs" />}
             </li>
           );
         })}
