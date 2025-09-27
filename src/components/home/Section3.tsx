@@ -62,7 +62,7 @@ export default function Section3() {
       imageUrl: '/image/aispace_thumbnail.png',
       altText: 'Aispace Thumbnail',
       href: '/projects/aispace',
-      spec: ['Next.js', 'Zustand', 'Tailwind CSS', 'OpenAI API', 'TypeScript', 'HTML/CSS'],
+      spec: ['Next.js', 'Zustand', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
       desc: 'AI Space is an AI service platform that allows users to create and share customized chatbots using various AI models.',
       contents: [
         'Developed AI playground and creator tool in AI Space using Next.js and Zustand, enabling chatbot customization and model comparison.',
@@ -76,8 +76,8 @@ export default function Section3() {
       imageUrl: '/image/oligo_thumbnail.png',
       altText: 'Oligo Thumbnail',
       href: '/projects/oligo',
-      spec: ['Next.js', 'Zustand', 'Tailwind CSS', 'OpenAI API', 'TypeScript', 'HTML/CSS'],
-      desc: 'AI Space is an AI service platform that allows users to create and share customized chatbots using various AI models.',
+      spec: ['Next.js', 'Pinia', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
+      desc: 'Admin dashboard with charts, bulletin board, email, and profile page using daisyUI and Chart.js.',
       contents: [
         'Developed AI playground and creator tool in AI Space using Next.js and Zustand, enabling chatbot customization and model comparison.',
         'Implemented features like prompt management, conversation history, and multi-model support (OpenAI, Azure, etc.).',
@@ -90,8 +90,8 @@ export default function Section3() {
       imageUrl: '/image/camstudy_thumbnail.png',
       altText: 'CamStudy Thumbnail',
       href: '/projects/camstudy',
-      spec: ['Next.js', 'Zustand', 'Tailwind CSS', 'OpenAI API', 'TypeScript', 'HTML/CSS'],
-      desc: 'AI Space is an AI service platform that allows users to create and share customized chatbots using various AI models.',
+      spec: ['Nuxt.js', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
+      desc: 'Study service with video calls as the core feature, enabling real-time collaboration and learning.',
       contents: [
         'Developed AI playground and creator tool in AI Space using Next.js and Zustand, enabling chatbot customization and model comparison.',
         'Implemented features like prompt management, conversation history, and multi-model support (OpenAI, Azure, etc.).',
@@ -104,7 +104,7 @@ export default function Section3() {
       imageUrl: '/image/medicaldb_thumbnail.png',
       altText: 'MedicalDB Thumbnail',
       href: '/projects/medicaldb',
-      spec: ['React.js', 'Next.js', 'TypeScript', 'Material-UI', 'PostgreSQL', 'Knex'],
+      spec: ['React.js', 'TypeScript', 'Material-UI', 'PostgreSQL', 'Knex'],
       desc: 'e-CRF medical data platform for hospital clinical research workflows.',
       contents: [
         'Developed UIs for MedicalDB and SPS using React and Next.js.',

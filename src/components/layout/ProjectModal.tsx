@@ -1,7 +1,7 @@
 // ProjectModal.tsx
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { LuX } from 'react-icons/lu';
 import { motion, AnimatePresence } from 'framer-motion';
 import Typography from '@/components/common/Typography';
@@ -23,6 +23,17 @@ export default function ProjectModal({
   backgroundImage,
   content,
 }: ProjectModalProps) {
+  useEffect(() => {
+    if (isOpen) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalStyle;
+      };
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
   return (
     <AnimatePresence>
       {isOpen && (
@@ -43,7 +54,7 @@ export default function ProjectModal({
 
           {/* Modal content */}
           <motion.div
-            className="bg-primary-900 relative z-10 mb-6 h-[calc(100vh-80px)] w-[calc(100%-32px)] max-w-3xl overflow-hidden rounded-2xl shadow-lg"
+            className="bg-primary-900 relative z-10 mb-6 h-[calc(100vh-100px)] w-[calc(100%-32px)] max-w-3xl overflow-hidden rounded-2xl shadow-lg"
             initial={{ y: 20, opacity: 0.4 }} // 아래에서 시작
             animate={{ y: 0, opacity: 1 }} // 제자리로 올라옴
             exit={{ y: 20, opacity: 0.4 }} // 닫을 때 다시 내려감
@@ -76,7 +87,7 @@ export default function ProjectModal({
                 </div>
               </div>
             )}
-            <div className="p-6">{content}</div>
+            <div className="h-[calc(100dvh-100px-300px)] overflow-y-auto p-6">{content}</div>
           </motion.div>
         </motion.div>
       )}
