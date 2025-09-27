@@ -32,7 +32,7 @@ export default function Section3() {
       year: '2024-2025',
       imageUrl: '/image/sellease_thumbnail.png',
       altText: 'Sellease Thumbnail',
-      href: '/projects/sellease',
+      href: 'https://www.sellease.io/',
       spec: ['Next.js', 'Pinia', 'Tailwind CSS', 'Chart.js', 'HTML/CSS'],
       desc: 'Independently built the entire frontend from the ground up, including both the asset management service and the back-office system.',
       contents: [
@@ -47,7 +47,6 @@ export default function Section3() {
       year: '2023-2024',
       imageUrl: '/image/hanwha_thumbnail.jpeg',
       altText: 'Hanwha Life Insurance Thumbnail',
-      href: '/projects/hanwha',
       spec: ['Nuxt.js', 'Vue.js', 'Pinia', 'Vuex', 'WebRTC', 'Chart.js', 'HTML/CSS'],
       desc: 'Developed a real-time video consultation service for both customers and counselors.',
       contents: [
@@ -61,7 +60,6 @@ export default function Section3() {
       year: '2023',
       imageUrl: '/image/aispace_thumbnail.png',
       altText: 'Aispace Thumbnail',
-      href: '/projects/aispace',
       spec: ['Next.js', 'Zustand', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
       desc: 'AI Space is an AI service platform that allows users to create and share customized chatbots using various AI models.',
       contents: [
@@ -75,7 +73,7 @@ export default function Section3() {
       year: '2023',
       imageUrl: '/image/oligo_thumbnail.png',
       altText: 'Oligo Thumbnail',
-      href: '/projects/oligo',
+      href: 'https://oligo.gooroomee.com/',
       spec: ['Next.js', 'Pinia', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
       desc: 'Admin dashboard with charts, bulletin board, email, and profile page using daisyUI and Chart.js.',
       contents: [
@@ -89,7 +87,7 @@ export default function Section3() {
       year: '2022-2023',
       imageUrl: '/image/camstudy_thumbnail.png',
       altText: 'CamStudy Thumbnail',
-      href: '/projects/camstudy',
+      href: 'https://gooroomee.com/intro',
       spec: ['Nuxt.js', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
       desc: 'Study service with video calls as the core feature, enabling real-time collaboration and learning.',
       contents: [
@@ -103,7 +101,7 @@ export default function Section3() {
       year: '2021-2022',
       imageUrl: '/image/medicaldb_thumbnail.png',
       altText: 'MedicalDB Thumbnail',
-      href: '/projects/medicaldb',
+      href: 'http://13.209.234.179/login',
       spec: ['React.js', 'TypeScript', 'Material-UI', 'PostgreSQL', 'Knex'],
       desc: 'e-CRF medical data platform for hospital clinical research workflows.',
       contents: [
@@ -185,6 +183,7 @@ export default function Section3() {
         onClose={() => setOpenProject(null)}
         title={projects[openProject ?? 0]?.title}
         year={projects[openProject ?? 0]?.year}
+        href={projects[openProject ?? 0]?.href}
         backgroundImage={projects[openProject ?? 0]?.imageUrl}
         content={
           <div className="flex flex-col gap-4">

@@ -4,13 +4,16 @@
 import { ReactNode, useEffect } from 'react';
 import { LuX } from 'react-icons/lu';
 import { motion, AnimatePresence } from 'framer-motion';
+import Button from '@/components/common/Button';
 import Typography from '@/components/common/Typography';
+import { LuExternalLink } from 'react-icons/lu';
 
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
   year: string;
+  href?: string;
   backgroundImage?: string;
   content: ReactNode;
 }
@@ -20,6 +23,7 @@ export default function ProjectModal({
   onClose,
   title,
   year,
+  href,
   backgroundImage,
   content,
 }: ProjectModalProps) {
@@ -77,12 +81,24 @@ export default function ProjectModal({
                 <div className="from-primary-900 via-primary-900/60 absolute bottom-[-2px] size-full bg-gradient-to-t to-transparent" />
 
                 <div className="absolute bottom-4 left-6">
-                  <Typography
-                    variant="h3"
-                    classes="!text-2xl sm:text-3xl !text-primary-100 !font-semibold"
-                  >
-                    {title}
-                  </Typography>
+                  <div className="flex items-center gap-4">
+                    <Typography
+                      variant="h3"
+                      classes="!text-2xl sm:text-3xl !text-primary-100 !font-semibold"
+                    >
+                      {title}
+                    </Typography>
+                    {href && (
+                      <Button
+                        variant="contain"
+                        size="sm"
+                        classes="!w-[30px]"
+                        onClick={() => window.open(href, '_blank')}
+                      >
+                        <LuExternalLink className="text-lg" />
+                      </Button>
+                    )}
+                  </div>
                   <span className="text-gray-500">{year}</span>
                 </div>
               </div>
