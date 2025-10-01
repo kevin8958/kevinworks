@@ -154,7 +154,7 @@ export default function Section3() {
                   </div>
                   <div className="flex w-full items-center justify-between px-2">
                     <Typography
-                      variant="body2"
+                      variant="body1"
                       classes={
                         '!text-primary-100 !font-semibold' +
                         (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')

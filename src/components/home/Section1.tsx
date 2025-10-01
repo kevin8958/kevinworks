@@ -36,13 +36,13 @@ export default function Section1() {
           </div>
           <div className="flex items-center gap-2">
             <Button variant="clear" size="sm">
-              <FaLinkedin className="text-lg" />
+              <FaLinkedin className="text-xl" />
             </Button>
             <Button variant="clear" size="sm">
-              <FaGithub className="text-lg" />
+              <FaGithub className="text-xl" />
             </Button>
             <Button variant="clear" size="sm">
-              <MdOutlineMail className="text-lg" />
+              <MdOutlineMail className="text-xl" />
             </Button>
           </div>
         </div>

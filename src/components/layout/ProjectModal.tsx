@@ -72,7 +72,7 @@ export default function ProjectModal({
             </button>
             {backgroundImage && (
               <div
-                className="relative h-[300px] bg-cover bg-top"
+                className="relative h-[200px] bg-cover bg-top sm:h-[300px]"
                 style={{ backgroundImage: `url(${backgroundImage})` }}
               >
                 {title === 'Kevin Design System' && (
@@ -103,7 +103,9 @@ export default function ProjectModal({
                 </div>
               </div>
             )}
-            <div className="h-[calc(100dvh-100px-300px)] overflow-y-auto p-6">{content}</div>
+            <div className="h-[calc(100dvh-100px-200px)] overflow-y-auto p-6 sm:h-[calc(100dvh-100px-300px)]">
+              {content}
+            </div>
           </motion.div>
         </motion.div>
       )}

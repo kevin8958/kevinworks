@@ -16,10 +16,10 @@ export default function Section4() {
           Whether you have a question or simply want to say Hello , I will do my best to respond!
         </Typography>
         <a
-          href="mailto:kevin8958@email.com"
+          href="mailto:kevinlee8958@email.com"
           className="border-primary-200/30 hover:bg-primary-800 mt-4 rounded-2xl border px-4 py-2 text-sm font-bold transition-colors"
         >
-          kevin8958@gmail.com
+          kevinlee8958@email.com
         </a>
       </div>
     </section>
