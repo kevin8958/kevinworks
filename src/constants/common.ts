@@ -28,7 +28,7 @@ export const componentsMenus = [
       { id: 'badge', label: 'Badge', href: '/components/common/badge' },
       { id: 'button', label: 'Button', href: '/components/common/button' },
       {
-        id: 'buttonGroup',
+        id: 'buttongroup',
         label: 'ButtonGroup',
         href: '/components/common/buttonGroup',
       },
@@ -37,7 +37,7 @@ export const componentsMenus = [
         label: 'Checkbox',
         href: '/components/common/checkbox',
       },
-      { id: 'datePicker', label: 'DatePicker', href: '/components/common/datepicker' },
+      { id: 'datepicker', label: 'DatePicker', href: '/components/common/datepicker' },
       { id: 'dialog', label: 'Dialog', href: '/components/common/dialog' },
       { id: 'drawer', label: 'Drawer', href: '/components/common/drawer' },
       { id: 'dropdown', label: 'Dropdown', href: '/components/common/dropdown' },
@@ -65,7 +65,7 @@ export const componentsMenus = [
       // { id: 'fileInput', label: 'FileInput', href: '/components/common/fileInput' },
       // { id: 'linkButton', label: 'LinkButton', href: '/components/common/linkButton' },
       { id: 'progress', label: 'Progress', href: '/components/common/progress' },
-      { id: 'textInput', label: 'TextInput', href: '/components/common/textInput' },
+      { id: 'textinput', label: 'TextInput', href: '/components/common/textInput' },
       {
         id: 'typography',
         label: 'Typography',
