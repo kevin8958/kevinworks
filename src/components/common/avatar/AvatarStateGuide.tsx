@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Avatar from '@/components/common/Avatar';
 import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const AvatarStateGuide = () => {
   const stateOptions: {
@@ -18,14 +18,14 @@ const AvatarStateGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">State</Typography>
+      <Typography variant="H3">State</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {stateOptions.map((option) => (
             <div key={option.id} className="w-full">
               <FlexWrapper classes="!gap-3" direction="col" items="center">
                 <Avatar size="md" type="image" state={option.id} />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>
@@ -33,7 +33,7 @@ const AvatarStateGuide = () => {
           ))}
           <FlexWrapper classes="!gap-3" direction="col" items="center">
             <Avatar size="md" type="image" disabled state="active" />
-            <Typography variant="caption" color="secondary">
+            <Typography variant="C1" color="secondary">
               disabled
             </Typography>
           </FlexWrapper>

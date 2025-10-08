@@ -25,7 +25,7 @@ export default function ComponentsLayout(props: { children: React.ReactNode }) {
             </Button>
           </div>
           <Snb isOpen={isOpen} />
-          <div className="transition-left relative m-auto pt-[100px] duration-300 ease-in-out sm:pt-[60px] sm:pl-[260px]">
+          <div className="transition-left relative m-auto pt-[100px] duration-300 ease-in-out sm:pt-[80px] sm:pl-[260px]">
             {props.children}
           </div>
         </div>

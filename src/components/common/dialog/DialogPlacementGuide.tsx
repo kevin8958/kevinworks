@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Button from '@/components/common/Button';
 import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import { useDialog } from '@/hooks/useDialog';
 
 const DialogPlacementGuide = () => {
@@ -31,7 +31,7 @@ const DialogPlacementGuide = () => {
   };
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Placement</Typography>
+      <Typography variant="H3">Placement</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {placementOptions.map((option) => (
@@ -44,7 +44,7 @@ const DialogPlacementGuide = () => {
                 >
                   Dialog
                 </Button>
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Alert from '../Alert';
 import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const AlertStateGuide = () => {
   const stateOptions: {
@@ -18,7 +18,7 @@ const AlertStateGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">State</Typography>
+      <Typography variant="H3">State</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {stateOptions.map((option) => (
@@ -30,7 +30,7 @@ const AlertStateGuide = () => {
                   title="Alert"
                   message="this is a message"
                 />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

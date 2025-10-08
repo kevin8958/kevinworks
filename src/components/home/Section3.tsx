@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import { BsStars } from 'react-icons/bs';
 import classNames from 'classnames';
 import FadeInGsap from '@/components/layout/FadeInGsap';
@@ -121,7 +121,7 @@ export default function Section3() {
         <div className="mb-2 flex w-full items-center justify-between">
           <div className="flex items-center gap-2">
             <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
-            <Typography variant="h4" classes="!text-[#50b4ff]">
+            <Typography variant="H3" classes="!text-[#50b4ff]">
               WORKS
             </Typography>
           </div>
@@ -154,7 +154,7 @@ export default function Section3() {
                   </div>
                   <div className="flex w-full items-center justify-between px-2">
                     <Typography
-                      variant="body1"
+                      variant="B1"
                       classes={
                         '!text-primary-100 !font-semibold' +
                         (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
@@ -163,7 +163,7 @@ export default function Section3() {
                       {project.title}
                     </Typography>
                     <Typography
-                      variant="body2"
+                      variant="B2"
                       classes={
                         '!text-primary-200' +
                         (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
@@ -187,14 +187,14 @@ export default function Section3() {
         backgroundImage={projects[openProject ?? 0]?.imageUrl}
         content={
           <div className="flex flex-col gap-4">
-            <Typography variant="body1" classes="!text-primary-200">
+            <Typography variant="B1" classes="!text-primary-200">
               {projects[openProject ?? 0]?.desc}
             </Typography>
             <ul className="list-inside list-none pl-2">
               {projects[openProject ?? 0]?.contents?.map((item, idx) => (
                 <li key={idx} className="mb-2 flex items-start gap-2">
                   <span className="bg-primary-200 mt-2 inline-block size-1 shrink-0 rounded-full" />
-                  <Typography variant="body2" classes="!text-primary-200">
+                  <Typography variant="B2" classes="!text-primary-200">
                     {item}
                   </Typography>
                 </li>

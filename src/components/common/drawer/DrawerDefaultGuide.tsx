@@ -5,14 +5,14 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 import Button from '@/components/common/Button';
 import Drawer from '@/components/common/Drawer';
 import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const DrawerDefaultGuide = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Default</Typography>
+      <Typography variant="H3">Default</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           <FlexWrapper classes="w-full !gap-3" direction="col" items="center">

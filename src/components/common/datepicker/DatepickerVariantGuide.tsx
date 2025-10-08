@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import dayjs from 'dayjs';
 import Datepicker from '@/components/common/DatePicker';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const variantOptions: {
   id: Common.DatepickerVariant;
@@ -24,7 +24,7 @@ const DatepickerVariantGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Variant</Typography>
+      <Typography variant="H3">Variant</Typography>
       <FlexWrapper classes="size-full px-6" items="center">
         <FlexWrapper items="end">
           {variantOptions.map((option) => (
@@ -39,7 +39,7 @@ const DatepickerVariantGuide = () => {
                     setSignleValue(value);
                   }}
                 />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

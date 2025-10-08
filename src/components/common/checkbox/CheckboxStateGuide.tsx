@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Box from '@/components/common/Box';
 import Checkbox from '../Checkbox';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const CheckboxStateGuide = () => {
   const [isChecked, setIsChecked] = React.useState<{
@@ -26,7 +26,7 @@ const CheckboxStateGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">State</Typography>
+      <Typography variant="H3">State</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {stateOptions.map((option) => (
@@ -46,7 +46,7 @@ const CheckboxStateGuide = () => {
                   }
                   label="Check me"
                 />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

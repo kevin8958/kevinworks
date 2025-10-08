@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import classNames from 'classnames';
 import { BsStars } from 'react-icons/bs';
 import Link from 'next/link';
@@ -52,7 +52,7 @@ export default function Index() {
         <div className="col-span-12 mb-10 flex w-full items-center justify-between">
           <div className="flex items-center gap-2">
             <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
-            <Typography variant="h4" classes="!text-[#50b4ff]">
+            <Typography variant="H3" classes="!text-[#50b4ff]">
               PROJECTS
             </Typography>
           </div>
@@ -82,7 +82,7 @@ export default function Index() {
               </div>
               <div className="flex w-full items-center justify-between px-2">
                 <Typography
-                  variant="h4"
+                  variant="H3"
                   classes={
                     '!text-primary-100' +
                     (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
@@ -91,7 +91,7 @@ export default function Index() {
                   {project.title}
                 </Typography>
                 <Typography
-                  variant="body2"
+                  variant="B2"
                   classes={
                     '!text-primary-200' +
                     (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')

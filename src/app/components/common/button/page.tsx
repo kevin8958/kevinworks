@@ -4,7 +4,7 @@ import ButtonSizeGuide from '@/components/common/button/ButtonSizeGuide';
 import ButtonStateGuide from '@/components/common/button/ButtonStateGuide';
 import ButtonVariantGuide from '@/components/common/button/ButtonVariantGuide';
 import BreadCrumb from '@/components/layout/BreadCrumb';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
 import Badge from '@/components/common/Badge';
@@ -22,14 +22,14 @@ export default function ComponentButtonPage() {
       <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
-          <Typography variant="h2" color="secondary">
+          <Typography variant="H1" color="secondary">
             Button
           </Typography>
           <ButtonSizeGuide />
           <ButtonVariantGuide />
           <ButtonStateGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
-            <Typography variant="h4">Props</Typography>
+            <Typography variant="H3">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />
           </FlexWrapper>
         </FlexWrapper>

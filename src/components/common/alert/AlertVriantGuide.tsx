@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Alert from '../Alert';
 import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const AlertVriantGuide = () => {
   const typeOptions: {
@@ -16,14 +16,14 @@ const AlertVriantGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Variant</Typography>
+      <Typography variant="H3">Variant</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {typeOptions.map((option) => (
             <div key={option.id} className="w-full">
               <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
                 <Alert classes="!w-[200px]" variant={option.id} state="danger" title="Alert" />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

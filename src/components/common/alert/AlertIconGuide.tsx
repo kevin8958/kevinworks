@@ -5,12 +5,12 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Alert from '../Alert';
 import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const AlertIconGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Icon</Typography>
+      <Typography variant="H3">Icon</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
@@ -21,7 +21,7 @@ const AlertIconGuide = () => {
               message="this is a message"
               hideIcon
             />
-            <Typography variant="caption" color="secondary">
+            <Typography variant="C1" color="secondary">
               hide icon
             </Typography>
           </FlexWrapper>
@@ -33,7 +33,7 @@ const AlertIconGuide = () => {
               message="this is a message"
               icon={<LuAlarmClock className="text-lg" />}
             />
-            <Typography variant="caption" color="secondary">
+            <Typography variant="C1" color="secondary">
               custom icon
             </Typography>
           </FlexWrapper>
@@ -45,7 +45,7 @@ const AlertIconGuide = () => {
               message="this is a message"
               loading
             />
-            <Typography variant="caption" color="secondary">
+            <Typography variant="C1" color="secondary">
               loading icon
             </Typography>
           </FlexWrapper>

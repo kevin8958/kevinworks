@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import ButtonGroup from '@/components/common/ButtonGroup';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const ButtonGroupSizeGuide = () => {
   const [selectedOption, setSelectedOption] = useState<Common.ButtonGroupOption>({
@@ -32,7 +32,7 @@ const ButtonGroupSizeGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Size</Typography>
+      <Typography variant="H3">Size</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {sizeOptions.map((option) => (
@@ -44,7 +44,7 @@ const ButtonGroupSizeGuide = () => {
                   options={buttonGroupOptions}
                   onChange={handleChangeOption}
                 />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

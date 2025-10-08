@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Dropdown from '@/components/common/Dropdown';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const DropdownSizeGuide = () => {
   const sizeOptions: {
@@ -15,7 +15,7 @@ const DropdownSizeGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Size</Typography>
+      <Typography variant="H3">Size</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           <FlexWrapper classes="w-full !gap-6" items="center">
@@ -35,7 +35,7 @@ const DropdownSizeGuide = () => {
                     buttonItem="Menu"
                     buttonClasses="w-[80px]"
                   />
-                  <Typography classes="w-max" variant="caption" color="secondary">
+                  <Typography classes="w-max" variant="C1" color="secondary">
                     {option.value}
                   </Typography>
                 </FlexWrapper>

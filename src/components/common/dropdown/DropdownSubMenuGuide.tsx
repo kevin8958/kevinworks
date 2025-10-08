@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Dropdown from '@/components/common/Dropdown';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const DropdownSubMenuGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Sub menu</Typography>
+      <Typography variant="H3">Sub menu</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           <FlexWrapper classes="w-full !gap-3" direction="col" items="center">

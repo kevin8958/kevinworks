@@ -2,34 +2,30 @@ import React from 'react';
 
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
-import Badge from '@/components/common/Badge';
 import Typography from '@/components/foundation/Typography';
 
-const BadgeColorGuide = () => {
-  const colorOptions: {
-    id: Common.BadgeColor;
+const HeadingGuide = () => {
+  const variantOptions: {
+    id: Foundation.TypographyVariant;
     value: string;
   }[] = [
-    { id: 'primary', value: 'Primary' },
-    { id: 'secondary', value: 'Secondary' },
-    { id: 'success', value: 'Success' },
-    { id: 'warning', value: 'Warning' },
-    { id: 'danger', value: 'Danger' },
+    { id: 'H1', value: 'H1 (64px)' },
+    { id: 'H2', value: 'H2 (40px)' },
+    { id: 'H3', value: 'H3 (24px)' },
   ];
-
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">State</Typography>
+      <Typography variant="H3">Heading</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
-          {colorOptions.map((option) => (
+          {variantOptions.map((option) => (
             <div key={option.id} className="w-full">
               <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Badge color={option.id} size="md">
-                  Badge
-                </Badge>
+                <Typography variant={option.id} classes="mb-0">
+                  Heading
+                </Typography>
                 <Typography variant="C1" color="secondary">
-                  {option.id}
+                  {option.value}
                 </Typography>
               </FlexWrapper>
             </div>
@@ -40,4 +36,4 @@ const BadgeColorGuide = () => {
   );
 };
 
-export default BadgeColorGuide;
+export default HeadingGuide;

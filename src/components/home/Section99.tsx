@@ -2,7 +2,7 @@
 import React from 'react';
 import { componentsImages } from '@/constants/common';
 import SpotlightCard from '@/components/interaction/SpotlightCard';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import { BsStars } from 'react-icons/bs';
 import Image from 'next/image';
 import CarouselWithProgress from '@/components/layout/CarouselWithProgress';
@@ -17,7 +17,7 @@ export default function Section99() {
       <div className="flex w-full max-w-[1000px] items-center justify-between">
         <div className="flex items-center gap-2">
           <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
-          <Typography variant="h4" classes="!text-[#50b4ff]">
+          <Typography variant="H3" classes="!text-[#50b4ff]">
             Components
           </Typography>
         </div>
@@ -40,7 +40,7 @@ export default function Section99() {
                       className="rounded-lg object-contain"
                     />
                   </div>
-                  <Typography variant="body2" classes="!text-primary-100 !font-semibold">
+                  <Typography variant="B2" classes="!text-primary-100 !font-semibold">
                     {item.label}
                   </Typography>
                 </div>

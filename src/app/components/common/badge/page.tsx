@@ -1,6 +1,6 @@
 'use client';
 
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 import SimpleTable from '@/components/common/SimpleTable';
 import { propsColumn } from '@/constants/common';
@@ -20,13 +20,13 @@ export default function ComponentBadgePage() {
       <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
-          <Typography variant="h2" color="secondary">
+          <Typography variant="H1" color="secondary">
             Badge
           </Typography>
           <BadgeSizeGuide />
           <BadgeColorGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
-            <Typography variant="h4">Props</Typography>
+            <Typography variant="H3">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />
           </FlexWrapper>
         </FlexWrapper>

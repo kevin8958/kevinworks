@@ -3,8 +3,7 @@ import React from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Avatar from '@/components/common/Avatar';
-import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const AvatarSizeGuide = () => {
   const sizeOptions: {
@@ -17,14 +16,14 @@ const AvatarSizeGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Size</Typography>
+      <Typography variant="H3">Size</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {sizeOptions.map((option) => (
             <div key={option.id} className="w-full">
               <FlexWrapper classes="!gap-3" direction="col" items="center">
                 <Avatar size={option.id} />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

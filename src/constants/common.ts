@@ -7,6 +7,20 @@ export const propsColumn = [
 
 export const componentsMenus = [
   {
+    id: 'foundation',
+    label: 'Foundation',
+    href: null,
+    items: [
+      { id: 'colors', label: 'Colors', href: '/components/foundation/colors' },
+      { id: 'typography', label: 'Typography', href: '/components/foundation/typography' },
+      { id: 'icons', label: 'Icons', href: '/components/foundation/icons' },
+      { id: 'grid', label: 'Grid', href: '/components/foundation/grid' },
+      { id: 'shadow', label: 'Shadow', href: '/components/foundation/shadow' },
+      { id: 'motion', label: 'Motion', href: '/components/foundation/motion' },
+      { id: 'breakpoints', label: 'Breakpoints', href: '/components/foundation/breakpoints' },
+    ],
+  },
+  {
     id: 'interaction',
     label: 'Interaction',
     href: null,
@@ -66,11 +80,6 @@ export const componentsMenus = [
       // { id: 'linkButton', label: 'LinkButton', href: '/components/common/linkButton' },
       { id: 'progress', label: 'Progress', href: '/components/common/progress' },
       { id: 'textinput', label: 'TextInput', href: '/components/common/textInput' },
-      {
-        id: 'typography',
-        label: 'Typography',
-        href: '/components/common/typography',
-      },
     ],
   },
   // {

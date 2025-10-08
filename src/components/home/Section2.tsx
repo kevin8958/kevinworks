@@ -1,5 +1,5 @@
 'use client';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import { BsStars } from 'react-icons/bs';
 import LogoLoop from '@/components/interaction/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
@@ -53,30 +53,30 @@ export default function Section2() {
     >
       <div className="mb-2 flex w-full items-center gap-2">
         <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
-        <Typography variant="h4" classes="!text-[#50b4ff]">
+        <Typography variant="H3" classes="!text-[#50b4ff]">
           ABOUT
         </Typography>
       </div>
       <div className="grid min-h-[500px] w-full max-w-[1000px] grid-cols-12 gap-4">
         <div className="col-span-12 flex size-full w-full shrink-0 flex-col items-start gap-8 md:col-span-6">
           <div className="flex w-full flex-col items-start gap-4">
-            <Typography variant="h4" classes="!text-white w-full">
+            <Typography variant="H3" classes="!text-white w-full">
               Who am I
             </Typography>
             <FadeInGsap>
               <div className="flex w-full flex-col items-start gap-4">
-                <Typography variant="body2" classes="!text-white">
+                <Typography variant="B2" classes="!text-white">
                   Kevin Lee — Front-End Developer (+5 years)
                 </Typography>
-                <Typography variant="body2" classes="!text-white">
+                <Typography variant="B2" classes="!text-white">
                   Building scalable and user-friendly web applications with a balance of clean code,
                   thoughtful UX, and design system principles.
                 </Typography>
-                <Typography variant="body2" classes="!text-white">
+                <Typography variant="B2" classes="!text-white">
                   Passionate about creating interfaces that feel intuitive and human, and excited to
                   contribute to teams that prioritize collaboration and growth.
                 </Typography>
-                <Typography variant="body2" classes="!text-white">
+                <Typography variant="B2" classes="!text-white">
                   Proficient in React, Next.js, and TypeScript, with a strong background in building
                   design systems and scalable frontend architecture.
                 </Typography>
@@ -98,18 +98,18 @@ export default function Section2() {
             </div>
           </div>
           <div className="flex w-full flex-col items-start gap-4">
-            <Typography variant="h4" classes="!text-white w-full">
+            <Typography variant="H3" classes="!text-white w-full">
               Education
             </Typography>
             <FadeInGsap classes="w-full">
               <div className="bg-primary-900 flex w-full flex-col items-start rounded-2xl px-4 py-10">
-                <Typography variant="body1" classes="!text-white !font-semibold">
+                <Typography variant="B1" classes="!text-white !font-semibold">
                   Bachelor in Computer Science
                 </Typography>
-                <Typography variant="body2" classes="!text-primary-200/70 mt-2">
+                <Typography variant="B2" classes="!text-primary-200/70 mt-2">
                   Kangwon National University ( South Korea, Chuncheon )
                 </Typography>
-                <Typography variant="caption" classes="mt-2 !text-primary-200/70">
+                <Typography variant="C1" classes="mt-2 !text-primary-200/70">
                   Mar 2008 – Feb 2015
                 </Typography>
               </div>
@@ -118,7 +118,7 @@ export default function Section2() {
         </div>
         <div className="col-span-12 flex w-full flex-col items-start gap-4 md:col-span-6">
           <div className="flex w-full flex-col items-start gap-4">
-            <Typography variant="h4" classes="!text-white w-full">
+            <Typography variant="H3" classes="!text-white w-full">
               Exprience
             </Typography>
             <div className="bg-primary-900 flex w-full flex-col items-start gap-1 rounded-2xl px-4 py-6">
@@ -132,13 +132,13 @@ export default function Section2() {
                     {/* 내용 */}
                     <div className="flex flex-col gap-1">
                       <FadeInGsap>
-                        <Typography variant="body1" classes="!text-white !font-semibold">
+                        <Typography variant="B1" classes="!text-white !font-semibold">
                           {exp.company}
                         </Typography>
-                        <Typography variant="body2" classes="!text-primary-200/70 mt-2">
+                        <Typography variant="B2" classes="!text-primary-200/70 mt-2">
                           {exp.description}
                         </Typography>
-                        <Typography variant="caption" classes="mt-2 !text-primary-200/70">
+                        <Typography variant="C1" classes="mt-2 !text-primary-200/70">
                           {exp.period} ( South Korea, Seoul )
                         </Typography>
                       </FadeInGsap>

@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Avatar from '@/components/common/Avatar';
 import Box from '@/components/common/Box';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const AvatarTypeGuide = () => {
   const typeOptions: {
@@ -16,14 +16,14 @@ const AvatarTypeGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Type</Typography>
+      <Typography variant="H3">Type</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {typeOptions.map((option) => (
             <div key={option.id} className="w-full">
               <FlexWrapper classes="!gap-3" direction="col" items="center">
                 <Avatar size="md" type={option.id} name="A" />
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

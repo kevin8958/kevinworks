@@ -1,4 +1,4 @@
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import BreadCrumb from '@/components/layout/BreadCrumb';
 
 export default function ComponentButtonPage() {
@@ -12,7 +12,7 @@ export default function ComponentButtonPage() {
   return (
     <div className="flex size-full flex-col items-start gap-4">
       <BreadCrumb items={breadcrumbItems} />
-      <Typography variant="h3">Gnb</Typography>
+      <Typography variant="H2">Gnb</Typography>
     </div>
   );
 }

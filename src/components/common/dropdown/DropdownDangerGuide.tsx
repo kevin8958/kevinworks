@@ -3,12 +3,12 @@ import { LuTrash2 } from 'react-icons/lu';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Dropdown from '@/components/common/Dropdown';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const DropdownDangerGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Danger</Typography>
+      <Typography variant="H3">Danger</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           <FlexWrapper classes="w-full !gap-3" direction="col" items="center">

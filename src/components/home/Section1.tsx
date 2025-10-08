@@ -1,4 +1,4 @@
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import Orb from '@/components/interaction/Orb';
 import Button from '@/components/common/Button';
 import PressureText from '@/components/interaction/PressureText';
@@ -13,7 +13,7 @@ export default function Section1() {
       <div className="absolute top-1/2 left-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
         <div className="flex w-full flex-col items-start gap-4 px-6 md:items-center">
           <div className="flex w-full max-w-[400px] flex-col items-start md:items-center">
-            <Typography variant="body2" classes="!text-primary-200/50 !font-semibold">
+            <Typography variant="B2" classes="!text-primary-200/50 !font-semibold">
               FRONTEND DEVELOPER
             </Typography>
             <PressureText
@@ -29,7 +29,7 @@ export default function Section1() {
               minFontSize={36}
               disabled
             />
-            <Typography variant="body2" classes="opacity-60 mt-6 md:text-center uppercase">
+            <Typography variant="B2" classes="opacity-60 mt-6 md:text-center uppercase">
               Crafting interactive, user-focused web experiences
               <br /> with clean and modern code.
             </Typography>

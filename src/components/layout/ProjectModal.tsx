@@ -5,7 +5,7 @@ import { ReactNode, useEffect } from 'react';
 import { LuX } from 'react-icons/lu';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '@/components/common/Button';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import { LuExternalLink } from 'react-icons/lu';
 
 interface ProjectModalProps {

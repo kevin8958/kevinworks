@@ -5,7 +5,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Box from '@/components/common/Box';
 import Button from '@/components/common/Button';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const ButtonStateGuide = () => {
   const statusOptions: {
@@ -20,7 +20,7 @@ const ButtonStateGuide = () => {
   ];
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">State</Typography>
+      <Typography variant="H3">State</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {statusOptions.map((option) => (
@@ -38,7 +38,7 @@ const ButtonStateGuide = () => {
                 >
                   Button
                 </Button>
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

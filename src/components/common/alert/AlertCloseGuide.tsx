@@ -3,12 +3,12 @@ import React from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Alert from '../Alert';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const AlertCloseGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Close</Typography>
+      <Typography variant="H3">Close</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
@@ -19,7 +19,7 @@ const AlertCloseGuide = () => {
               message="this is a message"
               showClose
             />
-            <Typography variant="caption" color="secondary">
+            <Typography variant="C1" color="secondary">
               showClose
             </Typography>
           </FlexWrapper>
@@ -32,7 +32,7 @@ const AlertCloseGuide = () => {
               time={5}
               repeat
             />
-            <Typography variant="caption" color="secondary">
+            <Typography variant="C1" color="secondary">
               timer
             </Typography>
           </FlexWrapper>

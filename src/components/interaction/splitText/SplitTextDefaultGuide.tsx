@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import SplitText from '@/components/interaction/SplitText';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const SplitTextDefaultGuide = () => {
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Default</Typography>
+      <Typography variant="H3">Default</Typography>
       <FlexWrapper classes="size-full" items="center">
         <SplitText variant="h2" text="Split Text" delay={100} repeat />
       </FlexWrapper>

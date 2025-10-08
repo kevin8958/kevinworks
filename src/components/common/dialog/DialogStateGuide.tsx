@@ -3,7 +3,7 @@ import React from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Button from '@/components/common/Button';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 import { useDialog } from '@/hooks/useDialog';
 
 const DialogStateGuide = () => {
@@ -32,7 +32,7 @@ const DialogStateGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">State</Typography>
+      <Typography variant="H3">State</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {stateOptions.map((option) => (
@@ -46,7 +46,7 @@ const DialogStateGuide = () => {
                 >
                   Dialog
                 </Button>
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

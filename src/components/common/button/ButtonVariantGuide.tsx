@@ -4,7 +4,7 @@ import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Box from '@/components/common/Box';
 import Button from '@/components/common/Button';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const ButtonVariantGuide = () => {
   const variantOptions: {
@@ -18,7 +18,7 @@ const ButtonVariantGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Variant</Typography>
+      <Typography variant="H3">Variant</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           {variantOptions.map((option) => (
@@ -27,7 +27,7 @@ const ButtonVariantGuide = () => {
                 <Button classes="min-w-[80px]" variant={option.id}>
                   Button
                 </Button>
-                <Typography variant="caption" color="secondary">
+                <Typography variant="C1" color="secondary">
                   {option.id}
                 </Typography>
               </FlexWrapper>

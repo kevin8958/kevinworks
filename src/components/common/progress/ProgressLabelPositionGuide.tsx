@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FlexWrapper from '@/components/layout/FlexWrapper';
 
 import Progress from '@/components/common/Progress';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/foundation/Typography';
 
 const ProgressLabelPositionGuide = () => {
   const labelPositionOptions: {
@@ -17,7 +17,7 @@ const ProgressLabelPositionGuide = () => {
 
   return (
     <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="h4">Size</Typography>
+      <Typography variant="H3">Size</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
           <FlexWrapper classes="w-full !gap-6" items="center">
@@ -30,7 +30,7 @@ const ProgressLabelPositionGuide = () => {
                     size="lg"
                     labelPosition={option.id as Common.ProgressLabelPosition}
                   />
-                  <Typography classes="w-max" variant="caption" color="secondary">
+                  <Typography classes="w-max" variant="C1" color="secondary">
                     {option.id}
                   </Typography>
                 </FlexWrapper>
