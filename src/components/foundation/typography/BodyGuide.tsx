@@ -13,7 +13,7 @@ const BodyGuide = () => {
     { id: 'B2', value: 'B2 (14px)' },
   ];
   return (
-    <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
       <FlexWrapper classes="w-full" items="start" direction="col">
         <Typography variant="H3">Body</Typography>
         <Typography variant="B1">

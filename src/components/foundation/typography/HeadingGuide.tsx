@@ -14,7 +14,7 @@ const HeadingGuide = () => {
     { id: 'H3', value: 'H3 (24px)' },
   ];
   return (
-    <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
       <FlexWrapper classes="w-full" items="start" direction="col">
         <Typography variant="H3">Heading</Typography>
         <Typography variant="B1">

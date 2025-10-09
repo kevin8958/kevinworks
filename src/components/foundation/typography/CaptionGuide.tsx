@@ -10,7 +10,7 @@ const CaptionGuide = () => {
     value: string;
   }[] = [{ id: 'C1', value: 'C1 (12px)' }];
   return (
-    <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
       <FlexWrapper classes="w-full" items="start" direction="col">
         <Typography variant="H3">Caption</Typography>
         <Typography variant="B1">
