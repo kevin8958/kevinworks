@@ -13,23 +13,33 @@ const BodyGuide = () => {
     { id: 'B2', value: 'B2 (14px)' },
   ];
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">Body</Typography>
-      <FlexWrapper classes="size-full" items="center">
-        <FlexWrapper items="end">
-          {variantOptions.map((option) => (
-            <div key={option.id} className="w-full">
-              <FlexWrapper classes="!gap-3 w-[100px]" direction="col" items="center">
-                <Typography variant={option.id} classes="mb-0">
-                  Body
-                </Typography>
-                <Typography variant="C1" color="secondary">
-                  {option.value}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-        </FlexWrapper>
+    <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">Body</Typography>
+        <Typography variant="B1">
+          Body text is the most common typography used throughout the interface. It focuses on
+          readability and is used for paragraphs, descriptions, and general content.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="start"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={10}
+      >
+        {variantOptions.map((option) => (
+          <div key={option.id}>
+            <FlexWrapper classes="!gap-3" items="end">
+              <Typography variant={option.id} classes="mb-0">
+                Body
+              </Typography>
+              <Typography variant="C1" color="secondary">
+                {option.value}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
       </FlexWrapper>
     </FlexWrapper>
   );

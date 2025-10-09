@@ -10,23 +10,33 @@ const CaptionGuide = () => {
     value: string;
   }[] = [{ id: 'C1', value: 'C1 (12px)' }];
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">Caption</Typography>
-      <FlexWrapper classes="size-full" items="center">
-        <FlexWrapper items="end">
-          {variantOptions.map((option) => (
-            <div key={option.id} className="w-full">
-              <FlexWrapper classes="!gap-3 w-[100px]" direction="col" items="center">
-                <Typography variant={option.id} classes="mb-0">
-                  Caption
-                </Typography>
-                <Typography variant="C1" color="secondary">
-                  {option.value}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-        </FlexWrapper>
+    <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">Caption</Typography>
+        <Typography variant="B1">
+          Captions are small, subtle text used for labels, timestamps, or secondary descriptions.
+          They help provide context without distracting from main content.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="start"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={10}
+      >
+        {variantOptions.map((option) => (
+          <div key={option.id}>
+            <FlexWrapper classes="!gap-3" items="end">
+              <Typography variant={option.id} classes="mb-0">
+                Caption
+              </Typography>
+              <Typography variant="C1" color="secondary">
+                {option.value}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
       </FlexWrapper>
     </FlexWrapper>
   );

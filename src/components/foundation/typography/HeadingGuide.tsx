@@ -14,23 +14,33 @@ const HeadingGuide = () => {
     { id: 'H3', value: 'H3 (24px)' },
   ];
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">Heading</Typography>
-      <FlexWrapper classes="size-full" items="center">
-        <FlexWrapper items="end">
-          {variantOptions.map((option) => (
-            <div key={option.id} className="w-full">
-              <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Typography variant={option.id} classes="mb-0">
-                  Heading
-                </Typography>
-                <Typography variant="C1" color="secondary">
-                  {option.value}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-        </FlexWrapper>
+    <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">Heading</Typography>
+        <Typography variant="B1">
+          Headings provide visual hierarchy and guide users through the page structure. They draw
+          the most attention and help users quickly understand content organization.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="start"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={10}
+      >
+        {variantOptions.map((option) => (
+          <div key={option.id}>
+            <FlexWrapper classes="!gap-3" items="end">
+              <Typography variant={option.id} classes="mb-0">
+                Heading
+              </Typography>
+              <Typography variant="C1" color="secondary">
+                {option.value}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
       </FlexWrapper>
     </FlexWrapper>
   );

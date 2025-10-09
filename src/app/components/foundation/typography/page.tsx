@@ -12,9 +12,9 @@ const ComponenTypographyPage = () => {
     { label: 'Typography', href: '/components/foundation/typography' },
   ];
   return (
-    <div className="flex size-full flex-col items-start gap-4 px-4">
+    <div className="flex size-full flex-col items-start gap-4 px-4 pb-[100px]">
       <BreadCrumb items={breadcrumbItems} />
-      <FlexWrapper justify="center">
+      <FlexWrapper classes="w-full" justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
           <Typography variant="H1" color="secondary">
             Typography
