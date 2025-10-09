@@ -1,7 +1,7 @@
 'use client';
 
-import FlexWrapper from '@/components/layout/FlexWrapper';
-import Button from '@/components/common/Button';
+import FlexWrapper from '@/design-system/layout/FlexWrapper';
+import Button from '@/design-system/components/Button';
 
 import { Dialog, Transition } from '@headlessui/react';
 import {

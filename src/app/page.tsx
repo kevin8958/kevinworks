@@ -1,9 +1,9 @@
 'use client';
-import Section1 from '@/components/home/Section1';
-import Section2 from '@/components/home/Section2';
-import Section3 from '@/components/home/Section3';
-import Section4 from '@/components/home/Section4';
-import PlanetBackground from '@/components/layout/PlanetBackground';
+import Section1 from '@/design-system/home/Section1';
+import Section2 from '@/design-system/home/Section2';
+import Section3 from '@/design-system/home/Section3';
+import Section4 from '@/design-system/home/Section4';
+import PlanetBackground from '@/design-system/layout/PlanetBackground';
 import classNames from 'classnames';
 
 export default function Index() {
