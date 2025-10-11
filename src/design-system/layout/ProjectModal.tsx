@@ -83,7 +83,7 @@ export default function ProjectModal({
                 <div className="absolute bottom-4 left-6">
                   <div className="flex items-center gap-4">
                     <Typography
-                      variant="h3"
+                      variant="H3"
                       classes="!text-2xl sm:text-3xl !text-primary-100 !font-semibold"
                     >
                       {title}
