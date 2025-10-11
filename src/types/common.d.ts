@@ -237,4 +237,19 @@ namespace Common {
     setIsDarkMode: (isDarkMode: boolean) => void;
     toggleIsDarkMode: () => void;
   }
+
+  /** Radio */
+  type RadioOption = {
+    id: string;
+    label: string;
+    desc?: string;
+  };
+
+  interface RadioProps {
+    title?: string;
+    options: RadioOption[];
+    value: string; // selected id
+    onChange: (value: string) => void;
+    classes?: string;
+  }
 }
