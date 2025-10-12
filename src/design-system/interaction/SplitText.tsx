@@ -67,7 +67,7 @@ const SimpleSplitText: React.FC<Interaction.SplitTextProps> = ({
           key={i}
           className={classNames(
             'inline-block transform transition duration-500 ease-out',
-            'translate-y-4 opacity-0',
+            'translate-y-0 opacity-0',
           )}
           style={{
             animation: `fadeUp 0.5s ease-out forwards`,
