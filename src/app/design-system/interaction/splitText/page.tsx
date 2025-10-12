@@ -1,7 +1,7 @@
 'use client';
 
 import Typography from '@/design-system/foundation/Typography';
-import SplitTextDefaultGuide from '@/design-system/interaction/splitText/SplitTextDefaultGuide';
+import SplitTextVariantGuide from '@/design-system/interaction/splitText/SplitTextVariantGuide';
 import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import SimpleTable from '@/design-system/components/SimpleTable';
 import Badge from '@/design-system/components/Badge';
@@ -22,7 +22,7 @@ export default function ComponentSplitTextPage() {
           <Typography variant="H1" color="secondary">
             Split Text
           </Typography>
-          <SplitTextDefaultGuide />
+          <SplitTextVariantGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="H3">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />
@@ -55,14 +55,7 @@ const propsData = [
     type: (
       <FlexWrapper items="start" gap={1} direction="col">
         <FlexWrapper items="center" gap={1}>
-          {['h2', 'h3', 'h4', 'display1', 'display2'].map((variant) => (
-            <Badge key={variant} size="md">
-              {variant}
-            </Badge>
-          ))}
-        </FlexWrapper>
-        <FlexWrapper items="center" gap={1}>
-          {['body1', 'body2', 'caption'].map((variant) => (
+          {['H2', 'H3', 'H4', 'B1', 'B2', 'C1'].map((variant) => (
             <Badge key={variant} size="md">
               {variant}
             </Badge>
@@ -70,7 +63,7 @@ const propsData = [
         </FlexWrapper>
       </FlexWrapper>
     ),
-    default: "'h2'",
+    default: "'B1'",
     description: 'Typography variant for the text',
   },
   {

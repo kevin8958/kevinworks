@@ -4,20 +4,18 @@ import { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 const baseStyles: Record<string, string> = {
-  h2: 'text-[60px] font-bold',
-  h3: 'text-2xl font-bold',
-  h4: 'text-lg font-normal',
-  display1: 'text-4xl',
-  display2: 'text-2xl',
-  body1: 'text-base',
-  body2: 'text-sm',
-  caption: 'text-xs',
+  H1: 'text-[64px] leading-[1.2] font-bold',
+  H2: 'text-[40px] font-bold',
+  H3: 'text-[24px] font-bold',
+  B1: 'text-[16px] font-thin',
+  B2: 'text-[14px] font-thin',
+  C1: 'text-[12px]',
 };
 
 const SimpleSplitText: React.FC<Interaction.SplitTextProps> = ({
   text,
   classes = '',
-  variant = 'body1',
+  variant = 'B1',
   delay = 40,
   repeat = false,
 }) => {
