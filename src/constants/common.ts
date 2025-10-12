@@ -29,6 +29,11 @@ export const designSystemMenus = [
         label: 'Split Text',
         href: '/design-system/interaction/splitText',
       },
+      {
+        id: 'sticker',
+        label: 'Sticker',
+        href: '/design-system/interaction/sticker',
+      },
     ],
   },
   {
