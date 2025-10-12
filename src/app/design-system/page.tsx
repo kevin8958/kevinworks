@@ -18,7 +18,7 @@ export default function Index() {
       case 'splitText':
         return (
           <SplitText
-            variant="h3"
+            variant="H3"
             text="Split Text"
             classes="translate-y-[-16px]"
             delay={100}
