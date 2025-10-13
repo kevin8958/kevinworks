@@ -35,7 +35,7 @@ const GrayGuide = () => {
       <FlexWrapper
         items="start"
         justify="start"
-        classes="bg-primary-900 p-4 md:p-10 w-full rounded-xl"
+        classes="bg-primary-900 p-4 md:p-10 w-max rounded-xl"
         gap={0}
       >
         {Object.entries(grayColors).map(([key, value]) => (
