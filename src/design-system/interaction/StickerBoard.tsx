@@ -5,6 +5,7 @@ import useImage from 'use-image';
 import { useState } from 'react';
 import FlexWrapper from '../layout/FlexWrapper';
 import Button from '../components/Button';
+import Typography from '../foundation/Typography';
 
 interface Sticker {
   id: number;
@@ -20,6 +21,7 @@ interface StickerProps extends Sticker {
 
 const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
   const [image] = useImage(src);
+  const [isHovered, setIsHovered] = useState(false);
 
   if (!image) return null;
 
@@ -29,33 +31,42 @@ const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
   const buttonSize = 18;
 
   return (
-    <Group x={x} y={y} draggable>
+    <Group
+      x={x}
+      y={y}
+      draggable
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Sticker image */}
       <KonvaImage image={image} width={width} height={height} />
 
       {/* X button background */}
-      <Rect
-        x={width - buttonSize / 2}
-        y={-buttonSize / 2}
-        width={buttonSize}
-        height={buttonSize}
-        fill="rgba(0,0,0,0.5)"
-        cornerRadius={4}
-        onClick={() => onRemove(id)}
-      />
-      {/* X button text */}
-      <Text
-        x={width - buttonSize / 2}
-        y={-buttonSize / 2 + 1}
-        text="✕"
-        fontSize={12}
-        fill="white"
-        width={buttonSize}
-        height={buttonSize}
-        align="center"
-        verticalAlign="middle"
-        onClick={() => onRemove(id)}
-      />
+      {isHovered && (
+        <>
+          <Rect
+            x={width - buttonSize / 2}
+            y={-buttonSize / 2}
+            width={buttonSize}
+            height={buttonSize}
+            fill="rgba(0,0,0,0.5)"
+            cornerRadius={4}
+            onClick={() => onRemove(id)}
+          />
+          <Text
+            x={width - buttonSize / 2}
+            y={-buttonSize / 2 + 1}
+            text="✕"
+            fontSize={12}
+            fill="white"
+            width={buttonSize}
+            height={buttonSize}
+            align="center"
+            verticalAlign="middle"
+            onClick={() => onRemove(id)}
+          />
+        </>
+      )}
     </Group>
   );
 };
@@ -88,15 +99,25 @@ export default function StickerBoard() {
   };
 
   return (
-    <FlexWrapper classes="bg-primary-900 rounded-2xl p-4" gap={4}>
+    <FlexWrapper classes="min-w-[800px] bg-primary-900 rounded-2xl p-4" gap={4}>
       {/* 보드 */}
-      <Stage width={600} height={400} className="bg-primary-800 rounded-xl">
-        <Layer>
-          {stickers.map((sticker) => (
-            <Sticker key={sticker.id} {...sticker} onRemove={handleRemoveSticker} />
-          ))}
-        </Layer>
-      </Stage>
+      <div className="bg-primary-800 relative h-[400px] w-[600px] rounded-xl">
+        {stickers.length === 0 && (
+          <Typography
+            variant="B2"
+            classes="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] p-2 !text-primary-100 !font-semibold"
+          >
+            Add some stickers to get started
+          </Typography>
+        )}
+        <Stage width={600} height={400}>
+          <Layer>
+            {stickers.map((sticker) => (
+              <Sticker key={sticker.id} {...sticker} onRemove={handleRemoveSticker} />
+            ))}
+          </Layer>
+        </Stage>
+      </div>
 
       {/* 스티커 선택 영역 */}
       <FlexWrapper classes="shrink-0" direction="col" justify="between">
