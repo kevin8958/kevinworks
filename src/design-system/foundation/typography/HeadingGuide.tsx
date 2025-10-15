@@ -12,6 +12,7 @@ const HeadingGuide = () => {
     { id: 'H1', value: 'H1 (64px)' },
     { id: 'H2', value: 'H2 (40px)' },
     { id: 'H3', value: 'H3 (24px)' },
+    { id: 'H4', value: 'H4 (16px)' },
   ];
   return (
     <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">

@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import { LuCircleAlert, LuInfo, LuCircleX, LuCircleCheck } from 'react-icons/lu';
 import { IoClose } from 'react-icons/io5';
 import { motion } from 'framer-motion';
+import Typography from '../foundation/Typography';
 
 /**
  * 상태별 아이콘 매핑
@@ -110,7 +111,7 @@ const Alert: FC<Common.AlertProps> = ({
       )}
     >
       <div className="flex items-start gap-2">
-        <div className="mt-[1px]">
+        <div className="mt-[2px]">
           {!hideIcon && !loading && (icon ? icon : ICONS[state])}
           {!hideIcon && loading && (
             <motion.div
@@ -124,9 +125,9 @@ const Alert: FC<Common.AlertProps> = ({
             />
           )}
         </div>
-        <div className="flex flex-col gap-1">
-          {title && <p>{title}</p>}
-          {message && <p>{message}</p>}
+        <div className="flex flex-col">
+          {title && <Typography variant="H4">{title}</Typography>}
+          {message && <Typography variant="B2">{message}</Typography>}
         </div>
       </div>
 
@@ -144,7 +145,7 @@ const Alert: FC<Common.AlertProps> = ({
 
       {/* 게이지 바 */}
       {time && (
-        <div className="absolute bottom-0 left-0 h-1 w-full bg-current/20">
+        <div className="absolute bottom-0 left-0 h-1 w-full overflow-hidden rounded-b-lg bg-current/20">
           <div
             className="h-full bg-current transition-[width] duration-75"
             style={{ width: `${progress}%` }}
