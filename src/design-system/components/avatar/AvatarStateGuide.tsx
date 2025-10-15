@@ -17,26 +17,36 @@ const AvatarStateGuide = () => {
   ];
 
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">State</Typography>
-      <FlexWrapper classes="size-full" items="center">
-        <FlexWrapper items="end">
-          {stateOptions.map((option) => (
-            <div key={option.id} className="w-full">
-              <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Avatar size="md" type="image" state={option.id} />
-                <Typography variant="C1" color="secondary">
-                  {option.id}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-          <FlexWrapper classes="!gap-3" direction="col" items="center">
-            <Avatar size="md" type="image" disabled state="active" />
-            <Typography variant="C1" color="secondary">
-              disabled
-            </Typography>
-          </FlexWrapper>
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">State</Typography>
+        <Typography variant="B1">
+          Indicates the user's current status or presence, represented as a small colored dot on the
+          bottom-right of the avatar.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="start"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={6}
+      >
+        {stateOptions.map((option) => (
+          <div key={option.id} className="w-full">
+            <FlexWrapper classes="!gap-3" direction="col" items="center">
+              <Avatar size="md" type="image" state={option.id} />
+              <Typography variant="C1" color="secondary">
+                {option.id}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
+        <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
+          <Avatar size="md" type="image" disabled state="active" />
+          <Typography variant="C1" color="secondary">
+            disabled
+          </Typography>
         </FlexWrapper>
       </FlexWrapper>
     </FlexWrapper>

@@ -15,21 +15,31 @@ const AvatarSizeGuide = () => {
     { id: 'lg', value: 'Large' },
   ];
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">Size</Typography>
-      <FlexWrapper classes="size-full" items="center">
-        <FlexWrapper items="end">
-          {sizeOptions.map((option) => (
-            <div key={option.id} className="w-full">
-              <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Avatar size={option.id} />
-                <Typography variant="C1" color="secondary">
-                  {option.id}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-        </FlexWrapper>
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">Size</Typography>
+        <Typography variant="B1">
+          Defines the overall dimensions of the avatar, including image or text scaling. Use
+          different sizes to maintain visual hierarchy in different layouts.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="start"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={6}
+      >
+        {sizeOptions.map((option) => (
+          <div key={option.id} className="w-full">
+            <FlexWrapper classes="!gap-3" direction="col" items="center">
+              <Avatar size={option.id} name="A" />
+              <Typography variant="C1" color="secondary">
+                {option.id}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
       </FlexWrapper>
     </FlexWrapper>
   );
