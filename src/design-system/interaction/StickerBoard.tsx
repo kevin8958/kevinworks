@@ -72,16 +72,24 @@ const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
 };
 
 // 선택용 스티커 목록 (10개)
-const stickerOptions = Array.from({ length: 10 }).map((_, i) => ({
-  id: i + 1,
-  src: `/sticker/sticker${i + 1}.png`,
-}));
+const stickerOptions = [
+  { id: 1, src: '/sticker/sticker1.png' },
+  { id: 2, src: '/sticker/sticker2.png' },
+  { id: 3, src: '/sticker/alice.png' },
+  { id: 4, src: '/sticker/bob.png' },
+  { id: 5, src: '/sticker/charlie.png' },
+  { id: 6, src: '/sticker/dana.png' },
+  { id: 7, src: '' },
+  { id: 8, src: '' },
+  { id: 9, src: '' },
+  { id: 10, src: '' },
+];
 
 export default function StickerBoard() {
   const [stickers, setStickers] = useState<Sticker[]>([]);
 
   const handleAddSticker = (src: string) => {
-    const hasImage = ['/sticker/sticker1.png', '/sticker/sticker2.png'].includes(src);
+    const hasImage = src !== '';
     if (!hasImage) return;
 
     const newSticker: Sticker = {
@@ -123,7 +131,7 @@ export default function StickerBoard() {
       <FlexWrapper classes="shrink-0" direction="col" justify="between">
         <div className="grid grid-cols-12 gap-2">
           {stickerOptions.map((sticker) => {
-            const hasImage = sticker.id <= 2;
+            const hasImage = sticker.src !== '';
             return (
               <button
                 key={sticker.id}

@@ -9,6 +9,7 @@ import SimpleTable from '@/design-system/components/SimpleTable';
 import Badge from '@/design-system/components/Badge';
 import { propsColumn } from '@/constants/common';
 import BreadCrumb from '@/design-system/layout/BreadCrumb';
+import AvatarStackGuide from '@/design-system/components/avatar/AvatarStackGuide';
 
 export default function ComponentAvatarPage() {
   const breadcrumbItems = [
@@ -26,6 +27,7 @@ export default function ComponentAvatarPage() {
           </Typography>
           <AvatarSizeGuide />
           <AvatarTypeGuide />
+          <AvatarStackGuide />
           <AvatarStateGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="H3">Props</Typography>

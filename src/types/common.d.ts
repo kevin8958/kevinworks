@@ -30,6 +30,13 @@ namespace Common {
     profileImageUrl?: string;
     name?: string;
   }
+  interface AvatarStackProps {
+    users: Common.AvatarProps[]; // Avatar에 전달되는 동일한 props 타입
+    max?: number; // 표시할 최대 개수
+    overlap?: number; // 겹침 정도 (기본: -8px)
+    size?: Common.AvatarProps['size']; // sm, md, lg
+    classes?: string;
+  }
   /** Button */
   type ButtonType = 'button' | 'submit';
   type ButtonSize = 'lg' | 'md' | 'sm';
