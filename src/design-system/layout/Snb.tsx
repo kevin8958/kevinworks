@@ -13,7 +13,7 @@ const SNB = (props: { isOpen: boolean }) => {
   return (
     <header
       className={
-        'bg-primary-990 fixed z-40 flex h-[100dvh] w-full overflow-y-auto pt-[60px] pr-0 sm:w-[260px] ' +
+        'bg-primary-990 scrollbar-thin scrollbar-thumb-primary-900 scrollbar-track-transparent fixed z-40 flex h-[100dvh] w-full overflow-y-auto pt-[60px] pr-0 sm:w-[260px] ' +
         (isOpen ? 'left-0' : '-left-full sm:left-0') +
         ' transition-left duration-300 ease-in-out'
       }
