@@ -17,23 +17,33 @@ const ButtonVariantGuide = () => {
   ];
 
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">Variant</Typography>
-      <FlexWrapper classes="size-full" items="center">
-        <FlexWrapper items="end">
-          {variantOptions.map((option) => (
-            <div key={option.id} className="w-full">
-              <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Button classes="min-w-[80px]" variant={option.id}>
-                  Button
-                </Button>
-                <Typography variant="C1" color="secondary">
-                  {option.id}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-        </FlexWrapper>
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">Variant</Typography>
+        <Typography variant="B1">
+          Determines the button's visual style. Use contained for solid buttons that draw attention,
+          outline for secondary actions, and clear for minimal or text-only buttons.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="start"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={6}
+      >
+        {variantOptions.map((option) => (
+          <div key={option.id} className="w-full">
+            <FlexWrapper classes="!gap-3" direction="col" items="center">
+              <Button classes="min-w-[80px]" variant={option.id}>
+                Button
+              </Button>
+              <Typography variant="C1" color="secondary">
+                {option.id}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
       </FlexWrapper>
     </FlexWrapper>
   );

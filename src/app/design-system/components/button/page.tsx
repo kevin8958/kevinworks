@@ -3,6 +3,8 @@
 import ButtonSizeGuide from '@/design-system/components/button/ButtonSizeGuide';
 import ButtonStateGuide from '@/design-system/components/button/ButtonStateGuide';
 import ButtonVariantGuide from '@/design-system/components/button/ButtonVariantGuide';
+import ButtonIconGuide from '@/design-system/components/button/ButtonIconGuide';
+import ButtonShapeGuide from '@/design-system/components/button/ButtonShapeGuide';
 import BreadCrumb from '@/design-system/layout/BreadCrumb';
 import Typography from '@/design-system/foundation/Typography';
 import FlexWrapper from '@/design-system/layout/FlexWrapper';
@@ -28,6 +30,8 @@ export default function ComponentButtonPage() {
           <ButtonSizeGuide />
           <ButtonVariantGuide />
           <ButtonStateGuide />
+          <ButtonIconGuide />
+          <ButtonShapeGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="H3">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />
@@ -191,6 +195,25 @@ const propsData = [
   },
   {
     id: '11',
+    property: (
+      <Badge color="secondary" size="md">
+        shape
+      </Badge>
+    ),
+    type: (
+      <FlexWrapper items="center" gap={1}>
+        {['rect', 'circle'].map((shape) => (
+          <Badge key={shape} size="md">
+            {shape}
+          </Badge>
+        ))}
+      </FlexWrapper>
+    ),
+    default: 'rect',
+    description: 'The shape of the button.',
+  },
+  {
+    id: '12',
     property: (
       <Badge color="secondary" size="md">
         onClick

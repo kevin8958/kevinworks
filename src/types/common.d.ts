@@ -43,6 +43,7 @@ namespace Common {
   type ButtonVariant = 'contain' | 'outline' | 'clear';
   type ButtonColor = 'primary' | 'info' | 'success' | 'warning' | 'danger';
   type ButtonIconPosition = 'left' | 'right';
+  type ButtonShape = 'rect' | 'circle';
   interface ButtonProps {
     classes?: string;
     type?: ButtonType;
@@ -55,6 +56,7 @@ namespace Common {
     loading?: boolean;
     prompted?: boolean;
     /** state end */
+    shape?: ButtonShape;
     icon?: React.ReactNode;
     iconPosition?: ButtonIconPosition;
     onClick?: (e) => void;

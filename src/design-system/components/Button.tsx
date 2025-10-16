@@ -19,6 +19,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
     loading = false,
     prompted = false,
     /** state end */
+    shape = 'rect',
     icon,
     iconPosition = 'left',
     onClick,
@@ -84,7 +85,8 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
         variant === 'outline' && getOutlineClasses(color),
         variant === 'contain' && getContainClasses(color),
         disabled && 'cursor-not-allowed opacity-30',
-        prompted && 'animate-flash-fast',
+        prompted && 'animate-flash-fast cursor-pointer',
+        shape === 'circle' && 'aspect-square !rounded-full p-0',
       )}
       disabled={disabled}
       ref={ref}
@@ -102,9 +104,9 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
         />
       ) : (
         <>
-          {icon && iconPosition === 'left' && <span className="mr-2">{icon}</span>}
+          {icon && iconPosition === 'left' && <span className="mr-1">{icon}</span>}
           {children}
-          {icon && iconPosition === 'right' && <span className="ml-2">{icon}</span>}
+          {icon && iconPosition === 'right' && <span className="ml-1">{icon}</span>}
         </>
       )}
     </button>
