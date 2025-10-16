@@ -5,7 +5,7 @@ import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import SimpleTable from '@/design-system/components/SimpleTable';
 import { propsColumn } from '@/constants/common';
 import BadgeSizeGuide from '@/design-system/components/badge/BadgeSizeGuide';
-import BadgeColorGuide from '@/design-system/components/badge/BadgeColorGuide';
+import BadgeStateGuide from '@/design-system/components/badge/BadgeStateGuide';
 import Badge from '@/design-system/components/Badge';
 import BreadCrumb from '@/design-system/layout/BreadCrumb';
 
@@ -24,7 +24,7 @@ export default function ComponentBadgePage() {
             Badge
           </Typography>
           <BadgeSizeGuide />
-          <BadgeColorGuide />
+          <BadgeStateGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="H3">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />

@@ -5,22 +5,25 @@ import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import Badge from '@/design-system/components/Badge';
 import Typography from '@/design-system/foundation/Typography';
 
-const BadgeSizeGuide = () => {
-  const sizeOptions: {
-    id: Common.ButtonSize;
+const BadgeStateGuide = () => {
+  const stateOptions: {
+    id: Common.BadgeColor;
     value: string;
   }[] = [
-    { id: 'sm', value: 'Small' },
-    { id: 'md', value: 'Medium' },
-    { id: 'lg', value: 'Large' },
+    { id: 'primary', value: 'Primary' },
+    { id: 'secondary', value: 'Secondary' },
+    { id: 'success', value: 'Success' },
+    { id: 'warning', value: 'Warning' },
+    { id: 'danger', value: 'Danger' },
   ];
+
   return (
     <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
       <FlexWrapper classes="w-full" items="start" direction="col">
-        <Typography variant="H3">Size</Typography>
+        <Typography variant="H3">State</Typography>
         <Typography variant="B1">
-          Defines the overall size of the badge, affecting both text and spacing. Use different
-          sizes to match the visual hierarchy across various interface elements.
+          Defines the visual tone of the badge, indicating contextual meaning such as success,
+          warning, or danger. Use different states to represent various statuses or message types.
         </Typography>
       </FlexWrapper>
       <FlexWrapper
@@ -30,10 +33,10 @@ const BadgeSizeGuide = () => {
         classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
         gap={6}
       >
-        {sizeOptions.map((option) => (
+        {stateOptions.map((option) => (
           <div key={option.id} className="w-full">
             <FlexWrapper classes="!gap-3" direction="col" items="center">
-              <Badge size={option.id} color="primary">
+              <Badge color={option.id} size="md">
                 Badge
               </Badge>
               <Typography variant="C1" color="secondary">
@@ -47,4 +50,4 @@ const BadgeSizeGuide = () => {
   );
 };
 
-export default BadgeSizeGuide;
+export default BadgeStateGuide;
