@@ -8,6 +8,7 @@ import BadgeSizeGuide from '@/design-system/components/badge/BadgeSizeGuide';
 import BadgeStateGuide from '@/design-system/components/badge/BadgeStateGuide';
 import Badge from '@/design-system/components/Badge';
 import BreadCrumb from '@/design-system/layout/BreadCrumb';
+import BadgeIconGuide from '@/design-system/components/badge/BadgeIconGuide';
 
 export default function ComponentBadgePage() {
   const breadcrumbItems = [
@@ -25,6 +26,7 @@ export default function ComponentBadgePage() {
           </Typography>
           <BadgeSizeGuide />
           <BadgeStateGuide />
+          <BadgeIconGuide />
           <FlexWrapper classes="w-full" items="start" direction="col">
             <Typography variant="H3">Props</Typography>
             <SimpleTable columns={propsColumn} data={propsData} />
@@ -34,88 +36,71 @@ export default function ComponentBadgePage() {
     </FlexWrapper>
   );
 }
-
 const propsData = [
   {
     id: '1',
     property: (
       <Badge color="secondary" size="md">
-        title
+        children
       </Badge>
     ),
-    type: 'string',
+    type: 'string | React.ReactNode',
     default: '',
-    description: 'The title of the datepicker.',
+    description: 'The content of the badge.',
   },
   {
     id: '2',
     property: (
       <Badge color="secondary" size="md">
-        message
+        size
       </Badge>
     ),
-    type: 'string',
-    default: '',
-    description: 'The message displayed below the datepicker.',
+    type: "'sm' | 'md' | 'lg'",
+    default: 'md',
+    description: 'Defines the overall size of the badge, affecting both text and spacing.',
   },
   {
     id: '3',
     property: (
       <Badge color="secondary" size="md">
-        confirmText
+        color
       </Badge>
     ),
-    type: 'string',
-    default: 'Confirm',
-    description: 'Text for the confirm button.',
+    type: "'primary' | 'secondary' | 'success' | 'warning' | 'danger'",
+    default: 'primary',
+    description: 'Defines the color theme of the badge.',
   },
   {
     id: '4',
     property: (
       <Badge color="secondary" size="md">
-        cancelText
+        icon
       </Badge>
     ),
-    type: 'string',
-    default: 'Cancel',
-    description: 'Text for the cancel button.',
+    type: 'React.ReactNode',
+    default: '',
+    description: 'Optional icon to display alongside the badge content.',
   },
   {
     id: '5',
     property: (
       <Badge color="secondary" size="md">
-        placement
+        disabled
       </Badge>
     ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['top', 'center', 'bottom'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
-    default: 'center',
-    description: 'Placement of the datepicker.',
+    type: 'boolean',
+    default: 'false',
+    description: 'If true, the badge will appear in a disabled state.',
   },
   {
     id: '6',
     property: (
       <Badge color="secondary" size="md">
-        state
+        classes
       </Badge>
     ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['info', 'success', 'warning', 'danger', 'default'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
-    default: 'default',
-    description: 'State of the datepicker.',
+    type: 'string',
+    default: '',
+    description: 'Custom classes for the badge.',
   },
 ];

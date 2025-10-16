@@ -19,8 +19,8 @@ const AvatarSizeGuide = () => {
       <FlexWrapper classes="w-full" items="start" direction="col">
         <Typography variant="H3">Size</Typography>
         <Typography variant="B1">
-          Defines the overall dimensions of the avatar, including image or text scaling. Use
-          different sizes to maintain visual hierarchy in different layouts.
+          Adds an icon to the badge to visually represent its meaning or status. Icons can be placed
+          before the text to enhance recognition and context.
         </Typography>
       </FlexWrapper>
       <FlexWrapper
