@@ -7,7 +7,7 @@ import Typography from '@/design-system/foundation/Typography';
 
 const BadgeSizeGuide = () => {
   const sizeOptions: {
-    id: Common.ButtonSize;
+    id: Common.BadgeSize;
     value: string;
   }[] = [
     { id: 'sm', value: 'Small' },

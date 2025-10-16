@@ -22,7 +22,7 @@ const Badge = (props: Common.BadgeProps) => {
   return (
     <span
       className={classNames(
-        'inline-flex items-center rounded-xl font-medium',
+        'inline-flex items-center rounded-full font-medium',
         sizeMap[size],
         colorMap[color],
         disabled && 'pointer-events-none opacity-50',
