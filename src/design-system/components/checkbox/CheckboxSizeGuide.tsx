@@ -25,32 +25,42 @@ const CheckboxSizeGuide = () => {
   ];
 
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">Size</Typography>
-      <FlexWrapper classes="size-full" items="center">
-        <FlexWrapper items="end">
-          {sizeOptions.map((option) => (
-            <div key={option.id}>
-              <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Checkbox
-                  id={`${option.value}-checkbox-example`}
-                  checked={isChecked[option.id]}
-                  size={option.id}
-                  onChange={() =>
-                    setIsChecked((prev) => ({
-                      ...prev,
-                      [option.id]: !prev[option.id],
-                    }))
-                  }
-                  label="Check me"
-                />
-                <Typography variant="C1" color="secondary">
-                  {option.id}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-        </FlexWrapper>
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">Size</Typography>
+        <Typography variant="B1">
+          Defines the overall size of the checkbox, including the checkmark and label spacing. Use
+          different sizes to maintain visual balance and consistency across layouts.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="center"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={6}
+      >
+        {sizeOptions.map((option) => (
+          <div key={option.id}>
+            <FlexWrapper classes="!gap-3" direction="col" items="center">
+              <Checkbox
+                id={`${option.value}-checkbox-example`}
+                checked={isChecked[option.id]}
+                size={option.id}
+                onChange={() =>
+                  setIsChecked((prev) => ({
+                    ...prev,
+                    [option.id]: !prev[option.id],
+                  }))
+                }
+                label="Check me"
+              />
+              <Typography variant="C1" color="secondary">
+                {option.id}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
       </FlexWrapper>
     </FlexWrapper>
   );
