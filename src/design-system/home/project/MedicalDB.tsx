@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectModal from '@/design-system/layout/ProjectModal';
 import Typography from '@/design-system/foundation/Typography';
 import Badge from '@/design-system/components/Badge';
@@ -8,6 +8,8 @@ import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import Image from 'next/image';
 
 const MedicalDB = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+
   const features = [
     {
       title: 'Concurrent Editing Prevention',
@@ -117,72 +119,93 @@ const MedicalDB = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
   ];
 
   return (
-    <ProjectModal
-      isOpen={isOpen}
-      onClose={onClose}
-      title="MedicalDB"
-      year="2021-2022"
-      href="https://www.notion.so/MedicalDB-fc116926adc04ad68bffc62b64c026cc"
-      backgroundImage="/image/medicaldb_thumbnail.png"
-      content={
-        <div className="flex flex-col gap-4">
-          <Typography variant="B2" classes="!text-primary-300">
-            Lime Society / Research Factory
-          </Typography>
-          <Typography variant="B1" classes="!text-primary-200">
-            e-CRF medical data platform for hospital clinical research workflows.
-          </Typography>
-          <div className="flex flex-wrap gap-2">
-            {['React.js', 'TypeScript', 'Material-UI', 'PostgreSQL', 'Knex'].map((tech, idx) => (
-              <Badge key={idx} size="sm">
-                {tech}
-              </Badge>
-            ))}
-          </div>
-          <ul className="list-inside list-none pl-2">
-            {[
-              'Developed UIs for MedicalDB and SPS using React and Next.js.',
-              'Implemented data validation, record revision recovery, custom filtering and Excel export optimization.',
-              'Improved scheduling features and introduced form grouping and required data alerts.',
-            ].map((item, idx) => (
-              <li key={idx} className="mb-2 flex items-start gap-2">
-                <span className="bg-primary-200 mt-2 inline-block size-1 shrink-0 rounded-full" />
-                <Typography variant="B2" classes="!text-primary-200">
-                  {item}
-                </Typography>
-              </li>
-            ))}
-          </ul>
-          <Typography variant="H4" classes="!text-primary-200">
-            🧩 Features
-          </Typography>
-          <ul className="list-inside list-none pl-2">
-            {features.map((feature, idx) => (
-              <li
-                key={idx}
-                className="border-primary-800 mb-2 flex flex-col items-start gap-2 border-b pb-4"
-              >
-                <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
-                  <FlexWrapper classes="w-full" items="start" direction="col">
-                    <Typography variant="H4">{feature.title}</Typography>
-                    <Typography variant="B1">{feature.description}</Typography>
+    <>
+      <ProjectModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="MedicalDB"
+        year="2021-2022"
+        href="https://www.notion.so/MedicalDB-fc116926adc04ad68bffc62b64c026cc"
+        backgroundImage="/image/medicaldb_thumbnail.png"
+        content={
+          <div className="flex flex-col gap-4">
+            <Typography variant="B2" classes="!text-primary-300">
+              Lime Society / Research Factory
+            </Typography>
+            <Typography variant="B1" classes="!text-primary-200">
+              e-CRF medical data platform for hospital clinical research workflows.
+            </Typography>
+            <div className="flex flex-wrap gap-2">
+              {['React.js', 'TypeScript', 'Material-UI', 'PostgreSQL', 'Knex'].map((tech, idx) => (
+                <Badge key={idx} size="sm">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+            <ul className="list-inside list-none pl-2">
+              {[
+                'Developed UIs for MedicalDB and SPS using React and Next.js.',
+                'Implemented data validation, record revision recovery, custom filtering and Excel export optimization.',
+                'Improved scheduling features and introduced form grouping and required data alerts.',
+              ].map((item, idx) => (
+                <li key={idx} className="mb-2 flex items-start gap-2">
+                  <span className="bg-primary-200 mt-2 inline-block size-1 shrink-0 rounded-full" />
+                  <Typography variant="B2" classes="!text-primary-200">
+                    {item}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
+            <Typography variant="H4" classes="!text-primary-200">
+              🧩 Features
+            </Typography>
+            <ul className="list-inside list-none pl-2">
+              {features.map((feature, idx) => (
+                <li
+                  key={idx}
+                  className="border-primary-800 mb-2 flex flex-col items-start gap-2 border-b pb-4"
+                >
+                  <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
+                    <FlexWrapper classes="w-full" items="start" direction="col">
+                      <Typography variant="H4">{feature.title}</Typography>
+                      <Typography variant="B1">{feature.description}</Typography>
+                    </FlexWrapper>
+                    {feature.imageUrl && (
+                      <Image
+                        src={feature.imageUrl}
+                        width={300}
+                        height={200}
+                        onClick={() => setPreviewImage(feature.imageUrl)}
+                        alt={feature.imageAlt || 'Feature Screenshot'}
+                        className="rounded-lg"
+                      />
+                    )}
                   </FlexWrapper>
-                  {feature.imageUrl && (
-                    <Image
-                      src={feature.imageUrl}
-                      width={400}
-                      height={250}
-                      alt={feature.imageAlt || 'Feature Screenshot'}
-                      className="rounded-lg"
-                    />
-                  )}
-                </FlexWrapper>
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
+        }
+      />
+      {previewImage && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80"
+          onClick={() => setPreviewImage(null)}
+        >
+          <img
+            src={previewImage}
+            alt="Feature Preview"
+            className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain shadow-2xl"
+          />
+          <button
+            onClick={() => setPreviewImage(null)}
+            className="absolute top-6 right-6 text-3xl font-light text-white hover:opacity-70"
+          >
+            ×
+          </button>
         </div>
-      }
-    />
+      )}
+    </>
   );
 };
 
