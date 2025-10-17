@@ -179,14 +179,20 @@ export default function Section3() {
           ))}
         </div>
       </div>
-      <MedicalDB isOpen={openProject === 6} onClose={() => setOpenProject(null)} />
+      <MedicalDB
+        isOpen={openProject === 6}
+        onClose={() => setOpenProject(null)}
+        onChange={(page: number) => setOpenProject(page)}
+      />
       <ProjectModal
         isOpen={openProject !== null && openProject !== 6}
         onClose={() => setOpenProject(null)}
+        onChange={(page: number) => setOpenProject(page)}
         title={projects[openProject ?? 0]?.title}
         year={projects[openProject ?? 0]?.year}
         href={projects[openProject ?? 0]?.href}
         backgroundImage={projects[openProject ?? 0]?.imageUrl}
+        currentPage={openProject ?? 0}
         content={
           <div className="flex flex-col gap-4">
             <Typography variant="B1" classes="!text-primary-200">

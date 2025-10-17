@@ -7,7 +7,15 @@ import Badge from '@/design-system/components/Badge';
 import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import Image from 'next/image';
 
-const MedicalDB = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+const MedicalDB = ({
+  isOpen,
+  onClose,
+  onChange,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  onChange: (page: number) => void;
+}) => {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const features = [
@@ -123,6 +131,8 @@ const MedicalDB = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
       <ProjectModal
         isOpen={isOpen}
         onClose={onClose}
+        onChange={onChange}
+        currentPage={6}
         title="MedicalDB"
         year="2021-2022"
         href="https://www.notion.so/MedicalDB-fc116926adc04ad68bffc62b64c026cc"
@@ -163,7 +173,7 @@ const MedicalDB = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
               {features.map((feature, idx) => (
                 <li
                   key={idx}
-                  className="border-primary-800 mb-2 flex flex-col items-start gap-2 border-b pb-4"
+                  className="border-primary-800 mb-2 flex flex-col items-start gap-2 border-b pt-4 pb-6"
                 >
                   <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
                     <FlexWrapper classes="w-full" items="start" direction="col">
@@ -177,7 +187,7 @@ const MedicalDB = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
                         height={200}
                         onClick={() => setPreviewImage(feature.imageUrl)}
                         alt={feature.imageAlt || 'Feature Screenshot'}
-                        className="rounded-lg"
+                        className="cursor-pointer rounded-lg"
                       />
                     )}
                   </FlexWrapper>

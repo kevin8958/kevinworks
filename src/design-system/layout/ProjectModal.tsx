@@ -6,26 +6,30 @@ import { LuX } from 'react-icons/lu';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '@/design-system/components/Button';
 import Typography from '@/design-system/foundation/Typography';
-import { LuExternalLink } from 'react-icons/lu';
+import { LuExternalLink, LuChevronRight, LuChevronLeft } from 'react-icons/lu';
 
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onChange: (page: number) => void;
   title: string;
   year: string;
   href?: string;
   backgroundImage?: string;
   content: ReactNode;
+  currentPage?: number;
 }
 
 export default function ProjectModal({
   isOpen,
   onClose,
+  onChange,
   title,
   year,
   href,
   backgroundImage,
   content,
+  currentPage,
 }: ProjectModalProps) {
   useEffect(() => {
     if (isOpen) {
@@ -41,29 +45,20 @@ export default function ProjectModal({
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          className="fixed inset-0 bottom-0 z-50 flex items-end justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
+        <motion.div className="fixed inset-0 bottom-0 z-50 flex items-center justify-center gap-4">
           {/* Overlay */}
-          <motion.div
-            className="absolute inset-0 bg-black/80 backdrop-blur-xs"
-            onClick={onClose}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          />
-
-          {/* Modal content */}
-          <motion.div
-            className="bg-primary-900 relative z-10 mb-6 h-[calc(100vh-100px)] w-[calc(100%-32px)] max-w-3xl overflow-hidden rounded-2xl shadow-lg"
-            initial={{ y: 20, opacity: 0.4 }} // 아래에서 시작
-            animate={{ y: 0, opacity: 1 }} // 제자리로 올라옴
-            exit={{ y: 20, opacity: 0.4 }} // 닫을 때 다시 내려감
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+          <motion.div className="absolute inset-0 bg-black/80 backdrop-blur-xs" onClick={onClose} />
+          <Button
+            onClick={() => onChange((currentPage || 0) - 1)}
+            variant="clear"
+            size="md"
+            disabled={currentPage === 0}
+            classes="!p-3 !size-[48px] relative z-10"
           >
+            <LuChevronLeft className="text-3xl text-white" />
+          </Button>
+          {/* Modal content */}
+          <motion.div className="bg-primary-900 relative z-10 mb-6 h-[calc(100vh-100px)] w-[calc(100%-32px)] max-w-3xl translate-y-[40px] overflow-hidden rounded-2xl shadow-lg">
             <button
               onClick={onClose}
               className="absolute top-4 right-4 z-50 text-2xl mix-blend-difference hover:opacity-70"
@@ -107,6 +102,15 @@ export default function ProjectModal({
               {content}
             </div>
           </motion.div>
+          <Button
+            onClick={() => onChange((currentPage || 0) + 1)}
+            variant="clear"
+            disabled={currentPage === 6}
+            size="md"
+            classes="!p-3 !size-[48px] relative z-10"
+          >
+            <LuChevronRight className="text-3xl text-white" />
+          </Button>
         </motion.div>
       )}
     </AnimatePresence>
