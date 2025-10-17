@@ -45,7 +45,7 @@ export default function ProjectModal({
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div className="fixed inset-0 bottom-0 z-50 flex items-center justify-center gap-4">
+        <motion.div className="fixed inset-0 bottom-0 z-50 flex items-center justify-center">
           {/* Overlay */}
           <motion.div className="absolute inset-0 bg-black/80 backdrop-blur-xs" onClick={onClose} />
           <Button
@@ -53,7 +53,7 @@ export default function ProjectModal({
             variant="clear"
             size="md"
             disabled={currentPage === 0}
-            classes="!p-3 !size-[48px] relative z-10"
+            classes="!p-3 !size-[48px] relative z-10 hidden sm:flex"
           >
             <LuChevronLeft className="text-3xl text-white" />
           </Button>
@@ -107,7 +107,7 @@ export default function ProjectModal({
             variant="clear"
             disabled={currentPage === 6}
             size="md"
-            classes="!p-3 !size-[48px] relative z-10"
+            classes="!p-3 !size-[48px] relative z-10 hidden sm:flex"
           >
             <LuChevronRight className="text-3xl text-white" />
           </Button>

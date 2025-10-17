@@ -9,9 +9,9 @@ const ButtonGroup = (props: Common.ButtonGroupProps) => {
   const { title, classes, size = 'md', value, options, onChange } = props;
 
   const sizeClasses = {
-    sm: 'h-[30px] text-xs w-max',
+    sm: 'h-[24px] text-xs w-max',
     md: 'h-[34px] text-sm',
-    lg: 'h-[44px] !px-6 text-lg',
+    lg: 'h-[36px] !px-4 text-base',
   };
 
   return (
@@ -28,7 +28,7 @@ const ButtonGroup = (props: Common.ButtonGroupProps) => {
             key={option.id}
             type="button"
             className={classNames(
-              'rounded-lg !border-0 !px-2 !py-[4px] !text-sm text-gray-800 transition-all duration-200 ease-in-out',
+              'rounded-lg !border-0 !px-2 !py-[4px] text-gray-800 transition-all duration-200 ease-in-out',
               { 'bg-primary-200': value.id === option.id },
               sizeClasses[size],
             )}
