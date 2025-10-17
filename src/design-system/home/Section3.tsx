@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import FadeInGsap from '@/design-system/layout/FadeInGsap';
 import ProjectModal from '@/design-system/layout/ProjectModal';
 import Badge from '@/design-system/components/Badge';
+import MedicalDB from './project/MedicalDB';
 
 export default function Section3() {
   const [focusedProject, setFocusedProject] = useState<number | null>(null);
@@ -101,7 +102,7 @@ export default function Section3() {
       year: '2021-2022',
       imageUrl: '/image/medicaldb_thumbnail.png',
       altText: 'MedicalDB Thumbnail',
-      href: 'http://13.209.234.179/login',
+      href: 'https://www.notion.so/MedicalDB-fc116926adc04ad68bffc62b64c026cc',
       spec: ['React.js', 'TypeScript', 'Material-UI', 'PostgreSQL', 'Knex'],
       desc: 'e-CRF medical data platform for hospital clinical research workflows.',
       contents: [
@@ -178,8 +179,9 @@ export default function Section3() {
           ))}
         </div>
       </div>
+      <MedicalDB isOpen={openProject === 6} onClose={() => setOpenProject(null)} />
       <ProjectModal
-        isOpen={openProject !== null}
+        isOpen={openProject !== null && openProject !== 6}
         onClose={() => setOpenProject(null)}
         title={projects[openProject ?? 0]?.title}
         year={projects[openProject ?? 0]?.year}

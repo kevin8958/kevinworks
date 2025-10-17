@@ -49,7 +49,7 @@ export default function ProjectModal({
         >
           {/* Overlay */}
           <motion.div
-            className="absolute inset-0 bg-black/30 backdrop-blur-xs"
+            className="absolute inset-0 bg-black/80 backdrop-blur-xs"
             onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -72,7 +72,7 @@ export default function ProjectModal({
             </button>
             {backgroundImage && (
               <div
-                className="relative h-[200px] bg-cover bg-top sm:h-[300px]"
+                className="relative h-[120px] bg-cover bg-top sm:h-[200px]"
                 style={{ backgroundImage: `url(${backgroundImage})` }}
               >
                 {title === 'Kevin Design System' && (
@@ -103,7 +103,7 @@ export default function ProjectModal({
                 </div>
               </div>
             )}
-            <div className="h-[calc(100dvh-100px-200px)] overflow-y-auto p-6 sm:h-[calc(100dvh-100px-300px)]">
+            <div className="h-[calc(100dvh-100px-120px)] overflow-y-auto p-6 sm:h-[calc(100dvh-100px-200px)]">
               {content}
             </div>
           </motion.div>
