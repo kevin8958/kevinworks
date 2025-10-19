@@ -45,12 +45,13 @@ export default function ProjectModal({
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div className="fixed inset-0 bottom-0 z-50 flex items-center justify-center">
+        <motion.div className="fixed inset-0 bottom-0 z-50 flex items-center justify-center gap-2">
           {/* Overlay */}
           <motion.div className="absolute inset-0 bg-black/80 backdrop-blur-xs" onClick={onClose} />
           <Button
             onClick={() => onChange((currentPage || 0) - 1)}
             variant="clear"
+            shape="circle"
             size="md"
             disabled={currentPage === 0}
             classes="!p-3 !size-[48px] relative z-10 hidden sm:flex"
@@ -105,6 +106,7 @@ export default function ProjectModal({
           <Button
             onClick={() => onChange((currentPage || 0) + 1)}
             variant="clear"
+            shape="circle"
             disabled={currentPage === 6}
             size="md"
             classes="!p-3 !size-[48px] relative z-10 hidden sm:flex"

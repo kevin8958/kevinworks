@@ -7,6 +7,7 @@ import FadeInGsap from '@/design-system/layout/FadeInGsap';
 import ProjectModal from '@/design-system/layout/ProjectModal';
 import Badge from '@/design-system/components/Badge';
 import MedicalDB from './project/MedicalDB';
+import Camstudy from './project/Camstudy';
 
 export default function Section3() {
   const [focusedProject, setFocusedProject] = useState<number | null>(null);
@@ -89,7 +90,7 @@ export default function Section3() {
       imageUrl: '/image/camstudy_thumbnail.png',
       altText: 'CamStudy Thumbnail',
       href: 'https://gooroomee.com/intro',
-      spec: ['Nuxt.js', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
+      spec: ['Vue.js', 'Vuex', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
       desc: 'Study service with video calls as the core feature, enabling real-time collaboration and learning.',
       contents: [
         'Developed AI playground and creator tool in AI Space using Next.js and Zustand, enabling chatbot customization and model comparison.',
@@ -179,13 +180,18 @@ export default function Section3() {
           ))}
         </div>
       </div>
+      <Camstudy
+        isOpen={openProject === 5}
+        onClose={() => setOpenProject(null)}
+        onChange={(page: number) => setOpenProject(page)}
+      />
       <MedicalDB
         isOpen={openProject === 6}
         onClose={() => setOpenProject(null)}
         onChange={(page: number) => setOpenProject(page)}
       />
       <ProjectModal
-        isOpen={openProject !== null && openProject !== 6}
+        isOpen={openProject !== null && openProject !== 6 && openProject !== 5}
         onClose={() => setOpenProject(null)}
         onChange={(page: number) => setOpenProject(page)}
         title={projects[openProject ?? 0]?.title}
