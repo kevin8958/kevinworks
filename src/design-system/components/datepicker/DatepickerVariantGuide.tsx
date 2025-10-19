@@ -23,29 +23,42 @@ const DatepickerVariantGuide = () => {
   ]);
 
   return (
-    <FlexWrapper classes="w-full" items="start" direction="col">
-      <Typography variant="H3">Variant</Typography>
-      <FlexWrapper classes="size-full px-6" items="center">
-        <FlexWrapper items="end">
-          {variantOptions.map((option) => (
-            <div key={option.id} className="w-full">
-              <FlexWrapper classes="!gap-3" direction="col" items="center">
-                <Datepicker
-                  classes="w-[200px]"
-                  type="single"
-                  variant={option.id}
-                  value={signleValue}
-                  onChange={(value: Date | null) => {
-                    setSignleValue(value);
-                  }}
-                />
-                <Typography variant="C1" color="secondary">
-                  {option.id}
-                </Typography>
-              </FlexWrapper>
-            </div>
-          ))}
-        </FlexWrapper>
+    <FlexWrapper classes="size-full lg:flex-row" direction="col" items="start">
+      <FlexWrapper classes="w-full" items="start" direction="col">
+        <Typography variant="H3">Variant</Typography>
+        <Typography variant="B1">
+          Variant determines the DatePicker’s visual presentation. The contain variant provides a
+          solid and filled style that draws attention to the input area. The outline variant uses a
+          bordered but transparent background, offering a balanced and versatile look. The clear
+          variant minimizes visual framing for a lightweight, seamless appearance that blends into
+          surrounding UI elements.
+        </Typography>
+      </FlexWrapper>
+      <FlexWrapper
+        items="start"
+        direction="col"
+        justify="start"
+        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        gap={6}
+      >
+        {variantOptions.map((option) => (
+          <div key={option.id} className="w-full">
+            <FlexWrapper classes="!gap-3" direction="col" items="center">
+              <Datepicker
+                classes="w-[200px]"
+                type="single"
+                variant={option.id}
+                value={signleValue}
+                onChange={(value: Date | null) => {
+                  setSignleValue(value);
+                }}
+              />
+              <Typography variant="C1" color="secondary">
+                {option.id}
+              </Typography>
+            </FlexWrapper>
+          </div>
+        ))}
       </FlexWrapper>
     </FlexWrapper>
   );

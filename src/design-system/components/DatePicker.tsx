@@ -112,7 +112,7 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
             'border-2 border-primary-600 leading-[28px]',
         )
       }
-      weekDayClassName={() => 'text-xs text-gray-500 inline-block size-8 text-center leading-6'}
+      weekDayClassName={() => 'hidden'}
       popperClassName="!z-[70]"
       renderCustomHeader={({
         date,
@@ -132,30 +132,38 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
           </Button>
         );
 
+        const shortWeekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
         return (
-          <div
-            className={classNames('bg-primary-900 flex w-[240px] items-center gap-4', {
-              'justify-center': hideHeaderButtons,
-              'justify-between': !hideHeaderButtons,
-            })}
-          >
-            {!hideHeaderButtons && (
-              <div className="flex items-center gap-1">
-                {renderButton(
-                  <LuChevronLeft className="" />,
-                  decreaseMonth,
-                  prevMonthButtonDisabled,
-                )}
-              </div>
-            )}
+          <div className="bg-primary-900 flex w-[240px] flex-col">
+            {/* Month / Year Header */}
+            <div
+              className={classNames('flex items-center gap-4 py-2', {
+                'justify-center': hideHeaderButtons,
+                'justify-between': !hideHeaderButtons,
+              })}
+            >
+              {!hideHeaderButtons && (
+                <div className="flex items-center gap-1">
+                  {renderButton(<LuChevronLeft />, decreaseMonth, prevMonthButtonDisabled)}
+                </div>
+              )}
 
-            <p className="text-base font-semibold">{dayjs(date).format('MMMM YYYY')}</p>
+              <p className="text-base font-semibold">{dayjs(date).format('MMMM YYYY')}</p>
 
-            {!hideHeaderButtons && (
-              <div className="flex items-center gap-1">
-                {renderButton(<LuChevronRight />, increaseMonth, nextMonthButtonDisabled)}
-              </div>
-            )}
+              {!hideHeaderButtons && (
+                <div className="flex items-center gap-1">
+                  {renderButton(<LuChevronRight />, increaseMonth, nextMonthButtonDisabled)}
+                </div>
+              )}
+            </div>
+
+            {/* Custom Weekday Row */}
+            <div className="text-primary-200 grid grid-cols-7 pb-1 text-center text-xs font-medium">
+              {shortWeekDays.map((day, idx) => (
+                <span key={idx}>{day}</span>
+              ))}
+            </div>
           </div>
         );
       }}
