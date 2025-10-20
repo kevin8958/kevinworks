@@ -87,7 +87,7 @@ export function DialogProvider({ children }: { children: ReactNode }) {
 
       {/* 모달 */}
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-[60]" onClose={() => close(false)}>
+        <Dialog as="div" className="relative z-[999]" onClose={() => close(false)}>
           {/* overlay */}
           <Transition.Child
             as={Fragment}

@@ -26,10 +26,8 @@ const DatepickerTypeGuide = () => {
       <FlexWrapper classes="w-full" items="start" direction="col">
         <Typography variant="H3">Type</Typography>
         <Typography variant="B1">
-          Type defines how users interact with the DatePicker. When set to single, it allows the
-          selection of one specific date, making it suitable for inputs like deadlines or event
-          dates. The range type enables the selection of a continuous date range, commonly used for
-          scheduling, reservations, or analytics periods.
+          Type specifies the selection mode: single for choosing one date, and range for selecting a
+          continuous date period.
         </Typography>
       </FlexWrapper>
       <FlexWrapper

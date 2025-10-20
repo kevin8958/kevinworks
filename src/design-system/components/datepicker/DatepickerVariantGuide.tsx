@@ -27,11 +27,8 @@ const DatepickerVariantGuide = () => {
       <FlexWrapper classes="w-full" items="start" direction="col">
         <Typography variant="H3">Variant</Typography>
         <Typography variant="B1">
-          Variant determines the DatePicker’s visual presentation. The contain variant provides a
-          solid and filled style that draws attention to the input area. The outline variant uses a
-          bordered but transparent background, offering a balanced and versatile look. The clear
-          variant minimizes visual framing for a lightweight, seamless appearance that blends into
-          surrounding UI elements.
+          Variant defines the DatePicker's visual style: contain for a solid filled look, outline
+          for a bordered and balanced appearance, and clear for a minimal, seamless design.
         </Typography>
       </FlexWrapper>
       <FlexWrapper
