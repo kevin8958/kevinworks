@@ -12,6 +12,8 @@ const Dropdown = (props: Common.DropdownProps) => {
     dialogPosition = 'left',
     dialogWidth,
     onChange,
+    buttonVariant = 'outline',
+    buttonSize = 'md',
     buttonItem,
     buttonClasses,
   } = props;
@@ -126,8 +128,8 @@ const Dropdown = (props: Common.DropdownProps) => {
     <div className="relative">
       <Button
         type="button"
-        variant="outline"
-        size="md"
+        variant={buttonVariant}
+        size={buttonSize}
         ref={buttonRef}
         classes={buttonClasses}
         onClick={() => setIsOpen(!isOpen)}

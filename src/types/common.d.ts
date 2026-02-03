@@ -184,6 +184,8 @@ namespace Common {
     onChange?: (value: any) => void;
     dialogPosition?: 'left' | 'right';
     dialogWidth?: number;
+    buttonVariant?: ButtonVariant;
+    buttonSize?: ButtonSize;
     buttonItem?: string | React.ReactNode;
     buttonClasses?: string;
   }

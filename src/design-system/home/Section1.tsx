@@ -7,6 +7,10 @@ import { FaGithub } from 'react-icons/fa6';
 import { MdOutlineMail } from 'react-icons/md';
 
 export default function Section1() {
+  const openEmail = () => {
+    window.location.href = 'keivnlee8958@gmail.com';
+  };
+
   return (
     <section id="home" className="relative h-screen min-h-screen w-full overflow-hidden px-20">
       <Orb hoverIntensity={0} rotateOnHover={true} hue={0} forceHoverState={false} />
@@ -35,13 +39,23 @@ export default function Section1() {
             </Typography>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="clear" size="sm">
+            <Button
+              variant="clear"
+              size="sm"
+              onClick={() =>
+                window.open('https://www.linkedin.com/in/kevin-lee-a1479a377/', '_blank')
+              }
+            >
               <FaLinkedin className="text-xl" />
             </Button>
-            <Button variant="clear" size="sm">
+            <Button
+              variant="clear"
+              size="sm"
+              onClick={() => window.open('https://github.com/kevin8958', '_blank')}
+            >
               <FaGithub className="text-xl" />
             </Button>
-            <Button variant="clear" size="sm">
+            <Button variant="clear" size="sm" onClick={openEmail}>
               <MdOutlineMail className="text-xl" />
             </Button>
           </div>
