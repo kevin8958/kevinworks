@@ -59,7 +59,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
   const getContainClasses = (buttonColor: Common.ButtonColor) => {
     const styles = {
       primary:
-        'bg-white hover:bg-primary-100 active:bg-primary-200 disabled:active:!bg-white disabled:hover:!bg-white text-gray-800',
+        'bg-primary-100 hover:bg-primary-200 active:bg-primary-200 disabled:active:!bg-white disabled:hover:!bg-white text-gray-800',
       info: 'bg-info !text-gray-200',
       success: 'bg-success !text-gray-200',
       warning: 'bg-warning !text-gray-200',

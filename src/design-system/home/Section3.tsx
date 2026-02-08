@@ -15,8 +15,23 @@ export default function Section3() {
 
   const projects = [
     {
+      title: 'Effice',
+      year: '2025-present',
+      imageUrl: '/image/effice_thumbnail.png',
+      altText: 'Effice Thumbnail',
+      href: 'https://www.effice.co.kr/',
+      spec: ['React', 'TypeScript', 'Supabase', 'Tailwind CSS', 'HTML/CSS'],
+      desc: 'A specialized back-office outsourcing platform that provides comprehensive management support, including HR, accounting, and legal contract management for small to medium-sized enterprises.',
+      contents: [
+        'Architected a real-time task management board using React and Supabase, allowing clients to monitor the progress of their administrative requests in real-time.',
+        'Developed secure modules for HR and accounting support, automating repetitive back-office tasks and ensuring compliance with local regulations.',
+        'Integrated Supabase Auth and Row Level Security (RLS) to manage sensitive corporate data and contract documents with enterprise-grade security.',
+        'Built a responsive and intuitive dashboard with Tailwind CSS to streamline communication between client companies and the dedicated Effice operations team.',
+      ],
+    },
+    {
       title: 'Kevin Design System',
-      year: '~ing',
+      year: '~present',
       imageUrl: '/image/designsystem_thumbnail.png',
       altText: 'Design System Thumbnail',
       href: '/design-system',

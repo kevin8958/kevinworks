@@ -21,10 +21,16 @@ export default function Section2() {
 
   const experiences: Experience[] = [
     {
+      company: 'Effice (Via contract)',
+      description:
+        'Independently designed, developed, and deployed a full-stack web application using React, Supabase and Vercel.',
+      period: 'Oct 2025 - Jan 2026',
+    },
+    {
       company: 'Sellease',
       description:
         'Independently built the entire frontend from the ground up, including both the asset management service and the back-office system.',
-      period: 'May 2024 – June 2025',
+      period: 'May 2024 - June 2025',
     },
     {
       company: 'Hanwha Life Insurance (Via contract)',
@@ -82,7 +88,7 @@ export default function Section2() {
                 </Typography>
               </div>
             </FadeInGsap>
-            <div className="relative mt-6 h-[56px] w-full shrink-0 overflow-hidden">
+            <div className="relative mt-6 h-[120px] w-full shrink-0 overflow-hidden">
               <LogoLoop
                 logos={techLogos}
                 speed={60}

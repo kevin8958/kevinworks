@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import GnbButton from '@/design-system/layout/GnbButton';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
+import FlexWrapper from './FlexWrapper';
+import Button from '../components/Button';
 
 const sections = ['home', 'about', 'works', 'contact'];
 const Gnb = () => {
@@ -31,18 +33,34 @@ const Gnb = () => {
   }, []);
 
   return (
-    <div
-      className={classNames(
-        'border-primary-100/30 fixed top-6 left-1/2 z-50 flex w-fit -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-[1px] bg-transparent px-2 pt-1 pb-2 backdrop-blur transition-all duration-500 ease-in-out sm:px-6',
-        { hidden: pathname.startsWith('/design-system') },
-      )}
-    >
-      {sections.map((id) => (
-        <GnbButton key={id} href={`#${id}`} isActive={currentSection === id}>
-          {id.toUpperCase()}
-        </GnbButton>
-      ))}
-    </div>
+    <>
+      <div
+        className={classNames(
+          'border-primary-100/30 fixed top-6 left-1/2 z-50 flex w-fit -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-[1px] bg-transparent px-2 pt-1 pb-2 backdrop-blur transition-all duration-500 ease-in-out sm:px-6',
+          { hidden: pathname.startsWith('/design-system') },
+        )}
+      >
+        {sections.map((id) => (
+          <GnbButton key={id} href={`#${id}`} isActive={currentSection === id}>
+            {id.toUpperCase()}
+          </GnbButton>
+        ))}
+      </div>
+      <div
+        className={classNames('fixed top-9 right-6 z-50', {
+          hidden: pathname.startsWith('/design-system'),
+        })}
+      >
+        <Button
+          variant="contain"
+          size="sm"
+          onClick={() => window.open('/design-system', '_self')}
+          classes="z-[999] fixed top-8 right-6"
+        >
+          View Design System
+        </Button>
+      </div>
+    </>
   );
 };
 

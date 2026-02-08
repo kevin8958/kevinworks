@@ -4,7 +4,6 @@ import '@/styles/datepicker.override.css';
 import type { Metadata } from 'next';
 
 import Gnb from '@/design-system/layout/Gnb';
-import PageWrapper from '@/design-system/layout/PageWrapper';
 import { DialogProvider } from '@/hooks/useDialog';
 
 export const metadata: Metadata = {
