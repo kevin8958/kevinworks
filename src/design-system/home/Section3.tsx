@@ -16,7 +16,7 @@ export default function Section3() {
   const projects = [
     {
       title: 'Effice',
-      year: '2025-present',
+      year: '2025.10-2026.01',
       imageUrl: '/image/effice_thumbnail.png',
       altText: 'Effice Thumbnail',
       href: 'https://www.effice.co.kr/',
@@ -30,23 +30,8 @@ export default function Section3() {
       ],
     },
     {
-      title: 'Kevin Design System',
-      year: '~present',
-      imageUrl: '/image/designsystem_thumbnail.png',
-      altText: 'Design System Thumbnail',
-      href: '/design-system',
-      spec: ['Next.js', 'TypeScript', 'Tailwind CSS', 'HTML/CSS'],
-      desc: 'A comprehensive design system and component library built with React, Next.js, and Tailwind CSS to streamline UI development and ensure design consistency across projects.',
-      contents: [
-        'Developed a modular and reusable component library using React and TypeScript, enhancing development efficiency.',
-        'Implemented responsive design principles with Tailwind CSS to ensure components adapt seamlessly across devices.',
-        'Integrated Storybook for interactive component documentation, facilitating easier collaboration between designers and developers.',
-        'Established best practices for component usage and theming, promoting consistency in UI/UX design across various applications.',
-      ],
-    },
-    {
       title: 'Sellease',
-      year: '2024-2025',
+      year: '2024.05-2025.05',
       imageUrl: '/image/sellease_thumbnail.png',
       altText: 'Sellease Thumbnail',
       href: 'https://www.sellease.io/',
@@ -61,7 +46,7 @@ export default function Section3() {
     },
     {
       title: 'Hanwha Life Insurance',
-      year: '2023-2024',
+      year: '2023.11-2024.01',
       imageUrl: '/image/hanwha_thumbnail.jpeg',
       altText: 'Hanwha Life Insurance Thumbnail',
       spec: ['Nuxt.js', 'Vue.js', 'Pinia', 'Vuex', 'WebRTC', 'Chart.js', 'HTML/CSS'],
@@ -115,7 +100,7 @@ export default function Section3() {
     },
     {
       title: 'MedicalDB',
-      year: '2021-2022',
+      year: '2020.09-2021.12',
       imageUrl: '/image/medicaldb_thumbnail.png',
       altText: 'MedicalDB Thumbnail',
       href: 'https://www.notion.so/MedicalDB-fc116926adc04ad68bffc62b64c026cc',

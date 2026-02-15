@@ -72,23 +72,24 @@ export default function Section2() {
             <FadeInGsap>
               <div className="flex w-full flex-col items-start gap-4">
                 <Typography variant="B2" classes="!text-white">
-                  Kevin Lee — Front-End Developer (+5 years)
+                  <b>Frontend Engineer with 5 years of experience</b> specializing in architecting
+                  scalable design systems and high-performance UI components.
                 </Typography>
                 <Typography variant="B2" classes="!text-white">
-                  Building scalable and user-friendly web applications with a balance of clean code,
-                  thoughtful UX, and design system principles.
+                  Proficient in translating complex design visions into fluid, responsive interfaces
+                  using Next.js/React.js and Tailwind CSS.
                 </Typography>
                 <Typography variant="B2" classes="!text-white">
-                  Passionate about creating interfaces that feel intuitive and human, and excited to
-                  contribute to teams that prioritize collaboration and growth.
+                  Expert at <b>bridging the gap between design and engineering</b>, fostering
+                  collaboration to ensure the synergy of UI/UX aesthetics and robust architecture.
                 </Typography>
                 <Typography variant="B2" classes="!text-white">
-                  Proficient in React, Next.js, and TypeScript, with a strong background in building
-                  design systems and scalable frontend architecture.
+                  Dedicated to building inclusive, accessible design patterns that cater to diverse
+                  product ecosystems across various industries.
                 </Typography>
               </div>
             </FadeInGsap>
-            <div className="relative mt-6 h-[120px] w-full shrink-0 overflow-hidden">
+            <div className="relative mt-6 h-[130px] w-full shrink-0 overflow-hidden">
               <LogoLoop
                 logos={techLogos}
                 speed={60}

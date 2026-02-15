@@ -46,20 +46,6 @@ const Gnb = () => {
           </GnbButton>
         ))}
       </div>
-      <div
-        className={classNames('fixed top-9 right-6 z-50', {
-          hidden: pathname.startsWith('/design-system'),
-        })}
-      >
-        <Button
-          variant="contain"
-          size="sm"
-          onClick={() => window.open('/design-system', '_self')}
-          classes="z-[999] fixed top-8 right-6"
-        >
-          View Design System
-        </Button>
-      </div>
     </>
   );
 };
