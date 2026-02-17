@@ -41,7 +41,7 @@ const CarouselWithProgress = () => {
             <SplideSlide key={item.id}>
               <Link
                 href={item.href}
-                className="bg-primary-990 flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white"
+                className="bg-neutral-990 flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white"
               >
                 <div className="relative h-full w-[90%]">
                   <Image
@@ -58,7 +58,7 @@ const CarouselWithProgress = () => {
         </SplideTrack>
 
         {/* Progress bar */}
-        <div className="mt-2 h-1 w-full rounded bg-gray-200">
+        <div className="mt-2 h-1 w-full rounded bg-neutral-200">
           <div
             className="h-full rounded bg-blue-500 transition-all duration-300"
             style={{ width: `${progress}%` }}

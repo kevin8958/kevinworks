@@ -31,7 +31,7 @@ export default function Section99() {
             <div key={item.id} className="col-span-12 md:col-span-3">
               <SpotlightCard spotlightColor="rgba(80, 180, 255, 0.7)" href={item.href}>
                 <div className="flex w-full flex-col items-start gap-4 pb-4">
-                  <div className="bg-primary-990 pointer-events-none relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white">
+                  <div className="bg-neutral-990 pointer-events-none relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white">
                     <Image
                       src={item.src}
                       fill
@@ -40,7 +40,7 @@ export default function Section99() {
                       className="rounded-lg object-contain"
                     />
                   </div>
-                  <Typography variant="B2" classes="!text-primary-100 !font-semibold">
+                  <Typography variant="B2" classes="!text-neutral-100 !font-semibold">
                     {item.label}
                   </Typography>
                 </div>

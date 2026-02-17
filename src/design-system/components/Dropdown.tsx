@@ -73,16 +73,16 @@ const Dropdown = (props: Common.DropdownProps) => {
             <li
               key={item.id}
               className={classNames('relative w-full', {
-                '!mt-1 !pt-1 [&::before]:absolute [&::before]:top-0 [&::before]:-right-2 [&::before]:-left-2 [&::before]:h-px [&::before]:bg-gray-100/30 [&::before]:content-[""]':
+                '!mt-1 !pt-1 [&::before]:absolute [&::before]:top-0 [&::before]:-right-2 [&::before]:-left-2 [&::before]:h-px [&::before]:bg-neutral-100/30 [&::before]:content-[""]':
                   showTopBorder,
-                '[&::after]:absolute [&::after]:-right-2 [&::after]:bottom-0 [&::after]:-left-2 [&::after]:h-px [&::after]:bg-gray-100/30 [&::after]:content-[""]':
+                '[&::after]:absolute [&::after]:-right-2 [&::after]:bottom-0 [&::after]:-left-2 [&::after]:h-px [&::after]:bg-neutral-100/30 [&::after]:content-[""]':
                   showBottomBorder,
               })}
               style={itemWidthStyle}
             >
               {item.label && (
                 <div
-                  className="truncate px-2 py-1 text-xs font-semibold text-gray-100"
+                  className="truncate px-2 py-1 text-xs font-semibold text-neutral-100"
                   title={item.label}
                 >
                   <div className="flex items-center gap-2">
@@ -114,7 +114,7 @@ const Dropdown = (props: Common.DropdownProps) => {
                 </span>
               </Button>
               <div className="absolute top-0 left-[calc(100%-4px)] ml-1 hidden group-hover:block">
-                <ul className="bg-primary-900 border-primary-600 rounded-xl border p-2">
+                <ul className="rounded-xl border border-neutral-600 bg-neutral-900 p-2">
                   {renderItems(item.items)}
                 </ul>
               </div>
@@ -138,7 +138,7 @@ const Dropdown = (props: Common.DropdownProps) => {
       </Button>
       <dialog
         className={classNames(
-          'bg-primary-900 border-primary-600 right-0 z-50 mt-2 !block rounded-xl border p-2 transition-all duration-200 ease-in-out',
+          'right-0 z-50 mt-2 !block rounded-xl border border-neutral-600 bg-neutral-900 p-2 transition-all duration-200 ease-in-out',
           {
             'left-0': dialogPosition === 'left',
             'right-0 left-[unset]': dialogPosition === 'right',

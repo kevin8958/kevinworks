@@ -36,7 +36,7 @@ const Gnb = () => {
     <>
       <div
         className={classNames(
-          'border-primary-100/30 fixed top-6 left-1/2 z-50 flex w-fit -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-[1px] bg-transparent px-2 pt-1 pb-2 backdrop-blur transition-all duration-500 ease-in-out sm:px-6',
+          'fixed top-6 left-1/2 z-50 flex w-fit -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-[1px] border-neutral-100/30 bg-transparent px-2 pt-1 pb-2 backdrop-blur transition-all duration-500 ease-in-out sm:px-6',
           { hidden: pathname.startsWith('/design-system') },
         )}
       >

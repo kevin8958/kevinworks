@@ -20,9 +20,9 @@ const MenuButton = (props: Layout.MenuButtonProps) => {
           'flex size-full items-center rounded-xl p-0 px-4 py-2 text-center text-base transition-all duration-200 ease-in-out',
           {
             'font-semibold': !isItem,
-            'bg-primary-100 font-semibold': isActive,
+            'bg-neutral-100 font-semibold': isActive,
             'text-textPrimary': !isActive,
-            'hover:bg-primary-100 hover:': !isActive && isItem,
+            'hover: hover:bg-neutral-100': !isActive && isItem,
             'pointer-events-none cursor-default': !href,
           },
         )}

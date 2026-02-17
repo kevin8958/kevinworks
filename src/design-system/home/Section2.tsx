@@ -109,14 +109,14 @@ export default function Section2() {
               Education
             </Typography>
             <FadeInGsap classes="w-full">
-              <div className="bg-primary-900 flex w-full flex-col items-start rounded-2xl px-4 py-10">
+              <div className="flex w-full flex-col items-start rounded-2xl bg-neutral-900 px-4 py-10">
                 <Typography variant="B1" classes="!text-white !font-semibold">
                   Bachelor in Computer Science
                 </Typography>
-                <Typography variant="B2" classes="!text-primary-200/70 mt-2">
+                <Typography variant="B2" classes="!text-neutral-200/70 mt-2">
                   Kangwon National University ( South Korea, Chuncheon )
                 </Typography>
-                <Typography variant="C1" classes="mt-2 !text-primary-200/70">
+                <Typography variant="C1" classes="mt-2 !text-neutral-200/70">
                   Mar 2008 – Feb 2015
                 </Typography>
               </div>
@@ -128,24 +128,24 @@ export default function Section2() {
             <Typography variant="H3" classes="!text-white w-full">
               Exprience
             </Typography>
-            <div className="bg-primary-900 flex w-full flex-col items-start gap-1 rounded-2xl px-4 py-6">
-              <div className="border-primary-200/30 relative pl-6">
+            <div className="flex w-full flex-col items-start gap-1 rounded-2xl bg-neutral-900 px-4 py-6">
+              <div className="relative border-neutral-200/30 pl-6">
                 {experiences.map((exp, idx) => (
                   <div
                     key={idx}
-                    className={`before:bg-primary-200/30 relative flex flex-col pb-6 before:absolute before:top-2 before:-left-[13px] before:w-px last:pb-2 ${idx === experiences.length - 1 ? 'before:h-0' : 'before:h-[calc(100%)]'} `}
+                    className={`relative flex flex-col pb-6 before:absolute before:top-2 before:-left-[13px] before:w-px before:bg-neutral-200/30 last:pb-2 ${idx === experiences.length - 1 ? 'before:h-0' : 'before:h-[calc(100%)]'} `}
                   >
-                    <span className="bg-primary-100 absolute top-2 -left-4 size-2 rounded-full" />
+                    <span className="absolute top-2 -left-4 size-2 rounded-full bg-neutral-100" />
                     {/* 내용 */}
                     <div className="flex flex-col gap-1">
                       <FadeInGsap>
                         <Typography variant="B1" classes="!text-white !font-semibold">
                           {exp.company}
                         </Typography>
-                        <Typography variant="B2" classes="!text-primary-200/70 mt-2">
+                        <Typography variant="B2" classes="!text-neutral-200/70 mt-2">
                           {exp.description}
                         </Typography>
-                        <Typography variant="C1" classes="mt-2 !text-primary-200/70">
+                        <Typography variant="C1" classes="mt-2 !text-neutral-200/70">
                           {exp.period} ( South Korea, Seoul )
                         </Typography>
                       </FadeInGsap>

@@ -13,7 +13,7 @@ const SNB = (props: { isOpen: boolean }) => {
   return (
     <header
       className={
-        'bg-primary-990 scrollbar-thin scrollbar-thumb-primary-900 scrollbar-track-transparent fixed z-40 flex h-[100dvh] w-full overflow-y-auto pt-[60px] pr-0 sm:w-[260px] ' +
+        'bg-neutral-990 scrollbar-thin scrollbar-thumb-neutral-900 scrollbar-track-transparent fixed z-40 flex h-[100dvh] w-full overflow-y-auto pt-[60px] pr-0 sm:w-[260px] ' +
         (isOpen ? 'left-0' : '-left-full sm:left-0') +
         ' transition-left duration-300 ease-in-out'
       }
@@ -29,9 +29,9 @@ const SNB = (props: { isOpen: boolean }) => {
                     <div>
                       <DisclosureButton
                         className={classNames(
-                          'hover:bg-primary-600/20 flex w-full items-center justify-between rounded-md px-4 py-2 text-left text-sm font-medium',
-                          { 'text-primary-100 !font-bold': isActiveMenu },
-                          { 'text-primary-100/70 !font-bold': !isActiveMenu },
+                          'flex w-full items-center justify-between rounded-md px-4 py-2 text-left text-sm font-medium hover:bg-neutral-600/20',
+                          { '!font-bold text-neutral-100': isActiveMenu },
+                          { '!font-bold text-neutral-100/70': !isActiveMenu },
                         )}
                       >
                         <span>{menu.label}</span>
@@ -50,9 +50,9 @@ const SNB = (props: { isOpen: boolean }) => {
                               key={item.id}
                               href={item.href}
                               className={classNames(
-                                'text-primary-100/70 hover:bg-primary-600/20 rounded-lg px-8 py-2 text-sm transition-all duration-100 ease-in-out',
+                                'rounded-lg px-8 py-2 text-sm text-neutral-100/70 transition-all duration-100 ease-in-out hover:bg-neutral-600/20',
                                 {
-                                  '!text-secondary-500 bg-primary-600/20 font-bold': isActiveItem,
+                                  '!text-primary-500 bg-neutral-600/20 font-bold': isActiveItem,
                                 },
                               )}
                             >

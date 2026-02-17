@@ -13,6 +13,7 @@ export default function Index() {
     { label: 'Home', href: '/' },
     { label: 'Design System', href: '/design-system' },
   ];
+
   const parseComponent = (component: { id: string; label: string; href: string }) => {
     switch (component.id) {
       case 'splitText':
@@ -44,8 +45,8 @@ export default function Index() {
       {designSystemMenus.map((menu) => (
         <div key={menu.id} className="mb-10 grid w-full grid-cols-12 gap-4">
           <div className="col-span-12 flex items-center gap-2">
-            <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
-            <Typography variant="H3" classes="!text-[#50b4ff]">
+            <BsStars className="!text-secondary-300 shrink-0 text-xl" />
+            <Typography variant="H3" classes="!text-secondary-300">
               {menu.id}
             </Typography>
           </div>
@@ -53,10 +54,10 @@ export default function Index() {
             <div key={item.id} className="col-span-12 md:col-span-4 lg:col-span-3">
               <SpotlightCard spotlightColor="rgba(80, 180, 255, 0.7)" href={item.href}>
                 <div className="flex w-full flex-col items-start gap-4 pb-4">
-                  <div className="bg-primary-990 pointer-events-none relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white">
+                  <div className="bg-neutral-990 pointer-events-none relative flex aspect-[3/2] w-full items-center justify-center rounded-lg text-white">
                     {parseComponent(item)}
                   </div>
-                  <Typography variant="B2" classes="!text-primary-100 !font-semibold">
+                  <Typography variant="B2" classes="!text-neutral-100 !font-semibold">
                     {item.label}
                   </Typography>
                 </div>

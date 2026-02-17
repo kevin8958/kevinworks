@@ -34,7 +34,7 @@ const DatepickerTypeGuide = () => {
         items="start"
         direction="col"
         justify="start"
-        classes="bg-primary-900 p-6 w-full rounded-xl pb-10"
+        classes="bg-neutral-900 p-6 w-full rounded-xl pb-10"
         gap={6}
       >
         {typeOptions.map((option) => (

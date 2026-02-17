@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
-    <html className="bg-primary-990 font-pretendard size-full transition-all duration-200 ease-in-out">
+    <html className="bg-neutral-990 font-pretendard size-full transition-all duration-200 ease-in-out">
       <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css" />
         <link

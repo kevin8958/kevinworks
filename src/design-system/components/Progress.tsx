@@ -69,7 +69,7 @@ const Progress = (props: Common.ProgressProps) => {
               fill="none"
             />
           </svg>
-          <div className="absolute text-center text-sm font-medium text-gray-400">
+          <div className="absolute text-center text-sm font-medium text-neutral-400">
             {label || clampedValue + '%'}
           </div>
         </div>
@@ -82,12 +82,15 @@ const Progress = (props: Common.ProgressProps) => {
   return (
     <div className="w-full" style={containerStyle}>
       {labelPosition === 'top' && (
-        <div className="mb-1 text-center text-sm font-medium text-gray-400">
+        <div className="mb-1 text-center text-sm font-medium text-neutral-400">
           {label || clampedValue + '%'}
         </div>
       )}
       <div
-        className={classNames('relative w-full overflow-hidden rounded-xl bg-gray-200', barHeight)}
+        className={classNames(
+          'relative w-full overflow-hidden rounded-xl bg-neutral-200',
+          barHeight,
+        )}
         role="Progress"
         aria-valuemin={0}
         aria-valuemax={100}
@@ -98,13 +101,13 @@ const Progress = (props: Common.ProgressProps) => {
           style={{ width: `${clampedValue}%` }}
         />
         {labelPosition === 'inside' && (
-          <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-gray-900">
+          <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-neutral-900">
             {label || clampedValue + '%'}
           </div>
         )}
       </div>
       {labelPosition === 'bottom' && (
-        <div className="mt-1 text-center text-sm font-medium text-gray-400">
+        <div className="mt-1 text-center text-sm font-medium text-neutral-400">
           {label || clampedValue + '%'}
         </div>
       )}

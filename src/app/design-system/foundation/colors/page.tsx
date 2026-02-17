@@ -1,7 +1,7 @@
 import Typography from '@/design-system/foundation/Typography';
 import PrimaryGuide from '@/design-system/foundation/colors/PrimaryGuide';
 import SecondaryGuide from '@/design-system/foundation/colors/SecondaryGuide';
-import GrayGuide from '@/design-system/foundation/colors/GrayGuide';
+import NeutralGuide from '@/design-system/foundation/colors/NeutralGuide';
 import BreadCrumb from '@/design-system/layout/BreadCrumb';
 import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import StatusGuide from '@/design-system/foundation/colors/StatusGuide';
@@ -22,7 +22,7 @@ const ComponenColorsPage = () => {
           </Typography>
           <PrimaryGuide />
           <SecondaryGuide />
-          <GrayGuide />
+          <NeutralGuide />
           <StatusGuide />
         </FlexWrapper>
       </FlexWrapper>

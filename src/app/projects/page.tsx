@@ -69,7 +69,7 @@ export default function Index() {
             onMouseLeave={() => setFocusedProject(null)}
           >
             <div className="flex w-full flex-col items-start gap-4">
-              <div className="bg-primary-100 relative aspect-video w-full overflow-hidden rounded-2xl">
+              <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-neutral-100">
                 <img
                   src={project.imageUrl}
                   alt={project.altText}
@@ -84,7 +84,7 @@ export default function Index() {
                 <Typography
                   variant="H3"
                   classes={
-                    '!text-primary-100' +
+                    '!text-neutral-100' +
                     (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
                   }
                 >
@@ -93,7 +93,7 @@ export default function Index() {
                 <Typography
                   variant="B2"
                   classes={
-                    '!text-primary-200' +
+                    '!text-neutral-200' +
                     (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
                   }
                 >

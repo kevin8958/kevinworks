@@ -107,13 +107,13 @@ export default function StickerBoard() {
   };
 
   return (
-    <FlexWrapper classes="min-w-[800px] bg-primary-900 rounded-2xl p-4" gap={4}>
+    <FlexWrapper classes="min-w-[800px] bg-neutral-900 rounded-2xl p-4" gap={4}>
       {/* 보드 */}
-      <div className="bg-primary-800 relative h-[400px] w-[600px] rounded-xl">
+      <div className="relative h-[400px] w-[600px] rounded-xl bg-neutral-800">
         {stickers.length === 0 && (
           <Typography
             variant="B2"
-            classes="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] p-2 !text-primary-100 !font-semibold"
+            classes="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] p-2 !text-neutral-100 !font-semibold"
           >
             Add some stickers to get started
           </Typography>
@@ -137,9 +137,9 @@ export default function StickerBoard() {
                 key={sticker.id}
                 onClick={() => handleAddSticker(sticker.src)}
                 disabled={!hasImage}
-                className={`border-primary-100/20 col-span-6 flex h-[60px] w-[60px] items-center justify-center rounded-lg border p-2 transition ${
+                className={`col-span-6 flex h-[60px] w-[60px] items-center justify-center rounded-lg border border-neutral-100/20 p-2 transition ${
                   hasImage
-                    ? 'hover:bg-primary-100/10 cursor-pointer'
+                    ? 'cursor-pointer hover:bg-neutral-100/10'
                     : 'cursor-not-allowed opacity-30'
                 }`}
               >
@@ -150,7 +150,7 @@ export default function StickerBoard() {
                     className="h-[40px] object-contain"
                   />
                 ) : (
-                  <span className="text-primary-300 text-xs">Empty</span>
+                  <span className="text-xs text-neutral-300">Empty</span>
                 )}
               </button>
             );

@@ -29,7 +29,7 @@ const AvatarStack = ({
       {remaining > 0 && (
         <div
           className={classNames(
-            'text-primary-100 flex items-center justify-center rounded-full font-semibold',
+            'flex items-center justify-center rounded-full font-semibold text-neutral-100',
             {
               'h-[40px] w-[40px] text-sm': size === 'sm',
               'h-[55px] w-[55px] text-base': size === 'md',

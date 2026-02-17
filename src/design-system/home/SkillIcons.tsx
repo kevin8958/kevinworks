@@ -185,7 +185,7 @@
 //       </div>
 //       <div
 //         ref={tooltipRef}
-//         className="absolute hidden flex-col gap-2 rounded-md bg-white p-4 text-gray-600 shadow-md"
+//         className="absolute hidden flex-col gap-2 rounded-md bg-white p-4 text-neutral-600 shadow-md"
 //       />
 //     </div>
 //   );

@@ -35,13 +35,13 @@ const SecondaryGuide = () => {
       <FlexWrapper
         items="start"
         justify="start"
-        classes="bg-primary-900 p-4 md:p-10 w-max rounded-xl"
+        classes="bg-neutral-900 p-4 md:p-10 w-full md:w-max rounded-xl"
         gap={0}
       >
         {Object.entries(secondaryColors).map(([key, value]) => (
-          <div key={key}>
+          <div key={key} className="flex-1">
             <FlexWrapper classes="!gap-3" items="center" direction="col">
-              <span className={`size-6 md:size-10 ${value}`} />
+              <span className={`size-6 rounded-sm md:size-10 md:rounded-none ${value}`} />
               <Typography variant="C1" color="secondary" classes="hidden md:block">
                 {key}
               </Typography>

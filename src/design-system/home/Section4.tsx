@@ -7,17 +7,17 @@ export default function Section4() {
       id="contact"
       className="relative flex w-full flex-col items-center gap-10 px-6 pt-20 pb-20 lg:px-10"
     >
-      <div className="bg-primary-900 flex h-[300px] h-full w-full max-w-[1000px] flex-col items-center justify-center gap-4 overflow-hidden rounded-2xl px-4 py-10 text-center">
+      <div className="flex h-[300px] h-full w-full max-w-[1000px] flex-col items-center justify-center gap-4 overflow-hidden rounded-2xl bg-neutral-900 px-4 py-10 text-center">
         <Typography variant="H3" classes="!text-white !font-bold">
           CONTACT ME
         </Typography>
-        <Typography variant="B2" classes="!text-primary-200/70">
+        <Typography variant="B2" classes="!text-neutral-200/70">
           I am actively seeking new opportunities and would love to hear from you! <br />
           Whether you have a question or simply want to say Hello , I will do my best to respond!
         </Typography>
         <a
           href="mailto:kevinlee8958@email.com"
-          className="border-primary-200/30 hover:bg-primary-800 mt-4 rounded-2xl border px-4 py-2 text-sm font-bold transition-colors"
+          className="mt-4 rounded-2xl border border-neutral-200/30 px-4 py-2 text-sm font-bold transition-colors hover:bg-neutral-800"
         >
           kevinlee8958@email.com
         </a>

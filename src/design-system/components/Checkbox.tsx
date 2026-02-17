@@ -31,7 +31,7 @@ const Checkbox = (props: Common.CheckboxProps) => {
       htmlFor={id}
       className={classNames(
         'flex items-center gap-2 select-none',
-        disabled ? 'cursor-not-allowed text-gray-600' : 'cursor-pointer text-white',
+        disabled ? 'cursor-not-allowed text-neutral-600' : 'cursor-pointer text-white',
         classes,
       )}
     >
@@ -51,9 +51,9 @@ const Checkbox = (props: Common.CheckboxProps) => {
           'flex shrink-0 items-center justify-center border transition-colors',
           boxSize[size],
           disabled
-            ? 'border-primary-700 text-transparent'
-            : 'border-primary-700 text-transparent transition peer-checked:text-white',
-          disabled && checked && 'bg-gray-300 !text-gray-500/70',
+            ? 'border-neutral-700 text-transparent'
+            : 'border-neutral-700 text-transparent transition peer-checked:text-white',
+          disabled && checked && 'bg-neutral-300 !text-neutral-500/70',
           invalid && '!border-danger',
         )}
       >

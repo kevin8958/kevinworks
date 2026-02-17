@@ -11,7 +11,7 @@ interface DividerProps {
 const Divider = ({
   orientation = 'horizontal',
   dashed = false,
-  color = 'border-gray-300/50',
+  color = 'border-neutral-300/50',
   thickness,
   className,
 }: DividerProps) => {

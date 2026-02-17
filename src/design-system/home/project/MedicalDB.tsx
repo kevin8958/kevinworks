@@ -139,10 +139,10 @@ const MedicalDB = ({
         backgroundImage="/image/medicaldb_thumbnail.png"
         content={
           <div className="flex flex-col gap-4">
-            <Typography variant="B2" classes="!text-primary-300">
+            <Typography variant="B2" classes="!text-neutral-300">
               Lime Society / Research Factory
             </Typography>
-            <Typography variant="B1" classes="!text-primary-200">
+            <Typography variant="B1" classes="!text-neutral-200">
               e-CRF medical data platform for hospital clinical research workflows.
             </Typography>
             <div className="flex flex-wrap gap-2">
@@ -159,21 +159,21 @@ const MedicalDB = ({
                 'Improved scheduling features and introduced form grouping and required data alerts.',
               ].map((item, idx) => (
                 <li key={idx} className="mb-2 flex items-start gap-2">
-                  <span className="bg-primary-200 mt-2 inline-block size-1 shrink-0 rounded-full" />
-                  <Typography variant="B2" classes="!text-primary-200">
+                  <span className="mt-2 inline-block size-1 shrink-0 rounded-full bg-neutral-200" />
+                  <Typography variant="B2" classes="!text-neutral-200">
                     {item}
                   </Typography>
                 </li>
               ))}
             </ul>
-            <Typography variant="H4" classes="!text-primary-200">
+            <Typography variant="H4" classes="!text-neutral-200">
               🧩 Features
             </Typography>
             <ul className="list-inside list-none pl-2">
               {features.map((feature, idx) => (
                 <li
                   key={idx}
-                  className="border-primary-800 mb-2 flex flex-col items-start gap-2 border-b pt-4 pb-6"
+                  className="mb-2 flex flex-col items-start gap-2 border-b border-neutral-800 pt-4 pb-6"
                 >
                   <FlexWrapper classes="size-full md:flex-row" direction="col" items="start">
                     <FlexWrapper classes="w-full" items="start" direction="col">

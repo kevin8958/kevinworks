@@ -141,7 +141,7 @@ export default function Section3() {
             >
               <FadeInGsap>
                 <div className="flex w-full flex-col items-start gap-4">
-                  <div className="border-primary-990 relative box-border aspect-video w-full overflow-hidden rounded-2xl border-[2px]">
+                  <div className="border-neutral-990 relative box-border aspect-video w-full overflow-hidden rounded-2xl border-[2px]">
                     <img
                       src={project.imageUrl}
                       alt={project.altText}
@@ -158,7 +158,7 @@ export default function Section3() {
                     <Typography
                       variant="B1"
                       classes={
-                        '!text-primary-100 !font-semibold' +
+                        '!text-neutral-100 !font-semibold' +
                         (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
                       }
                     >
@@ -167,7 +167,7 @@ export default function Section3() {
                     <Typography
                       variant="B2"
                       classes={
-                        '!text-primary-200' +
+                        '!text-neutral-200' +
                         (!!focusedProject && focusedProject !== index + 1 ? ' opacity-50' : '')
                       }
                     >
@@ -201,14 +201,14 @@ export default function Section3() {
         currentPage={openProject ?? 0}
         content={
           <div className="flex flex-col gap-4">
-            <Typography variant="B1" classes="!text-primary-200">
+            <Typography variant="B1" classes="!text-neutral-200">
               {projects[openProject ?? 0]?.desc}
             </Typography>
             <ul className="list-inside list-none pl-2">
               {projects[openProject ?? 0]?.contents?.map((item, idx) => (
                 <li key={idx} className="mb-2 flex items-start gap-2">
-                  <span className="bg-primary-200 mt-2 inline-block size-1 shrink-0 rounded-full" />
-                  <Typography variant="B2" classes="!text-primary-200">
+                  <span className="mt-2 inline-block size-1 shrink-0 rounded-full bg-neutral-200" />
+                  <Typography variant="B2" classes="!text-neutral-200">
                     {item}
                   </Typography>
                 </li>

@@ -4,23 +4,25 @@ import FlexWrapper from '@/design-system/layout/FlexWrapper';
 
 import Typography from '@/design-system/foundation/Typography';
 
-const GrayGuide = () => {
-  const grayColors = {
-    50: 'bg-gray-50',
-    100: 'bg-gray-100',
-    200: 'bg-gray-200',
-    300: 'bg-gray-300',
-    400: 'bg-gray-400',
-    500: 'bg-gray-500',
-    600: 'bg-gray-600',
-    700: 'bg-gray-700',
-    800: 'bg-gray-800',
-    900: 'bg-gray-900',
+const NeutralGuide = () => {
+  const neutralColors = {
+    50: 'bg-neutral-50',
+    100: 'bg-neutral-100',
+    200: 'bg-neutral-200',
+    300: 'bg-neutral-300',
+    400: 'bg-neutral-400',
+    500: 'bg-neutral-500',
+    600: 'bg-neutral-600',
+    700: 'bg-neutral-700',
+    800: 'bg-neutral-800',
+    900: 'bg-neutral-900',
+    990: 'bg-neutral-990',
   };
+
   return (
     <FlexWrapper classes="size-full" direction="col" items="start">
       <FlexWrapper classes="w-full" items="start" direction="col">
-        <Typography variant="H3">Gray</Typography>
+        <Typography variant="H3">Neutral</Typography>
         <Typography variant="B1">
           The neutral palette provides the foundation for layout, typography, and UI structure. It's
           used for backgrounds, borders, and text colors, ensuring balance and readability.
@@ -35,13 +37,13 @@ const GrayGuide = () => {
       <FlexWrapper
         items="start"
         justify="start"
-        classes="bg-primary-900 p-4 md:p-10 w-max rounded-xl"
+        classes="bg-neutral-900 p-4 md:p-10 w-full md:w-max rounded-xl"
         gap={0}
       >
-        {Object.entries(grayColors).map(([key, value]) => (
-          <div key={key}>
+        {Object.entries(neutralColors).map(([key, value]) => (
+          <div key={key} className="flex-1">
             <FlexWrapper classes="!gap-3" items="center" direction="col">
-              <span className={`size-6 md:size-10 ${value}`} />
+              <span className={`size-6 rounded-sm md:size-10 md:rounded-none ${value}`} />
               <Typography variant="C1" color="secondary" classes="hidden md:block">
                 {key}
               </Typography>
@@ -53,4 +55,4 @@ const GrayGuide = () => {
   );
 };
 
-export default GrayGuide;
+export default NeutralGuide;

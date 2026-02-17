@@ -48,20 +48,20 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
     <DatePicker
       portalId="datepicker-portal"
       className={classNames(
-        'box-border h-full !rounded-lg px-4 text-center !text-sm !outline-none placeholder:text-gray-300 focus:z-10',
+        'box-border h-full !rounded-lg px-4 text-center !text-sm !outline-none placeholder:text-neutral-300 focus:z-10',
         classes,
         {
           'border-danger focus:!border-danger !border-2': isError,
-          'focus:!border-primary-600 border-gray-100 focus:!border-2': !isError && !isFilter,
-          'focus:!border-primary-600 border-gray-100': !isError && isFilter,
-          'bg-newPrimary-50 cursor-not-allowed !text-[#8C9097]': disabled,
+          'border-neutral-100 focus:!border-2 focus:!border-neutral-600': !isError && !isFilter,
+          'border-neutral-100 focus:!border-neutral-600': !isError && isFilter,
+          'bg-newneutral-50 cursor-not-allowed !text-[#8C9097]': disabled,
           'h-[32px] min-h-[32px]': size === 'sm',
           'h-[40px] min-h-[40px]': size === 'md',
           'h-[48px] min-h-[48px]': size === 'lg',
-          'hover:bg-primary-100 active:bg-primary-200 bg-white text-gray-800 disabled:hover:!bg-white disabled:active:!bg-white':
+          'bg-white text-neutral-800 hover:bg-neutral-100 active:bg-neutral-200 disabled:hover:!bg-white disabled:active:!bg-white':
             variant === 'contain',
-          'border-primary-600 text-primary-100 border bg-transparent': variant === 'outline',
-          'text-primary-300 bg-transparent': variant === 'clear',
+          'border border-neutral-600 bg-transparent text-neutral-100': variant === 'outline',
+          'bg-transparent text-neutral-300': variant === 'clear',
         },
       )}
       dateFormat="MMM dd, yyyy"
@@ -95,21 +95,21 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
       minDate={minDate || undefined}
       maxDate={maxDate || undefined}
       showPopperArrow={false}
-      calendarClassName="bg-primary-900 text-white rounded-xl border border-primary-600 overflow-hidden p-2"
+      calendarClassName="bg-neutral-900 text-white rounded-xl border border-neutral-600 overflow-hidden p-2"
       dayClassName={(d) =>
         classNames(
-          'inline-block size-8 text-center rounded-lg text-sm leading-8 cursor-pointer box-border hover:bg-primary-800/50',
-          dayjs(d).isSame(dayjs(value), 'day') && 'bg-primary-700 text-white',
+          'inline-block size-8 text-center rounded-lg text-sm leading-8 cursor-pointer box-border hover:bg-neutral-800/50',
+          dayjs(d).isSame(dayjs(value), 'day') && 'bg-neutral-700 text-white',
           isRange &&
             start &&
             end &&
             dayjs(d).isBetween(dayjs(start), dayjs(end), 'day', '[]') &&
-            'bg-primary-800 text-white',
+            'bg-neutral-800 text-white',
           isRange &&
             start &&
             !end &&
             dayjs(d).isSame(start, 'day') &&
-            'border-2 border-primary-600 leading-[28px]',
+            'border-2 border-neutral-600 leading-[28px]',
         )
       }
       weekDayClassName={() => 'hidden'}
@@ -135,7 +135,7 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
         const shortWeekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
         return (
-          <div className="bg-primary-900 flex w-[240px] flex-col">
+          <div className="flex w-[240px] flex-col bg-neutral-900">
             {/* Month / Year Header */}
             <div
               className={classNames('flex items-center gap-4 py-2', {
@@ -159,7 +159,7 @@ const CustomDatePicker = (props: Common.DatepickerProps) => {
             </div>
 
             {/* Custom Weekday Row */}
-            <div className="text-primary-200 grid grid-cols-7 pb-1 text-center text-xs font-medium">
+            <div className="grid grid-cols-7 pb-1 text-center text-xs font-medium text-neutral-200">
               {shortWeekDays.map((day, idx) => (
                 <span key={idx}>{day}</span>
               ))}

@@ -35,12 +35,12 @@ const Avatar = (props: Common.AvatarProps) => {
       }
       return <p className={classNames(textSize, 'font-tossface')}>👦</p>;
     }
-    return <p className={classNames(textSize, 'text-primary-800 font-bold')}>{firstLetter}</p>;
+    return <p className={classNames(textSize, 'font-bold text-neutral-800')}>{firstLetter}</p>;
   })();
 
   return (
     <div title={name} style={{ width: dimension, height: dimension }} className="relative">
-      <div className="bg-secondary-100 flex size-full items-center justify-center overflow-hidden rounded-full">
+      <div className="bg-primary-100 flex size-full items-center justify-center overflow-hidden rounded-full">
         {content}
       </div>
       {state !== 'none' && (
@@ -51,13 +51,13 @@ const Avatar = (props: Common.AvatarProps) => {
               'bg-success': state === 'active',
               'bg-warning': state === 'semiActive',
               'bg-danger': state === 'inactive',
-              '!bg-gray-300': disabled,
+              '!bg-neutral-300': disabled,
             },
           )}
         />
       )}
       {disabled && (
-        <div className="pointer-events-none absolute inset-0 rounded-full bg-gray-300 opacity-70" />
+        <div className="pointer-events-none absolute inset-0 rounded-full bg-neutral-300 opacity-70" />
       )}
     </div>
   );

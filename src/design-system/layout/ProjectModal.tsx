@@ -59,7 +59,7 @@ export default function ProjectModal({
             <LuChevronLeft className="text-3xl text-white" />
           </Button>
           {/* Modal content */}
-          <motion.div className="bg-primary-900 relative z-10 mb-6 h-[calc(100vh-100px)] w-[calc(100%-32px)] max-w-3xl translate-y-[40px] overflow-hidden rounded-2xl shadow-lg">
+          <motion.div className="relative z-10 mb-6 h-[calc(100vh-100px)] w-[calc(100%-32px)] max-w-3xl translate-y-[40px] overflow-hidden rounded-2xl bg-neutral-900 shadow-lg">
             <button
               onClick={onClose}
               className="absolute top-4 right-4 z-50 text-2xl mix-blend-difference hover:opacity-70"
@@ -72,15 +72,15 @@ export default function ProjectModal({
                 style={{ backgroundImage: `url(${backgroundImage})` }}
               >
                 {title === 'Kevin Design System' && (
-                  <div className="from-primary-900 via-primary-900/60 absolute top-[-2px] h-[80px] w-full bg-gradient-to-b to-transparent" />
+                  <div className="absolute top-[-2px] h-[80px] w-full bg-gradient-to-b from-neutral-900 via-neutral-900/60 to-transparent" />
                 )}
-                <div className="from-primary-900 via-primary-900/60 absolute bottom-[-2px] size-full bg-gradient-to-t to-transparent" />
+                <div className="absolute bottom-[-2px] size-full bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent" />
 
                 <div className="absolute bottom-4 left-6">
                   <div className="flex items-center gap-4">
                     <Typography
                       variant="H3"
-                      classes="!text-2xl sm:text-3xl !text-primary-100 !font-semibold"
+                      classes="!text-2xl sm:text-3xl !text-neutral-100 !font-semibold"
                     >
                       {title}
                     </Typography>
@@ -95,7 +95,7 @@ export default function ProjectModal({
                       </Button>
                     )}
                   </div>
-                  <span className="text-gray-500">{year}</span>
+                  <span className="text-neutral-500">{year}</span>
                 </div>
               </div>
             )}

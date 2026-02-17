@@ -22,10 +22,10 @@ const ICONS: Record<Common.AlertState, any> = {
  */
 const COLOR_CLASSES: Record<Common.AlertVariant, Record<Common.AlertState, string>> = {
   contain: {
-    danger: 'bg-danger text-primary-100',
-    warning: 'bg-warning text-primary-100',
-    info: 'bg-info text-primary-100',
-    success: 'bg-success text-primary-100',
+    danger: 'bg-danger text-neutral-100',
+    warning: 'bg-warning text-neutral-100',
+    info: 'bg-info text-neutral-100',
+    success: 'bg-success text-neutral-100',
   },
   outline: {
     danger: 'text-danger border border-danger bg-transparent',

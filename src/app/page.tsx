@@ -31,13 +31,13 @@ export default function Index() {
       <div
         className={classNames(
           'pointer-events-none fixed top-0 left-0 z-40 h-[120px] w-full opacity-100',
-          'from-primary-990 bg-gradient-to-b to-transparent',
+          'from-neutral-990 bg-gradient-to-b to-transparent',
         )}
       />
       <Section1 />
       <Section2 />
       <div className="my-20 flex w-full flex-col items-center gap-6">
-        <div className="border-primary-990 relative box-border aspect-video min-h-[300px] w-full max-w-[600px] overflow-hidden rounded-2xl border-[2px]">
+        <div className="border-neutral-990 relative box-border aspect-video min-h-[300px] w-full max-w-[600px] overflow-hidden rounded-2xl border-[2px]">
           <img
             src={designSystem.imageUrl}
             alt={designSystem.altText}
@@ -57,7 +57,7 @@ export default function Index() {
           </div>
         </div>
 
-        <Typography variant="H3" classes={'!text-primary-100 !font-semibold'}>
+        <Typography variant="H3" classes={'!text-neutral-100 !font-semibold'}>
           {designSystem.title}
         </Typography>
 
@@ -65,7 +65,7 @@ export default function Index() {
           Explore System
         </Button>
 
-        <Typography variant="B2" classes={'!text-primary-200 max-w-[480px] text-center'}>
+        <Typography variant="B2" classes={'!text-neutral-200 max-w-[480px] text-center'}>
           {designSystem.desc}
         </Typography>
       </div>
@@ -74,7 +74,7 @@ export default function Index() {
       <div
         className={classNames(
           'pointer-events-none fixed bottom-0 left-0 z-40 h-[200px] w-full opacity-100',
-          'to-primary-990 bg-gradient-to-b from-transparent',
+          'to-neutral-990 bg-gradient-to-b from-transparent',
         )}
       />
     </div>

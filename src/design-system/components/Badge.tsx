@@ -8,9 +8,9 @@ const sizeMap = {
 } as const;
 
 const colorMap = {
-  gray: 'bg-gray-100 text-gray-800',
-  primary: 'bg-primary-100 text-primary-800',
-  secondary: 'bg-secondary-100 text-secondary-800',
+  gray: 'bg-neutral-100 text-neutral-800',
+  primary: 'bg-neutral-100 text-neutral-800',
+  secondary: 'bg-primary-100 text-primary-800',
   success: 'bg-success/10 text-success',
   warning: 'bg-warning/10 text-warning',
   danger: 'bg-danger/10 text-danger',

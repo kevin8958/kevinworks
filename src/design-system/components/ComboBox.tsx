@@ -37,7 +37,7 @@ const ComboBox = (props: Common.ComboBoxOption) => {
         onClose={() => setQuery('')}
       >
         <ComboboxInput
-          className="border-primary-700 focus:!border-primary-500 active:!border-primary-500 w-[200px] rounded-md border bg-transparent px-2 py-1 transition-all duration-100 ease-in-out outline-none focus:border-2"
+          className="w-[200px] rounded-md border border-neutral-700 bg-transparent px-2 py-1 transition-all duration-100 ease-in-out outline-none focus:border-2 focus:!border-neutral-500 active:!border-neutral-500"
           aria-label="Assignee"
           displayValue={(option) => {
             if (typeof option === 'string') return option;
@@ -50,13 +50,13 @@ const ComboBox = (props: Common.ComboBoxOption) => {
         />
         <ComboboxOptions
           anchor={{ to: 'bottom start', gap: '4px' }}
-          className="bg-primary-700 w-[200px] rounded-md text-white empty:invisible"
+          className="w-[200px] rounded-md bg-neutral-700 text-white empty:invisible"
         >
           {filteredOption.map((option) => (
             <ComboboxOption
               key={option.id}
               value={option}
-              className="group hover:bg-primary-600 flex gap-2 px-2 py-1 data-focus:bg-blue-100"
+              className="group flex gap-2 px-2 py-1 hover:bg-neutral-600 data-focus:bg-blue-100"
             >
               {option.value}
             </ComboboxOption>

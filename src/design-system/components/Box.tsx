@@ -7,7 +7,7 @@ const Box = (props: Common.BoxProps) => {
     <div
       id={id}
       className={classNames(
-        'text-primary-600 border-primary-500/30 w-full overflow-hidden rounded-xl border',
+        'w-full overflow-hidden rounded-xl border border-neutral-500/30 text-neutral-600',
         {
           'flex flex-col': title,
           'shadow-custom-light': type === 'card',

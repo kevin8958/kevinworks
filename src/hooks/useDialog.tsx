@@ -28,7 +28,7 @@ const PANEL_BORDER: Record<Common.DialogState, string> = {
   success: 'border-success border',
   warning: 'border-warning border',
   danger: 'border-danger border',
-  default: 'border-primary-600 border',
+  default: 'border-neutral-600 border',
 };
 
 const CONFIRM_BTN: Record<Common.DialogState, string> = {
@@ -113,7 +113,7 @@ export function DialogProvider({ children }: { children: ReactNode }) {
             >
               <Dialog.Panel
                 className={classNames(
-                  'bg-primary-900 w-full max-w-md rounded-xl p-6 shadow-xl',
+                  'w-full max-w-md rounded-xl bg-neutral-900 p-6 shadow-xl',
                   PANEL_BORDER[options?.state || 'default'],
                 )}
               >
@@ -123,7 +123,7 @@ export function DialogProvider({ children }: { children: ReactNode }) {
                       {options.title}
                     </Dialog.Title>
                   )}
-                  <p className="text-sm whitespace-pre-line text-gray-300">{options?.message}</p>
+                  <p className="text-sm whitespace-pre-line text-neutral-300">{options?.message}</p>
                 </div>
 
                 <div className="mt-6 flex justify-end gap-3">

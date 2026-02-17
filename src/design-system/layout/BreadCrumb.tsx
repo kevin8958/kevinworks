@@ -20,13 +20,13 @@ const BreadCrumb = (props: Layout.BreadCrumbProps) => {
             <li
               key={item.label}
               className={classNames('flex items-center gap-1 text-sm font-semibold', {
-                'text-secondary-300 !font-bold': isActive,
-                'text-primary-200': !isActive,
-                'hover:text-gray-300': !isActive && item.href,
+                'text-primary-300 !font-bold': isActive,
+                'text-neutral-200': !isActive,
+                'hover:text-neutral-300': !isActive && item.href,
               })}
             >
               {item.href ? <Link href={item.href}>{item.label}</Link> : item.label}
-              {index < items.length - 1 && <FaChevronRight className="text-primary-200 text-xs" />}
+              {index < items.length - 1 && <FaChevronRight className="text-xs text-neutral-200" />}
             </li>
           );
         })}

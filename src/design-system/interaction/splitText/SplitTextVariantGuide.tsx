@@ -25,7 +25,7 @@ const SplitTextVariantGuide = () => {
         </Typography>
       </FlexWrapper>
       <FlexWrapper
-        classes="w-full flex-wrap bg-primary-900 p-6  rounded-xl pb-10"
+        classes="w-full flex-wrap bg-neutral-900 p-6  rounded-xl pb-10"
         gap={4}
         direction="col"
         items="start"

@@ -30,7 +30,7 @@ const TextInput = (props: Common.TextInputProps) => {
         {label && (
           <label
             htmlFor={id}
-            className={classNames('text-primary-100 relative mb-2 !text-sm font-semibold', {
+            className={classNames('relative mb-2 !text-sm font-semibold text-neutral-100', {
               "after:absolute after:top-0 after:-right-[7px] after:rounded-full after:text-[#FF3535] after:content-['*']":
                 required,
             })}
@@ -45,15 +45,15 @@ const TextInput = (props: Common.TextInputProps) => {
           type={type}
           autoFocus={autoFocus}
           className={classNames(
-            'form-control box-border w-full overflow-hidden border border-gray-50 bg-white p-2 !text-base text-ellipsis outline-0 transition-all duration-200 ease-in-out placeholder:text-[#AFAFAF] focus:!border-2',
+            'form-control box-border w-full overflow-hidden border border-neutral-50 bg-white p-2 !text-base text-ellipsis outline-0 transition-all duration-200 ease-in-out placeholder:text-[#AFAFAF] focus:!border-2',
             classes,
             {
               'h-[32px] max-h-[32px]': size === 'sm',
               'h-[46px] max-h-[46px]': size === 'md',
               'h-[56px] max-h-[56px]': size === 'lg',
-              '!bg-newPrimary-50 !text-[#8C9097]': disabled,
+              '!bg-newneutral-50 !text-[#8C9097]': disabled,
               '!border-danger focus:!border-danger !border-2': error,
-              'focus:!border-newPrimary-600': !error,
+              'focus:!border-newneutral-600': !error,
               '!rounded-sm': rounded === 'sm',
               '!rounded-md': rounded === 'md',
               '!rounded-lg': rounded === 'lg',
