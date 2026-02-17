@@ -45,180 +45,84 @@ export default function ComponentButtonPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the button.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        type
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['button', 'submit'].map((type) => (
-          <Badge key={type} size="md">
-            {type}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'type',
+    type: ['button', 'submit'],
     default: 'button',
     description: 'The type of the button.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['lg', 'md', 'sm'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'size',
+    type: ['lg', 'md', 'sm'],
     default: 'md',
     description: 'The size of the button.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        variant
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['contain', 'outline', 'clear'].map((variant) => (
-          <Badge key={variant} size="md">
-            {variant}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'variant',
+    type: ['contain', 'outline', 'clear'],
     default: 'contain',
     description: 'The variant of the button.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        color
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['primary', 'info', 'success', 'warning', 'danger'].map((color) => (
-          <Badge key={color} size="md">
-            {color}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'color',
+    type: ['primary', 'info', 'success', 'warning', 'danger'],
     default: 'primary',
     description: 'The color of the button.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        disabled
-      </Badge>
-    ),
+    property: 'disabled',
     type: 'boolean',
     default: 'false',
     description: 'If true, the button will be disabled.',
   },
   {
     id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        loading
-      </Badge>
-    ),
+    property: 'loading',
     type: 'boolean',
     default: 'false',
     description: 'If true, the button will show a loading spinner.',
   },
   {
     id: '8',
-    property: (
-      <Badge color="secondary" size="md">
-        prompted
-      </Badge>
-    ),
+    property: 'prompted',
     type: 'boolean',
     default: 'false',
     description: 'If true, the button will show a prompt state.',
   },
   {
     id: '9',
-    property: (
-      <Badge color="secondary" size="md">
-        icon
-      </Badge>
-    ),
+    property: 'icon',
     type: 'ReactNode',
     default: '',
     description: 'The icon to be displayed in the button.',
   },
   {
     id: '10',
-    property: (
-      <Badge color="secondary" size="md">
-        iconPosition
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['left', 'right'].map((position) => (
-          <Badge key={position} size="md">
-            {position}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'iconPosition',
+    type: ['left', 'right'],
     default: 'left',
     description: 'The position of the icon in the button. Can be "left" or "right".',
   },
   {
     id: '11',
-    property: (
-      <Badge color="secondary" size="md">
-        shape
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['rect', 'circle'].map((shape) => (
-          <Badge key={shape} size="md">
-            {shape}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'shape',
+    type: ['rect', 'circle'],
     default: 'rect',
     description: 'The shape of the button.',
   },
   {
     id: '12',
-    property: (
-      <Badge color="secondary" size="md">
-        onClick
-      </Badge>
-    ),
+    property: 'onClick',
     type: '(e) => void',
     default: '',
     description: 'Function to be called when the button is clicked.',

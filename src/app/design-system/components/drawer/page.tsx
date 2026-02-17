@@ -36,77 +36,49 @@ export default function ComponentDrawerPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        open
-      </Badge>
-    ),
+    property: 'open',
     type: 'boolean',
     default: '',
     description: 'Controls the visibility of the drawer.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        title
-      </Badge>
-    ),
+    property: 'title',
     type: 'string',
     default: '',
     description: 'The title displayed at the top of the drawer.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        children
-      </Badge>
-    ),
+    property: 'children',
     type: 'React.ReactNode',
     default: '',
     description: 'Content to be displayed inside the drawer.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        showFooter
-      </Badge>
-    ),
+    property: 'showFooter',
     type: 'boolean',
     default: 'true',
     description: 'Controls the visibility of the footer section.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        onConfirm
-      </Badge>
-    ),
+    property: 'onConfirm',
     type: '() => void',
     default: '',
     description: 'Callback function triggered when the confirm button is clicked.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        onCancel
-      </Badge>
-    ),
+    property: 'onCancel',
     type: '() => void',
     default: '',
     description: 'Callback function triggered when the cancel button is clicked.',
   },
   {
     id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        onClose
-      </Badge>
-    ),
+    property: 'onClose',
     type: '() => void',
     default: '',
     description: 'Callback function triggered when the drawer is closed.',

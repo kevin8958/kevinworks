@@ -36,65 +36,35 @@ export default function ComponentSplitTextPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the component',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        variant
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="start" gap={1} direction="col">
-        <FlexWrapper items="center" gap={1}>
-          {['H2', 'H3', 'H4', 'B1', 'B2', 'C1'].map((variant) => (
-            <Badge key={variant} size="md">
-              {variant}
-            </Badge>
-          ))}
-        </FlexWrapper>
-      </FlexWrapper>
-    ),
+    property: 'variant',
+    type: ['H2', 'H3', 'H4', 'B1', 'B2', 'C1'],
     default: "'B1'",
     description: 'Typography variant for the text',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        text
-      </Badge>
-    ),
+    property: 'text',
     type: 'string',
     default: '',
     description: 'Text to be split and animated',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        delay
-      </Badge>
-    ),
+    property: 'delay',
     type: 'number',
     default: '100',
     description: 'Delay before the animation starts for each letter',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        repeat
-      </Badge>
-    ),
+    property: 'repeat',
     type: 'boolean',
     default: 'false',
     description: 'Whether to repeat the animation when the element comes back into view',

@@ -38,83 +38,43 @@ export default function ComponentDialogPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        title
-      </Badge>
-    ),
+    property: 'title',
     type: 'string',
     default: '',
     description: 'The title of the datepicker.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        message
-      </Badge>
-    ),
+    property: 'message',
     type: 'string',
     default: '',
     description: 'The message displayed below the datepicker.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        confirmText
-      </Badge>
-    ),
+    property: 'confirmText',
     type: 'string',
     default: 'Confirm',
     description: 'Text for the confirm button.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        cancelText
-      </Badge>
-    ),
+    property: 'cancelText',
     type: 'string',
     default: 'Cancel',
     description: 'Text for the cancel button.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        placement
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['top', 'center', 'bottom'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'placement',
+    type: ['top', 'center', 'bottom'],
     default: 'center',
     description: 'Placement of the datepicker.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        state
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['info', 'success', 'warning', 'danger', 'default'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'Badge',
+    type: ['info', 'success', 'warning', 'danger', 'default'],
     default: 'default',
     description: 'State of the datepicker.',
   },

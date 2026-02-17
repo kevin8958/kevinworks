@@ -36,74 +36,42 @@ export default function ComponentButtonGroupPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the button group.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        title
-      </Badge>
-    ),
+    property: 'title',
     type: 'string',
     default: '',
     description: 'The title of the button group.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['lg', 'md', 'sm'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'size',
+    type: ['lg', 'md', 'sm'],
     default: 'md',
     description: 'The size of the button group.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        value
-      </Badge>
-    ),
+    property: 'value',
     type: 'object',
     default: '',
     description: 'The selected option of the button group.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        options
-      </Badge>
-    ),
+    property: 'options',
     type: 'array',
     default: '',
     description: 'The options of the button group.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        onChange
-      </Badge>
-    ),
+    property: 'onChange',
     type: '(option) => void',
     default: '',
     description: 'Callback function when the selected option changes in the button group.',

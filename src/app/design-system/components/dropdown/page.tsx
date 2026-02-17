@@ -44,95 +44,43 @@ export default function ComponentDropdownPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        items
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">DropdownItem[]</Badge>
-      </FlexWrapper>
-    ),
+    property: 'items',
+    type: 'DropdownItem[]',
     default: '',
     description: 'Array of dropdown items.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        onChange
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">function</Badge>
-      </FlexWrapper>
-    ),
+    property: 'onChange',
+    type: 'function',
     default: '',
     description: 'Callback function when an item is selected.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        dialogPosition
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['left', 'right'].map((position) => (
-          <Badge key={position} size="md">
-            {position}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'dialogPosition',
+    type: ['left', 'right'],
     default: "'left'",
     description: 'Position of the dropdown dialog.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        dialogWidth
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">number</Badge>
-      </FlexWrapper>
-    ),
+    property: 'dialogWidth',
+    type: 'number',
     default: '',
     description: 'Width of the dropdown dialog.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        buttonItem
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">string | React.ReactNode</Badge>
-      </FlexWrapper>
-    ),
+    property: 'buttonItem',
+    type: ['string', 'React.ReactNode'],
     default: '',
     description: 'Content of the button that opens the dropdown.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        buttonClasses
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">string</Badge>
-      </FlexWrapper>
-    ),
+    property: 'buttonClasses',
+    type: 'string',
     default: '',
     description: 'Additional classes for the button.',
   },

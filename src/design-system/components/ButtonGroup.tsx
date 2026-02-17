@@ -28,8 +28,8 @@ const ButtonGroup = (props: Common.ButtonGroupProps) => {
             key={option.id}
             type="button"
             className={classNames(
-              'rounded-lg !border-0 !px-2 !py-[4px] text-neutral-800 transition-all duration-200 ease-in-out',
-              { 'bg-neutral-200': value.id === option.id },
+              'text-primary-800 rounded-lg !border-0 !px-2 !py-[4px] transition-all duration-200 ease-in-out',
+              { 'bg-primary-200': value.id === option.id },
               sizeClasses[size],
             )}
             onClick={() => onChange && onChange(option)}

@@ -38,96 +38,56 @@ export default function ComponentCheckboxPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the checkbox.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        id
-      </Badge>
-    ),
+    property: 'id',
     type: 'string',
     default: '',
     description: 'Unique identifier for the checkbox.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        label
-      </Badge>
-    ),
+    property: 'label',
     type: 'string',
     default: '',
     description: 'Label for the checkbox.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        checked
-      </Badge>
-    ),
+    property: 'checked',
     type: 'boolean',
     default: 'false',
     description: 'Indicates whether the checkbox is checked.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        disabled
-      </Badge>
-    ),
+    property: 'disabled',
     type: 'boolean',
     default: 'false',
     description: 'Indicates whether the checkbox is disabled.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        invalid
-      </Badge>
-    ),
+    property: 'invalid',
     type: 'boolean',
     default: 'false',
     description: 'Indicates whether the checkbox is in an invalid state.',
   },
   {
     id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['sm', 'md', 'lg'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'size',
+    type: ['sm', 'md', 'lg'],
     default: 'md',
     description: 'The size of the checkbox.',
   },
   {
     id: '8',
-    property: (
-      <Badge color="secondary" size="md">
-        onChange
-      </Badge>
-    ),
+    property: 'onChange',
     type: 'function',
     default: '',
     description: 'Callback function triggered when the checkbox state changes.',

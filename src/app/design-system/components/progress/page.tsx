@@ -40,99 +40,43 @@ export default function ComponentProgressPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        value
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">number</Badge>
-      </FlexWrapper>
-    ),
+    property: 'value',
+    type: 'number',
     default: '0',
     description: 'Current value of the progress bar.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['sm', 'md', 'lg'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'size',
+    type: ['sm', 'md', 'lg'],
     default: "'md'",
     description: 'Size of the progress bar.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        width
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">string | number</Badge>
-      </FlexWrapper>
-    ),
+    property: 'width',
+    type: ['string', 'number'],
     default: '',
     description: 'Width of the progress bar container.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        label
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">string</Badge>
-      </FlexWrapper>
-    ),
+    property: 'label',
+    type: 'string',
     default: '',
     description: 'Label text displayed on the progress bar.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        labelPosition
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['top', 'bottom', 'inside'].map((position) => (
-          <Badge key={position} size="md">
-            {position}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'labelPosition',
+    type: ['top', 'bottom', 'inside'],
     default: "'bottom'",
     description: 'Position of the label relative to the progress bar.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        isCircle
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">boolean</Badge>
-      </FlexWrapper>
-    ),
+    property: 'isCircle',
+    type: 'boolean',
     default: 'false',
     description: 'Whether to render the progress bar as a circular progress indicator.',
   },

@@ -37,203 +37,119 @@ export default function ComponentDatepickerPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the button group.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        type
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['single', 'range'].map((type) => (
-          <Badge key={type} size="md">
-            {type}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'type',
+    type: ['single', 'range'],
     default: 'single',
     description: 'Type of the datepicker.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        value
-      </Badge>
-    ),
-    type: 'Date | null',
+    property: 'value',
+    type: ['Date', 'null'],
     default: null,
     description: 'Selected date value.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        minDate
-      </Badge>
-    ),
-    type: 'Date | null',
+    property: 'minDate',
+    type: ['Date', 'null'],
     default: null,
     description: 'Minimum selectable date.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        maxDate
-      </Badge>
-    ),
-    type: 'Date | null',
+    property: 'maxDate',
+    type: ['Date', 'null'],
     default: null,
     description: 'Maximum selectable date.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        isError
-      </Badge>
-    ),
+    property: 'isError',
     type: 'boolean',
     default: false,
     description: 'Indicates if there is an error with the datepicker.',
   },
   {
     id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        isNullable
-      </Badge>
-    ),
+    property: 'isNullable',
     type: 'boolean',
     default: false,
     description: 'Allows the datepicker to accept a null value, useful for clearing the selection.',
   },
   {
     id: '8',
-    property: (
-      <Badge color="secondary" size="md">
-        isFilter
-      </Badge>
-    ),
+    property: 'isFilter',
     type: 'boolean',
     default: false,
     description: 'Indicates if the datepicker is used for filtering.',
   },
   {
     id: '9',
-    property: (
-      <Badge color="secondary" size="md">
-        placeholder
-      </Badge>
-    ),
+    property: 'placeholder',
     type: 'string',
     default: '',
     description: 'Placeholder text for the datepicker input.',
   },
   {
     id: '10',
-    property: (
-      <Badge color="secondary" size="md">
-        isRange
-      </Badge>
-    ),
+    property: 'isRange',
     type: 'boolean',
     default: false,
     description: 'Indicates if the datepicker allows selecting a range of dates.',
   },
   {
     id: '11',
-    property: (
-      <Badge color="secondary" size="md">
-        isMultiple
-      </Badge>
-    ),
+    property: 'isMultiple',
     type: 'boolean',
     default: false,
     description: 'Allows selecting multiple dates when set to true, applicable in range mode.',
   },
   {
     id: '12',
-    property: (
-      <Badge color="secondary" size="md">
-        startDate
-      </Badge>
-    ),
+    property: 'startDate',
     type: 'Date',
     default: null,
     description: 'Start date for range selection, required when isRange is true.',
   },
   {
     id: '13',
-    property: (
-      <Badge color="secondary" size="md">
-        endDate
-      </Badge>
-    ),
+    property: 'endDate',
     type: 'Date',
     default: null,
     description: 'End date for range selection, required when isRange is true.',
   },
   {
     id: '14',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['sm', 'md', 'lg'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'size',
+    type: ['sm', 'md', 'lg'],
     default: 'md',
     description: 'Size of the datepicker.',
   },
   {
     id: '15',
-    property: (
-      <Badge color="secondary" size="md">
-        disabled
-      </Badge>
-    ),
+    property: 'disabled',
     type: 'boolean',
     default: false,
     description: 'Disables the datepicker when true.',
   },
   {
     id: '16',
-    property: (
-      <Badge color="secondary" size="md">
-        hideHeaderButtons
-      </Badge>
-    ),
+    property: 'hideHeaderButtons',
     type: 'boolean',
     default: false,
     description: 'Hides the header buttons (today, clear) when set to true.',
   },
   {
     id: '17',
-    property: (
-      <Badge color="secondary" size="md">
-        onChange
-      </Badge>
-    ),
+    property: 'onChange',
     type: '(value: Date | null) => void',
     default: '',
     description: 'Callback function triggered when the date value changes.',

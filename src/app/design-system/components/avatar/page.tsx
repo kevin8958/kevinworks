@@ -42,101 +42,49 @@ export default function ComponentAvatarPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the avatar.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['lg', 'md', 'sm'].map((size) => (
-          <Badge key={size} size="md">
-            {size}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'size',
+    type: ['lg', 'md', 'sm'],
     default: 'md',
     description: 'The size of the avatar.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        type
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['image', 'text'].map((type) => (
-          <Badge key={type} size="md">
-            {type}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'type',
+    type: ['image', 'text'],
     default: 'image',
     description: 'The type of the avatar.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        state
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['none', 'active', 'semiActive', 'inactive'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'state',
+    type: ['none', 'active', 'semiActive', 'inactive'],
     default: 'none',
     description: 'The state of the avatar.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        disabled
-      </Badge>
-    ),
+    property: 'disabled',
     type: 'boolean',
     default: 'false',
     description: 'If true, the avatar is disabled.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        profileImageUrl
-      </Badge>
-    ),
+    property: 'profileImageUrl',
     type: 'string',
     default: '',
     description: 'The URL of the profile image.',
   },
   {
     id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        name
-      </Badge>
-    ),
+    property: 'name',
     type: 'string',
     default: '',
     description: 'The name to display in the avatar.',

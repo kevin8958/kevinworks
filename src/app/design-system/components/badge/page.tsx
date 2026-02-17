@@ -39,66 +39,42 @@ export default function ComponentBadgePage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        children
-      </Badge>
-    ),
-    type: 'string | React.ReactNode',
+    property: 'children',
+    type: ['string', 'React.ReactNode'],
     default: '',
     description: 'The content of the badge.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: "'sm' | 'md' | 'lg'",
+    property: 'size',
+    type: ['sm', 'md', 'lg'],
     default: 'md',
     description: 'Defines the overall size of the badge, affecting both text and spacing.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        color
-      </Badge>
-    ),
-    type: "'primary' | 'secondary' | 'success' | 'warning' | 'danger'",
+    property: 'color',
+    type: ['primary', 'secondary', 'success', 'warning', 'danger'],
     default: 'primary',
     description: 'Defines the color theme of the badge.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        icon
-      </Badge>
-    ),
+    property: 'icon',
     type: 'React.ReactNode',
     default: '',
     description: 'Optional icon to display alongside the badge content.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        disabled
-      </Badge>
-    ),
+    property: 'disabled',
     type: 'boolean',
     default: 'false',
     description: 'If true, the badge will appear in a disabled state.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the badge.',

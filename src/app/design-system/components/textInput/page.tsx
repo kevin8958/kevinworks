@@ -36,115 +36,63 @@ export default function ComponentTextInputPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        label
-      </Badge>
-    ),
+    property: 'label',
     type: 'string',
     default: '',
     description: 'Label for the input field.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        placeholder
-      </Badge>
-    ),
+    property: 'placeholder',
     type: 'string',
     default: '',
     description: 'Placeholder text for the input field.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        id
-      </Badge>
-    ),
+    property: 'id',
     type: 'string',
     default: '',
     description: 'Unique identifier for the input element.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom CSS classes for styling the input.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        type
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['text', 'password', 'email', 'number'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'type',
+    type: ['text', 'password', 'email', 'number'],
     default: "'text'",
     description: 'Type of the input field.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        value
-      </Badge>
-    ),
+    property: 'value',
     type: 'string',
     default: '',
     description: 'Current value of the input field.',
   },
   {
     id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        max
-      </Badge>
-    ),
+    property: 'max',
     type: 'number',
     default: '',
     description: 'Maximum length of the input value.',
   },
   {
     id: '8',
-    property: (
-      <Badge color="secondary" size="md">
-        size
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['sm', 'md', 'lg'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'size',
+    type: ['sm', 'md', 'lg'],
     default: "'md'",
     description: "Size of the input field. Options are 'sm', 'md', or 'lg'.",
   },
   {
     id: '9',
-    property: (
-      <Badge color="secondary" size="md">
-        required
-      </Badge>
-    ),
+    property: 'required',
     type: 'boolean',
     default: false,
     description:
@@ -152,130 +100,78 @@ const propsData = [
   },
   {
     id: '10',
-    property: (
-      <Badge color="secondary" size="md">
-        disabled
-      </Badge>
-    ),
+    property: 'disabled',
     type: 'boolean',
     default: false,
     description: 'Disables the input field if set to true.',
   },
   {
     id: '11',
-    property: (
-      <Badge color="secondary" size="md">
-        error
-      </Badge>
-    ),
+    property: 'error',
     type: 'boolean',
     default: false,
     description: 'Indicates if there is an error with the input.',
   },
   {
     id: '12',
-    property: (
-      <Badge color="secondary" size="md">
-        errorMsg
-      </Badge>
-    ),
+    property: 'errorMsg',
     type: 'string',
     default: '',
     description: 'Error message to display when error is true.',
   },
   {
     id: '13',
-    property: (
-      <Badge color="secondary" size="md">
-        inputProps
-      </Badge>
-    ),
+    property: 'inputProps',
     type: 'any',
     default: '{}',
     description: 'Additional properties to be passed to the input element.',
   },
   {
     id: '14',
-    property: (
-      <Badge color="secondary" size="md">
-        rounded
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['sm', 'md', 'lg', '2xl'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'rounded',
+    type: ['sm', 'md', 'lg', '2xl'],
     default: "'lg'",
     description:
       "Defines the border radius of the input field. Options are 'sm', 'md', 'lg', or '2xl'.",
   },
   {
     id: '15',
-    property: (
-      <Badge color="secondary" size="md">
-        suffix
-      </Badge>
-    ),
-    type: 'string | ReactNode',
+    property: 'suffix',
+    type: ['string', 'ReactNode'],
     default: '',
     description: 'Optional suffix element that appears at the end of the input field.',
   },
   {
     id: '16',
-    property: (
-      <Badge color="secondary" size="md">
-        autoFocus
-      </Badge>
-    ),
+    property: 'autoFocus',
     type: 'boolean',
     default: false,
     description: 'If true, the input field will automatically receive focus when rendered.',
   },
   {
     id: '17',
-    property: (
-      <Badge color="secondary" size="md">
-        onChange
-      </Badge>
-    ),
+    property: 'onChange',
     type: '(e) => void',
     default: '',
     description: 'Callback function triggered when the value of the input changes.',
   },
   {
     id: '18',
-    property: (
-      <Badge color="secondary" size="md">
-        onFocus
-      </Badge>
-    ),
+    property: 'onFocus',
     type: '(e) => void',
     default: '',
     description: 'Callback function triggered when the input receives focus.',
   },
   {
     id: '19',
-    property: (
-      <Badge color="secondary" size="md">
-        onBlur
-      </Badge>
-    ),
+    property: 'onBlur',
     type: '(e) => void',
     default: '',
     description: 'Callback function triggered when the input loses focus.',
   },
   {
     id: '20',
-    property: (
-      <Badge color="secondary" size="md">
-        onKeyUp
-      </Badge>
-    ),
+    property: 'onKeyUp',
     type: '(e) => void',
     default: '',
     description: 'Callback function triggered when a key is released while the input is focused.',

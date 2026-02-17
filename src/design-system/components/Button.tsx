@@ -36,7 +36,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
 
   const getClearColorClasses = (buttonColor: Common.ButtonColor) => {
     const colors = {
-      primary: 'text-neutral-300',
+      primary: 'text-primary-300',
       info: 'text-info',
       success: 'text-success',
       warning: 'text-warning',
@@ -47,7 +47,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
 
   const getOutlineClasses = (buttonColor: Common.ButtonColor) => {
     const styles = {
-      primary: 'border-neutral-500 text-neutral-300',
+      primary: 'border-primary-500 text-primary-300',
       info: 'border-info !text-info',
       success: 'border-success !text-success',
       warning: 'border-warning !text-warning',
@@ -59,7 +59,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
   const getContainClasses = (buttonColor: Common.ButtonColor) => {
     const styles = {
       primary:
-        'bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-200 disabled:active:!bg-white disabled:hover:!bg-white text-neutral-800',
+        'bg-primary-100 hover:bg-primary-200 active:bg-primary-200 disabled:active:!bg-white disabled:hover:!bg-white text-primary-800',
       info: 'bg-info !text-neutral-200',
       success: 'bg-success !text-neutral-200',
       warning: 'bg-warning !text-neutral-200',
@@ -76,9 +76,9 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
         classes,
         sizeClasses[size],
         {
-          'hover:bg-neutral-800/30 active:bg-neutral-600/30 disabled:!bg-transparent':
+          'hover:bg-primary-800/30 active:bg-primary-600/30 disabled:!bg-transparent':
             variant === 'clear',
-          'border hover:bg-neutral-800/30 active:bg-neutral-600/30 disabled:!bg-transparent':
+          'hover:bg-primary-800/30 active:bg-primary-600/30 border disabled:!bg-transparent':
             variant === 'outline',
         },
         variant === 'clear' && getClearColorClasses(color),
@@ -94,7 +94,7 @@ const Button = React.forwardRef((props: Common.ButtonProps, ref: React.Ref<HTMLB
     >
       {loading ? (
         <motion.div
-          className="size-4 rounded-full border-[3px] border-neutral-400 border-t-transparent"
+          className="border-primary-400 size-4 rounded-full border-[3px] border-t-transparent"
           animate={{ rotate: 360 }}
           transition={{
             repeat: Infinity,

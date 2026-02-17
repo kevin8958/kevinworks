@@ -44,148 +44,84 @@ export default function ComponentAlertPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        classes
-      </Badge>
-    ),
+    property: 'classes',
     type: 'string',
     default: '',
     description: 'Custom classes for the alert.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        variant
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['contain', 'outline'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'variant',
+    type: ['contain', 'outline'],
     default: 'contain',
     description: 'The variant of the alert.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        state
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        {['info', 'success', 'warning', 'danger'].map((state) => (
-          <Badge key={state} size="md">
-            {state}
-          </Badge>
-        ))}
-      </FlexWrapper>
-    ),
+    property: 'state',
+    type: ['info', 'success', 'warning', 'danger'],
     default: 'info',
     description: 'The state of the alert.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        title
-      </Badge>
-    ),
+    property: 'title',
     type: 'string',
     default: '',
     description: 'The title of the alert.',
   },
   {
     id: '5',
-    property: (
-      <Badge color="secondary" size="md">
-        message
-      </Badge>
-    ),
+    property: 'message',
     type: 'string',
     default: '',
     description: 'The message of the alert.',
   },
   {
     id: '6',
-    property: (
-      <Badge color="secondary" size="md">
-        showClose
-      </Badge>
-    ),
+    property: 'showClose',
     type: 'boolean',
     default: 'false',
     description: 'Whether to show the close button.',
   },
   {
     id: '7',
-    property: (
-      <Badge color="secondary" size="md">
-        time
-      </Badge>
-    ),
+    property: 'time',
     type: 'number',
     default: '',
     description: 'Time in seconds to auto-close the alert.',
   },
   {
     id: '8',
-    property: (
-      <Badge color="secondary" size="md">
-        repeat
-      </Badge>
-    ),
+    property: 'repeat',
     type: 'boolean',
     default: 'false',
     description: 'Whether to repeat the alert.',
   },
   {
     id: '9',
-    property: (
-      <Badge color="secondary" size="md">
-        loading
-      </Badge>
-    ),
+    property: 'loading',
     type: 'boolean',
     default: 'false',
     description: 'Whether to show loading state.',
   },
   {
     id: '10',
-    property: (
-      <Badge color="secondary" size="md">
-        icon
-      </Badge>
-    ),
+    property: 'icon',
     type: 'ReactNode',
     default: '',
     description: 'Custom icon for the alert.',
   },
   {
     id: '11',
-    property: (
-      <Badge color="secondary" size="md">
-        hideIcon
-      </Badge>
-    ),
+    property: 'hideIcon',
     type: 'boolean',
     default: 'false',
     description: 'Whether to hide the icon.',
   },
   {
     id: '12',
-    property: (
-      <Badge color="secondary" size="md">
-        onClose
-      </Badge>
-    ),
+    property: 'onClose',
     type: '() => void',
     default: '',
     description: 'Callback function when the alert is closed.',

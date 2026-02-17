@@ -36,62 +36,29 @@ export default function ComponentRadioPage() {
 const propsData = [
   {
     id: '1',
-    property: (
-      <Badge color="secondary" size="md">
-        title
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">string</Badge>
-      </FlexWrapper>
-    ),
+    property: 'title',
+    type: 'string',
     default: "''",
     description: 'Optional title displayed above the radio group.',
   },
   {
     id: '2',
-    property: (
-      <Badge color="secondary" size="md">
-        options
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">Array</Badge>
-        <Badge size="md">{'{ id: string; label: string; desc?: string }[]'}</Badge>
-      </FlexWrapper>
-    ),
+    property: 'options',
+    type: ['Array', '{ id: string; label: string; desc?: string }[]'],
     default: '[]',
     description: 'Array of radio options with label and optional description.',
   },
   {
     id: '3',
-    property: (
-      <Badge color="secondary" size="md">
-        value
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">string</Badge>
-      </FlexWrapper>
-    ),
+    property: 'value',
+    type: 'string',
     default: "''",
     description: 'Currently selected option ID.',
   },
   {
     id: '4',
-    property: (
-      <Badge color="secondary" size="md">
-        onChange
-      </Badge>
-    ),
-    type: (
-      <FlexWrapper items="center" gap={1}>
-        <Badge size="md">(id: string) =&gt; void</Badge>
-      </FlexWrapper>
-    ),
+    property: 'onChange',
+    type: '(id: string) => void',
     default: '—',
     description: 'Callback fired when a radio option is selected.',
   },
