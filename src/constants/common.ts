@@ -34,6 +34,11 @@ export const designSystemMenus = [
         label: 'Sticker',
         href: '/design-system/interaction/sticker',
       },
+      {
+        id: 'countUp',
+        label: 'Count Up',
+        href: '/design-system/interaction/countUp',
+      },
     ],
   },
   {

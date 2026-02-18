@@ -7,6 +7,7 @@ import Typography from '@/design-system/foundation/Typography';
 import { BsStars } from 'react-icons/bs';
 import SplitText from '@/design-system/interaction/SplitText';
 import BreadCrumb from '@/design-system/layout/BreadCrumb';
+import CountUp from '@/design-system/interaction/CountUp';
 
 export default function Index() {
   const breadcrumbItems = [
@@ -25,6 +26,10 @@ export default function Index() {
             delay={100}
             repeat
           />
+        );
+      case 'countUp':
+        return (
+          <CountUp to={100} repeat className="text-primary-500 font-mono text-4xl font-bold" />
         );
       default:
         return (
