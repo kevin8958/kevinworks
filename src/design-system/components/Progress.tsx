@@ -53,7 +53,7 @@ const Progress = (props: Common.ProgressProps) => {
               cx={dimension / 2}
               cy={dimension / 2}
               r={radius}
-              stroke="#e5e7eb"
+              stroke="#566481"
               strokeWidth={stroke}
               fill="none"
             />
@@ -61,7 +61,7 @@ const Progress = (props: Common.ProgressProps) => {
               cx={dimension / 2}
               cy={dimension / 2}
               r={radius}
-              stroke="#3b82f6"
+              stroke="#FFB74D"
               strokeWidth={stroke}
               strokeDasharray={circumference}
               strokeDashoffset={offset}
@@ -88,7 +88,7 @@ const Progress = (props: Common.ProgressProps) => {
       )}
       <div
         className={classNames(
-          'relative w-full overflow-hidden rounded-xl bg-neutral-200',
+          'relative w-full overflow-hidden rounded-xl bg-neutral-600',
           barHeight,
         )}
         role="Progress"
@@ -97,7 +97,7 @@ const Progress = (props: Common.ProgressProps) => {
         aria-valuenow={clampedValue}
       >
         <div
-          className={classNames('bg-info transition-all duration-300', barHeight)}
+          className={classNames('bg-primary-400 transition-all duration-300', barHeight)}
           style={{ width: `${clampedValue}%` }}
         />
         {labelPosition === 'inside' && (
