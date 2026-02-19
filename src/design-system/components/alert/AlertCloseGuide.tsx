@@ -28,7 +28,7 @@ const AlertCloseGuide = () => {
             message="this is a message"
             showClose
           />
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             showClose
           </Typography>
         </FlexWrapper>
@@ -42,7 +42,7 @@ const AlertCloseGuide = () => {
             time={5}
             repeat
           />
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             timer
           </Typography>
         </FlexWrapper>

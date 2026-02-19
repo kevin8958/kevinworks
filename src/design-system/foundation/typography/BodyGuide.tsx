@@ -34,7 +34,7 @@ const BodyGuide = () => {
               <Typography variant={option.id} classes="mb-0">
                 Body
               </Typography>
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.value}
               </Typography>
             </FlexWrapper>

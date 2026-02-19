@@ -36,7 +36,7 @@ const HeadingGuide = () => {
               <Typography variant={option.id} classes="mb-0">
                 Heading
               </Typography>
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.value}
               </Typography>
             </FlexWrapper>

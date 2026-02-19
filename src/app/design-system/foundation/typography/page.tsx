@@ -16,7 +16,7 @@ const ComponenTypographyPage = () => {
       <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper classes="w-full" justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
-          <Typography variant="H1" color="secondary">
+          <Typography variant="H1" color="primary">
             Typography
           </Typography>
           <HeadingGuide />

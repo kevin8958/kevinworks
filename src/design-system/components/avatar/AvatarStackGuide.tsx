@@ -42,7 +42,7 @@ const AvatarStackGuide = () => {
             overlap={-24}
             max={3}
           />
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             stack
           </Typography>
         </FlexWrapper>

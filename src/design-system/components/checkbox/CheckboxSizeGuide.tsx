@@ -55,7 +55,7 @@ const CheckboxSizeGuide = () => {
                 }
                 label="Check me"
               />
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

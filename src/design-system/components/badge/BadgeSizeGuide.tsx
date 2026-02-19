@@ -33,10 +33,8 @@ const BadgeSizeGuide = () => {
         {sizeOptions.map((option) => (
           <div key={option.id} className="w-full">
             <FlexWrapper classes="!gap-3" direction="col" items="center">
-              <Badge size={option.id} color="primary">
-                Badge
-              </Badge>
-              <Typography variant="C1" color="secondary">
+              <Badge size={option.id}>Badge</Badge>
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

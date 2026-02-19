@@ -65,7 +65,7 @@ const RadioTypeGuide = () => {
                     value={option.id === 'default' ? selectedDefault : selectedDescription}
                     onChange={option.id === 'default' ? setSelectedDefault : setSelectedDescription}
                   />
-                  <Typography classes="w-max" variant="C1" color="secondary">
+                  <Typography classes="w-max" variant="C1" color="primary">
                     {option.id}
                   </Typography>
                 </FlexWrapper>

@@ -39,7 +39,7 @@ const BadgeStateGuide = () => {
               <Badge color={option.id} size="md">
                 Badge
               </Badge>
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

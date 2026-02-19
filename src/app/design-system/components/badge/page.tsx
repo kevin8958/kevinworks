@@ -21,7 +21,7 @@ export default function ComponentBadgePage() {
       <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
-          <Typography variant="H1" color="secondary">
+          <Typography variant="H1" color="primary">
             Badge
           </Typography>
           <BadgeSizeGuide />

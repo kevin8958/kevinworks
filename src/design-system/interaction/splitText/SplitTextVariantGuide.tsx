@@ -34,7 +34,7 @@ const SplitTextVariantGuide = () => {
           <div key={option.id}>
             <FlexWrapper classes="!gap-3" items="end">
               <SplitText variant={option.id} text="Split Text" delay={100} repeat />
-              <Typography classes="w-max" variant="C1" color="secondary">
+              <Typography classes="w-max" variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

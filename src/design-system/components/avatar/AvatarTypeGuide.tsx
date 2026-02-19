@@ -35,7 +35,7 @@ const AvatarTypeGuide = () => {
           <div key={option.id} className="w-full">
             <FlexWrapper classes="!gap-3" direction="col" items="center">
               <Avatar size="md" type={option.id} name="A" />
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

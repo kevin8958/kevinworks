@@ -23,18 +23,16 @@ const BadgeIconGuide = () => {
         gap={6}
       >
         <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
-          <Badge color="primary" size="md">
-            Badge
-          </Badge>
-          <Typography variant="C1" color="secondary">
+          <Badge size="md">Badge</Badge>
+          <Typography variant="C1" color="primary">
             hide icon
           </Typography>
         </FlexWrapper>
         <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
-          <Badge color="primary" size="md" icon={<HiBadgeCheck className="text-lg" />}>
+          <Badge size="md" icon={<HiBadgeCheck className="text-lg" />}>
             Badge
           </Badge>
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             custom icon
           </Typography>
         </FlexWrapper>

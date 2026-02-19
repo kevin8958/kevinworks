@@ -29,7 +29,7 @@ const ProgressSizeGuide = () => {
                     size={option.id as Common.ProgressSize}
                     labelPosition="bottom" // top | bottom | inside
                   />
-                  <Typography classes="w-max" variant="C1" color="secondary">
+                  <Typography classes="w-max" variant="C1" color="primary">
                     {option.id}
                   </Typography>
                 </FlexWrapper>

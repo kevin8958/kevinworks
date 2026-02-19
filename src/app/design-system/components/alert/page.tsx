@@ -23,7 +23,7 @@ export default function ComponentAlertPage() {
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-6" items="start" direction="col">
           <FlexWrapper classes="w-full" items="end" justify="between">
-            <Typography variant="H1" color="secondary">
+            <Typography variant="H1" color="primary">
               Alert
             </Typography>
           </FlexWrapper>

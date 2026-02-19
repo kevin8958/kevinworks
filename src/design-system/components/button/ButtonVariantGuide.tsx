@@ -38,7 +38,7 @@ const ButtonVariantGuide = () => {
               <Button classes="min-w-[80px]" variant={option.id}>
                 Button
               </Button>
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

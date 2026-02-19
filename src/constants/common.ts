@@ -80,7 +80,11 @@ export const designSystemMenus = [
       // { id: 'toast', label: 'Toast', href: '/design-system/components/toast' },
       // { id: 'tooltip', label: 'Tooltip', href: '/design-system/components/tooltip' },
       // { id: 'tree', label: 'Tree', href: '/design-system/components/tree' },
-      // { id: 'upload', label: 'Upload', href: '/design-system/components/upload' },
+      {
+        id: 'uploaddropzone',
+        label: 'UploadDropzone',
+        href: '/design-system/components/uploadDropzone',
+      },
       // { id: 'video', label: 'Video', href: '/design-system/components/video' },
       // { id: 'carousel', label: 'Carousel', href: '/design-system/components/carousel' },
       // { id: 'colorPicker', label: 'ColorPicker', href: '/design-system/components/colorPicker' },

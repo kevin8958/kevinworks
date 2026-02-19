@@ -93,7 +93,7 @@ export default function ComponentCountUpPage() {
         <Typography variant="H1" color="primary">
           Count Up
         </Typography>
-        <Typography variant="B1" color="secondary" classes="max-w-3xl">
+        <Typography variant="B1" classes="max-w-3xl">
           A flexible component to animate numbers with support for prefixes, suffixes, custom
           durations, and intersection observer for scroll-triggered animations.
         </Typography>

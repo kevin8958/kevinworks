@@ -30,7 +30,7 @@ const ProgressLabelPositionGuide = () => {
                     size="lg"
                     labelPosition={option.id as Common.ProgressLabelPosition}
                   />
-                  <Typography classes="w-max" variant="C1" color="secondary">
+                  <Typography classes="w-max" variant="C1" color="primary">
                     {option.id}
                   </Typography>
                 </FlexWrapper>

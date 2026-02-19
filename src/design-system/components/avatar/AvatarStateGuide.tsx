@@ -36,7 +36,7 @@ const AvatarStateGuide = () => {
           <div key={option.id} className="w-full">
             <FlexWrapper classes="!gap-3" direction="col" items="center">
               <Avatar size="md" type="image" state={option.id} />
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>
@@ -44,7 +44,7 @@ const AvatarStateGuide = () => {
         ))}
         <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
           <Avatar size="md" type="image" disabled state="active" />
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             disabled
           </Typography>
         </FlexWrapper>

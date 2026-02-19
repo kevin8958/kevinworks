@@ -55,7 +55,7 @@ const ButtonGroupSizeGuide = () => {
                 options={buttonGroupOptions}
                 onChange={handleChangeOption}
               />
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

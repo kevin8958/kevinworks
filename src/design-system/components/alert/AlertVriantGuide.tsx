@@ -32,7 +32,7 @@ const AlertVriantGuide = () => {
           <div key={option.id} className="w-full">
             <FlexWrapper classes="w-full !gap-3" direction="col" items="center">
               <Alert classes="!w-full" variant={option.id} state="danger" title="Alert" />
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

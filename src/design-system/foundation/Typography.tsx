@@ -12,7 +12,7 @@ const baseStyles: Record<string, string> = {
 };
 
 const Typography = (props: Foundation.TypographyProps) => {
-  const { classes = '', variant, color = 'primary', children } = props;
+  const { classes = '', variant, color = 'neutral', children } = props;
 
   return (
     <p
@@ -20,8 +20,9 @@ const Typography = (props: Foundation.TypographyProps) => {
         baseStyles[variant],
         'tracking-wide transition-all duration-200 ease-in-out',
         {
-          'text-neutral-100': color === 'primary',
-          'text-primary-400': color === 'secondary',
+          'text-primary-400': color === 'primary',
+          'text-secondary-400': color === 'secondary',
+          'text-neutral-100': color === 'neutral',
         },
         classes,
       )}

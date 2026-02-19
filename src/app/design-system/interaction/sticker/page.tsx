@@ -20,7 +20,7 @@ export default function ComponentSplitTextPage() {
       <BreadCrumb items={breadcrumbItems} />
       <FlexWrapper justify="center">
         <FlexWrapper classes="w-full !gap-10" items="start" direction="col">
-          <Typography variant="H1" color="secondary">
+          <Typography variant="H1" color="primary">
             Sticker
           </Typography>
           <StickerBoard />
@@ -38,7 +38,7 @@ export default function ComponentSplitTextPage() {
 //   {
 //     id: '1',
 //     property: (
-//       <Badge color="secondary" size="md">
+//       <Badge color="primary" size="md">
 //         classes
 //       </Badge>
 //     ),
@@ -49,7 +49,7 @@ export default function ComponentSplitTextPage() {
 //   {
 //     id: '2',
 //     property: (
-//       <Badge color="secondary" size="md">
+//       <Badge color="primary" size="md">
 //         variant
 //       </Badge>
 //     ),
@@ -70,7 +70,7 @@ export default function ComponentSplitTextPage() {
 //   {
 //     id: '3',
 //     property: (
-//       <Badge color="secondary" size="md">
+//       <Badge color="primary" size="md">
 //         text
 //       </Badge>
 //     ),
@@ -81,7 +81,7 @@ export default function ComponentSplitTextPage() {
 //   {
 //     id: '4',
 //     property: (
-//       <Badge color="secondary" size="md">
+//       <Badge color="primary" size="md">
 //         delay
 //       </Badge>
 //     ),
@@ -92,7 +92,7 @@ export default function ComponentSplitTextPage() {
 //   {
 //     id: '5',
 //     property: (
-//       <Badge color="secondary" size="md">
+//       <Badge color="primary" size="md">
 //         repeat
 //       </Badge>
 //     ),

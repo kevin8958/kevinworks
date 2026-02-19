@@ -33,7 +33,7 @@ const CountUpVariantGuide = () => {
     <FlexWrapper classes="w-full lg:flex-row gap-8" direction="col" items="start">
       <FlexWrapper classes="w-full lg:w-1/3" items="start" direction="col">
         <Typography variant="H3">Usage Examples</Typography>
-        <Typography variant="B1" color="secondary">
+        <Typography variant="B1">
           The CountUp component animates numerical values, providing a dynamic way to display
           statistics, progress, or data changes.
         </Typography>
@@ -48,7 +48,7 @@ const CountUpVariantGuide = () => {
         <div className="grid w-full grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
           {examples.map((example, index) => (
             <div key={index} className="space-y-2">
-              <Typography variant="C1" color="secondary" classes="uppercase tracking-wider">
+              <Typography variant="C1" color="primary" classes="uppercase tracking-wider">
                 {example.label}
               </Typography>
               <div className="flex items-baseline gap-2">

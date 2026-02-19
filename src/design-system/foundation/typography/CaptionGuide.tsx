@@ -31,7 +31,7 @@ const CaptionGuide = () => {
               <Typography variant={option.id} classes="mb-0">
                 Caption
               </Typography>
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.value}
               </Typography>
             </FlexWrapper>

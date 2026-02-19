@@ -30,7 +30,7 @@ const ProgressTypeGuide = () => {
                     labelPosition="bottom"
                     isCircle={option.id === 'circle'}
                   />
-                  <Typography classes="w-max" variant="C1" color="secondary">
+                  <Typography classes="w-max" variant="C1" color="primary">
                     {option.id}
                   </Typography>
                 </FlexWrapper>

@@ -32,7 +32,7 @@ const AlertIconGuide = () => {
             message="this is a message"
             hideIcon
           />
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             hide icon
           </Typography>
         </FlexWrapper>
@@ -45,7 +45,7 @@ const AlertIconGuide = () => {
             message="this is a message"
             icon={<LuAlarmClock className="text-lg" />}
           />
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             custom icon
           </Typography>
         </FlexWrapper>
@@ -58,7 +58,7 @@ const AlertIconGuide = () => {
             message="this is a message"
             loading
           />
-          <Typography variant="C1" color="secondary">
+          <Typography variant="C1" color="primary">
             loading icon
           </Typography>
         </FlexWrapper>

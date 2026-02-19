@@ -44,7 +44,7 @@ const NeutralGuide = () => {
           <div key={key} className="flex-1">
             <FlexWrapper classes="!gap-3" items="center" direction="col">
               <span className={`size-6 rounded-sm md:size-10 md:rounded-none ${value}`} />
-              <Typography variant="C1" color="secondary" classes="hidden md:block">
+              <Typography variant="C1" color="primary" classes="hidden md:block">
                 {key}
               </Typography>
             </FlexWrapper>

@@ -57,7 +57,7 @@ const DialogStateGuide = () => {
               >
                 Dialog
               </Button>
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

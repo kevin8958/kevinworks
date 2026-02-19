@@ -36,7 +36,7 @@ const ButtonSizeGuide = () => {
               <Button classes="min-w-[80px]" size={option.id}>
                 Button
               </Button>
-              <Typography variant="C1" color="secondary">
+              <Typography variant="C1" color="primary">
                 {option.id}
               </Typography>
             </FlexWrapper>

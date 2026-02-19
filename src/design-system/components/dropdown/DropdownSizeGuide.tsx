@@ -35,7 +35,7 @@ const DropdownSizeGuide = () => {
                     buttonItem="Menu"
                     buttonClasses="w-[80px]"
                   />
-                  <Typography classes="w-max" variant="C1" color="secondary">
+                  <Typography classes="w-max" variant="C1" color="primary">
                     {option.value}
                   </Typography>
                 </FlexWrapper>
