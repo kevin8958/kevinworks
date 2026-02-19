@@ -28,7 +28,9 @@ const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
 
   const aspectRatio = image.height / image.width;
   const height = width * aspectRatio;
-  const buttonSize = 18;
+
+  // 모바일 터치 편의를 위해 버튼 크기를 18 -> 22로 살짝 키움
+  const buttonSize = 22;
 
   return (
     <Group
@@ -37,34 +39,44 @@ const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
       draggable
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      // 모바일에서 터치했을 때도 삭제 버튼이 보이도록 추가 (최소한의 대응)
+      // ✅ 추가: 클릭이나 탭을 했을 때 X버튼 상태를 토글함 (모바일 대응)
       onClick={() => setIsHovered(!isHovered)}
+      onTap={() => setIsHovered(!isHovered)}
     >
+      {/* Sticker image */}
       <KonvaImage image={image} width={width} height={height} />
+
+      {/* X button background */}
       {isHovered && (
-        <>
+        <Group
+          x={width - buttonSize / 2}
+          y={-buttonSize / 2}
+          // ✅ 중요: X버튼 클릭 시 스티커 클릭 이벤트가 또 발생하지 않도록 전파 방지
+          onClick={(e) => {
+            e.cancelBubble = true;
+            onRemove(id);
+          }}
+          onTap={(e) => {
+            e.cancelBubble = true;
+            onRemove(id);
+          }}
+        >
           <Rect
-            x={width - buttonSize / 2}
-            y={-buttonSize / 2}
             width={buttonSize}
             height={buttonSize}
-            fill="rgba(0,0,0,0.5)"
+            fill="rgba(0,0,0,0.7)" // 모바일에서 더 잘 보이게 투명도 조정
             cornerRadius={4}
-            onClick={() => onRemove(id)}
           />
           <Text
-            x={width - buttonSize / 2}
-            y={-buttonSize / 2 + 1}
             text="✕"
-            fontSize={12}
+            fontSize={14}
             fill="white"
             width={buttonSize}
             height={buttonSize}
             align="center"
             verticalAlign="middle"
-            onClick={() => onRemove(id)}
           />
-        </>
+        </Group>
       )}
     </Group>
   );
