@@ -112,7 +112,7 @@ export default function StickerBoard() {
       gap={4}
     >
       {/* 2. 보드 영역: 모바일에서 화면보다 클 경우 가로 스크롤 가능하게 함 */}
-      <div className="w-full touch-none overflow-x-auto rounded-xl bg-neutral-800">
+      <div className="w-full overflow-x-auto rounded-xl bg-neutral-800">
         <div className="relative h-[400px] w-[600px]">
           {stickers.length === 0 && (
             <Typography
