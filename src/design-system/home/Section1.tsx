@@ -28,7 +28,7 @@ export default function Section1() {
               width={true}
               weight={true}
               italic={true}
-              textColor="#ffffff"
+              textColor="#FFB74D"
               strokeColor="#ff0000"
               minFontSize={36}
               disabled

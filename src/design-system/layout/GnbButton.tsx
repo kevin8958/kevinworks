@@ -43,7 +43,7 @@ const GnbButton = ({ href, isActive, children }: Layout.GnbButtonProps) => {
       onClick={handleClick}
       className={clsx(
         'group relative px-2 py-1 font-semibold text-white transition-colors',
-        isActive ? '!font-bold !text-[#50b4ff]' : 'opacity-80 hover:opacity-100',
+        isActive ? '!text-primary-400 !font-bold' : 'opacity-80 hover:opacity-100',
       )}
     >
       <span className="relative z-10 text-xs">{children}</span>
@@ -51,7 +51,7 @@ const GnbButton = ({ href, isActive, children }: Layout.GnbButtonProps) => {
         className={clsx(
           'absolute bottom-0 left-1/2 h-[2px] w-0 origin-center rounded-xs bg-white transition-all duration-300 ease-in-out',
           'group-hover:w-[calc(100%-16px)]',
-          isActive && 'w-[calc(100%-16px)] -translate-x-1/2 !bg-[#50b4ff]',
+          isActive && '!bg-primary-400 w-[calc(100%-16px)] -translate-x-1/2',
           !isActive && 'group-hover:-translate-x-1/2',
         )}
       ></span>

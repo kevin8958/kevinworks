@@ -58,8 +58,8 @@ export default function Section2() {
       className="flex w-full max-w-[1000px] flex-col items-center gap-6 px-6 pt-20 pb-10 lg:px-0"
     >
       <div className="mb-2 flex w-full items-center gap-2">
-        <BsStars className="shrink-0 text-xl !text-[#50b4ff]" />
-        <Typography variant="H3" classes="!text-[#50b4ff]">
+        <BsStars className="!text-primary-400 shrink-0 text-xl" />
+        <Typography variant="H3" classes="!text-primary-400">
           ABOUT
         </Typography>
       </div>

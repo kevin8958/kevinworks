@@ -50,8 +50,8 @@ export default function Index() {
       {designSystemMenus.map((menu) => (
         <div key={menu.id} className="mb-10 grid w-full grid-cols-12 gap-4">
           <div className="col-span-12 flex items-center gap-2">
-            <BsStars className="!text-secondary-300 shrink-0 text-xl" />
-            <Typography variant="H3" classes="!text-secondary-300">
+            <BsStars className="!text-primary-400 shrink-0 text-xl" />
+            <Typography variant="H3" classes="!text-primary-400">
               {menu.id}
             </Typography>
           </div>

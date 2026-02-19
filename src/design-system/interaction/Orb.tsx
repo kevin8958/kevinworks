@@ -106,9 +106,11 @@ export default function Orb({
       return vec4(colorIn.rgb / (a + 1e-5), a);
     }
     
-    const vec3 baseColor1 = vec3(0.611765, 0.262745, 0.996078);
-    const vec3 baseColor2 = vec3(0.298039, 0.760784, 0.913725);
-    const vec3 baseColor3 = vec3(0.062745, 0.078431, 0.600000);
+    // ✅ 아래 3줄만 수정되었습니다. (Primary 500, 600, 900 적용)
+    const vec3 baseColor1 = vec3(1.0, 0.6549, 0.1490); // #FFA726
+    const vec3 baseColor2 = vec3(0.9843, 0.5490, 0.0); // #FB8C00
+    const vec3 baseColor3 = vec3(0.6509, 0.2274, 0.0); // #A63A00
+
     const float innerRadius = 0.6;
     const float noiseScale = 0.65;
     
