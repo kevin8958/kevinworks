@@ -13,33 +13,30 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
   const [showTopShadow, setShowTopShadow] = useState(false);
   const [showBottomShadow, setShowBottomShadow] = useState(false);
 
-  // --- 1. 스크롤 복원 및 저장 로직 ---
+  // 1. 스크롤 복원 및 저장
   useEffect(() => {
     const root = scrollRef.current;
     if (!root) return;
 
-    // [복원] 페이지가 바뀌거나 컴포넌트가 로드될 때 실행
     const savedPos = sessionStorage.getItem(`scrollPos-${pathname}`);
     if (savedPos) {
-      // 콘텐츠가 그려질 시간을 주기 위해 requestAnimationFrame 사용
       requestAnimationFrame(() => {
         root.scrollTo(0, parseInt(savedPos));
       });
     }
 
-    // [저장] 스크롤할 때마다 위치를 기억 (디바운싱을 주면 더 좋지만 일단 직관적으로 구현)
     const handleScroll = () => {
       sessionStorage.setItem(`scrollPos-${pathname}`, root.scrollTop.toString());
     };
 
     root.addEventListener('scroll', handleScroll);
     return () => root.removeEventListener('scroll', handleScroll);
-  }, [pathname]); // 경로가 바뀔 때마다 해당 경로의 위치를 복원/저장
+  }, [pathname]);
 
-  // --- 2. 기존 그림자 감지 로직 (IntersectionObserver) ---
+  // 2. 그림자 감지 (IntersectionObserver)
   useEffect(() => {
     const root = scrollRef.current;
-    if (!root || !topSentinel.current || !bottomSentinel.current) return () => {};
+    if (!root || !topSentinel.current || !bottomSentinel.current) return;
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -53,8 +50,8 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
         });
       },
       {
-        root,
-        threshold: 0.1,
+        root, // 스크롤 박스를 기준으로 감지
+        threshold: 0,
       },
     );
 
@@ -62,34 +59,37 @@ const PageWrapper = ({ children }: Layout.PageWrapperProps) => {
     io.observe(bottomSentinel.current);
 
     return () => io.disconnect();
-  }, []); // 의존성 배열을 비워두어 mount/unmount 시에만 설정
+  }, []);
 
   return (
-    <div ref={scrollRef} className="relative flex h-screen w-full flex-col overflow-y-auto">
-      {/* 센티넬 (그림자 감지용) */}
-      <div ref={topSentinel} className="h-px w-full shrink-0" />
+    /* 최상위 컨테이너: 스크롤되지 않고 화면에 고정됨 */
+    <div className="relative flex h-screen w-full flex-col overflow-hidden">
+      {/* 실제 스크롤이 발생하는 영역 */}
+      <div ref={scrollRef} className="scrollbar-hide relative w-full flex-1 overflow-y-auto">
+        {/* 상단 감지 포인트 */}
+        <div ref={topSentinel} className="h-px w-full shrink-0" />
 
-      {/* 실제 콘텐츠 영역 */}
-      <div className="w-full grow">{children}</div>
+        {/* 실제 콘텐츠 */}
+        <div className="min-h-full w-full">{children}</div>
 
-      <div ref={bottomSentinel} className="h-4 w-full shrink-0" />
+        {/* 하단 감지 포인트 */}
+        <div ref={bottomSentinel} className="h-px w-full shrink-0" />
+      </div>
 
-      {/* ⇡ 위 그림자 (PageWrapper가 스크롤 주체이므로 fixed 대신 absolute가 나을 수 있음) */}
+      {/* ⇡ 상단 고정 그림자: scrollRef 밖에서 absolute로 배치해야 고정됨 */}
       <div
         className={classNames(
-          'pointer-events-none absolute top-0 left-0 z-40 h-[120px] w-full',
-          'from-neutral-990 bg-gradient-to-b to-transparent',
-          'transition-opacity duration-700',
+          'pointer-events-none absolute top-0 left-0 z-40 h-[100px] w-full',
+          'from-neutral-990 bg-gradient-to-b to-transparent transition-opacity duration-500',
           showTopShadow ? 'opacity-100' : 'opacity-0',
         )}
       />
 
-      {/* ⇣ 아래 그림자 */}
+      {/* ⇣ 하단 고정 그림자 */}
       <div
         className={classNames(
           'pointer-events-none absolute bottom-0 left-0 z-40 h-[100px] w-full',
-          'to-neutral-990 bg-gradient-to-b from-transparent',
-          'transition-opacity duration-300',
+          'from-neutral-990 bg-gradient-to-t to-transparent transition-opacity duration-500',
           showBottomShadow ? 'opacity-100' : 'opacity-0',
         )}
       />
