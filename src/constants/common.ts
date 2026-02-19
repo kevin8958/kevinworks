@@ -81,7 +81,7 @@ export const designSystemMenus = [
       // { id: 'tooltip', label: 'Tooltip', href: '/design-system/components/tooltip' },
       // { id: 'tree', label: 'Tree', href: '/design-system/components/tree' },
       {
-        id: 'uploaddropzone',
+        id: 'uploadDropzone',
         label: 'UploadDropzone',
         href: '/design-system/components/uploadDropzone',
       },
