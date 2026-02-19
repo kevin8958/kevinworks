@@ -36,7 +36,7 @@ export default function Index() {
       />
       <Section1 />
       <Section2 />
-      <div className="my-20 flex w-full flex-col items-center gap-6">
+      <div className="my-20 flex w-full flex-col items-center gap-6 px-4">
         <div className="border-neutral-990 relative box-border aspect-video min-h-[300px] w-full max-w-[600px] overflow-hidden rounded-2xl border-[2px]">
           <img
             src={designSystem.imageUrl}
