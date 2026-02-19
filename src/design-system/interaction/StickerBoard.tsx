@@ -7,6 +7,7 @@ import FlexWrapper from '../layout/FlexWrapper';
 import Button from '../components/Button';
 import Typography from '../foundation/Typography';
 
+// ... (Sticker 인터페이스 및 Sticker 컴포넌트 로직은 기존과 완전히 동일)
 interface Sticker {
   id: number;
   src: string;
@@ -27,7 +28,6 @@ const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
 
   const aspectRatio = image.height / image.width;
   const height = width * aspectRatio;
-
   const buttonSize = 18;
 
   return (
@@ -37,11 +37,10 @@ const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
       draggable
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      // 모바일에서 터치했을 때도 삭제 버튼이 보이도록 추가 (최소한의 대응)
+      onClick={() => setIsHovered(!isHovered)}
     >
-      {/* Sticker image */}
       <KonvaImage image={image} width={width} height={height} />
-
-      {/* X button background */}
       {isHovered && (
         <>
           <Rect
@@ -71,7 +70,6 @@ const Sticker = ({ id, src, x, y, width, onRemove }: StickerProps) => {
   );
 };
 
-// 선택용 스티커 목록 (10개)
 const stickerOptions = [
   { id: 1, src: '/sticker/sticker1.png' },
   { id: 2, src: '/sticker/sticker2.png' },
@@ -107,28 +105,35 @@ export default function StickerBoard() {
   };
 
   return (
-    <FlexWrapper classes="min-w-[800px] bg-neutral-900 rounded-2xl p-4" gap={4}>
-      {/* 보드 */}
-      <div className="relative h-[400px] w-[600px] rounded-xl bg-neutral-800">
-        {stickers.length === 0 && (
-          <Typography
-            variant="B2"
-            classes="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] p-2 !text-neutral-100 !font-semibold"
-          >
-            Add some stickers to get started
-          </Typography>
-        )}
-        <Stage width={600} height={400}>
-          <Layer>
-            {stickers.map((sticker) => (
-              <Sticker key={sticker.id} {...sticker} onRemove={handleRemoveSticker} />
-            ))}
-          </Layer>
-        </Stage>
+    /* 1. min-w 제거, w-full 추가 및 화면 크기에 따라 가로/세로 정렬 변경 */
+    <FlexWrapper
+      classes="w-full bg-neutral-900 rounded-2xl p-4 overflow-hidden sm:flex-row"
+      direction="col"
+      gap={4}
+    >
+      {/* 2. 보드 영역: 모바일에서 화면보다 클 경우 가로 스크롤 가능하게 함 */}
+      <div className="w-full touch-none overflow-x-auto rounded-xl bg-neutral-800">
+        <div className="relative h-[400px] w-[600px]">
+          {stickers.length === 0 && (
+            <Typography
+              variant="B2"
+              classes="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] p-2 !text-neutral-100 !font-semibold z-10"
+            >
+              Add some stickers to get started
+            </Typography>
+          )}
+          <Stage width={600} height={400}>
+            <Layer>
+              {stickers.map((sticker) => (
+                <Sticker key={sticker.id} {...sticker} onRemove={handleRemoveSticker} />
+              ))}
+            </Layer>
+          </Stage>
+        </div>
       </div>
 
-      {/* 스티커 선택 영역 */}
-      <FlexWrapper classes="shrink-0" direction="col" justify="between">
+      {/* 3. 스티커 선택 영역: 모바일에서는 아래로 배치됨 */}
+      <FlexWrapper classes="w-full lg:w-auto shrink-0" direction="col" justify="between" gap={4}>
         <div className="grid grid-cols-12 gap-2">
           {stickerOptions.map((sticker) => {
             const hasImage = sticker.src !== '';
@@ -137,26 +142,22 @@ export default function StickerBoard() {
                 key={sticker.id}
                 onClick={() => handleAddSticker(sticker.src)}
                 disabled={!hasImage}
-                className={`col-span-6 flex h-[60px] w-[60px] items-center justify-center rounded-lg border border-neutral-100/20 p-2 transition ${
+                className={`col-span-3 flex h-[60px] w-[60px] items-center justify-center rounded-lg border border-neutral-100/20 p-2 transition lg:col-span-6 ${
                   hasImage
-                    ? 'cursor-pointer hover:bg-neutral-100/10'
+                    ? 'cursor-pointer hover:bg-neutral-100/10 active:scale-95'
                     : 'cursor-not-allowed opacity-30'
                 }`}
               >
                 {hasImage ? (
-                  <img
-                    src={sticker.src}
-                    alt={`Sticker ${sticker.id}`}
-                    className="h-[40px] object-contain"
-                  />
+                  <img src={sticker.src} alt="" className="h-[40px] object-contain" />
                 ) : (
-                  <span className="text-xs text-neutral-300">Empty</span>
+                  <span className="text-[10px] text-neutral-300">Empty</span>
                 )}
               </button>
             );
           })}
         </div>
-        <Button variant="outline" onClick={() => setStickers([])}>
+        <Button variant="outline" onClick={() => setStickers([])} classes="w-full">
           CLEAR ALL
         </Button>
       </FlexWrapper>
