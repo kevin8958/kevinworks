@@ -34,7 +34,7 @@ const Drawer = (props: Common.DrawerProps) => {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className="absolute right-0 flex h-full w-xl flex-col bg-neutral-900 shadow-xl">
+                <Dialog.Panel className="absolute right-0 flex h-full w-full flex-col bg-neutral-900 shadow-xl sm:w-xl">
                   <div className="flex items-center justify-between p-4 text-white">
                     <Dialog.Title className="text-lg font-medium">{title}</Dialog.Title>
                     <Button variant="clear" onClick={() => onClose()}>

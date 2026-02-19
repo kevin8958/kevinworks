@@ -19,7 +19,7 @@ const ProgressSizeGuide = () => {
       <Typography variant="H3">Size</Typography>
       <FlexWrapper classes="size-full" items="center">
         <FlexWrapper items="end">
-          <FlexWrapper classes="w-full !gap-6" items="center">
+          <FlexWrapper classes="w-full !gap-6 sm:flex-row" direction="col" items="center">
             {sizeOptions.map((option) => (
               <div key={option.id} className="w-full">
                 <FlexWrapper classes="!gap-3" direction="col" items="center">
