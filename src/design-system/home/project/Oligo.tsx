@@ -7,7 +7,7 @@ import Badge from '@/design-system/components/Badge';
 import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import Image from 'next/image';
 
-const Camstudy = ({
+const Oligo = ({
   isOpen,
   onClose,
   onChange,
@@ -19,23 +19,30 @@ const Camstudy = ({
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const features = [
     {
-      title: 'D-Day Widget Integration',
+      title: 'Main Landing Page Development',
       description:
-        'Developed a feature that allows users to set a D-Day on the main page and view it as a widget within the study room page. This ensures consistent visibility of important study goals across pages.',
-      imageUrl: '/image/features/camstudy/D-Day Widget Integration Feature Screenshot.png',
-      imageAlt: 'D-Day Widget Integration Feature Screenshot',
+        'Developed the main landing page with smooth UI animations using CSS Animation, Slick, and AOS. Implemented features such as email sending, text copy functionality, and integrated ChannelTalk for real-time customer communication.',
     },
     {
-      title: 'Account Deletion Feature',
+      title: 'Admin Dashboard Development',
       description:
-        'Implemented an in-site account deletion feature to replace the previous manual email-based process, improving user autonomy and operational efficiency.',
-      imageUrl: '/image/features/camstudy/Account Deletion Feature Screenshot.png',
-      imageAlt: 'Account Deletion Feature Screenshot',
+        'Built an admin dashboard interface using DaisyUI. Implemented custom data visualization charts with Chart.js to display key platform metrics and improve administrative insights.',
+      imageUrl: '/image/features/oligo/Dashboard Feature Screenshot.png',
+      imageAlt: 'Admin Dashboard Feature Screenshot',
     },
     {
-      title: 'Site-wide QA Improvements',
+      title: 'Bulletin Board Management System',
       description:
-        'Collaborated with the newly established QA team to fix site-wide issues, enhance existing features, and refine the overall UI for better usability and visual consistency.',
+        'Developed a board management system with filtering and search functionality. Implemented Excel export, template download and upload features, bulk email sending, custom pagination and tables, and a custom date picker using vue2-datepicker. Also enabled direct navigation to active CamStudy rooms and provided tools to manage service information and monitor participation status.',
+      imageUrl: '/image/features/oligo/Board Management Feature Screenshot.png',
+      imageAlt: 'Board Management Feature Screenshot',
+    },
+    {
+      title: 'User Profile Management',
+      description:
+        'Built a profile management page with image upload functionality and address search using the Kakao Maps API to improve user profile management and location input.',
+      imageUrl: '/image/features/oligo/Profile Feature Screenshot.png',
+      imageAlt: 'Profile Feature Screenshot',
     },
   ];
 
@@ -45,22 +52,22 @@ const Camstudy = ({
         isOpen={isOpen}
         onClose={onClose}
         onChange={onChange}
-        currentPage={5}
-        title="CamStudy"
-        year="2022-2023"
-        href="https://gooroomee.com/intro"
-        backgroundImage="/image/camstudy_thumbnail.png"
+        currentPage={4}
+        title="Oligo"
+        year="2023"
+        href="https://oligo.gooroomee.com/"
+        backgroundImage="/image/oligo_thumbnail.png"
         content={
           <div className="flex flex-col gap-4">
             <Typography variant="B2" classes="!text-neutral-300">
               Gooroommee
             </Typography>
             <Typography variant="B1" classes="!text-neutral-200">
-              Study service with video calls as the core feature, enabling real-time collaboration
-              and learning.
+              Admin dashboard with charts, bulletin board, email, and profile page using daisyUI and
+              Chart.js.
             </Typography>
             <div className="flex flex-wrap gap-2">
-              {['Vue.js', 'Vuex', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'].map((tech, idx) => (
+              {['Next.js', 'Pinia', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'].map((tech, idx) => (
                 <Badge key={idx} size="sm">
                   {tech}
                 </Badge>
@@ -68,9 +75,9 @@ const Camstudy = ({
             </div>
             <ul className="list-inside list-none pl-2">
               {[
-                'Contributed to the development of a video call-based study platform enabling real-time collaboration.',
-                'Built user interfaces for study rooms and collaboration features using Nuxt.js, Pinia, and Tailwind CSS.',
-                'Improved user experience by implementing responsive layouts and reusable UI components.',
+                'Developed an academy management admin dashboard using Nuxt.js, Pinia, and Tailwind CSS.',
+                'Implemented key features including data visualization charts, bulletin board management, email interface, and user profile pages.',
+                'Built responsive and maintainable UI components to support efficient administrative workflows.',
               ].map((item, idx) => (
                 <li key={idx} className="mb-2 flex items-start gap-2">
                   <span className="mt-2 inline-block size-1 shrink-0 rounded-full bg-neutral-200" />
@@ -133,4 +140,4 @@ const Camstudy = ({
   );
 };
 
-export default Camstudy;
+export default Oligo;

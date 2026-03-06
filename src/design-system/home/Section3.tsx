@@ -8,6 +8,9 @@ import ProjectModal from '@/design-system/layout/ProjectModal';
 import Badge from '@/design-system/components/Badge';
 import MedicalDB from './project/MedicalDB';
 import Camstudy from './project/Camstudy';
+import Oligo from './project/Oligo';
+import AISpace from './project/AISpace';
+import Hanwha from './project/Hanwha';
 
 export default function Section3() {
   const [focusedProject, setFocusedProject] = useState<number | null>(null);
@@ -76,12 +79,12 @@ export default function Section3() {
       imageUrl: '/image/oligo_thumbnail.png',
       altText: 'Oligo Thumbnail',
       href: 'https://oligo.gooroomee.com/',
-      spec: ['Next.js', 'Pinia', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
-      desc: 'Admin dashboard with charts, bulletin board, email, and profile page using daisyUI and Chart.js.',
+      spec: ['Nuxt.js', 'Pinia', 'Tailwind CSS'],
+      desc: 'Admin dashboard with charts, bulletin board, email, and profile page for academy management.',
       contents: [
-        'Developed AI playground and creator tool in AI Space using Next.js and Zustand, enabling chatbot customization and model comparison.',
-        'Implemented features like prompt management, conversation history, and multi-model support (OpenAI, Azure, etc.).',
-        'Optimized performance and responsiveness with Tailwind CSS, ensuring a seamless user experience across devices.',
+        'Developed an academy management admin dashboard using Nuxt.js, Pinia, and Tailwind CSS.',
+        'Implemented key features including data visualization charts, bulletin board management, email interface, and user profile pages.',
+        'Built responsive and maintainable UI components to support efficient administrative workflows.',
       ],
     },
     {
@@ -90,12 +93,12 @@ export default function Section3() {
       imageUrl: '/image/camstudy_thumbnail.png',
       altText: 'CamStudy Thumbnail',
       href: 'https://gooroomee.com/intro',
-      spec: ['Vue.js', 'Vuex', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
-      desc: 'Study service with video calls as the core feature, enabling real-time collaboration and learning.',
+      spec: ['Nuxt.js', 'Pinia', 'Tailwind CSS'],
+      desc: 'Video call-based study service enabling real-time collaboration and learning.',
       contents: [
-        'Developed AI playground and creator tool in AI Space using Next.js and Zustand, enabling chatbot customization and model comparison.',
-        'Implemented features like prompt management, conversation history, and multi-model support (OpenAI, Azure, etc.).',
-        'Optimized performance and responsiveness with Tailwind CSS, ensuring a seamless user experience across devices.',
+        'Contributed to the development of a video call-based study platform enabling real-time collaboration.',
+        'Built user interfaces for study rooms and collaboration features using Nuxt.js, Pinia, and Tailwind CSS.',
+        'Improved user experience by implementing responsive layouts and reusable UI components.',
       ],
     },
     {
@@ -180,6 +183,21 @@ export default function Section3() {
           ))}
         </div>
       </div>
+      <Hanwha
+        isOpen={openProject === 2}
+        onClose={() => setOpenProject(null)}
+        onChange={(page: number) => setOpenProject(page)}
+      />
+      <AISpace
+        isOpen={openProject === 3}
+        onClose={() => setOpenProject(null)}
+        onChange={(page: number) => setOpenProject(page)}
+      />
+      <Oligo
+        isOpen={openProject === 4}
+        onClose={() => setOpenProject(null)}
+        onChange={(page: number) => setOpenProject(page)}
+      />
       <Camstudy
         isOpen={openProject === 5}
         onClose={() => setOpenProject(null)}
@@ -191,7 +209,14 @@ export default function Section3() {
         onChange={(page: number) => setOpenProject(page)}
       />
       <ProjectModal
-        isOpen={openProject !== null && openProject !== 6 && openProject !== 5}
+        isOpen={
+          openProject !== null &&
+          openProject !== 2 &&
+          openProject !== 3 &&
+          openProject !== 4 &&
+          openProject !== 5 &&
+          openProject !== 6
+        }
         onClose={() => setOpenProject(null)}
         onChange={(page: number) => setOpenProject(page)}
         title={projects[openProject ?? 0]?.title}

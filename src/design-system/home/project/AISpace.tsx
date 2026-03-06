@@ -7,7 +7,7 @@ import Badge from '@/design-system/components/Badge';
 import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import Image from 'next/image';
 
-const Camstudy = ({
+const AISpace = ({
   isOpen,
   onClose,
   onChange,
@@ -19,23 +19,32 @@ const Camstudy = ({
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const features = [
     {
-      title: 'D-Day Widget Integration',
+      title: 'AI Playground (Model Comparison & Chat)',
       description:
-        'Developed a feature that allows users to set a D-Day on the main page and view it as a widget within the study room page. This ensures consistent visibility of important study goals across pages.',
-      imageUrl: '/image/features/camstudy/D-Day Widget Integration Feature Screenshot.png',
-      imageAlt: 'D-Day Widget Integration Feature Screenshot',
+        'Developed an AI playground where users can compare responses from different AI models by asking the same question. Implemented a chat interface with template-based prompts to quickly test and interact with multiple models.',
+      imageUrl: '/image/features/aispace/playground_feature.png',
+      imageAlt: 'AI Playground Feature Screenshot',
     },
     {
-      title: 'Account Deletion Feature',
+      title: 'Conversation History Page',
       description:
-        'Implemented an in-site account deletion feature to replace the previous manual email-based process, improving user autonomy and operational efficiency.',
-      imageUrl: '/image/features/camstudy/Account Deletion Feature Screenshot.png',
-      imageAlt: 'Account Deletion Feature Screenshot',
+        'Built a history page that retrieves and displays previous conversations through API integration, allowing users to easily review and manage past interactions.',
+      imageUrl: '/image/features/aispace/history_feature.png',
+      imageAlt: 'History Page Feature Screenshot',
     },
     {
-      title: 'Site-wide QA Improvements',
+      title: 'Analytics Dashboard',
       description:
-        'Collaborated with the newly established QA team to fix site-wide issues, enhance existing features, and refine the overall UI for better usability and visual consistency.',
+        'Implemented an analytics page with custom data visualization using Chart.js. Added a sample preview feature using the Faker library to demonstrate chart behavior when real data is unavailable.',
+      imageUrl: '/image/features/aispace/statistics_feature.png',
+      imageAlt: 'Analytics Dashboard Feature Screenshot',
+    },
+    {
+      title: 'AI Creator & Assistant Builder',
+      description:
+        'Developed a feature that allows users to create their own AI assistant by uploading data and configuring prompts. The assistant generates responses based on the uploaded content and prompt settings, enabling customized AI interactions.',
+      imageUrl: '/image/features/aispace/ai_creator_feature.png',
+      imageAlt: 'AI Creator Feature Screenshot',
     },
   ];
 
@@ -45,22 +54,21 @@ const Camstudy = ({
         isOpen={isOpen}
         onClose={onClose}
         onChange={onChange}
-        currentPage={5}
-        title="CamStudy"
-        year="2022-2023"
-        href="https://gooroomee.com/intro"
-        backgroundImage="/image/camstudy_thumbnail.png"
+        currentPage={3}
+        title="AI Space"
+        year="2023"
+        backgroundImage="/image/aispace_thumbnail.png"
         content={
           <div className="flex flex-col gap-4">
             <Typography variant="B2" classes="!text-neutral-300">
               Gooroommee
             </Typography>
             <Typography variant="B1" classes="!text-neutral-200">
-              Study service with video calls as the core feature, enabling real-time collaboration
-              and learning.
+              AI Space is an AI service platform that allows users to create and share customized
+              chatbots using various AI models.
             </Typography>
             <div className="flex flex-wrap gap-2">
-              {['Vue.js', 'Vuex', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'].map((tech, idx) => (
+              {['Next.js', 'Zustand', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'].map((tech, idx) => (
                 <Badge key={idx} size="sm">
                   {tech}
                 </Badge>
@@ -68,9 +76,9 @@ const Camstudy = ({
             </div>
             <ul className="list-inside list-none pl-2">
               {[
-                'Contributed to the development of a video call-based study platform enabling real-time collaboration.',
-                'Built user interfaces for study rooms and collaboration features using Nuxt.js, Pinia, and Tailwind CSS.',
-                'Improved user experience by implementing responsive layouts and reusable UI components.',
+                'Developed AI playground and creator tool in AI Space using Next.js and Zustand, enabling chatbot customization and model comparison.',
+                'Implemented features like prompt management, conversation history, and multi-model support (OpenAI, Azure, etc.).',
+                'Optimized performance and responsiveness with Tailwind CSS, ensuring a seamless user experience across devices.',
               ].map((item, idx) => (
                 <li key={idx} className="mb-2 flex items-start gap-2">
                   <span className="mt-2 inline-block size-1 shrink-0 rounded-full bg-neutral-200" />
@@ -133,4 +141,4 @@ const Camstudy = ({
   );
 };
 
-export default Camstudy;
+export default AISpace;

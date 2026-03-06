@@ -7,7 +7,7 @@ import Badge from '@/design-system/components/Badge';
 import FlexWrapper from '@/design-system/layout/FlexWrapper';
 import Image from 'next/image';
 
-const Camstudy = ({
+const Hanwha = ({
   isOpen,
   onClose,
   onChange,
@@ -19,23 +19,19 @@ const Camstudy = ({
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const features = [
     {
-      title: 'D-Day Widget Integration',
+      title: 'Admin Dashboard for Consultation Management',
       description:
-        'Developed a feature that allows users to set a D-Day on the main page and view it as a widget within the study room page. This ensures consistent visibility of important study goals across pages.',
-      imageUrl: '/image/features/camstudy/D-Day Widget Integration Feature Screenshot.png',
-      imageAlt: 'D-Day Widget Integration Feature Screenshot',
+        'Developed an admin dashboard for managing consultation services. Implemented analytics using Chart.js and a bulletin board system to monitor service statistics and manage consultants. Added configuration features for consultation schedules and operating dates, along with tools to review recorded consultations, audio recordings, and STT (speech-to-text) transcripts.',
     },
     {
-      title: 'Account Deletion Feature',
+      title: 'Consultant Management Interface',
       description:
-        'Implemented an in-site account deletion feature to replace the previous manual email-based process, improving user autonomy and operational efficiency.',
-      imageUrl: '/image/features/camstudy/Account Deletion Feature Screenshot.png',
-      imageAlt: 'Account Deletion Feature Screenshot',
+        'Built a consultation management page for consultants to handle incoming requests and connect them to live consultation sessions. Implemented features for viewing past consultation history and adding internal notes for better client management.',
     },
     {
-      title: 'Site-wide QA Improvements',
+      title: 'Real-time Video Consultation Service',
       description:
-        'Collaborated with the newly established QA team to fix site-wide issues, enhance existing features, and refine the overall UI for better usability and visual consistency.',
+        'Developed a real-time video consultation interface for both consultants and clients based on Gooroomee’s video communication service. Implemented P2P-based video connections along with identity verification via ID card capture, document submission and classification, SMS and simple authentication for secondary verification, and collaboration features such as contract sharing, account sharing, and shared notes.',
     },
   ];
 
@@ -45,32 +41,32 @@ const Camstudy = ({
         isOpen={isOpen}
         onClose={onClose}
         onChange={onChange}
-        currentPage={5}
-        title="CamStudy"
-        year="2022-2023"
-        href="https://gooroomee.com/intro"
-        backgroundImage="/image/camstudy_thumbnail.png"
+        currentPage={4}
+        title="Hanwha Life Insurance"
+        year="2023.11-2024.01"
+        backgroundImage="/image/hanwha_thumbnail.jpeg"
         content={
           <div className="flex flex-col gap-4">
             <Typography variant="B2" classes="!text-neutral-300">
               Gooroommee
             </Typography>
             <Typography variant="B1" classes="!text-neutral-200">
-              Study service with video calls as the core feature, enabling real-time collaboration
-              and learning.
+              Developed a real-time video consultation service for both customers and counselors.
             </Typography>
             <div className="flex flex-wrap gap-2">
-              {['Vue.js', 'Vuex', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'].map((tech, idx) => (
-                <Badge key={idx} size="sm">
-                  {tech}
-                </Badge>
-              ))}
+              {['Nuxt.js', 'Vue.js', 'Pinia', 'Vuex', 'WebRTC', 'Chart.js', 'HTML/CSS'].map(
+                (tech, idx) => (
+                  <Badge key={idx} size="sm">
+                    {tech}
+                  </Badge>
+                ),
+              )}
             </div>
             <ul className="list-inside list-none pl-2">
               {[
-                'Contributed to the development of a video call-based study platform enabling real-time collaboration.',
-                'Built user interfaces for study rooms and collaboration features using Nuxt.js, Pinia, and Tailwind CSS.',
-                'Improved user experience by implementing responsive layouts and reusable UI components.',
+                'Developed Admin and Management pages using Nuxt.js and Pinia.',
+                'Built video consultation platform using WebRTC (Gooroomee base) with features like document submission, authentication, note sharing, and P2P video chat.',
+                'Integrated dashboards using Chart.js and managed real-time consultation settings, STT, and recording playback.',
               ].map((item, idx) => (
                 <li key={idx} className="mb-2 flex items-start gap-2">
                   <span className="mt-2 inline-block size-1 shrink-0 rounded-full bg-neutral-200" />
@@ -94,16 +90,6 @@ const Camstudy = ({
                       <Typography variant="H4">{feature.title}</Typography>
                       <Typography variant="B1">{feature.description}</Typography>
                     </FlexWrapper>
-                    {feature.imageUrl && (
-                      <Image
-                        src={feature.imageUrl}
-                        width={300}
-                        height={200}
-                        onClick={() => setPreviewImage(feature.imageUrl)}
-                        alt={feature.imageAlt || 'Feature Screenshot'}
-                        className="cursor-pointer rounded-lg"
-                      />
-                    )}
                   </FlexWrapper>
                 </li>
               ))}
@@ -133,4 +119,4 @@ const Camstudy = ({
   );
 };
 
-export default Camstudy;
+export default Hanwha;
