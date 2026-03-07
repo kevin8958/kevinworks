@@ -4,8 +4,8 @@ namespace Common {
   type AlertVariant = 'contain' | 'outline';
   interface AlertProps {
     classes?: string;
-    variant: AlertVariant;
-    state: AlertState;
+    variant?: AlertVariant;
+    state?: AlertState;
     title: string;
     message?: string;
     showClose?: boolean;
