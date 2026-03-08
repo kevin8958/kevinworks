@@ -11,6 +11,7 @@ import Camstudy from './project/Camstudy';
 import Oligo from './project/Oligo';
 import AISpace from './project/AISpace';
 import Hanwha from './project/Hanwha';
+import Sellease from './project/Sellease';
 
 export default function Section3() {
   const [focusedProject, setFocusedProject] = useState<number | null>(null);
@@ -183,6 +184,11 @@ export default function Section3() {
           ))}
         </div>
       </div>
+      <Sellease
+        isOpen={openProject === 1}
+        onClose={() => setOpenProject(null)}
+        onChange={(page: number) => setOpenProject(page)}
+      />
       <Hanwha
         isOpen={openProject === 2}
         onClose={() => setOpenProject(null)}
@@ -209,14 +215,7 @@ export default function Section3() {
         onChange={(page: number) => setOpenProject(page)}
       />
       <ProjectModal
-        isOpen={
-          openProject !== null &&
-          openProject !== 2 &&
-          openProject !== 3 &&
-          openProject !== 4 &&
-          openProject !== 5 &&
-          openProject !== 6
-        }
+        isOpen={openProject !== null && openProject === 0}
         onClose={() => setOpenProject(null)}
         onChange={(page: number) => setOpenProject(page)}
         title={projects[openProject ?? 0]?.title}
