@@ -1,5 +1,6 @@
 'use client';
 
+import { KEVIN_DESIGN_SYSTEM_URL } from '@/constants/externalLinks';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -15,7 +16,9 @@ const BreadCrumb = (props: Layout.BreadCrumbProps) => {
     <nav aria-label="breadcrumb">
       <ol className="flex items-center gap-1">
         {items.map((item, index) => {
-          const isActive = pathname === item.href;
+          const resolvedHref = item.href === '/design-system' ? KEVIN_DESIGN_SYSTEM_URL : item.href;
+          const isExternal = resolvedHref?.startsWith('http');
+          const isActive = !isExternal && pathname === resolvedHref;
           return (
             <li
               key={item.label}
@@ -25,7 +28,17 @@ const BreadCrumb = (props: Layout.BreadCrumbProps) => {
                 'hover:text-neutral-300': !isActive && item.href,
               })}
             >
-              {item.href ? <Link href={item.href}>{item.label}</Link> : item.label}
+              {resolvedHref ? (
+                isExternal ? (
+                  <a href={resolvedHref} target="_blank" rel="noreferrer">
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link href={resolvedHref}>{item.label}</Link>
+                )
+              ) : (
+                item.label
+              )}
               {index < items.length - 1 && <FaChevronRight className="text-xs text-neutral-200" />}
             </li>
           );

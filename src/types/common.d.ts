@@ -38,14 +38,16 @@ namespace Common {
     classes?: string;
   }
   /** Button */
-  type ButtonType = 'button' | 'submit';
+  type ButtonType = 'button' | 'submit' | 'reset';
   type ButtonSize = 'lg' | 'md' | 'sm';
   type ButtonVariant = 'contain' | 'outline' | 'clear';
-  type ButtonColor = 'primary' | 'info' | 'success' | 'warning' | 'danger';
+  type ButtonColor = 'primary' | 'neutral' | 'info' | 'success' | 'warning' | 'danger';
   type ButtonIconPosition = 'left' | 'right';
   type ButtonShape = 'rect' | 'circle';
+  type ButtonJustify = 'start' | 'center';
   interface ButtonProps {
     classes?: string;
+    className?: string;
     type?: ButtonType;
     children?: React.ReactNode;
     size?: ButtonSize;
@@ -57,9 +59,16 @@ namespace Common {
     prompted?: boolean;
     /** state end */
     shape?: ButtonShape;
+    justify?: ButtonJustify;
+    fullWidth?: boolean;
     icon?: React.ReactNode;
+    href?: string;
+    target?: React.HTMLAttributeAnchorTarget;
+    rel?: string;
     iconPosition?: ButtonIconPosition;
-    onClick?: (e) => void;
+    id?: string;
+    style?: React.CSSProperties;
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
   }
 
   /** ButtonGroup */

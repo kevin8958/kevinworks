@@ -89,7 +89,7 @@ export default function ProjectModal({
                         variant="contain"
                         size="sm"
                         classes="!w-[30px]"
-                        onClick={() => window.open(href, '_blank')}
+                        onClick={() => window.open(href, '_blank', 'noopener,noreferrer')}
                       >
                         <LuExternalLink className="text-lg" />
                       </Button>

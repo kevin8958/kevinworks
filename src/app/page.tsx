@@ -6,6 +6,7 @@ import Section2 from '@/design-system/home/Section2';
 import Section3 from '@/design-system/home/Section3';
 import Section4 from '@/design-system/home/Section4';
 import PlanetBackground from '@/design-system/layout/PlanetBackground';
+import { KEVIN_DESIGN_SYSTEM_URL } from '@/constants/externalLinks';
 import classNames from 'classnames';
 
 export default function Index() {
@@ -14,7 +15,7 @@ export default function Index() {
     year: '2025.07~2025.09',
     imageUrl: '/image/designsystem_thumbnail.png',
     altText: 'Design System Thumbnail',
-    href: '/design-system',
+    href: KEVIN_DESIGN_SYSTEM_URL,
     spec: ['Next.js', 'TypeScript', 'Tailwind CSS', 'HTML/CSS'],
     desc: 'A comprehensive design system and component library built with React, Next.js, and Tailwind CSS to streamline UI development and ensure design consistency across projects.',
     contents: [
@@ -45,24 +46,20 @@ export default function Index() {
               'h-full w-full object-cover brightness-50 transition-all duration-500 ease-in-out',
             )}
           />
-
-          <div className="absolute top-4 right-4 flex items-center gap-2 rounded-full border border-white/20 bg-black/50 px-3 py-1.5 backdrop-blur-md">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-            </span>
-            <span className="text-[10px] font-bold tracking-wider text-white uppercase">
-              Under Development
-            </span>
-          </div>
         </div>
 
         <Typography variant="H3" classes={'!text-neutral-100 !font-semibold'}>
           {designSystem.title}
         </Typography>
 
-        <Button variant="contain" size="sm" onClick={() => window.open('/design-system', '_self')}>
-          Explore System
+        <Button
+          variant="contain"
+          size="sm"
+          href={designSystem.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Design System
         </Button>
 
         <Typography variant="B2" classes={'!text-neutral-200 max-w-[480px] text-center'}>
