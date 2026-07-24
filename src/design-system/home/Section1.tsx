@@ -21,17 +21,16 @@ export default function Section1() {
               FRONTEND DEVELOPER
             </Typography>
             <PressureText
-              text="Kevin Lee"
-              flex={true}
+              text="KEVIN"
+              flex
               alpha={false}
               stroke={false}
-              width={true}
-              weight={true}
-              italic={true}
+              width
+              weight
+              italic
               textColor="#FFB74D"
               strokeColor="#ff0000"
               minFontSize={36}
-              disabled
             />
             <Typography variant="B2" classes="opacity-60 mt-6 md:text-center uppercase">
               Crafting interactive, user-focused web experiences
